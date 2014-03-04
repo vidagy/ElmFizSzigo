@@ -1,0 +1,1150 @@
+\chapter{A relativisztikus fizika alapegyenletei}\label{2tetel}
+ 
+ \section{Mechanika és elektrodinamika}
+  
+  \subsection{A relativitás elve}
+   
+   A Newton-törvények inerciarendszerekben igazak. Egy vonatkoztatási rendszer akkor inerciarendszer, ha bármely test, amely nem hat kölcsön semmilyen más objektummal, állandó impulzussal rendelkezik. A fizika relativitásának elve azt mondja ki, hogy bármely ilyen rendszerben a fizikai folyamatokat leíró egyenletek ugyanolyan alakúak. Ez azt jeleni, hogy a megfelelő törvényekben szereplő mennyiségekre megadható egy egyértelmű transzformáció, hogy az egyenlet továbbra is igaz maradjon. Legyen általánosan egy összefüggés $\Psi(a,b,c,\dots)=0$, mely a transzformált rendszerben a $\Psi(\mathcal{T}_{a}a,\mathcal{T}_{c}c,\mathcal{T}_{c}c,\dots)$ alakú, $\Psi$ nem változik.
+   
+   A klasszikus mechanikában ez a transzformáció a Galilei-transzformáció. A transzformáció csak a helykoordinátákra hat: ha a $\bar{K}$ rendszer $\vect{v}_0$ állandó sebességgel mozog a $K$ rendszerhez képest, akkor a $\bar{\vect{r}}=\vect{r}-\vect{v}t$. 
+  
+   Egy a probléma: a mozgó töltések által létrehozott mezők (Lienard--Wiechert-potenciálok) nem invariánsak a Galilei-transzformációra, azokat pedig közvetlenül a Maxwell-egyenletekből vezettük le, vagyis azok sem invariánsak. Az ellentmondás kétféleképpen oldható fel: a) az elektrodinamika csak egy kitüntetett koordináta-rendszerben érvényes, ez pedig az éter, b) nem helyes a Galilei-transzformáció, mozgó koordináta-rendszerek között más szabály szerint kell áttérni. 
+  
+   Michelson--Morley megmutatta, hogy ha van éter, akkor az hozzánk képest áll. Az éter hipotézis elbonyolódik, és Einstein megmutatta, hogy szükségtelenné válik. Ehelyett a b) utat járjuk, megkeressük az új áttérést, a Lorentz-transzformációt.
+      
+  \subsection{Az elektrodinamika kovariáns formalizmusa}
+   
+   Áttérünk a négydimenziós Minkowski-térre. Egy ebbe tartozó vektor $\minv{x}^\mu=(ct,\vect{r})$, ahol $\mu=0,1,2,3$. A deriválást a $\partial_\mu=\left(\frac{1}{c}\pder{}{t}, \pder{}{x^i}\right)$ kovariáns vektor reprezentálja. Integrálás $\intl{}{}\dd^4\minv{x}=\intl{}{}\dd(ct)\intl{}{}\drh$ szerint. A tér metrikáját a 
+   \eq{
+   g_{\mu\nu}=(g^{-1})^{\mu\nu}=\begin{pmatrix}
+                                 1 & 0 & 0 & 0 \\
+                                 0 & -1 & 0 & 0 \\
+                                 0 & 0 & -1 & 0 \\
+                                 0 & 0 & 0 & -1
+                                \end{pmatrix}
+   }
+   metrikus tenzorral írjuk le. Ezzel: $a_\mu=g_{\mu\nu}a^\nu$, $a^\mu=g^{\mu\nu}a_\nu$ és $a\cdot b=a^\mu g_{\mu\nu}b^\nu$. 
+   
+   Egy vektor hossza, $\minv x^2=c^2t^2-\vect{r}^2$, lehet nulla akkor is, ha $\vect{r}^2\neq 0$. Ezek a fényszerű vektorok. Az origóból fénysebességnél lassabban ($\vect{r}^2=v^2t^2$) elérhető vektorok időszerűek: $x^2=(c^2-v^2)t^2>0$, ha pedig $x^2<0$, akkor térszerűek. 
+   
+   Egy ponttöltés töltéssűrűségéből és áramsűrűségéből is képezhetünk egy négyesvektort:
+   \eq{
+    \minv{J}^\mu=(c\rho,\vect{J}).
+   }
+   Ekkor a kontinuitási egyenlet egyszerű alakú:
+   \eq{
+    0=\partial_t\rho+\divo{\vect{J}}=0=\frac{1}{c}\partial_t(c\rho)+\partial_i J_i=\partial_\mu\minv{J}^\mu
+   }
+   
+   A statikus pontöltés potenciálja $\phi(\vect{r})=\frac{\mu_0qc^2}{4\pi r}$ és a statikus áram által létrehozott vektorpotenciál $\vect{A}=\frac{\mu_0q\vect{v}}{4\pi r}$ nagyon hasonló. Ebből az intuícióból felírható a négyes potenciál:
+   \eq{
+    \minv{A}^\mu= \left(\frac 1c\phi,\vect{A}\right).
+   }
+   
+   Bevezetjük a térerősség tenzort:
+   \eq{
+    \minv{F}^{\mu\nu}=\partial^\mu \minv{A}^\nu-\partial^\nu \minv{A}^\mu,
+   }
+   Ami antiszimmetrikus ($\minv{F}^{\mu\nu}=-\minv{F}^{\nu\mu}$). Ennek elemei:
+   \eq{
+    \minv{F}^{0i}
+    =\partial^0 \minv{A}^i-\partial^i \minv{A}^0
+    =\partial_0 \minv{A}^i+\partial_i \minv{A}^0
+    =\frac{1}{c}\partial_t A_i + \grad{\left(\frac{1}{c}\phi\right)}=-\frac{1}{c} E_i
+   }
+   \eq{
+    \ep_{ijk}\minv{F}^{ij}
+    =\ep_{ijk}\left(\partial^i \minv{A}^j-\partial^j \minv{A}^i\right)
+    =2\ep_{ijk}\partial^i \minv{A}^j=-2\ep_{ijk}\partial_i \minv{A}^j=-2(\rot{\vect{A}})_k,
+   }
+   így a teljes tenzor kétszeresen kontravariánsan:
+   \eq{
+    \minv{F}^{\mu\nu} = 
+    \begin{pmatrix}
+     0 & -E_1/c & -E_2/c & -E_3/c \\
+     E_1/c & 0 & -B_3 & B_2 \\
+     E_2/c & B_3 & 0 & -B_1 \\
+     E_3/c & -B_2 & B_1 & 0
+    \end{pmatrix}
+   }
+   Ennek deriváltja azonos a harmadik és a negyedik Maxwell-egyenlettel:
+   \al{
+    \partial_\mu \minv{F}^{\mu0}&=\partial_i\minv{F}^{i0}=\frac{1}{c}\partial_tE_i=\frac{1}{c}\frac{\rho}{\ep_0}=\mu_0\minv{J}^0 \\
+    \partial_\mu \minv{F}^{\mu i}&=\partial_0F^{0i}+\partial_j\minv{F}^{ji}=-\frac{1}{c}\partial_t\frac{1}{c}E_i+\ep_{ijk}\partial_jB_k=\mu_0\minv{J}^i,
+   }
+   ezek pedig összefoglalva:
+   \eqn{
+    \boxed{\partial_\mu \minv{F}^{\mu\nu}=\mu_0\minv{J}^{\nu}}.\label{eq:02-MX34}
+   }
+   
+   A másik két Maxwell-egyenlet ebben a formalizmusban azonosság. Onnan következnek, hogy az $F$ tenzort már a négyespotenciál létezését feltételezve írtuk fel, ami pedig csak akkor lehet, ha $\vect{B}$ divergencia, $\vect{E}$ pedig rotációmentes. 
+   
+   Ez a két Maxwell-egyenlet kontravariáns alakban történő felírásához bevezetjük a duális térerősség tenzort:
+   \eq{
+    \tilde{\minv{F}}^{\mu\nu}=\frac 12 \ep^{\mu\nu\rho\sigma}\minv{F}_{\rho\sigma},
+   }
+   melynek elemei kiírva:
+   \eq{
+    \tilde{\minv{F}}^{\mu\nu}=
+    \begin{pmatrix}
+     0 & -B_1 & -B_2 & -B_3 \\
+      B_1 & 0 & E_3/c & -E_2/c \\
+      B_2 & -E_3/c & 0 & E_1/c \\
+      B_3 & E_2/c & -E_1/c & 0
+    \end{pmatrix}
+   }
+   Ennek a négyesderiváltja automatikusan nulla (szimmetrikus--antiszimmetrikus tenzor szorzata). Ezek kiírva komponensenként:
+   \eq{
+    \partial_\mu\tilde{\minv{F}}^{\mu 0}=\frac{1}{2}\partial_i \ep^{i0jk}\minv{F}_{jk}=\frac{1}{2}\partial_i(-\ep_{ijk})(-\ep_{jkl})B_l=\partial_i B_i=0
+   }
+   \al{
+    \partial_\mu\tilde{\minv{F}}^{\mu i}&=\partial_0\tilde{\minv{F}}^{0 i}+\partial_j\tilde{\minv{F}}^{ji}
+    =\frac{1}{2}\partial_0 \ep^{0ijk}\minv{F}_{jk}+\frac{1}{2}\partial_j \left(\ep^{ji0k}\minv{F}_{0k}+\ep^{jik0}\minv{F}_{k0}\right) \\
+    &=\frac{1}{2c}\partial_t\ep_{ijk}(-\ep_{jkl})B_l+\frac 1c \partial_j\ep_{jik}E_k=-\frac{1}{c}\left[\partial_t B_i+(\rot{\vect{E}})_i\right]=0,
+   }
+   vagyis megkapjuk az I. és a II. Maxwell-egyenletet. 
+   
+  \subsection{A Lorentz-transzformáció}
+   
+   Keressünk egy olyan transzformációt, amely rendelkezik az alábbi tulajdonságokkal:
+   \begin{enumerate}
+    \item Lineáris: $\Lambda\colon \bar{\minv{a}}^\mu=\Lambda^\mu_{\phantom{\mu}\nu} \minv{a}^\nu$.
+    \item A skaláris szorzatot invariánsan hagyja: $\forall\; \minv{a},\minv{b}$: $\minv{a}\cdot \minv{b}=\bar{\minv{a}}\cdot\bar{\minv{b}}$ $\Leftrightarrow$ $\minv{a}^\mu \minv{b}^\nu g_{\mu\nu}=\bar{\minv{a}}^\mu \bar{\minv{b}}^\nu g_{\mu\nu}$, vagyis
+    \al{
+     &\Lambda^\mu_{\phantom{\mu}\mu'} \minv{a}^{\mu'}\Lambda^\nu_{\phantom{\nu}\nu'} \minv{b}^{\nu'}g_{\mu\nu}=\minv{a}^{\mu'} \minv{b}^{\nu'} g_{\mu'\nu'}
+     &\Rightarrow &&
+     & \Lambda^\mu_{\phantom{\mu}\mu'} \Lambda^\nu_{\phantom{\nu}\nu'}g_{\mu\nu}=g_{\mu'\nu'}
+    }
+   \end{enumerate}
+   Ezek a Lorentz-transzformációk. Mivel a skaláris szorzatot invariánsan hagyják, ezért az ilyen alakú összefüggések is, vagyis a Maxwell-egyenletek mind invariánsak lesznek erre tekintve. 
+   
+   A Lorentz-transzformáció két fontos tulajdonsága: $\Lambda_\mu^{\phantom{\mu}\nu}\Lambda^\mu_{\phantom{\mu}\sigma}=\delta_\sigma^\nu$, és $(\Lambda^{-1})^\mu_{\phantom{\mu}\nu}=\Lambda_\nu^{\phantom{\nu}\mu}$, illetve általános tulajdonság, hogy $\big(\minv{M}^\text{T}\big)^\mu_{\phantom{\mu}\nu}=\minv{M}^{\phantom{\nu}\mu}_{\nu}$.
+   
+   A helyvektor transzformációja $\bar{\minv{x}}^\mu=\Lambda^\mu_{\phantom{\mu}\nu} \minv{x}^\nu$, ahonnan a kovariáns derivált:
+   \eq{
+    \bar{\partial}_\mu=\pder{}{\bar{\minv{x}}^\mu}=\pder{}{\minv{x}^\nu}\pder{\minv{x}^\nu}{\bar{\minv{x}}^\mu} = \pder{}{\minv{x}^\nu}\left(\Lambda^{-1}\right)^\nu_{\phantom{\nu}\mu}=\Lambda_\mu^{\phantom{\mu}\nu}\partial_\nu.
+   }
+   
+   A transzformáció mezőkre: az elforgatott mező az elforgatott helyen olyan mintha az eredeti mezőt az eredeti helyen nézném, és elforgatnám az egészet:
+   \aln{
+    &\bar{\minv{A}}(\bar{\minv{x}})=\Lambda \minv{A}(\minv{x}) 
+    &\bar{\minv{A}}(\minv{x})=\Lambda \minv{A}(\Lambda^{-1}\minv{x}).\label{eq:02-ltraf}
+   }
+   
+   A Maxwell-egyenletek tényleg invariánsak egy ilyen transzformációra:
+   \al{
+    \bar{\partial}_\mu\bar{F}^{\mu\nu}(\bar{\minv{x}})
+    &= \left(\Lambda_\mu^{\phantom{\mu}\mu'}\partial_{\mu'}\right)
+       \left(\Lambda^\mu_{\phantom{\mu}\rho} \Lambda^\nu_{\phantom{\nu}\nu'} F^{\rho\nu'}(\minv{x})\right)
+     = \underbrace{\left(\Lambda_\mu^{\phantom{\mu}\mu'}\Lambda^\mu_{\phantom{\mu}\rho} \right)}_{=\delta_\rho^{\mu'}}\Lambda^\nu_{\phantom{\nu}\nu'} \partial_{\mu'}F^{\rho\nu'}(\minv{x})
+     = \Lambda^\nu_{\phantom{\nu}\nu'} \partial_{\mu'}F^{\mu'\nu'}(\minv{x}) \\
+    &= \Lambda^\nu_{\phantom{\nu}\nu'} \mu_0\minv{J}^{\nu'}(\minv{x})
+     = \mu_0\bar{\minv{J}}^{\nu'}(\minv{x}).
+   }
+   
+   \paragraph{A Lorentz-transzformáció mátrixelemei}
+    
+    A $\Lambda$ mátrixa 16 elemet tartalmaz. A második feltétel mátrixos alakban:
+    \al{
+     \Lambda^\text{T}g\Lambda=g,
+    }
+    ami szimmetrikus a transzponálásra, így összesen 10 független egyenletet fogalmaz meg. Ezek szerint 6 paraméterrel jellemezhetjük a Lorentz-transzformációkat. 
+    
+    Ha veszünk egy speciális alakú 
+    $\Lambda=\begin{pmatrix}
+              1 & 0 \\
+              0 & \mat{O}
+             \end{pmatrix}$
+    transzformációt, és helyettesítsük a második feltételbe. Így az $\mat{O}^T\mat{O}=1$ összefüggést kapjuk. Ezek a valós térbeli forgatásokat írják le. A hat paraméterből három ezekhez a transzformációkhoz tartozik.
+    
+    Tekinthetünk egy másik speciális alakú transzformációt:
+    \eq{
+     \Lambda=\begin{pmatrix}
+              e & f & 0 & 0 \\
+              g & h & 0 & 0 \\
+              0 & 0 & 1 & 0 \\
+              0 & 0 & 0 & 1 
+             \end{pmatrix}
+    }
+    A 2. feltétel ennek a felső blokkjára a következőt adja:
+    \al{
+    &g\Lambda^\text{T}g\Lambda=1 
+    &\Rightarrow &
+    &\begin{pmatrix}
+      1 & 0 \\
+      0 & -1 
+     \end{pmatrix}
+     \begin{pmatrix}
+      e & g \\
+      f & h 
+     \end{pmatrix}
+     \begin{pmatrix}
+      1 & 0 \\
+      0 & -1 
+     \end{pmatrix}
+     \begin{pmatrix}
+      e & f \\
+      g & h 
+     \end{pmatrix}
+     =
+     \begin{pmatrix}
+      1 & 0 \\
+      0 & 1 
+     \end{pmatrix}
+    } 
+    \eq{
+     \left.\begin{aligned}
+            e^2-g^2&=1  \\
+            h^2-f^2&=1  \\
+              ef-hg&=0   
+           \end{aligned}
+     \right\}
+     \Rightarrow
+     \Lambda=\begin{pmatrix}
+              \cosh \eta & \sinh \eta & 0 & 0 \\
+              \sinh \eta & \cosh \eta  & 0 & 0 \\
+               0 & 0 & 1 & 0 \\
+               0 & 0 & 0 & 1 
+             \end{pmatrix}
+    }
+    Az $\eta$ fizikai jelentése a helyvektor transzformációjából: legyen $\minv{x}$ a vesszős rendszer origójának helye. Ekkor $\bar{\minv{x}}^1=0=\sinh\eta\; \minv{x}^0+\cosh\eta \;\minv{x}^1 = \sinh\eta\; ct+\cosh\eta \;x $, ahonnan $x=-c\tanh\eta\;t$, vagyis $\tanh{\eta}=-\frac{v}{c}$. Ebből a transzformáció mátrixa:
+    \eq{
+    \Lambda=
+     \begin{pmatrix}
+      \frac{1}{\sqrt{1-\frac{v^2}{c^2}}} & \frac{-\frac{v}{c}}{\sqrt{1-\frac{v^2}{c^2}}} & 0 & 0\\
+      \frac{-\frac{v}{c}}{\sqrt{1-\frac{v^2}{c^2}}} & \frac{1}{\sqrt{1-\frac{v^2}{c^2}}} & 0 & 0 \\
+      0 & 0 & 1 & 0 \\
+      0 & 0 & 0 & 1
+     \end{pmatrix}
+    }
+    
+    Ennek a transzformációnak a paramétere a mozgó koordináta-rendszer sebességétől függ: ezek a boostok. Mindhárom térbeli irányba lehetséges egy ilyen transzformáció: a maradék 3 paraméter a három $\eta$ (rapiditás). 
+    
+    A négyesvektorok transzformációja a boostok hatására:
+    \begin{description}
+     \item[Helyvektor:] $\minv{x}=(ct,x,y,z)$
+      \al{
+       &\bar{t}=\frac{t-\frac{vx}{c^2}}{\sqrt{1-\frac{v^2}{c^2}}}&
+       &\bar{x}=\frac{x-vt}{\sqrt{1-\frac{v^2}{c^2}}} &
+       &\bar{y}=y&
+       &\bar{z}=z&
+      } 
+     \item[Áramsűrűség:] $\minv{J}=(c\rho,\vect{J})=(c\rho,J_x,J_y,J_z)$
+      \al{
+       &\bar{\rho}=\frac{\rho-\frac{vJ_x}{c^2}}{\sqrt{1-\frac{v^2}{c^2}}}&
+       &\bar{J}_x=\frac{J_x-vt}{\sqrt{1-\frac{v^2}{c^2}}} &
+       &\bar{J}_y=J_y&
+       &\bar{J}_z=J_z&
+      }
+     \item[Négyespotenciál:] $\minv{A}=\left(\frac{1}{c}\phi,\vect{A}\right)=\left(\frac{1}{c}\phi,A_x,A_y,A_z\right)$
+      \al{
+       &\bar{\phi}=\frac{\phi-vA_x}{\sqrt{1-\frac{v^2}{c^2}}}&
+       &\bar{A}_x= \frac{A_x-\frac{v\phi}{c^2}}{\sqrt{1-\frac{v^2}{c^2}}}&
+       &\bar{A}_y=A_y&
+       &\bar{A}_z=A_z&
+      }
+    \end{description}
+    A térerősség tenzor transzformációja is kiszámolható: $\bar{F}^{\mu\nu}=\Lambda^\mu_{\phantom{\mu}\mu'}\Lambda^\nu_{\phantom{\nu}\nu'} F^{\mu'\nu'}$, a legegyszerűbb elemenként ($F$-ben nincs diagonális, $\Lambda$-ban sok elem nulla\dots). Eredmény:
+    \al{
+     &\bar{E}_x=E_x&
+     &\bar{E}_y=\frac{E_y-vB_z}{\sqrt{1-\frac{v^2}{c^2}}}&
+     &\bar{E}_z=\frac{E_z+vB_y}{\sqrt{1-\frac{v^2}{c^2}}}&
+     \\
+     &\bar{B}_x=B_x&
+     &\bar{B}_y=\frac{B_y+\frac{vE_z}{c^2}}{\sqrt{1-\frac{v^2}{c^2}}}&
+     &\bar{B}_z=\frac{B_z-\frac{vE_y}{c^2}}{\sqrt{1-\frac{v^2}{c^2}}}&
+    }
+   
+   \paragraph{Infinitezimális Lorentz-transzformációk}
+    
+    Keressük a Lorentz-transzformáció generátorát, azaz egy olyan $\ep^\mu_{\phantom{\mu}\nu}$ mátrixot, mellyel:
+    \al{
+     &\delta\Lambda^\mu_{\phantom{\mu}\nu}=\ep^\mu_{\phantom{\mu}\nu}
+     &\Rightarrow
+     &&\Lambda^\mu_{\phantom{\mu}\nu}=e^{\ep^\mu_{\phantom{\mu}\nu}}.
+    } 
+    Ezt az alakot behelyettesítve a Lorentz-transzformációra megadott egyenletbe:
+    \al{
+     \Lambda^{-1}&=g\Lambda^\text{T}g\\
+     e^{-\ep}&=g e^{\ep^\text{T}}g=e^{g\ep^\text{T}g}\\
+     \Downarrow\\
+     -\ep&=g\ep^\text{T}g,
+    }
+    ahol felhasználtuk, hogy $gg=1$. Az egyenlet alapján $\ep$ elemeiről a következőket tudjuk: $\ep^\mu_{\phantom{\mu}\mu}=0$, $\ep^0_{\phantom{0}j}=\ep^j_{\phantom{j}0}$, ha $j=1,2,3$ és $\ep^j_{\phantom{j}k}=-\ep^k_{\phantom{k}j}$, ha $j,k=1,2,3$. Egyszerűen látszik az is, hogy $\ep^{\mu\nu}=-\ep^{\nu\mu}$ és $\ep_{\mu\nu}=-\ep_{\nu\mu}$. Ez összesen 6 paraméter az előző megfontolásoknak megfelelően.
+    
+   
+   
+  \subsection{Speciális relativitáselmélet}
+   
+   Einstein: ha egy tömegpont kölcsönhat az elektromágneses térrel, akkor a tömegpont mozgását leíró fizikai törvényeknél is a Lorentz-transzformációnak kell érvényesnek lenni a Galilei-transzformációval szemben. Einstein fizikai elvekből vezeti le a Lorentz-transzformációt:
+   \begin{enumerate}
+    \item A vákuumbeli fénysebesség minden inerciarendszerben ugyanakkora: $c$.
+    \item Minden inerciarendszer egymással ekvivalens, vagyis a fizikai törvények ugyanolyan alakúak.
+   \end{enumerate}
+   
+   A fenti két posztulátumot feltételezve, illetve a transzformációt lineárisnak keresve megkapjuk a Lorentz-transzformációt. A transzformáció nem hagyja invariánsan az időt sem: érdemes itt is bevezetni a négyes vektorokat és a négydimenziós Minkowski-féle téridőt.
+   
+  \subsection{A mechanika kovariáns formalizmusa}
+   
+   A helyvektorok az $\minv{x}=(ct,\vect{r})$ alakúak. A tömegpont mozgásának leírásához szükséges a pálya ($\gamma(t)$) általánosítása. Ehhez $s$ egy paraméter: $\gamma^\mu(s)=(ct(s),\vect{r}(s))$. A pálya ívhossza, mivel skalárszorzatot tartalmaz, így invariáns. Paraméterezzük a mozgást az idővel: $\minv{\gamma}^\mu(t)=(ct,\vect{r}(t))$. Ennek segítségével definiálhatunk egy újabb invariánst, a sajátidőt:
+   \al{
+    &c\tau=\intl{t_1}{t_2}\dd t\;\sqrt{\frac{\dd\gamma^\mu}{\dd t}\frac{\dd\gamma_\mu}{\dd t}}
+     =\intl{t_1}{t_2}\dd t\;\sqrt{(c,\dot{\vect{r}})\cdot(c,\dot{\vect{r}})}
+     =\intl{t_1}{t_2}\dd t\;\sqrt{c^2-v^2}&
+    &\Rightarrow&
+    &\boxed{\dd\tau=\dd t\sqrt{1-\frac{v^2}{c^2}}}&
+   }
+   
+   A négyessebesség a kontravariáns koordináta sajátidő szerinti deriváltja:
+   \eq{
+    \minv{u}^\mu=\der{\minv{x}^\mu}{\tau}=\left(\frac{c}{\sqrt{1-\frac{v^2}{c^2}}},\frac{\vect{v}}{\sqrt{1-\frac{v^2}{c^2}}}\right).
+   }
+   Ez is kontravariáns vektor, így ennek is a hossznégyzete megmarad, speciálisan $\minv{u}^\mu\minv{u}_\mu=c^2$. 
+   
+   A négyessebességet egy invariáns skalárral megszorozva is kontravariáns vektort kapunk. Legyen ez a skalár a nyugalmi tömeg ($m_0$), vagyis az együttmozgó koordináta-rendszerben mért tömeg, így a négyesimpulzust kapjuk:
+   \eq{
+    \minv{p}^\mu=m_0\minv{u}^\mu=\left(\frac{m_0c}{\sqrt{1-\frac{v^2}{c^2}}},\frac{m_0\vect{v}}{\sqrt{1-\frac{v^2}{c^2}}}\right),
+   }
+   aminek hossznégyzete: 
+   \eqn{\minv{p}^\mu\minv{p}_\mu=m_0^2c^2.\label{eq:02-kinimphossz}}
+   
+   A négyesimpulzus 0. komponensét fejtsük ki $v\ll c$ határesetben:
+   \eq{
+    \frac{m_0c}{\sqrt{1-\frac{v^2}{c^2}}}\approx \frac{1}{c}\left(m_0c^2+\frac 12m_0 v^2+\dots\right).
+   }
+   Ennek az első tagja egy konstans, vagyis határesetben a zárójelben szereplő összeg megfelel a klasszikus mozgási energiának. Ezentúl rögzítjük az energia nullpontját, ez legyen $m_0c^2$. A teljes energia: $E=\frac{m_0c^2}{\sqrt{1-\frac{v^2}{c^2}}}=mc^2$, mely a klasszikus határesetet úgy adja vissza, ha $E=m_0c^2+E_\text{kin}$, azaz $E_\text{kin}=E-m_0c^2$. Bevezettük a mozgási tömeget:
+   \eq{
+    m:=\frac{m_0}{\sqrt{1-\frac{v^2}{c^2}}},
+   }
+   mellyel a négyesimpulzus:
+   \eq{
+    \minv{p}^\mu=(mc,m\vect{v})=\left(\frac{E}{c},\vect{p}\right).
+   }
+   Az invariáns hossznégyzetre vonatkozó összefüggés így kifejthető:
+   \al{
+    &\minv{p}^\mu\minv{p}_\mu=m_0^2c^2=\frac{E^2}{c^2}-\vect{p}^2&
+    &\Leftrightarrow&
+    &\boxed{E^2=c^2\vect{p}^2+m_0^2c^4}.&
+   }
+   
+   Készítsük el a négyesimpulzus sajátidő szerinti deriváltját, a négyeserőt:
+   \eq{
+    \minv{K}^\mu=\der{\minv{p}^\mu}{\tau}=\left(\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\frac{1}{c}\der{E}{t},\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\der{\vect{p}}{t}\right).
+   }
+   Vizsgáljuk meg ennek tagjait. A négyesimpulzus hossza skalár, így időtől független: $0=\der{\minv{p}^2}{t}=2\minv{p}^0\der{\minv{p}^0}{t}-\suml{i=1}{3}2\minv{p}^i\der{\minv{p}^i}{t}$ $\Rightarrow$ $cm\der{(cm)}{t}=m\vect{v}\der{(m\vect{v})}{t}$ $\Rightarrow$ $\der{E}{t}=\der{(mc^2)}{t}=\vect{v}\der{\vect{p}}{t}$. {\color{red}
+%    A $\vect{v}\ll c$ határesetnek itt is vissza kell adnia a klasszikus esetet, így 
+   A hármasimpulzus időbeli változása a Newton-egyenlet megfelelően kell történni,így}
+   \eqn{
+    \der{E}{t}=\der{}{t}(mc^2)=\vect{v}\vect{F}\label{eq:02-relmunkatetel}
+   }
+   összefüggést adja, vagyis a teljes energia megváltozása az $\vect{F}$ erő által végzett munka. A négyeserő második komponensében is felhasználjuk a Newton-egyenletet, így:
+   \eq{
+    \minv{K}^\mu=\left(\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\frac{\vect{v}\vect{F}}{c},\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\vect{F}\right).
+   }
+   
+   Így tehát a Newton-egyenlet relativisztikus általánosítása:
+   \eqn{
+    \boxed{\minv{K}^\mu=\der{\minv{p}^\mu}{\tau}}.\label{eq:02-relNewton}
+   }
+   
+   Ha az erők potenciálosak, akkor \eqaref{eq:02-relmunkatetel} egyenlet alapján a teljes energia átírható, az új megmaradó mennyiség a 
+   \eqn{
+    E_\text{tot}=E+U=mc^2+U=m_0c^2+E_\text{kin}+U.
+   }
+  
+  \subsection{Töltött relativisztikus részecske Lagrange- és Hamilton-függvénye}\label{ss:02-relqLagrangeHamilton}
+   
+   Egy olyan Lagrange-függvényt keresünk, amelyből a megfelelő Euler--Lagrange-egyenletek előállítják a a külső térbe helyezett töltésre vonatkozó mozgásegyenleteket. Először vizsgáljuk a szabad részecske esetét. 
+   
+   A hatás:
+   \eq{
+    S=\intl{t_1}{t_2}\dd t\; L = S=\intl{\tau_1}{\tau_2}\dd \tau\;\frac{1}{\sqrt{1-\frac{v^2}{c^2}}} L. 
+   }
+   A hatásnak Lorentz-invariánsnak kell lennie, hiszen annak ugyanakkorának kell lennie minden inerciarendszerben. Mivel a sajátidő invariáns, ezért az integrandusnak is annak kell lenni minden sajátidő-pillanatban. A szabad Lagrange-függvénye csak a tömegtől és a részecske négyessebességétől függhet, és négyessebesség Lorentz-invariáns alakja: $\minv{u}^\mu\minv{u}_\mu=c^2$, {\color{red} ezért egy kézenfekvő megoldás} az $L=\alpha\sqrt{1-\frac{v^2}{c^2}}$ választás. Az $\alpha$ illesztése a klasszikus határesethez:
+   \al{
+    &L=\alpha\left(1-\frac{v^2}{2c^2}+\dots\right)\overset{!}{=}\text{const}+\frac 12 m_0v^2&
+    &\Rightarrow&
+    &\alpha=-m_0c^2,&
+   }
+   így
+   \eq{
+    L=-m_0c^2\sqrt{1-\frac{v^2}{c^2}}.
+   }
+   
+   Ha van kölcsönhatás, akkor azt a Lagrange-függvény kiegészül egy additív taggal ($L_\text{int}$) tudjuk figyelembe venni. A klasszikus határesetben ($v\to 0$) a potenciális energia $U=q\phi$. Mivel $\phi$ az $\minv{A}^\mu$-nek egy komponense, és szükséges a Lorentz-invariancia itt is, ezért feltehetjük, hogy a négyespotenciál egy másik négyesvektorral vett skaláris szorzata szerepel a kölcsönhatásban. Ez a másik vektor a négyessebesség és -koordináta lehet. A transzlációinvariancia a másodikat kizárja, így szükségképpen:
+   \eq{
+    L_\text{int}=-U=-q\minv{u}^\mu\minv{A}_\mu\sqrt{1-\frac{v^2}{c^2}}=-q\phi+q\vect{A}\vect{v},
+   }
+   vagyis az elektromos térben mozgó részecske Lagrange-függvénye:
+   \eqn{
+    \boxed{L=\sqrt{1-\frac{v^2}{c^2}}\left(-m_0 c^2-q\minv{u}^\mu \minv{A}_\mu\right)=-m_0c^2\sqrt{1-\frac{v^2}{c^2}}-qU+q\vect{A}\vect{v}}.\label{eq:02-relLagrange}
+   }
+   
+   A kanonikus impulzus:
+   \eqn{
+    \vect{p}=\pder{L}{\vect{v}}=\frac{m_0\vect{v}}{\sqrt{1-\frac{v^2}{c^2}}}+q\vect{A}=m\vect{v}+q\vect{A}=\vect{k}+q\vect{A},\label{eq:02-kinimpdef}
+   }
+   ahol $\vect{k}=m\vect{v}$ a kinetikus impulzus (áttértünk innentől erre a jelölésre), illetve a Hamilton-függvény:
+   \eq{
+    H=\vect{p}\vect{v}-L=m\vect{v}^2+q\vect{A}\vect{v}+m(c^2-\vect{v}^2)+qU-q\vect{A}\vect{v}=mc^2+q\phi.
+   }
+   
+   Elkészíthetjük az elektromágneses térben mozgó relativisztikus részecske Hamilton-Jacobi egyenletét is. Ehhez $H$-t átalakítjuk:
+   \eq{
+   H=E+q\phi=\sqrt{c^2\vect{k}^2+m_0^2c^4}+q\phi
+    =c\sqrt{\left(\vect{p}-q\vect{A}\right)^2+m_0^2c^2}+q\phi.
+   }
+   A kanonikus transzformáció szerint pedig $\vect{p}=\pder{S}{\vect{r}}$ és $H=-\pder{S}{t}$, melyekkel:
+   \eqn{
+    \boxed{\left(\pder{S}{t}+q\phi\right)^2-c^2\left(\pder{S}{\vect{r}}-q\vect{A}\right)^2=m_0^2c^4}.
+   }
+   
+ \section{Kvantummechanika}\label{ss:02-kvantum}
+   
+  \subsection{A Klein--Gordon-egyenlet}
+   
+   A kommutációs relációkat meg kell tartania a relativisztikus általánosításnak is. Fontos, hogy az impulzus operátora a kanonikus impulzushoz tartozik, így a $[\op{\minv{p}}^\mu,\op{\minv{x}}^\nu]=\frac{\hbar}{i}\delta^{\mu\nu}$. A $\minv{p}^\mu$ operátort úgy választjuk meg, hogy teljesüljön a fenti reláció:
+   \al{
+   &\op{\minv{x}}^\mu
+      =\minv{x}^\mu\cdot
+      =\left(ct,\rv\right)\cdot \\
+   &\op{\minv{p}}^\mu
+      =i\hbar\partial^\mu 
+      =\left(-\frac{\hbar}{i}\frac 1c\partial_t,\frac{\hbar}{i}\vects{\nabla}\right)
+   & \Leftrightarrow&
+   &\op{\minv{p}}_\mu=i\hbar\partial_\mu=\left(-\frac{\hbar}{i}\frac 1c\partial_t,-\frac{\hbar}{i}\vects{\nabla}\right).
+   }
+   
+   A kinetikus impulzus operátora \eqaref{eq:02-kinimpdef} egyenletnek megfelelően: 
+   \eqn{
+    \op{\minv{k}}_\mu=\op{\minv{p}}_\mu-q\op{\minv{A}}_\mu
+    =\left(-\frac{\hbar}{i}\frac{1}{c}\partial_t-\frac qc\phi,-\frac{\hbar}{i}\vects{\nabla}+q\vect{A}\right).\label{eq:02-kinimpopdef}
+   }
+   
+   \Eqaref{eq:02-kinimphossz} egyenlet alapján (figyelem, az összefüggés fent is a kinetikus impulzusra volt igaz, ott nem volt még $\vect{A}$!):
+   \al{
+    &\ominv{k}^\mu\ominv{k}_\mu=m_0^2c^2&
+    &\Rightarrow&
+    &\left(-\frac{\hbar}{i}\frac{1}{c}\partial_t-\frac qc\phi\right)^2-\left(-\frac{\hbar}{i}\vects{\nabla}+q\vect{A}\right)^2=m_0^2c^2,&
+   }
+   Ez pedig mivel azonosság, formálisan hathat egy $\psi(t,\vect{r})$ hullámfüggvényre is:
+   \eqn{
+    \boxed{\left[
+    \left(\frac{\hbar}{i}\vects{\nabla}-q\vect{A}\right)^2 - \frac{1}{c^2}\left(i\hbar\partial_t-q\phi\right)^2
+    \right ]\psi(t,\vect{r})
+    =-m_0^2c^2\psi(t,\vect{r})}.\label{eq:02-kleingordon}
+   }
+   
+   Ennek a nulla terekhez tartozó esete egy egyszerű hullámegyenlet: 
+   \al{
+    &\left(\Delta -\frac{1}{c^2}\partial_t^2\right)\psi(t,\vect{r})=\frac{m_0^2c^2}{\hbar^2}\psi(t,\vect{r})
+    &-\partial^\mu\partial_\mu\psi(t,\vect{r})=\frac{m_0^2c^2}{\hbar^2}\psi(t,\vect{r}),
+   }
+   ami szembeötlően Lorentz-invariáns. 
+   
+   A Klein--Gordon-egyenlet azonban hibás eredményt a H-atom finomszerkezetére, és a hullámfüggvény mint valószínűségi amplitúdó sem értelmezhető, illetve a spin létére sem ad magyarázatot. A probléma a kétszeres időderiválás, Dirac: keressünk lineáris, Lorentz-invariáns egyenletet.
+   
+  \subsection{Dirac-egyenlet}
+   
+   Keressük a szabad részecske mozgásegyenletét az alábbi feltételek mellett:
+   \begin{enumerate}
+    \item Legyen a deriválásban lineáris az egyenlet.
+    \item Teljesüljön az energia-impulzus közötti kapcsolat.
+   \end{enumerate}
+   Ezeknek megfelel az, ha az operátort az alábbi alakban keressük:
+    \eq{
+     \big(\op{\minv{p}}^\mu\op{\minv{p}}_\mu-m_0^2c^2\big)=
+     \left(\op{\gamma}^\mu\op{\minv{p}}_\mu+m_0c\right)
+     \left(\op{\gamma}^\nu\op{\minv{p}}_\nu-m_0c\right)
+    }
+    Itt megjelenik egy új szabadsági fokokat tartalmazó Hilbert-tér, ahol $\op{\gamma}^\mu$ hat. A fenti egyenlőség teljesüléséhez szükséges, hogy a $\op{\gamma}^\mu$ mátrixokra igaz legyen az alábbi összefüggés:
+   \al{
+    \op{\gamma}^\mu\op{\gamma}^\nu\op{\minv{p}}_\mu\op{\minv{p}}_\nu
+     &=\frac 12 \left(
+        \op{\gamma}^\mu\op{\gamma}^\nu\op{\minv{p}}_\mu\op{\minv{p}}_\nu
+       +\op{\gamma}^\nu\op{\gamma}^\mu\op{\minv{p}}_\nu\op{\minv{p}}_\mu
+      \right)
+     =\frac 12 \left(
+        \op{\gamma}^\mu\op{\gamma}^\nu\op{\minv{p}}_\mu\op{\minv{p}}_\nu
+       +\op{\gamma}^\nu\op{\gamma}^\mu\op{\minv{p}}_\mu\op{\minv{p}}_\nu
+      \right)\\
+     &=\frac 12 \left(\op{\gamma}^\mu\op{\gamma}^\nu+\op{\gamma}^\nu\op{\gamma}^\mu\right)\op{\minv{p}}_\mu\op{\minv{p}}_\nu
+     \overset{!}{=}
+     \op{\minv{p}}^\mu\op{\minv{p}}_\mu
+     =\op{\minv{p}}_{\mu}\op{\minv{p}}_\nu \minv{g}^{\mu\nu}
+   }
+   vagyis
+   \al{
+     &\op{\gamma}^\mu\op{\gamma}^\nu+\op{\gamma}^\nu\op{\gamma}^\mu=2\minv{g}^{\mu\nu}\op{I}
+     &\Rightarrow
+     &&\boxed{\big\{\op{\gamma}^\mu,\op{\gamma}^\nu\big\}=2\minv{g}^{\mu\nu}\op{I}}.
+   }
+   Ebből láthatjuk, hogy $(\op{\gamma}^0)^2=\op I$, $(\op{\gamma}^k)^2=-\op I$. Innen az következik, hogy $\op{\gamma}^0$ sajátértékei a $\pm1$, illetve $\op{\gamma}^j$ sajátértékei $\pm i$. Ezeket tehát választhatom rendre unitér és antiunitér operátoroknak. 
+   
+   Keressük ezeknek az operátoroknak egy véges dimenziós reprezentációját. A $\op{\gamma}^\mu$-t véges dimenziós mátrixokként szeretnénk felírni, ekkor az ehhez tartozó Hilbert-tér is véges dimenziós, vagyis a hullámfüggvény a négyzetesen integrálható függvények és egy véges dimenziós Hilbert-tér direkt szorzatának az eleme.
+   
+   \paragraph{Dirac-mátrixok}
+    
+    $\mu\ne\nu$-re $\op\gamma^\mu\op\gamma^\nu=-\op\gamma^\nu\op\gamma^\mu$, így
+    \al{
+     \det{\op\gamma^\mu\op\gamma^\nu}
+     &=\det{\big(-\op\gamma^\nu\op\gamma^\mu\big)}
+      =(-1)^d\det{\op\gamma^\nu\op\gamma^\mu}
+      =(-1)^d\det{\op\gamma^\nu}\det{\op\gamma^\mu}
+      =(-1)^d\det{\op\gamma^\mu}\det{\op\gamma^\nu}\\
+     &=(-1)^d\det{\op\gamma^\mu\op\gamma^\nu}.
+    } 
+    A mátrixok determinánsára nem szeretnénk kikötni, hogy nulla legyen, így $d=2k$ lehet csak. 
+    
+    Két dimenzióban csak három antikommutáló mátrix létezik (Pauli-mátrixok), így legalább négy dimenziósnak kell lennie az ábrázolásnak. Négy dimenzióban van is ilyen, a Dirac-féle ábrázolás:
+    \al{
+     &\gamma^0=\begin{pmatrix}
+                1 & &  &  \\
+                & 1 &  &  \\
+                & & -1 & \\
+                & & & -1
+               \end{pmatrix}
+     &\gamma^1=\begin{pmatrix}
+                & & & 1 \\
+                & & 1 & \\
+                & -1 & & \\
+                -1 & & & 
+               \end{pmatrix}
+     & \\
+     &\gamma^2=\begin{pmatrix}
+                & & & -i \\
+                & & i & \\
+                & i & & \\
+                -i & & & 
+               \end{pmatrix}
+     &\gamma^3=\begin{pmatrix}
+                & & 1 &  \\
+                & & & -1 \\
+                -1 & & & \\
+                 & 1 & & 
+               \end{pmatrix},
+     &
+    }
+   Ami a Pauli-mátrixokkal, $\sigma_1=\bigl(\begin{smallmatrix}
+                                        & 1 \\
+                                       1&  \\
+                                      \end{smallmatrix}\bigr)$,
+                            $\sigma_2=\bigl(\begin{smallmatrix}
+                                        & -i \\
+                                       i & \\
+                                      \end{smallmatrix}\bigr)$ és 
+                            $\sigma_3=\bigl(\begin{smallmatrix}
+                                       1 &  \\
+                                        & -1\\
+                                      \end{smallmatrix}\bigr)$összefoglalható: 
+   \al{
+    &\gamma^0=\begin{pmatrix}
+               I_2 & \\
+                & -I_2
+              \end{pmatrix}.
+    &\gamma^j=\begin{pmatrix}
+               & \sigma_j \\
+              -\sigma_j &  \\
+             \end{pmatrix}\quad j=1,2,3
+   }
+   Összefoglalva tehát a Dirac-egyenlet szabad részecskék esetében:
+   \al{
+    (\op{\gamma}^\mu\op{\minv{p}}_\mu-m_0c\op{I})\ket{\Psi}=0.
+   }
+   
+   Elektromágneses terek esetében a $\op{\minv{p}}_\mu$ helyett a kinetikus impulzussal kel felírni az egyenletet:
+   \eqn{
+   (\op{\gamma}^\mu\op{\minv{k}}_\mu-m_0c\op{I})\ket{\Psi}=0.\label{eq:02-DiracEM}
+   }
+   
+   Ennek kifejtéséhez használjuk a $\op{\gamma}^\mu$ operátorok fenti reprezentációját és a másik Hilbert-téren pedig koordináta-reprezentációt. 
+   
+   Az operátort kifejtve:
+   \eq{
+   \Big[\gamma^\mu\left(-\frac{1}{c}\frac{\hbar}{i}\partial_t-\frac qc\phi,-\vect{p}+q\vect{A}\right)-m_0c\op{I}\Big]\Psi(\minv{x})=0
+   }
+   majd mindkét oldalt $c\gamma^0$-lal bővítve:
+   \al{
+     \left[\left(i\hbar\partial_t-q\phi\right)+c\gamma^0\vects{\gamma}\left(-\vect{p}+q\vect{A}\right)-m_0c^2\gamma^0\right]\Psi(\minv{x})=0,
+   }
+   
+   Bevezetjük az $\op\alpha_k$ és a $\beta$ mátrixokat:
+   \al{
+    &\vects{\op\alpha}=\gamma_0\vects{\gamma}=\begin{pmatrix}
+                                             0 & \vects{\sigma} \\
+                                             \vects{\sigma} & 0
+                                            \end{pmatrix}
+    &\beta=\begin{pmatrix}
+            I_2 & 0 \\
+            0 & -I_2
+           \end{pmatrix},
+   }
+   melyekkel az időfüggő Dirac-egyenlet elektromágneses terek jelenlétében:
+   \eqn{
+    \boxed{i\hbar\partial_t\Psi(\minv{x})=\big[c\vects{\op\alpha}\left(\vect{p}-q\vect{A}\right)+q\phi+m_0c^2\op\beta\big]\Psi(\minv{x})},\label{eq:02-Dirac}
+   }
+   melyről a Dirac--Hamilton-operátor leolvasható:
+   \eqn{
+    \boxed{
+    H=c\vects{\op{\alpha}}\left(\op{\vect{p}}-q\vect{A}\right)+q\phi+m_0c^2\op{\beta}}.\label{eq:02-DE}
+   }
+   
+  \subsection{A Dirac-egyenlet Lorentz-invarianciája}
+    
+   A Dirac-egyenletnek invariánsnak kell lennie a Lorentz-transzformációra. Azt azonban nem tudjuk még, hogy a hullámfüggvény hogyan változik, alkalmazzuk a Lorentz-transzformációt. Meg kell tehát keresnünk ezt a 4$\times$4-es Hilbert-téren lévő megfelelő transzformációt, hogy a Dirac-egyenlet Lorentz-invariáns legyen. 
+   
+   A Dirac egyenlet:
+   \eq{
+    \left[\op\gamma^\mu\big(i\hbar\partial_\mu-q\minv{A}_\mu(\minv{x})\big)-m_0c\op{I}\right]\Psi(\minv{x})=0,
+   }
+   ahol $\Psi(\minv{x})$ transzformációja általánosan \eqaref{eq:02-ltraf} egyenletnek megfelelően:
+   \al{
+    &\bar\Psi (\bar{\minv{x}}) = \op{T}\Psi(\minv{x})
+    &\bar A_\mu (\bar{\minv{x}}) = \Lambda_{\mu}^{\phantom{\mu}\nu}A_\nu(\minv{x}),
+   } 
+   ahol a $\op{T}$ mátrixokat keressük. Ezek a Lorentz-transzformációk $4\times4$-es ábrázolásai. Transzformáljuk a teljes egyenletet, ekkor
+   \al{
+    \left[\op\gamma^\mu\Lambda_{\mu}^{\phantom{\mu}\nu}\big(i\hbar\partial_\nu-q\minv{A}_\nu(\minv{x})\big)-m_0c\op{I}\right]\op{T}\Psi(\minv{x})=0.
+   }
+   A transzformálás előtti egyenletet jobbról bővítve $\op{T}$-vel majd a transzformálás utáni egyenletből azt kivonva az alábbi összefüggést kapjuk:
+   \al{
+    \big(\op{T}\op\gamma^\mu-\op\gamma^\nu\Lambda_{\nu}^{\phantom{\nu}\mu}\op{T}\big)\big(i\hbar\partial_\mu-q\minv{A}_\mu(\minv{x})\big)\Psi(\minv{x})=0.
+   } 
+   A kifejezés eltűnéséhez általános esetben szükséges, hogy $\op{T}\op\gamma^\mu-\op\gamma^\nu\Lambda_{\nu}^{\phantom{\nu}\mu}\op{T}=0$, vagyis 
+   \aln{
+    &\op{T}\op\gamma^\mu\op{T}^{-1}=\Lambda_{\nu}^{\phantom{\nu}\mu}\op\gamma^\nu 
+    &\Leftrightarrow
+    &&\op{T}^{-1}\op\gamma^\mu\op{T}=\Lambda^{\mu}_{\phantom{\mu}\nu}\op\gamma^\nu.\label{eq:02-Tlt}
+   }
+   
+   Állítás: 
+   \al{
+    \boxed{\op{T}=e^{\frac{i}{\hbar}\ep^{\mu\nu}\op{S}_{\mu\nu}}
+    \qquad\qquad \minv{S}_{\mu\nu}=\frac{\hbar}{8i}\big[\op\gamma_\mu,\op\gamma_\nu\big]},
+   }
+   ahol $\ep^{\mu\nu}$ a Lorentz-transzformáció generátora.
+   Bizonyítás: először átírjuk az exponenst:
+   \al{
+    \op{\tau}
+     &=\frac{i}{\hbar}\ep^{\mu\nu}\op{S}_{\mu\nu}
+      =\frac{i}{\hbar}\ep^{\mu\nu}\frac{\hbar}{8i}\big[\op\gamma_\mu,\op\gamma_\nu\big]
+      =\frac{1}{8}\ep^{\mu\nu}\big(\op\gamma_\mu\op\gamma_\nu-\op\gamma_\nu\op\gamma_\mu\big)
+      =\frac{1}{8}\ep^{\mu\nu}\Big(2\op\gamma_\mu\op\gamma_\nu-\big\{\op\gamma_\mu,\op\gamma_\nu\big\}\Big)\\
+     &=\frac{1}{4}\ep^{\mu\nu}\op\gamma_\mu\op\gamma_\nu
+      -\frac{1}{8}\ep^{\mu\nu}g_{\mu\nu}
+      =\frac{1}{4}\ep^{\mu\nu}\op\gamma_\mu\op\gamma_\nu,
+   }
+   hiszen $\ep^{\mu\nu}$-nek a diagonálisa nulla, míg $g_{\mu\nu}$-nek minden offdiagonális eleme nulla. A megadott $\op{T}$ mátrixot behelyettesítjük \eqaref{eq:02-Tlt} bal oldali egyenletébe. Ennek a bal oldala:
+   \al{
+    \op{T}\op{\gamma}^\mu\op{T}^{-1}
+     &=e^{\op{\tau}}\op{\gamma}^\mu e^{\op{-\tau}}
+      =\op{\gamma}^\mu+\big[\op{\tau},\op{\gamma}^\mu\big]+\frac{1}{2!}\Big[\op{\tau},\big[\op{\tau},\op{\gamma}^\mu\big]\Big]+\frac{1}{3!}\Big[\op{\tau},\Big[\op{\tau},\big[\op{\tau},\op{\gamma}^\mu\big]\Big]\Big]+\dots
+   }
+   A kommutátor:
+   \al{
+    \big[\op{\tau},\op{\gamma}^\mu\big]
+     &=\left[\frac{1}{4}\ep^{\rho\sigma}\op\gamma_\rho\op\gamma_\sigma,\op{\gamma}^\mu\right]
+      =\frac{1}{4}\ep^{\rho\sigma}g^{\mu\nu}\left[\op\gamma_\rho\op\gamma_\sigma,\op{\gamma}_\nu\right]
+      =\frac{1}{4}\ep^{\rho\sigma}g^{\mu\nu}\big(\op\gamma_\rho\op\gamma_\sigma\op{\gamma}_\nu-\op{\gamma}_\nu\op\gamma_\rho\op\gamma_\sigma\big)\\
+     &=\frac{1}{4}\ep^{\rho\sigma}g^{\mu\nu}\big(\op\gamma_\rho\op\gamma_\sigma\op{\gamma}_\nu+\op\gamma_\rho\op{\gamma}_\nu\op\gamma_\sigma-\op\gamma_\rho\op{\gamma}_\nu\op\gamma_\sigma-\op{\gamma}_\nu\op\gamma_\rho\op\gamma_\sigma\big)
+      =\frac{1}{4}\ep^{\rho\sigma}g^{\mu\nu}\Big(\op\gamma_\rho\{\op\gamma_\sigma,\op{\gamma}_\nu\}-\{\op\gamma_\rho,\op{\gamma}_\nu\}\op\gamma_\sigma\Big)\\
+     &=\frac{1}{2}\ep^{\rho\sigma}g^{\mu\nu}\Big(\op\gamma_\rho g_{\sigma\nu}-g_{\rho\nu}\op\gamma_\sigma\Big)
+      =\frac{1}{2}\ep^{\rho\sigma}\Big(\op\gamma_\rho \delta_{\sigma}^\mu-\delta_{\rho}^\mu\op\gamma_\sigma\Big)
+      =\frac{1}{2}\big(\ep^{\rho\mu}-\ep^{\mu\rho}\big)\op\gamma_\rho
+      =\op\gamma^\rho\ep^{\phantom{\rho}\mu}_\rho.
+   }
+   Teljes indukcióval belátható, hogy 
+   \al{
+    \underbrace{\Big[\op{\tau},\dots,\Big[\op{\tau},\big[\op{\tau},\op{\gamma}^\mu\big]\Big]\Big]}_{n\,\text{db.}}=\op\gamma^\rho(\ep^{\phantom{\rho}\mu}_\rho)^n.
+   }
+   Az indukciós lépés:
+   \al{
+    \Big[\op{\tau},\underbrace{\Big[\op{\tau},\dots,\Big[\op{\tau},\big[\op{\tau},\op{\gamma}^\mu\big]\Big]\Big]}_{n-1\,\text{db.}}\Big]
+     =\Big[\op{\tau},\op\gamma^\rho(\ep^{\phantom{\rho}\mu}_\rho)^{n-1}\Big]
+     =\Big[\op{\tau},\op\gamma^\rho\Big](\ep^{\phantom{\rho}\mu}_\rho)^{n-1}
+     =\op\gamma^\sigma\ep^{\phantom{\sigma}\rho}_\sigma (\ep^{\phantom{\rho}\mu}_\rho)^{n-1}
+     =\op\gamma^\sigma (\ep^{\phantom{\sigma}\mu}_\sigma)^{n}.
+   }
+   \Eqaref{eq:02-Tlt} bal oldali összefüggésének jobb oldala pedig szintén kifejthető:
+   \al{
+    \Lambda_{\nu}^{\phantom{\nu}\mu}\op\gamma^\nu
+     &=e^{\ep_{\nu}^{\phantom{\nu}\mu}}\op\gamma^\nu
+      =\left(\ep_{\nu}^{\phantom{\nu}\mu}+\frac{1}{2!}(\ep_{\nu}^{\phantom{\nu}\mu})^2+\frac{1}{3!}(\ep_{\nu}^{\phantom{\nu}\mu})^3+\dots\right)\op\gamma^\nu
+     =\op\gamma^\nu\ep_{\nu}^{\phantom{\nu}\mu}+\frac{1}{2!}\op\gamma^\nu(\ep_{\nu}^{\phantom{\nu}\mu})^2+\dots,
+   }
+   ami jól láthatóan megegyezik a bal oldallal, vagyis helyes a $\op{T}$ mátrix alakja.
+   
+   Összefoglalva tehát a Dirac-egyenlet természetesen Lorentz-invariáns, melynek az a következménye, hogy a bispinorok terén a Lorentz-transzformációt a $\op{T}$ operátorok reprezentálják. Belátható, hogy a $\op{T}$ operátorok a Lorentz-csoport egy ábrázolása.
+   
+  \subsection{Spin és teljes impulzusmomentum, mint a térbeli forgatások generátora}{}
+   
+   {\color{red} 
+   
+%    FIGYELEM! Nagyon fontosak a jelölések. Ne feledjük, hogy a Minkowski-vektorok ilyenek: $\minv{S}$, amelyeknek vannak kontra  ($\minv{S}^i$) és kovariáns ($\minv{S}_i=-\minv{S}^i$) komponenseik. Ezen felül vannak az Euklideszi vektorok, amelyeknek ilyenek: $\vect{S}$, és ennek a komponensei: $\vect{S}_i$. A kapcsolat a kettő között: $\minv{S}^i=\vect{S}_i$.
+   
+   Egyetlen dolog lehet megtévesztő: a Minkowski-téren lévő Levi--Civita-szimbólumot és az Euklideszi téren értelmezettet ugyanúgy jelölöm. Értelemszerűen kiderül, hogy melyik hol áll. A definíció kicsit lejjebb.
+   }
+   
+   Tekintsük a térbeli forgatásokat. Először megnézzük, hogy a bispinorok terén mi a transzformáció, majd pedig a hullámfüggvények terén is vizsgáljuk a transzformációt. A teljes téren a transzformáció ezeknek a direkt szorzata lesz. 
+   \al{
+    \bar\Psi(\minv{x})=\op{T}\Psi(\Lambda^{-1}\minv{x}).
+   }
+   
+   A valós forgatásokhoz az $\ep^{\mu\nu}$ tenzor teljesen antiszimmetrikus része tartozik. A három irány körüli forgatások infinitezimális Lorentz-transzformációja:
+   \al{
+    &\op{\vect{J}}_1=
+    \begin{pmatrix}
+     0 & 0 & 0 & 0 \\
+     0 & 0 & 0 & 0 \\
+     0 & 0 & 0 &-1 \\
+     0 & 0 & 1 & 0 
+    \end{pmatrix}
+    &\op{\vect{J}}_2=
+    \begin{pmatrix}
+     0 & 0 & 0 & 0 \\
+     0 & 0 & 0 & 1 \\
+     0 & 0 & 0 & 0 \\
+     0 &-1 & 0 & 0 
+    \end{pmatrix}
+    &&\op{\vect{J}}_3=
+    \begin{pmatrix}
+     0 & 0 & 0 & 0 \\
+     0 & 0 &-1 & 0 \\
+     0 & 1 & 0 & 0 \\
+     0 & 0 & 0 & 0 
+    \end{pmatrix}
+   }
+   \al{
+    (\vect{J}_n)^{\mu\nu}=\begin{cases}
+                      \ep^{\phantom{n}\mu\nu}_n,&\text{ha } \mu,\nu=1,2,3\\
+                      0 & \text{különben}
+                     \end{cases}
+   }
+   Itt $\ep^{123}=1$, és $\ep$ teljesen antiszimmetrikus. Három index lehúzásával ennek az ellentettjét kapjuk: $\ep_{123}=-1$. A legtöbbet használt azonosság: $\ep^{ijk}\ep^{ilm}=\big(\delta^{jl}\delta^{km}-\delta^{jm}\delta^{kl}\big)$.
+   Ennek segítségével az $\op{\tau}$ operátor:
+   \al{
+    \op{\tau}
+     &=\frac{\alpha^n}{4}(\vect{J}_n)^{\mu\nu}\op\gamma_\mu\op\gamma_\nu
+      =\frac{\alpha^n}{4}\ep^{\phantom{n}ij}_n\op\gamma_i\op\gamma_j
+      =-\frac{\alpha^n}{4}\ep^{nij}\op\gamma_i\op\gamma_j
+      =-\frac{\alpha^n}{4}\ep^{nij}
+       \begin{pmatrix}
+          & \sigma_i\\
+         -\sigma_i &
+       \end{pmatrix}
+       \begin{pmatrix}
+         & \sigma_j\\
+         -\sigma_j &
+       \end{pmatrix}
+      \\
+     &=\frac{\alpha^n}{4}\ep^{nij}
+       \begin{pmatrix}
+         \sigma_i\sigma_j&\\
+          &\sigma_i\sigma_j
+       \end{pmatrix}
+      =\frac{i}{2}\alpha^n
+      \begin{pmatrix}
+         \sigma_n&\\
+          &\sigma_n
+       \end{pmatrix}
+      =\frac{i}{2}\alpha^n\Sigma^n
+      =-\frac{i}{2}\alpha^n\Sigma_n.
+   }
+   Innen tehát a spin mint az $\minv{S}$ Minkovski-vektor három térszerű komponense egy-egy $4\times4$-es operátor:
+   \al{
+    &\op{\minv{S}}_n=\frac{\hbar}{2}\Sigma_n=\frac{\hbar i}{4}\ep^{\phantom{n}ij}_n\op{\gamma}_i\op{\gamma}_j
+    &\Leftrightarrow
+    &&\op{\minv{S}}^n=\frac{\hbar i}{4}\ep^{nij}\op{\gamma}_i\op{\gamma}_j.
+   }
+   Készítsük el az $\op{\vects{S}}$ operátorok kommutációs relációit:
+   \al{
+    \big[\op{\minv{S}}^n,\op{\minv{S}}^m]
+     &=\left[
+        \frac{\hbar i}{4}\ep^{nij}\op{\gamma}_i\op{\gamma}_j
+         ,
+        \frac{\hbar i}{4}\ep^{mkl}\op{\gamma}_k\op{\gamma}_l
+       \right]
+      =-\frac{\hbar^2}{16}\ep^{nij}\ep^{mkl}\big[\op{\gamma}_i\op{\gamma}_j,\op{\gamma}_k\op{\gamma}_l\big]\\
+     &=-\frac{\hbar^2}{16}\ep^{nij}\ep^{mkl}
+      \Big(
+       \op{\gamma}_i\big[\op{\gamma}_j,\op{\gamma}_k\op{\gamma}_l\big]
+      +\big[\op{\gamma}_i,\op{\gamma}_k\op{\gamma}_l\big]\op{\gamma}_j
+      \Big)\\
+     &=-\frac{\hbar^2}{8}\ep^{nij}\ep^{mkl}
+      \Big(
+       \op{\gamma}_i\Big(\delta_{jk}\op{\gamma}_l-\delta_{jl}\op{\gamma}_k\Big)
+      +\Big(\delta_{ik}\op{\gamma}_l-\delta_{il}\op{\gamma}_k\Big)\op{\gamma}_j
+      \Big)\\
+     &=\frac{\hbar^2}{8}
+     \Big(
+      \ep^{nij}\ep^{mjl}\op{\gamma}_i\op{\gamma}_l-\ep^{nij}\ep^{mlj}\op{\gamma}_i\op{\gamma}_l
+     +\ep^{nij}\ep^{mil}\op{\gamma}_l\op{\gamma}_j-\ep^{nij}\ep^{mli}\op{\gamma}_l\op{\gamma}_j
+     \Big)\\
+     &=\frac{\hbar^2}{4}
+     \Big(
+      \ep^{nij}\ep^{mjl}\op{\gamma}_i\op{\gamma}_l
+     +\ep^{nij}\ep^{mil}\op{\gamma}_l\op{\gamma}_j
+     \Big)
+      =\frac{\hbar^2}{4}
+     \Big(
+      \big(\delta^{nl}\delta^{im}-\delta^{nm}\delta^{il}\big)\op{\gamma}_i\op{\gamma}_l
+     +\big(\delta^{jl}\delta^{nm}-\delta^{nl}\delta^{jm}\big)\op{\gamma}_l\op{\gamma}_j
+     \Big)\\
+     &=\frac{\hbar^2}{4}
+     \Big(
+      \op{\gamma}_m\op{\gamma}_n-\delta^{nm}\op{\gamma}_l\op{\gamma}_l+\delta^{nm}\op{\gamma}_l\op{\gamma}_l-\op{\gamma}_n\op{\gamma}_m
+     \Big)
+      =\frac{\hbar^2}{4}
+     \Big(
+      \op{\gamma}_m\op{\gamma}_n-\op{\gamma}_n\op{\gamma}_m
+     \Big),
+   }
+   illetve:
+   \al{
+    i\hbar\ep^{nmk}\op{\minv{S}}^k
+     &=-\ep^{nmk}\frac{\hbar^2}{4}\ep^{kij}\op{\gamma}_i\op{\gamma}_j
+      =-\frac{\hbar^2}{4}\big(\delta^{in}\delta^{mj}-\delta^{im}\delta^{jn}\big)\op{\gamma}_i\op{\gamma}_j
+      =\frac{\hbar^2}{4}\big(\op{\gamma}_m\op{\gamma}_n-\op{\gamma}_n\op{\gamma}_m\big),
+   }
+   ahonnan látszik tehát, hogy
+   \al{
+    \boxed{\big[\op{\minv{S}}^n,\op{\minv{S}}^m]=i\hbar\ep^{nmk}\op{\minv{S}}^k.}
+   }
+   Ne felejtsük el, hogy $\ep^{ijk}$ viselkedik úgy, mint a hagyományosan megszokott Levi--Civita-szim\-bó\-lum.
+   
+   Az $\op{\vect{S}}^2$ operátor:
+   \al{
+    \op{\vect{S}}^2
+     &=\op{\minv{S}}^i\op{\minv{S}}^i
+      =-\frac{\hbar^2}{16}\ep^{ijk}\op{\gamma}_j\op{\gamma}_k\ep^{ilm}\op{\gamma}_l\op{\gamma}_m
+      =-\frac{\hbar^2}{16}\big(\delta^{jl}\delta^{km}-\delta^{jm}\delta^{kl}\big)\op{\gamma}_j\op{\gamma}_k\op{\gamma}_l\op{\gamma}_m
+      =-\frac{\hbar^2}{16}\big(\op{\gamma}_i\op{\gamma}_j\op{\gamma}_i\op{\gamma}_j-\op{\gamma}_i\op{\gamma}_j\op{\gamma}_j\op{\gamma}_i\big)\\
+     &=\frac{\hbar^2}{16}\underbrace{\big(\op{\gamma}_i\op{\gamma}_i\op{\gamma}_j\op{\gamma}_j+\op{\gamma}_i\op{\gamma}_i\op{\gamma}_j\op{\gamma}_j\big)}_{i\ne j}
+      =\frac{\hbar^2}{16}\big((-3)\cdot(-2)+(-3)\cdot(-2)\big)\op{I}
+      =\frac{\hbar^2}{4}3\op{I}=\hbar^2 \frac{1}{2}\left(\frac{1}{2}+1\right)\op{I}.
+   }
+   Tehát az elektron feles spinű: $S=\frac{1}{2}$.
+   
+   Eddig csak a spinor térben történő transzformációról beszéltünk. Vizsgáljuk meg azt is, hogy a forgatás hatására a hullámfüggvény térszerű része hogyan transzformálódik: $\Psi(\Lambda^{-1}\minv{x})$. Mivel most csak térbeli forgatásokat nézünk, az idő koordinátát nem transzformáljuk. A térbeli koordináták transzformációja pedig:
+   \al{
+    \Psi\big((\Lambda^{-1})^{\mu}_{\phantom{\mu}\nu} \minv{x}^\nu\big)
+     &=\Psi\big(\big[\delta^i_j-\alpha^n (\ep_n)^{i}_{\phantom{i}j}\big]x^j\big)
+      =\Psi\big(\big[x^i-\alpha^n \ep^{nij}x^j\big)\\
+     &=\Psi(\minv{x})-\alpha^n \ep^{nij}x^j\partial_i\Psi(\minv{x})
+      =\Psi(\minv{x})+\alpha^n \big(\rv\times\vects{\nabla}\big)^n\Psi(\minv{x})
+      =\Psi(\minv{x})+\frac{i}{\hbar}\alpha^n \op{\minv{L}}^n\Psi(\minv{x})\\
+     &=\left(1-\frac{i}{\hbar}\alpha^n \op{\minv{L}}_n\right)\Psi(\minv{x}),
+   }
+   Vagyis:
+   \al{
+    \Psi\big(R(\alpha^i) \minv{x}^\nu\big)=e^{-\frac{i}{\hbar}\alpha^n \op{\minv{L}}_n}.
+   }
+   A teljes transzformáció így
+   \al{
+    \bar\Psi(\minv{x})
+     =e^{-\frac{i}{\hbar}\alpha^n \op{\minv{L}}_n}e^{-\frac{i}{\hbar}\alpha^n \op{\minv{S}}_n}\Psi(\minv{x})
+     =e^{-\frac{i}{\hbar}\alpha^n\big(\op{\minv{L}}_n+\op{\minv{S}}_n\big)}\Psi(\minv{x}).
+   }
+   Ezek alapján a valós térbeli forgatásokat a teljes bispinor és Hilbert-tér keresztszorzaton a 
+   \al{
+    \op{\minv{J}}^n=\op{\minv{L}}^n+\op{\minv{S}}^n,
+   }
+   teljes impulzusmomentum generálja.
+   
+  \subsection{Az impulzusmomentum időfüggése}
+   
+   Az időfüggés Heisenberg-képben:
+   \al{
+    \partial_t\op{\vect{J}}_n=\frac{i}{\hbar}\big[\op{H},\op{\vect{J}}_n\big].
+   }
+   Az időfejlődés a Dirac--Hamilton-operátor szerint történik, ahol most nem tekintünk vektorpotenciált. A kommutátor:
+   \al{
+    \big[\op{H},\op{\vect{S}}_j\big]
+     &=\Big[c\vects{\op{\alpha}}\op{\vect{p}}+q\phi+m_0c^2\op{\beta},\frac{\hbar}{2}\vects{\Sigma}_j\Big]
+      =\Big[c\vects{\op{\alpha}}\op{\vect{p}}+q\phi+m_0c^2\op{\beta},\frac{\hbar}{2}\vects{\Sigma}_j\Big]
+      =\Big[c\vects{\op{\alpha}}\op{\vect{p}},\frac{\hbar}{2}\vects{\Sigma}_j\Big]\\
+     &=\frac{c\hbar}{2}\op{\vect{p}_i}\Big[\op{\vects{\alpha}}_i,\vects{\Sigma}_j\Big]
+      =\frac{c\hbar}{2}\op{\vect{p}_i}
+       \left[
+        \begin{pmatrix}
+         0 & \sigma_i\\
+         \sigma_i & 0
+        \end{pmatrix}
+        ,
+        \begin{pmatrix}
+         \sigma_j&0\\
+         0&\sigma_j
+        \end{pmatrix}
+       \right]\\
+      &=\frac{c\hbar}{2}\op{\vect{p}_i}
+        \begin{pmatrix}
+         0 & \big[\sigma_i,\sigma_j\big]\\
+         \big[\sigma_i,\sigma_j\big] & 0
+        \end{pmatrix}
+       =2ic\hbar\ep_{ijk}\op{\vect{p}_i}
+        \begin{pmatrix}
+         0 & \sigma_k\\
+         \sigma_k & 0
+        \end{pmatrix}
+       =ic\hbar\big(\op{\vects{\alpha}}\times\op{\vect{p}}\big)_j,
+   }
+   \al{
+    \big[\op{H},\op{\vect{L}}_j\big]
+     &=\Big[c\vects{\op{\alpha}}\op{\vect{p}}+q\phi+m_0c^2\op{\beta},\ep_{jkl}\op{\vect{r}}_k\op{\vect{p}}_l\Big]
+      =\Big[c\vects{\op{\alpha}}\op{\vect{p}}+q\phi,\ep_{jkl}\op{\vect{r}}_k\op{\vect{p}}_l\Big]\\
+     &=c\op{\vects{\alpha}}_m\ep_{jkl}\Big[\op{\vect{p}}_m,\op{\vect{r}}_k\op{\vect{p}}_l\Big]
+       +q\ep_{jkl}\Big[\phi,\op{\vect{r}}_k\op{\vect{p}}_l\Big]
+      =c\op{\vects{\alpha}}_m\ep_{jkl}\Big[\op{\vect{p}}_m,\op{\vect{r}}_k\Big]\op{\vect{p}}_l
+       +q\ep_{jkl}\op{\vect{r}}_k\Big[\phi,\op{\vect{p}}_l\Big]\\
+     &=-ic\hbar \op{\vects{\alpha}}_m\ep_{jml}\op{\vect{p}}_l
+       +iq\hbar\ep_{jkl}\op{\vect{r}}_k\vects{\nabla}_l\phi
+      =-ic\hbar\big(\op{\vects{\alpha}}\times\op{\vect{p}}\big)_j
+       +iq\hbar\big(\op{\vect{r}}\times\vects{\nabla}\phi\big)_j.
+   }
+   Vagyis
+   \al{
+    \partial_t\op{\vect{J}}
+     =-q\big(\op{\vect{r}}\times\vects{\nabla}\phi\big)=\op{\vect{r}}\times\vect{F}.
+   }
+   Láthatjuk, hogy centrális erőtérben a teljes impulzusmomentum megmaradó mennyiség.
+   
+   
+  \subsection{A Pauli--Schrödinger-egyenlet származtatása}
+   
+   Induljunk ki \eqaref{eq:02-DiracEM} egyenletből:
+   \al{
+    0
+     &=(\op{\gamma}^\mu\op{\minv{k}}_\mu-m_0c\op{I})\ket{\Psi}
+      =(\op{\gamma}^\nu\op{\minv{k}}_\nu+m_0c\op{I})(\op{\gamma}^\mu\op{\minv{k}}_\mu-m_0c\op{I})\ket{\Psi}\\
+     &=(\op{\gamma}^\nu\op{\gamma}^\mu\op{\minv{k}}_\nu\op{\minv{k}}_\mu-m_0^2c^2\op{I})\ket{\Psi}
+      =\left(\big(\op{\minv{k}}^\mu\op{\minv{k}}_\mu-m_0^2c^2\big)\op{I}+\suml{\mu\ne\nu}{}\op{\gamma}^\nu\op{\gamma}^\mu\op{\minv{k}}_\nu\op{\minv{k}}_\mu\right)\ket{\Psi}.
+   }
+   A második tag:
+   \al{
+    \suml{\mu\ne\nu}{}\op{\gamma}^\nu\op{\gamma}^\mu\op{\minv{k}}_\nu\op{\minv{k}}_\mu
+     &=\frac{1}{2}\suml{\mu\ne\nu}{}\Big(\op{\gamma}^\nu\op{\gamma}^\mu\op{\minv{k}}_\nu\op{\minv{k}}_\mu+\op{\gamma}^\mu\op{\gamma}^\nu\op{\minv{k}}_\mu\op{\minv{k}}_\nu\Big)\\
+     &=\frac{1}{2}\suml{\mu\ne\nu}{}\Big(\big(\op{\gamma}^\nu\op{\gamma}^\mu+\op{\gamma}^\mu\op{\gamma}^\nu\big)\op{\minv{k}}_\nu\op{\minv{k}}_\mu+\op{\gamma}^\mu\op{\gamma}^\nu\big[\op{\minv{k}}_\mu,\op{\minv{k}}_\nu\big]\Big)\\
+     &=\frac{1}{2}\suml{\mu\ne\nu}{}\op{\gamma}^\mu\op{\gamma}^\nu\big[\op{\minv{k}}_\mu,\op{\minv{k}}_\nu\big]
+   }
+   Felhasználjuk a kinetikus impulzus kommutációs relációit (\eqref{eq:05-kinkomm00}, \eqref{eq:05-kinkomm0i} és \eqref{eq:05-kinkommij} egyenletek), melyekkel:
+   \al{
+    \suml{\mu\ne\nu}{}\op{\gamma}^\nu\op{\gamma}^\mu\op{\minv{k}}_\nu\op{\minv{k}}_\mu
+     &=\frac{1}{2}\suml{i\ne j}{}\op{\gamma}^i\op{\gamma}^j\big[\op{\minv{k}}_i,\op{\minv{k}}_j\big]+\op{\gamma}^0\op{\gamma}^i\big[\op{\minv{k}}_0,\op{\minv{k}}_i\big]\\
+     &=-\frac{1}{2}\op{\gamma}^i\op{\gamma}^j\frac{\hbar q}{i}\ep_{ijk}\vect{B}_k+\op{\gamma}^0\op{\gamma}^i\frac{\hbar q}{ic}\vect{E}_i.
+   }
+   Behelyettesítve:
+   \al{
+    0=
+      \left(
+       \big(\op{\minv{k}}^\mu\op{\minv{k}}_\mu-m_0^2c^2\big)\op{I}
+       -\frac{\hbar q}{2i}\ep_{ijk}\op{\gamma}^i\op{\gamma}^j\vect{B}_k+\frac{\hbar q}{ic}\op{\gamma}^0\op{\gamma}^i\vect{E}_i
+      \right)
+      \ket{\Psi}.
+   }
+   A Klein--Gordon részt behelyettesítjük, illetve átalakítjuk a mágneses teret tartalmazó tagot:
+   \al{
+    \ep_{ijk}\op{\gamma}^i\op{\gamma}^j
+     =\ep_{ijk}\begin{pmatrix}
+                   & \vects{\sigma}_i \\
+                  -\vects{\sigma}_i &
+                \end{pmatrix}\cdot
+                \begin{pmatrix}
+                   & \vects{\sigma}_j \\
+                  -\vects{\sigma}_j &
+                \end{pmatrix}
+      =-\ep_{ijk}\vects{\sigma}_i\vects{\sigma}_j\op{I}
+      =-2i\vects{\sigma}_k\op{I}
+      =-2i\begin{pmatrix}
+           \vects{\sigma} & 0\\
+           0 & \vects{\sigma}
+          \end{pmatrix}_k
+      =-2i\vects{\Sigma}_k,
+   }
+   így
+   \al{
+    0=
+      \left[
+       \frac{1}{c^2}
+       \left(
+        i\hbar\partial_t-q\phi
+       \right)^2
+       -\left(
+        \vect{\op{p}}-q\vect{A}
+       \right)^2
+       -m_0^2c^2
+       +\frac{\hbar q}{ic}\vects{\alpha}\vect{E}
+       +\hbar q\vects{\Sigma}\vect{B}
+      \right]\ket{\Psi}.
+   }
+   
+   Tekintsük a kisenergiás (nem relativisztikus) határesetet. Ekkor
+   \al{
+    m_0^2c^2-\frac{1}{c^2}\left(i\hbar\partial_t-q\phi\right)^2
+     &=\frac{1}{c^2}\big(m_0c^2-i\hbar\partial_t+q\phi\big)\underbrace{\big(m_0c^2+i\hbar\partial_t-q\phi\big)}_{\sim2m_0c^2}\\
+     &\approx 2m_0\big[m_0c^2-i\hbar\partial_t+q\phi\big],
+   }
+   vagyis
+   \al{
+    i\hbar\partial_t\ket{\Psi}=
+      \left[
+       \frac{1}{2m_0}\left(
+        \vect{\op{p}}-q\vect{A}
+       \right)^2
+       +m_0c^2+q\phi
+       -\frac{\hbar q}{2im_0c}\vects{\alpha}\vect{E}
+       -\frac{\hbar q}{2m_0}\vects{\Sigma}\vect{B}
+      \right]\ket{\Psi}.
+   }
+   
+   Az elektromos térerősséget tartalmazó tag $c$-vel el van nyomva $q\phi$ mellett, így azt is jó közelítéssel elhanyagolhatjuk. Most már előállt Pauli--Schrödinger-egyenlet. Ha az energiát $m_0c^2$-től mérjük, akkor 
+   \al{
+    E\ket{\Psi}=\Bigg[
+       \frac{1}{2m_0}\left(
+        \vect{\op{p}}-q\vect{A}
+       \right)^2
+       +q\phi
+       -2\underbrace{\frac{\hbar q}{2m_0}}_{\mu_\text{B}}\underbrace{\frac{1}{2}\vects{\Sigma}}_{\op{\vect{S}}}\vect{B}
+      \Bigg]\ket{\Psi}.
+   }
+   
+  \subsection{Relativisztikus korrekciók: kinetikus energia tag, Darwin-tag, Spin--pálya kölcsönhatás}
+   
+   Tekintsük az időtől független Dirac-egyenletet, melyet \eqaref{eq:02-DE} operátorral írunk fel:
+   \al{
+    \Big(c\vects{\op{\alpha}}\left(\op{\vect{p}}-q\vect{A}\right)+q\phi+m_0c^2\op{\beta}\Big)\Psi=E\Psi.
+   }
+   A $\Psi$ bispinort felírjuk két spinort tartalmazó alakban: $\Psi=\begin{pmatrix}\chi\\ \varphi\end{pmatrix}$, mellyel a fenti egyenlet:
+   \al{
+    \begin{pmatrix}
+     E-m_0c^2-q\phi & -c\vects{\sigma}\op{\vect{k}}\\
+     -c\vects{\sigma}\op{\vect{k}} & E+m_0c^2-q\phi
+    \end{pmatrix}
+    \begin{pmatrix}
+     \chi \\ \varphi
+    \end{pmatrix}
+    =0
+   }
+   Komponensenként külön felírva:
+   \al{
+    \big(E-m_0c^2-q\phi\big)\chi-c\vects{\sigma}\op{\vect{k}}\varphi&=0\\
+    -c\vects{\sigma}\op{\vect{k}}\chi+\big(E+m_0c^2-q\phi\big)\varphi&=0.
+   }
+   Fejezzük ki a második egyenletből $\varphi$-t:
+   \al{
+    \varphi
+     =\frac{1}{E+m_0c^2-q\phi}c\vects{\sigma}\op{\vect{k}}\chi
+   }
+   Felhasználjuk, hogy kis energiákon vagyunk. Ehhez a nevezőt sorba fejtsük: 
+   \al{
+    \frac{1}{E+m_0c^2-q\phi}
+     &=\frac{1}{2m_0c^2+E-m_0c^2-q\phi}
+      =\frac{1}{2m_0c^2+E'-q\phi}
+      =\frac{1}{2m_0c^2}\cdot\frac{1}{1+\frac{E'-q\phi}{2m_0c^2}}\\
+     &=\frac{1}{2m_0c^2}\cdot\left(1+\frac{E'-q\phi}{2m_0c^2}\right)^{-1}
+      \approx\frac{1}{2m_0c^2}\cdot\left(1-\frac{E'-q\phi}{2m_0c^2}\right).
+   }
+   Ha itt megálltunk volna az elsőrendű tagnál, akkor a Pauli--Schrödinger-egyenletet kaptuk volna vissza. Ehhez képest most még az $\frac{1}{c^2}$-tel arányos tagokat is megtartjuk. Ezt az első egyenletbe helyettesítve a nagykomponensre az alábbi egyenlet adódik:
+   \al{
+    (E'-q\phi)\chi=\frac{1}{2m_0}\cdot(\vects{\sigma}\op{\vect{k}})\left(1-\frac{E'-q\phi}{2m_0c^2}\right)(\vects{\sigma}\op{\vect{k}})\chi.
+   }
+   Foglalkozzunk a jobb oldal kifejtésével. Ehhez
+   \al{
+    (\vects{\sigma}\op{\vect{k}})(\vects{\sigma}\op{\vect{k}})
+     &=\op{\vect{k}}^2+i\vects{\sigma}\big(\op{\vect{k}}\times\op{\vect{k}}\big)
+      =\big(\op{\vect{p}}-q\vect{A}\big)^2+i\frac{1}{2}\ep_{ijk}\vects{\sigma}_k\big[\op{\vect{k}}_i,\op{\vect{k}}_j\big]\\
+     &=\big(\op{\vect{p}}-q\vect{A}\big)^2-i\frac{1}{2}\ep_{ijk}\vects{\sigma}_k\frac{\hbar q}{i}\ep_{ijk}\vect{B}_k
+      =\big(\op{\vect{p}}-q\vect{A}\big)^2-\hbar q\vects{\sigma}\vect{B},
+   }
+   mellyel
+   \al{
+    (E'-q\phi)\chi
+     &=\frac{1}{2m_0}\cdot(\vects{\sigma}\op{\vect{k}})(\vects{\sigma}\op{\vect{k}})\chi
+      -\frac{1}{2m_0}\cdot(\vects{\sigma}\op{\vect{k}})\frac{E'-q\phi}{2m_0c^2}(\vects{\sigma}\op{\vect{k}})\chi\\
+    E'\chi
+     &=\underbrace{\left(\frac{\big(\op{\vect{p}}-q\vect{A}\big)^2}{2m_0}-\frac{\hbar q}{2m_0}\vects{\sigma}\vect{B}+q\phi\right)}_{\op{H}_\text{PS}}\chi
+      -\frac{1}{2m_0}\cdot(\vects{\sigma}\op{\vect{k}})\frac{E'-q\phi}{2m_0c^2}(\vects{\sigma}\op{\vect{k}})\chi
+   }
+   Láthatjuk tehát, hogy a Pauli--Schrödinger Hamilton-operátorhoz a korrekciókat a második tag adja. Ezt átalakítjuk:
+   \al{
+    -\frac{1}{2m_0}\cdot(\vects{\sigma}\op{\vect{k}})\frac{E'-q\phi}{2m_0c^2}(\vects{\sigma}\op{\vect{k}})\chi
+    =\underbrace{-\frac{1}{2m_0}\cdot(\vects{\sigma}\op{\vect{k}})(\vects{\sigma}\op{\vect{k}})\frac{E'-q\phi}{2m_0c^2}}_{\op{H}_\text{K}}\chi
+    +\underbrace{\frac{1}{2m_0}\cdot(\vects{\sigma}\op{\vect{k}})\left[(\vects{\sigma}\op{\vect{k}}),\frac{E'-q\phi}{2m_0c^2}\right]}_{\text{II.}}\chi,
+   }
+   ahol $\frac{1}{c^2}$ rendig:
+   \al{
+    \op{H}_\text{K}
+     &=-\left(\op{H}_\text{PS}-q\phi\right)\frac{1}{2m_0c^2}\big(E'-q\phi\big)
+      \approx-\left(\op{H}_\text{PS}-q\phi\right)\frac{1}{2m_0c^2}\left(\op{H}_\text{PS}-q\phi\right)\\
+     &=-\frac{1}{2m_0c^2}\left(\op{H}_\text{PS}-q\phi\right)^2
+      \approx\frac{1}{2m_0c^2}\left(\frac{\op{\vect{k}}^2}{2m_0}\right)^2
+      =-\frac{1}{8m_0^3c^2}\op{\vect{k}}^4
+   }
+   \al{
+    \text{II.}
+     &=-\frac{1}{4m_0^2c^2}\cdot \sigma_i\op{\vect{k}}_i\left[\vects{\sigma}_j\op{\vect{k}}_j,q\phi\right]
+      =-\frac{1}{4m_0^2c^2}\cdot \vects{\sigma}_i\vects{\sigma}_j\op{\vect{k}}_i\left[\op{\vect{k}}_j,q\phi\right]\\
+     &=-\frac{1}{4m_0^2c^2}\cdot \big(\delta_{ij}+i\ep_{ijk}\vects{\sigma}_k\big)\op{\vect{k}}_i\left[\op{\vect{k}}_j,q\phi\right]
+     =\underbrace{-\frac{1}{4m_0^2c^2}\cdot \vect{\op{k}}\left[\vect{\op{k}},q\phi\right]}_{\op{H}_\text{D1}}
+      \underbrace{-\frac{i}{4m_0^2c^2}\sigv\Big(\vect{\op{k}}\times\left[\vect{\op{k}},q\phi\right]\Big)}_{\op{H}_\text{SP}}
+   }
+   Itt a második tag:
+   \al{
+    \op{H}_\text{SP}
+     &=-\frac{i}{4m_0^2c^2}\vects{\sigma}_i\ep_{ijk}\op{\vect{k}}_j\left[\op{\vect{k}}_k,q\phi\right]
+      =-\frac{i}{4m_0^2c^2}\vects{\sigma}_i\left(\left[\ep_{ijk}\op{\vect{k}}_j\op{\vect{k}}_k,q\phi\right]
+       -\ep_{ijk}\left[\op{\vect{k}}_j,q\phi\right]\op{\vect{k}}_k\right)\\
+     &=-\frac{i}{4m_0^2c^2}\vects{\sigma}_i\Bigg(\underbrace{\left[-\frac{\hbar q}{i}\vect{B}_i,q\phi\right]}_{=0}
+       -\ep_{ijk}\left[\op{\vect{A}}_j,q\phi\right]\op{\vect{k}}_k\Bigg)
+      =\frac{i}{4m_0^2c^2}
+      \sigv\big(\left[\op{\vect{p}},q\phi\right]\times\op{\vect{k}}\big) \\
+     &=\frac{\hbar}{4m_0^2c^2}
+      \sigv\big(\left(\vects{\nabla}q\phi\right)\times\op{\vect{k}}\big)
+      =-\frac{\hbar}{4m_0^2c^2}
+      \sigv\big(q\vect{E}\times\op{\vect{k}}\big)
+    }
+   
+   Az első taghoz pedig hozzávesszük azt is, hogy a bispinor normált:
+   \al{
+    1&=\intl{}{}\drh\Psi^+\Psi
+      =\intl{}{}\drh\big(\chi^+\chi+\varphi^+\varphi\big)
+      \approx\intl{}{}\drh\chi^+\chi+\frac{1}{4m_0^2c^2}\intl{}{}\drh\chi^+(\op{\vects{\sigma}}\op{\vect{k}})(\op{\vects{\sigma}}\op{\vect{k}})\chi\\
+     &\approx\intl{}{}\drh\chi^+\chi+\frac{1}{4m_0^2c^2}\intl{}{}\drh\chi^+\op{\vect{k}}^2\chi
+      =\intl{}{}\drh\chi^+\left(1+\frac{1}{4m_0^2c^2}\op{\vect{k}}^2\right)\chi.
+   }
+   Innen tehát a normált $\chi$ komponens ($1/c^2$ rendig): $\chi_S=\left(1+\frac{1}{8m_0^2c^2}\op{\vect{k}}^2\right)\chi$. Erre a $\chi_S$-re kellene valójában felírni a fenti egyenletet, ezt behelyettesítve:
+   \al{
+    E'\chi_S&\approx\left(1+\frac{1}{8m_0^2c^2}\op{\vect{k}}^2\right)\op{H}\left(1-\frac{1}{8m_0^2c^2}\op{\vect{k}}^2\right)\chi_S
+     \approx\left(\op{H}+\left[\frac{1}{8m_0^2c^2}\op{\vect{k}}^2,\op{H}\right]\right)\chi_S\\
+     &\approx\left(\op{H}+\frac{1}{8m_0^2c^2}\left[\op{\vect{k}}^2,q\phi\right]\right)\chi_S
+   }
+   Ennek a tagnak és $\op{H}_\text{D1}$-nek a korrekcióját együtt tekintve:
+   \al{
+    \op{H}_\text{D}
+     &=-\frac{1}{4m_0^2c^2}\cdot \vect{\op{k}}\left[\vect{\op{k}},q\phi\right]+\frac{1}{8m_0^2c^2}\left[\op{\vect{k}}^2,q\phi\right]
+      =\frac{q}{8m_0^2c^2}\cdot\left(\left[\op{\vect{k}}^2,\phi\right]-2\vect{\op{k}}\left[\vect{\op{k}},\phi\right]\right)\\
+     &=\frac{q}{8m_0^2c^2}\cdot\left(\left[\op{\vect{k}},\phi\right]\op{\vect{k}}-\vect{\op{k}}\left[\vect{\op{k}},\phi\right]\right)
+      =-\frac{\hbar^2q}{8m_0^2c^2}\cdot\big(\left(\vects{\nabla}\phi\right)\vects{\nabla}-\vects{\nabla}\left(\vects{\nabla}\phi\right)\big)\\
+     &=\frac{\hbar^2q}{8m_0^2c^2}\cdot(\Delta\phi).
+   }
+   
+   Összefoglalva tehát a normált nagykomponensre $1/c^2$-es pontosságú relativisztikus korrekciókkal felírt Pauli--Schrödinger-egyenlet az alábbi:
+   \\[6pt]
+   \fbox{
+    \addtolength{\linewidth}{-10\fboxsep}%
+    \addtolength{\linewidth}{-5\fboxrule}%
+    \begin{minipage}{\linewidth}
+     \vspace{-14pt}
+     \aln{
+      E'\chi_S=\big(\op{H}_\text{PS}+\op{H}_\text{K}+\op{H}_\text{SP}+\op{H}_\text{D}\big)\chi_S
+     }
+     \begin{subequations}
+     \aln{
+      \op{H}_\text{PS}&=\left(\frac{\big(\op{\vect{p}}-q\vect{A}\big)^2}{2m_0}-\frac{\hbar q}{2m_0}\vects{\sigma}\vect{B}+q\phi\right)\\
+      \op{H}_\text{K}&=-\frac{1}{8m_0^3c^2}\op{\vect{k}}^4\\
+      \op{H}_\text{SP}&=-\frac{\hbar}{4m_0^2c^2}
+        \sigv\big(q\vect{E}\times\op{\vect{k}}\big)\\
+      \op{H}_\text{D}&=\frac{\hbar^2q}{8m_0^2c^2}\cdot(\Delta\phi)
+     }
+     \end{subequations}
+    \end{minipage}
+   }

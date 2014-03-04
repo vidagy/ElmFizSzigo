@@ -1,0 +1,500 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     18599,        491]
+NotebookOptionsPosition[     17798,        459]
+NotebookOutlinePosition[     18132,        474]
+CellTagsIndexPosition[     18089,        471]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"m", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Rho]", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Alpha]", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"L", "=", 
+  RowBox[{"m", "*", "\[Rho]", "*", "v"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Ee", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"1", "/", "2"}], "*", "m", "*", 
+    RowBox[{"v", "^", "2"}]}], "-", "0.7"}]}], "\[IndentingNewLine]", 
+ RowBox[{"p", "=", 
+  FractionBox[
+   RowBox[{"L", "^", "2"}], 
+   RowBox[{"m", "*", "\[Alpha]"}]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"e", ":=", 
+   RowBox[{"Sqrt", "[", 
+    RowBox[{"1", "+", 
+     FractionBox[
+      RowBox[{"2", "*", "Ee", "*", 
+       RowBox[{"L", "^", "2"}]}], 
+      RowBox[{"m", "*", 
+       RowBox[{"\[Alpha]", "^", "2"}]}]]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.566198958508918*^9, 3.56619927452097*^9}, 
+   3.566199333428725*^9, 3.566199539032641*^9, 3.566199724533433*^9, {
+   3.566200451687245*^9, 3.56620045175785*^9}, {3.566200493529161*^9, 
+   3.566200511747252*^9}, {3.56881141586057*^9, 3.568811415972551*^9}, {
+   3.568811449260965*^9, 3.568811525716918*^9}, 3.568811623069514*^9, {
+   3.568812546275868*^9, 3.568812618209438*^9}, {3.568814254808436*^9, 
+   3.568814269917563*^9}}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{
+  3.568812550183558*^9, {3.568812581086785*^9, 3.568812618875458*^9}, 
+   3.568813530205916*^9, {3.568814259842854*^9, 3.568814270299063*^9}, 
+   3.56898180695863*^9}],
+
+Cell[BoxData[
+ RowBox[{"-", "0.19999999999999996`"}]], "Output",
+ CellChangeTimes->{
+  3.568812550183558*^9, {3.568812581086785*^9, 3.568812618875458*^9}, 
+   3.568813530205916*^9, {3.568814259842854*^9, 3.568814270299063*^9}, 
+   3.568981806959824*^9}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{
+  3.568812550183558*^9, {3.568812581086785*^9, 3.568812618875458*^9}, 
+   3.568813530205916*^9, {3.568814259842854*^9, 3.568814270299063*^9}, 
+   3.5689818069609*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<~/Dokumentumok/palyak.pdf\>\"", ",", 
+   RowBox[{"PolarPlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      FractionBox["p", 
+       RowBox[{"1", "-", 
+        RowBox[{"e", "*", 
+         RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Phi]", ",", "0", ",", 
+       RowBox[{"2", "Pi"}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "3"}], ",", "5"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "3.5"}], ",", "3.5"}], "}"}]}], "}"}]}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", "Thick", "}"}]}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.56881165077813*^9, 3.568811715640301*^9}, {
+  3.568811830538285*^9, 3.568811887956949*^9}, {3.568812649887744*^9, 
+  3.568812650136931*^9}}],
+
+Cell[BoxData["\<\"~/Dokumentumok/palyak.pdf\"\>"], "Output",
+ CellChangeTimes->{{3.56881164517173*^9, 3.5688116567719*^9}, {
+   3.568811697741483*^9, 3.568811716256959*^9}, 3.568811855581032*^9, 
+   3.568811888837881*^9, 3.568812552887992*^9, {3.568812583179514*^9, 
+   3.568812620001563*^9}, 3.568812650768375*^9, 3.568813534803787*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<~/Dokumentumok/palyak1.eps\>\"", ",", 
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"PolarPlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         FractionBox["p", 
+          RowBox[{"1", "-", 
+           RowBox[{
+            RowBox[{"Sqrt", "[", 
+             RowBox[{"1", "+", 
+              FractionBox[
+               RowBox[{"2", "*", 
+                RowBox[{"(", 
+                 RowBox[{"-", "0.5"}], ")"}], "*", 
+                RowBox[{"L", "^", "2"}]}], 
+               RowBox[{"m", "*", 
+                RowBox[{"\[Alpha]", "^", "2"}]}]]}], "]"}], "*", 
+            RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]], ",", 
+         FractionBox["p", 
+          RowBox[{"1", "-", 
+           RowBox[{
+            RowBox[{"Sqrt", "[", 
+             RowBox[{"1", "+", 
+              FractionBox[
+               RowBox[{"2", "*", 
+                RowBox[{"(", 
+                 RowBox[{"-", "0.4"}], ")"}], "*", 
+                RowBox[{"L", "^", "2"}]}], 
+               RowBox[{"m", "*", 
+                RowBox[{"\[Alpha]", "^", "2"}]}]]}], "]"}], "*", 
+            RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]], ",", 
+         FractionBox["p", 
+          RowBox[{"1", "-", 
+           RowBox[{
+            RowBox[{"Sqrt", "[", 
+             RowBox[{"1", "+", 
+              FractionBox[
+               RowBox[{"2", "*", "0", "*", 
+                RowBox[{"L", "^", "2"}]}], 
+               RowBox[{"m", "*", 
+                RowBox[{"\[Alpha]", "^", "2"}]}]]}], "]"}], "*", 
+            RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\[Phi]", ",", "0", ",", 
+         RowBox[{"2", "Pi"}]}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "1.5"}], ",", "5"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "3"}], ",", "3"}], "}"}]}], "}"}]}], ",", 
+       RowBox[{"PlotStyle", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Red"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Blue"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Green"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+     RowBox[{"PolarPlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        FractionBox["p", 
+         RowBox[{"1", "-", 
+          RowBox[{
+           RowBox[{"Sqrt", "[", 
+            RowBox[{"1", "+", 
+             FractionBox[
+              RowBox[{"2", "*", 
+               RowBox[{"(", "0.5", ")"}], "*", 
+               RowBox[{"L", "^", "2"}]}], 
+              RowBox[{"m", "*", 
+               RowBox[{"\[Alpha]", "^", "2"}]}]]}], "]"}], "*", 
+           RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\[Phi]", ",", 
+         RowBox[{
+          RowBox[{"Pi", "/", "2"}], "-", 
+          RowBox[{"ArcCos", "[", 
+           RowBox[{"1", "/", 
+            RowBox[{"(", 
+             RowBox[{"Sqrt", "[", 
+              RowBox[{"1", "+", 
+               FractionBox[
+                RowBox[{"2", "*", 
+                 RowBox[{"(", "0.5", ")"}], "*", 
+                 RowBox[{"L", "^", "2"}]}], 
+                RowBox[{"m", "*", 
+                 RowBox[{"\[Alpha]", "^", "2"}]}]]}], "]"}], ")"}]}], "]"}], 
+          "+", "0.001"}], ",", 
+         RowBox[{
+          RowBox[{"3", "*", 
+           RowBox[{"Pi", "/", "2"}]}], "+", 
+          RowBox[{"ArcCos", "[", 
+           RowBox[{"1", "/", 
+            RowBox[{"(", 
+             RowBox[{"Sqrt", "[", 
+              RowBox[{"1", "+", 
+               FractionBox[
+                RowBox[{"2", "*", 
+                 RowBox[{"(", "0.5", ")"}], "*", 
+                 RowBox[{"L", "^", "2"}]}], 
+                RowBox[{"m", "*", 
+                 RowBox[{"\[Alpha]", "^", "2"}]}]]}], "]"}], ")"}]}], 
+           "]"}]}]}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "1.5"}], ",", "5"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "3"}], ",", "3"}], "}"}]}], "}"}]}], ",", 
+       RowBox[{"PlotStyle", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"Thick", ",", "Black"}], "}"}]}]}], "]"}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.568813392447554*^9, 3.568813488908181*^9}, {
+  3.568813599802923*^9, 3.568813693151352*^9}, {3.568813936220269*^9, 
+  3.568813937677928*^9}, {3.568813997032246*^9, 3.568813999612536*^9}}],
+
+Cell[BoxData["\<\"~/Dokumentumok/palyak1.eps\"\>"], "Output",
+ CellChangeTimes->{
+  3.568813387181221*^9, {3.568813441726251*^9, 3.568813489710813*^9}, 
+   3.568813542887836*^9, {3.568813605295701*^9, 3.56881365013067*^9}, {
+   3.568813682825724*^9, 3.56881369397269*^9}, 3.568813938946912*^9, 
+   3.568814000630265*^9, 3.56898184059057*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"PolarPlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      FractionBox["p", 
+       RowBox[{"1", "+", 
+        RowBox[{"e", "*", 
+         RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Phi]", ",", 
+       RowBox[{"Pi", "-", 
+        RowBox[{"ArcCos", "[", 
+         RowBox[{"1", "/", "e"}], "]"}]}], ",", 
+       RowBox[{"Pi", "+", 
+        RowBox[{"ArcCos", "[", 
+         RowBox[{"1", "/", "e"}], "]"}]}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "5"}]}], "]"}], ",", 
+   RowBox[{"PolarPlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      FractionBox["p", 
+       RowBox[{"1", "+", 
+        RowBox[{"e", "*", 
+         RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Phi]", ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "Pi"}], "/", "2"}], "-", 
+        RowBox[{"ArcCos", "[", 
+         RowBox[{"1", "/", "e"}], "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"Pi", "/", "2"}], "+", 
+        RowBox[{"ArcCos", "[", 
+         RowBox[{"1", "/", "e"}], "]"}]}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "5"}]}], "]"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"PolarPlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      FractionBox[
+       RowBox[{"-", "p"}], 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"e", "*", 
+         RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Phi]", ",", 
+       RowBox[{"ArcCos", "[", 
+        RowBox[{"1", "/", "e"}], "]"}], ",", 
+       RowBox[{"-", 
+        RowBox[{"ArcCos", "[", 
+         RowBox[{"1", "/", "e"}], "]"}]}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "5"}]}], "]"}], ",", 
+   RowBox[{"PolarPlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      FractionBox[
+       RowBox[{"-", "p"}], 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        RowBox[{"e", "*", 
+         RowBox[{"Cos", "[", "\[Phi]", "]"}]}]}]], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\[Phi]", ",", 
+       RowBox[{
+        RowBox[{"Pi", "/", "2"}], "-", 
+        RowBox[{"ArcCos", "[", 
+         RowBox[{"1", "/", "e"}], "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"3", "*", 
+         RowBox[{"Pi", "/", "2"}]}], "+", 
+        RowBox[{"ArcCos", "[", 
+         RowBox[{"1", "/", "e"}], "]"}]}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "5"}]}], "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.568810596097624*^9, 3.56881064465105*^9}, {
+  3.568810704918838*^9, 3.568810891892084*^9}, {3.568810929587097*^9, 
+  3.568811040797657*^9}, {3.568811140470615*^9, 3.568811159365263*^9}, {
+  3.568811194419378*^9, 3.568811208037927*^9}, {3.568811256970582*^9, 
+  3.568811257335927*^9}, {3.568811303021881*^9, 3.568811303261004*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"V", "[", "r_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"L", "^", "2"}], "/", "2"}], "/", "m"}], "/", 
+     RowBox[{"r", "^", "2"}]}], "-", 
+    RowBox[{"\[Alpha]", "/", "r"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.568981924605958*^9, 3.568981954570369*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"V", "[", "r", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "0", ",", "7"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.568981956746636*^9, 3.568982005168242*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {}, 
+   {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1: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
+p37Mz9OIcxLGd6unK/B/676zow==
+     "]]}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{0, 0},
+  PlotRange->{{0, 7}, {-0.4999999423929379, 0.22785469686647258`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ CellChangeTimes->{{3.568981966588307*^9, 3.568982005686118*^9}}]
+}, Open  ]]
+},
+WindowSize->{814, 747},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Linux x86 (32-bit) (October 10, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 1388, 35, 213, "Input"],
+Cell[1970, 59, 216, 4, 30, "Output"],
+Cell[2189, 65, 253, 5, 30, "Output"],
+Cell[2445, 72, 215, 4, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2697, 81, 941, 26, 102, "Input"],
+Cell[3641, 109, 337, 4, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4015, 118, 4662, 128, 343, "Input"],
+Cell[8680, 248, 341, 5, 30, "Output"]
+}, Open  ]],
+Cell[9036, 256, 2851, 83, 217, "Input"],
+Cell[11890, 341, 352, 11, 30, "Input"],
+Cell[CellGroupData[{
+Cell[12267, 356, 234, 6, 30, "Input"],
+Cell[12504, 364, 5278, 92, 228, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

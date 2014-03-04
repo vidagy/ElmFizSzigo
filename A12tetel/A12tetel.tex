@@ -1,0 +1,310 @@
+\chapter{K\"olcs\"onhat\'o soktestrendszerek}
+ 
+ \section{Mechanika} 
+  
+  \subsection{Pontrendszerek dinamikája}
+   
+   Lásd \ref{ss6:pontrendszerek}. fejezet. 
+   
+  \subsection{Csatolt rezgések, normálkoordináták, rezgési módusok}
+   
+   Tekintsünk egy $N$ pontból álló rendszert, melynek $f$ szabadsági foka van. Vizsgáljunk egy olyan esetet, amikor a rendszer $V(q)$ potenciáljának a $q_0=(q_{10},q_{20},\dots,q_{f0})$ helyen minimuma van. Fejtsük sorba a potenciált ez a pont körül:
+   \al{
+    V(q)=V(q_0)
+        +\suml{i=1}{f}\left.\pder{V(q)}{q_i}\right|_{q=q_0}(q_i-q_{i0})
+        +\suml{i,j=1}{f}\frac{1}{2}\left.\pder{^2V(q)}{q_i\partial q_j}\right|_{q=q_0}(q_i-q_{i0})(q_j-q_{j0})+\dots
+   }
+   Itt az első tag eltüntethető a potenciális energia nullpontjának megfelelő választásával. A második tag nulla, mert a deriváltakat a minimumhelyen nézzük. Az első releváns tag a másodrendű. Az koordináta-rendszer origóját eltolva a minimumhelybe és bevezetbe a deriváltakra a $b_{ij}$ együtthatókat:
+   \al{
+    V(q)=\frac{1}{2}\suml{i,j=1}{f}b_{ij} q_i q_j.
+   }
+   A kinetikus energia tag: $K=V(q)=\frac{1}{2}\suml{i,j=1}{f}a_{ij} \dot{q}_i \dot{q}_j$. Az $a_{ij}$ és a $b_{ij}$ is szimmetrikus, pozitív definit mátrixok. A Lagrange-függvény és a Lagrange-egyenletek:
+   \al{
+    &L=\frac{1}{2}\suml{i,j=1}{f}\big(a_{ij} \dot{q}_i \dot{q}_j-b_{ij} q_i q_j\big)
+    &\Rightarrow
+    &&0=\suml{j=1}{f}\big(a_{ij}\ddot{q}_j-b_{ij} q_j\big)\qquad \forall i\text{-re.}
+   }
+   
+   A megoldást keressük $q_j(t)=C_j\cos(\omega t+\delta)$ alakban:
+   \aln{
+    0=\cos(\omega t+\delta)\suml{j=1}{f}\big(b_{ij}- \omega^2 a_{ij}\big)C_j,\label{eq:12-hrmproba}
+   }
+   amit beszorozva $C$ komplex konjugáltjával és összegezve:
+   \al{
+    &0=\suml{i,j=1}{f}\big(b_{ij}- \omega^2 a_{ij}\big)C_i^* C_j
+    &\Rightarrow
+    &&\omega^2=\frac{\suml{i,j=1}{f}b_{ij}C_i^* C_j}{\suml{i,j=1}{f}a_{ij}C_i^* C_j}
+   }
+   A $C_i^* C_j=(A_i-iB_i)(A_i+iB_i)=A_iA_j+B_iB_j+i(A_iB_j-A_jB_i)$ képzetes része antiszimmetrikus, az $a_{ij}$ és a $b_{ij}$ viszont szimmetrikus, így az összeg a számlálóban és a nevezőben is valós. Mivel a mátrixok pozitív definitek, ezért $C$ vektortól függetlenül $\omega$ pozitív szám lesz. 
+   
+   \Eqaref{eq:12-hrmproba} egyenletnek akkor van nemtriviális megoldása, ha a $\big(b_{ij}- \omega^2 a_{ij}\big)$ mátrix determinánsa nulla. Ez $\omega^2$-re egy $f$-edfokú polinom, aminek általában van $f$ megoldása. $\{\omega_\alpha\}_{\alpha=1}^f$ a rendszer sajátfrekvenciái. Az $\omega_\alpha$-hoz tartozó sajátvektor $C_{\alpha i}$. 
+   
+   Ezekből az általános megoldás tetszőleges lineárkombinációval áll elő:
+   \aln{
+    q_j(t)=\suml{\alpha=1}{f}D_\alpha C_{\alpha j}\cos(\omega_\alpha t+\delta_\alpha),\label{eq:12-altmego}
+   }
+   ahol $D_\alpha$ és $\delta_\alpha$ tetszőleges állandó.
+   
+   Mivel minden megoldás a $\Theta_\alpha(t)=D_\alpha \cos(\omega_\alpha t+\delta_\alpha)$-k szuperpozíciójából áll elő, ezért térjünk át ezekre az általános koordinátákra. Felhasználva \eqaref{eq:12-altmego} egyenletet, a Lagrange-függvény az új koordinátákban:
+   \al{
+    L=\frac{1}{2}\suml{i,j=1}{f}\big(a_{ij} \dot{q}_i \dot{q}_j-b_{ij} q_i q_j\big)
+     =\frac{1}{2}\suml{\substack{i,j=1 \\ \alpha,\beta=1}}{f}\big(a_{ij} C_{\alpha i}C_{\beta j}\dot{\Theta}_\alpha \dot{\Theta}_\beta-b_{ij} C_{\alpha i}C_{\beta j}\Theta_\alpha \Theta_\beta\big).
+   }
+   Az $i$-re és $j$-re való szummázás elvégzéséhez használjuk fel a mozgásegyenletet, illetve $a$ és $b$ szimmetrikusságát:
+   \al{
+    &0=\suml{i=1}{f}\big(b_{ij}- \omega_\alpha^2 a_{ij}\big)C_{\alpha i}
+    &\Big/ \cdot C_{\beta j}\; ,\;  \suml{j=1}{f}\cdot
+    &&\Rightarrow
+    &&0=\suml{i,j=1}{f}\big(b_{ij}- \omega_\alpha^2 a_{ij}\big)C_{\alpha i} C_{\beta j}
+    \\
+    &0=\suml{j=1}{f}\big(b_{ij}- \omega_\beta^2 a_{ij}\big)C_{\beta j}
+    &\Big/ \cdot C_{\alpha i}\; ,\; \suml{i=1}{f} \cdot
+    &&\Rightarrow
+    &&0=\suml{i,j=1}{f}\big(b_{ij}- \omega_\beta^2 a_{ij}\big)C_{\alpha i}C_{\beta j}
+   }
+   melyeknek különbségéből:
+   \al{
+    &0=\suml{i,j=1}{f}\big(\omega_\alpha^2- \omega_\beta^2 \big)a_{ij}C_{\alpha i}C_{\beta j}
+    &\Rightarrow
+    &&0=\suml{i,j=1}{f}a_{ij}C_{\alpha i}C_{\beta j}\qquad\text{ha }\alpha\ne\beta.
+   }
+   A normálást úgy adjuk meg, hogy a fenti szorzat 1 legyen ha $\alpha=\beta$, így
+   \al{
+    \delta_{\alpha\beta}=\suml{i,j=1}{f}a_{ij}C_{\alpha i}C_{\beta j},
+   }
+   mellyel az előbb átalakított mozgásegyenlet:
+   \al{
+    \suml{i,j=1}{f}b_{ij}C_{\alpha i} C_{\beta j}=\delta_{\alpha\beta}\omega_\alpha^2.
+   }
+   Ezek ismeretében a Lagrange:
+   \al{
+    L=
+      \frac{1}{2}\suml{\alpha,\beta=1}{f}\big(\delta_{\alpha\beta}\dot{\Theta}_\alpha \dot{\Theta}_\beta-\delta_{\alpha\beta}\omega_{\alpha}^2\Theta_\alpha \Theta_\beta\big)
+     =\frac{1}{2}\suml{\alpha=1}{f}\big(\dot{\Theta}_\alpha^2-\omega_{\alpha}^2\Theta_\alpha^2 \big),
+   }
+   ami $f$ darab harmonikus oszcillátor összege. A $\Theta_\alpha$ koordináták a normálkoordináták, és a $\Theta_\alpha(t)$ megoldások a rendszer normálrezgései.
+   
+   \paragraph{Példa}
+    
+    1D-ben két $m$ tömegű pont, amelyek $D$ rugóra vannak kötve, és egymáshoz $D'$ -vel. A Lagrange:
+    \al{
+     L
+      =K-U
+      =\left(\frac{1}{2}m\dot{x}_1^2+\frac{1}{2}m\dot{x}_2^2\right)
+       -\left(\frac{1}{2}D x_1^2+\frac{1}{2}D x_1^2+\frac{1}{2}D'(x_1-x_2)^2\right)
+      =\dot{\vect{x}}^T\mat{a}\dot{\vect{x}}+\vect{x}^T\mat{b}\vect{x},
+    }
+    ahol 
+    \al{
+     &\mat{a}
+      =\begin{pmatrix}
+        m & 0 \\
+        0 & m 
+       \end{pmatrix}
+     &\mat{b}
+      =\begin{pmatrix}
+        D+D' & -D' \\
+        -D' & D+D' 
+       \end{pmatrix}
+    }
+    A frekvenciákat meghatározó determináns ($0=\det(\mat{b}-\omega^2\mat{a})$):
+    \al{
+     0=
+       \begin{vmatrix}
+        D+D'-\omega^2 m & -D' \\
+        -D' & D+D' -\omega^2 m
+       \end{vmatrix}
+      =\big(D+D'-\omega^2\big)^2-D'^2
+      =\big(D+2D'-\omega^2\big)\big(D-\omega^2\big),
+    }
+    ahonnan $\omega_1^2=\frac{D}{m}$ és $\omega_2^2=\frac{D+2D'}{m}$. A két sajátvektor: $C_1=\frac{1}{\sqrt{2}}\left(1,1\right)$ és $C_2=\frac{1}{\sqrt{2}}\left(-1,1\right)$. Az első megoldás, amikor a két pont egy irányba tér ki minden pillanatban (akusztikai módus), a második pedig, amikor ellentétesen (optikai módus). Azt is láthatjuk, hogy az optikai módus energiája nagyobb.
+    
+ \section{Elektrodinamika}
+  
+  \subsection{Ponttöltésekből álló rendszer energiája}
+   
+   Ahhoz, hogy töltést adjunk egy ponttöltésekből álló rendszerhez, munkát kell végeznünk: $\dd W=-\Fv \dd \rv=-q\Ev\dd\rv$. Egy makroszkópikus $\rv_1\to\rv_2$ mozgatásnál ez $\dd W=q(\phi(\rv_2)-\phi(\rv_1))$. Ha a végtelenből állítjuk össze a töltéseloszlást, akkor:
+   \al{
+    W=\suml{i=1}{N}q_i\suml{\substack{j=1\\(j\ne i)}}{i}\frac{q_j}{4\pi\ep_0}\frac{1}{\abs{\rv_i-\rv_j}}
+     =\frac{1}{2}\suml{i\ne j}{N}\frac{1}{4\pi\ep_0}\frac{q_i q_j}{\abs{\rv_i-\rv_j}}
+   }
+   Folytonos töltéseloszlásnál:
+   \al{
+    W=\frac{1}{2}\intl{}{}\drh\intl{}{}\drkh\frac{1}{4\pi\ep_0}\frac{\rho(\rv)\rho(\rv')}{\abs{\rv-\rv'}}
+     =\frac{1}{2}\intl{}{}\drh\rho(\rv)\phi(\rv).
+   }
+   A diszkrét eloszlásnál az önkölcsönhatás ki van hagyva az összegből, mert akkor a nevező nem lenne értelmezgető. Folytonos esetben az önkölcsönhatás szerepel.
+   
+  \subsection{Kapacitás}
+   
+   Vizsgáljunk egy olyan rendszert, amelyben nincsenek általunk rögzített ponttöltések $\rho(\rv)\equiv 0$, hanem fém felületek vannak, amelyeket $V_i$ feszültségre töltünk. Kérdés, hogy mekkora lesz a rendszer energiája. Ebben az esetben a potenciált a Laplace-egyenlet megoldásaként kapjuk Dirichlet-feltétel mellett. \Eqaref{eq:3-dirichletmo} egyenlet alapján:
+   \al{
+    \phi(\rv')
+     =0-\ep_0\ointl{\partial V}{}\dd^2\vect{f}_{\vect{r}}\,\phi(\vect{r})\grad_\rv{G(\vect{r},\vect{r}')}
+     =-\ep_0\suml{i=1}{n}V_i\intl{S_i}{}\dd^2\vect{f}_{\vect{r}}\,\grad_\rv{G(\vect{r},\vect{r}')}
+     =-\suml{i=1}{n}V_if_i(\rv').
+   }
+   A felületi töltéssűrűség: $\sigma_i(\rv)=-\ep_0\left.\pder{\phi}{\nv}\right|_{\rv\in S_i}$, mellyel az adott felületen a töltés:
+   \al{
+    Q_i
+     &=\intl{S_i}{}\dd^2 f_{\vect{r}'}\,\sigma_i(\rv')
+      =-\ep_0\intl{S_i}{}\dd^2\vect{f}_{\vect{r}'}\,\grad_{\rv'}\phi(\rv')
+      =\ep_0^2\suml{j=1}{n}V_j\intl{S_j}{}\dd^2\vect{f}_{\vect{r}}\intl{S_i}{}\dd^2\vect{f}_{\vect{r}'}\,\grad_{\rv}\grad_{\rv'} G(\vect{r},\vect{r}')
+      \\
+      &=\suml{i=1}{n}C_{ij}V_j.
+   }
+   A teljes rendszer energiája ebben az esetben:
+   \al{
+    W=\frac{1}{2}\intl{}{}\drh\rho(\rv)\phi(\rv)
+     =\frac{1}{2}\suml{i=1}{n}\intl{S_i}{}\dd^2 f_{\vect{r}}\sigma_i(\rv)V_i
+     =\frac{1}{2}\suml{i=1}{n}Q_iV_i
+     =\frac{1}{2}\suml{i,j=1}{n}C_{ij}V_iV_j
+   }
+   
+  \subsection{Áramhurkokból álló rendszer energiája}
+   
+   \Aref{ss-7:elterenergia}. fejezetben leírtakhoz hasonlóan járunk el. Láttuk, hogy a tér töltésen végzett munkája folytonos töltéseloszlások esetén:
+   \al{
+    P=\intl{}{}\drh\Jv\Ev.
+   }
+   A mi munkánk míg a teret felépítjük, felhasználva a Maxwell-egyenleteket (\eqref{eq:01-MXanyagban1}--\eqref{eq:01-MXanyagban2} egyenletek) és eltekintve $\Dv$ időfüggésétől:
+   \al{
+    \delta W
+     &=-\intl{}{}\drh\Jv\Ev\delta t
+      =-\intl{}{}\drh\big [\rot{\Hv}-\partial_t\Dv\big]\Ev\delta t
+      =-\intl{}{}\drh\rot{\Hv}\Ev\delta t\\
+     &=-\intl{}{}\drh\rot{\Ev}\Hv\delta t
+      = \intl{}{}\drh\partial_t\Bv\Hv\delta t
+      = \intl{}{}\drh\partial_t\rot{\Av}\Hv\delta t
+      = \intl{}{}\drh\partial_t\Av\rot{\Hv}\delta t\\
+     &= \intl{}{}\drh\partial_t\Av\Jv\delta t
+      = \intl{}{}\drh\delta\Av\Jv.
+   }
+   $\Av$-t és $\Jv$-t arányosnak tekintve a teljes munkavégzés:
+   \aln{
+    W=\frac{1}{2}\intl{}{}\drh\Av\Jv.\label{eq:12-magmunka}
+   }
+   
+  \subsection{Indukciós tényezők}\label{ss:12-indegyh}
+   
+   Most tekintsünk $N$ darab vezetőhurkot, majd melyettesítsük be a $\Jv_i$-k által létrehozott vektorpotenciált:
+   \al{
+    W
+     &=\frac{1}{2}\suml{ij=1}{N}\intl{}{}\drh\Av_i\Jv_j
+      =\frac{1}{2}\frac{\mu_0}{4\pi}\suml{ij=1}{N}\intl{}{}\drh\int\drkh\frac{\Jv_i(\rv)\vect{J}_j(\vect{r}')}{\abs{\vect{r}-\vect{r}'}}\\
+     &=\frac{1}{2}\frac{\mu_0}{4\pi}\suml{i=1}{N}\intl{}{}\drh\int\drkh\frac{\Jv_i(\rv)\vect{J}_i(\vect{r}')}{\abs{\vect{r}-\vect{r}'}}
+       +\frac{\mu_0}{4\pi}\frac{1}{2}\suml{i(\ne j)}{N}\intl{}{}\drh\int\drkh\frac{\Jv_i(\rv)\vect{J}_j(\vect{r}')}{\abs{\vect{r}-\vect{r}'}}
+   }
+   Tegyük fel, hogy a vezetők vékonyak, azaz $\drh \Jv\to\dd \sv I$. Ekkor a második tag átalakítható:
+   \al{
+    \frac{\mu_0}{4\pi}\suml{i\ne j}{N}\intl{}{}\drh\int\drkh\frac{\Jv_i(\rv)\vect{J}_j(\vect{r}')}{\abs{\vect{r}-\vect{r}'}}
+     =\frac{\mu_0}{4\pi}\frac{1}{2}\suml{i(\ne j)}{N}\ointl{C_i}{}\dd \sv\ointl{C_j}{}\dd \sv'\,\frac{1}{\abs{\vect{s}-\vect{s}'}}I_i I_j.
+   }
+   Ezek alapján a rendszer energiája felírható:
+   \aln{
+    &W= \frac{1}{2}\suml{i=1}{N}L_i I^2_i
+      +\suml{i\ne j}{N}M_{ij} I_iI_j
+    &\begin{array}{l}\displaystyle
+      L_i=\frac{\mu_0}{4\pi I_i^2}\intl{}{}\drh\int\drkh\frac{\Jv_i(\rv)\vect{J}_i(\vect{r}')}{\abs{\vect{r}-\vect{r}'}},\\
+      \displaystyle M_{ij}=\frac{\mu_0}{4\pi}\frac{1}{2}\ointl{C_i}{}\dd \sv\ointl{C_j}{}\dd \sv'\,\frac{1}{\abs{\vect{s}-\vect{s}'}}.
+     \end{array}\label{eq:12-indegyhatok}
+   }
+   Fontos, hogy az első tagban a vezető vastagsága nem hagyható el. Az első tagban jelennek meg az önindukciós együtthatók, a másodikban pedig a kölcsönös indukciós együtthatók. $M_{ij}$ szimmetrikus $i$--$j$-ben.
+   
+   Az indukciós tényezők számolásához nem ez a legpraktikusabb eljárás. Tekintsünk egy vékony áramhurkot. Ekkor \eqaref{eq:12-magmunka} egyenlet átírható:
+   \al{
+    W=\frac{1}{2}\intl{}{}\drh\Av\Jv
+     =\frac{I}{2}\ointl{C}{}\dd\sv\,\Av
+     =\frac{I}{2}\intl{\intdom{C}}{}\df\,\rot\Av
+     =\frac{I}{2}\intl{\intdom{C}}{}\df\,\Bv
+     =\frac{I}{2}\Phi_{\intdom{C}}.
+   }
+   
+   Tekintsük egy áramhurok energiáját \eqaref{eq:12-indegyhatok} összegben. Ekkor:
+   \al{
+    \Phi_{\intdom{C_i}}
+     =\frac{2}{I_i}W_i
+     =\frac{2}{I_i}\frac{1}{2}\left(L_i I^2_i
+      +\suml{j(\ne i)}{N}M_{ij} I_iI_j\right)
+     =L_i I_i
+      +\suml{j(\ne i)}{N}M_{ij} I_j.
+   }
+   Ha az időfüggés csak az áram nagyságában van, az árameloszlás alakjában nem ($\Jv=\jv\cdot I(t)$), akkor
+   \al{
+    \pder{}{t}\Phi_{\intdom{C_i}}
+     =L_i\dot I_i+\suml{j(\ne i)}{N}M_{ij} \dot{I}_j.
+   }
+   
+   Így tehát ha elkészítjük a mágneses fluxus időbeli deriváltját, akkor az egyes áramderiváltak szorzói adják az indukciós együtthatókat.
+   
+   \paragraph{Példa}
+    
+    Tekintsünk egy vékony, $r_0$ sugarú, egymástól $D$ távolságra lévő, párhuzamos vezetőpárt, amelyekben az áram ellentétes irányba folyik. Az egyenes vezető körül kialakuló tér: $B(r)=\frac{\mu_0 I}{2\pi}\frac{1}{r}$, így a tér:
+    \al{
+     B(r)=\frac{\mu_0 I}{2\pi}\left(\frac{1}{r}+\frac{1}{D-r}\right).
+    }
+    A fluxus a kettő között:
+    \al{
+     \Phi
+     &=\intl{}{}\df\Bv(\rv)
+      =l\intl{r_0}{D-r_0}\dd r\,\frac{\mu_0 I}{2\pi}\left(\frac{1}{r}+\frac{1}{D-r}\right)
+      =\frac{\mu_0 Il}{2\pi}\left[\ln(r)-\ln(D-r)\right]_{r_0}^{D-r_0}\\
+     &=\frac{\mu_0 Il}{\pi}\ln\left(\frac{D-r_0}{r_0}\right),
+    }
+    ahonnan
+    \al{
+     L_i=\frac{1}{\dot{I}_i}\partial_t\Phi=\frac{\mu_0 l}{\pi}\ln\left(\frac{D-r_0}{r_0}\right)
+    }
+   
+ \section{Kvantummechanika}
+  
+  \subsection{Sokrészecske probléma a kvantummechanikában} 
+   
+   A sokrészecskés állapot: $\Psi(t,\rv_1,\sigma_1;\rv_2,\sigma_2;\dots;\rv_N,\sigma_N)$. Ez az egyrészecskés állapotok direkt szorzat terén értelmezett: $\mathbb{H}=\mathbb{H}_1\otimes\mathbb{H}_2\otimes\dots\otimes\mathbb{H}_N$,
+   \al{
+    \Psi(t,\rv_1,\sigma_1;\rv_2,\sigma_2;\dots;\rv_N,\sigma_N)
+     =\psi_1(t,\rv_1,\sigma_1)\psi_2(t,\rv_2,\sigma_2)\cdot\cdots\cdot\psi_N(t,\rv_N,\sigma_N)
+   }
+   A Hamilton-operátor ekkor:
+   \al{
+    \opH\big(\{\rv_i,\sigma_i\}\big)=\suml{i}{}\opH_{i}(\rv_i,\sigma_i)+\suml{i\ne j}{}\opH_{ij}(\rv_i,\sigma_i,\rv_j,\sigma_j)+\dots,
+   }
+   ahol az egyrészecskés operátorok úgy értelmezhető a sokrészecskés téren, hogy $I_1\otimes\dots\otimes\opH_i\otimes\dots I_N$.
+   
+  \subsection{A részecskék megkülönböztethetetlensége}
+   
+   A jelenségek leírásához feltételezzük, hogy az ugyanolyan típusú részecskék megkülönböztethetetlenek. Ez praktikusan azt jelenti, hogy ha egy sokrészecskés rendszerben bármely két részecskét kicserélünk, akkor a mérhető mennyiségnek nem változhatnak. 
+   
+   A hullámfüggvényre ez alapján a követelmény:
+   \al{
+    \Psi(t,\rv_{\pi(1)},\sigma_{\pi(1)};\rv_{\pi(2)},\sigma_{\pi(2)};\dots;\rv_{\pi(N)},\sigma_{\pi(N)})=e^{i\phi(\pi)}\Psi(t,\rv_1,\sigma_1;\rv_2,\sigma_2;\dots;\rv_N,\sigma_N),
+   }
+   ahol $\pi$ egy tetszőleges permutáció. A részecskecserét el is tudjuk végezni, legalább két dimenzióban egy megfelelő forgatással. Az elektronok esetében a $z$ tengelyű forgatásnál egy $-1$-szeres szorzót ad a transzformáció. 
+   
+   A részecskecserére való fázis szoros kapcsolatban van a kvantálással. Fermionikus rendszerekben a részecskecsere $-1$-es szorzót, bozonikus rendszerekben pedig $+1$-es szorzót ad.
+   
+  \subsection{Pauli-elv}
+   
+   A Pauli-elv kimondja, hogy a fermionikus sokrészecske-rendszerek alapállapota minden esetben teljesen antiszimmetrikus. A sokrészecskés hullámfüggvény antiszimmetrizálva:
+   \al{
+    \Psi(t,\rv_1,\sigma_1;\rv_2,\sigma_2;\dots;\rv_N,\sigma_N)
+     =\frac{1}{\sqrt{N!}}\suml{\pi\in S_n}{}(-1)^{\pi}\psi_1(t,\rv_1,\sigma_1)\psi_2(t,\rv_2,\sigma_2)\cdot\cdots\cdot\psi_N(t,\rv_N,\sigma_N),
+   }
+   ami felírható egy Slater-determinánsként:
+   \al{
+    \Psi(t,\rv_1,\sigma_1;\rv_2,\sigma_2;\dots;\rv_N,\sigma_N)
+     =\frac{1}{\sqrt{N!}}
+      \begin{vmatrix}
+       \psi_1(t,\rv_1,\sigma_1) & \psi_1(t,\rv_2,\sigma_2) & \dots  &\psi_1(t,\rv_N,\sigma_N)\\
+       \psi_2(t,\rv_1,\sigma_1) & \psi_2(t,\rv_2,\sigma_2) & \dots  &\psi_1(t,\rv_N,\sigma_N)\\
+       \vdots                   &                          & \ddots &\\
+       \psi_N(t,\rv_1,\sigma_1) & \psi_2(t,\rv_2,\sigma_2) & \dots  &\psi_N(t,\rv_N,\sigma_N)
+      \end{vmatrix}.
+   }
+   
+  \subsection{Az egyrészecske közelítés, Hartree-módszer}
+   
+   Lásd \ref{ss:10-Hartree}. fejezet. 
+   
+   
+   

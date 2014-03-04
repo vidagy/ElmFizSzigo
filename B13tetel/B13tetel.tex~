@@ -1,0 +1,209 @@
+\chapter{Brown-mozg\'as, Langevin- \'es Fokker--Plack-egyenlet}
+ 
+ \section{Brown-mozgás}
+  
+  A Brown-mozgás egy véletlen bolyongásnak tekinthető azon az idő és méretskálán, ahol az egyedi részecske-részecske ütközések már nem láthatóak. Egy kísérlet csak egy megvalósulást mutat, valójában a lehetséges mintázatok egy sokaságot alkotnak, amelyhez tartozik egy valószínűségi eloszlás is.
+  
+  \subsection{A Brown-mozgás klasszikus leírása}
+   
+   Készítsünk egy sokaságot, ahol a részecskék egydimenziós térben mozognak nehézségi erőtérben. Legyen a részecskék sűrűsége $n(t,x)$, míg az áramsűrűség pedig $j(t,x)$. Mivel a részecskék száma állandó, így $\partial_t n(t,x)+\partial_x j(t,x)=0$. 
+   
+   A részecskék mozgását két áramsűrűség határozza meg. Az egyik a diffúzió, ahol a Fick-törvény adja meg az áramsűrűség és a sűrűség közötti kapcsolatot: $j_\text{D}=-D\partial_x n(t,x)$. A másik oka a nehézségi erőtér és a közegellenállás által kifejtett erő. A mozgásegyenlet $m\ddot x_i=-m\gamma\dot x_i+F$, ahol ha az $\ddot a\approx 0$ (stacioner) esetet nézzük: $\dot x_i=\frac{F}{m\gamma}$. Az innen adódó áramsűrűség: $j_ F=n\cdot \dot x_i=\frac{nF}{m\gamma}$. 
+   
+   Az áramokat behelyettesítbe a sűrűségre kapunk egy differenciálegyenletet:
+   \aln{
+    \partial_t n(t,x)=-\frac{F}{m\gamma}\partial_x n+D\partial^2_x n(t,x).\label{eq:B13-mozge}
+   }
+   Stacioner állapotban az időfüggés eltűnik, így 
+   \al{
+    \frac{F}{m\gamma}n'(x)=D n''(x).
+   }
+   Nehézségi erőtérben ennek a megoldása $n(x)=n(x_0)e^{-\frac{mg}{D m\gamma}x}$. A megoldásnak meg kell felenie a Maxwell--Boltz\-mann-eloszlásnak, ami $n(x)=n(0)e^{-\frac{mgx}{\kB T}}$. Ennek következménye, hogy $D=\kB T\mu$, ahol $\mu$ a mozgékonyság, $\mu=\frac{\dot x_i}{F}=\frac{1}{m\gamma}$.
+   
+   Ez a fluktuáció--disszipáció-tétel megjelenése, a mobilitás, mint a külső térre adott válasz megjelenik, míg a disszipáció a diffúziós állandóval kapcsolatos. 
+   
+  \subsection{A Brown-mozgás valószínűségi leírása}
+   
+   Legyen $P(t,x|t_0,x_0)$ annak a valószínűsége, hogy a részecske a $t$ időpontban az $x$ helyen van, feltéve, hogy a $t_0$ pillanatban $x_0$-ban volt. \Eqaref{eq:B13-mozge} egyenletet fel lehet írni ezekre a valószínűségekre. Az $F=0$-t választva:
+   \al{
+    \partial_t P(t,x|t_0,x_0)=D\partial^2_x P(t,x|t_0,x_0).
+   }
+   Az egyenlet kezdeti feltétele: $P(t_0,x|t_0,x_0)=\delta(x-x_0)$. Az egyenlet megoldható, a megoldás egy Gauss-eloszlás, melynek szórása időben gyökösen nő:
+   \al{
+    &P(t,x|t_0,x_0)=\frac{1}{\sqrt{2\pi\sigma^2(t)}}e^{-\frac{(x-x_0)^2}{2\sigma^2(t)}}
+    &\sigma(t)=\sqrt{2D(t-t_0)}.
+   }
+   
+ \section{Langevin-egyenlet}
+  
+  A mozgásegyenletet kicsit átértelmezzük, ez a Langevin-egyenlet:
+  \aln{
+   \dot v(t)=-\gamma v(t)+\varphi(t).\label{eq:B13-langevin}
+  }
+  Itt az első tag a viszkozitásnak felel meg, míg a második a részecskékkel való ütközésnek felel meg. Ez az egyenlet egy sztochasztikus differenciálegyenlet, melynek megoldása egy eloszlás minden egyes időpillanatra, és tartalmazza a különböző időpontokhoz tartozó eloszlások közötti korrelációkat is. 
+  
+  A megoldáshoz Fourier-transzformáljuk a fenti egyenletet ($\partial_t\to -i\omega$):
+  \al{
+   -i\omega v(\omega)&=-\gamma v(\omega)+\varphi(\omega)\\
+   v(\omega)&=\frac{\varphi(\omega)}{-i\omega +\gamma}\\
+   \abs{v(\omega)}^2&=\frac{\abs{\varphi(\omega)}^2}{\omega^2 +\gamma^2}
+  }
+  
+  Az egyenletben szereplő abszolút érték négyzetek éppen a spektrális sűrűségnek felelnek meg. A Wiener--Khintchin-tétel (\ref{ss:B11-fdt}. fejezet) alapján a spektrális sűrűség megegyezik a korrelációs függvény Fourier-transzformáltjával:
+  \aln{
+   \abs{v(\omega)}^2=S_{vv}(\omega)=C_{vv}(\omega)=\frac{S_{\varphi\varphi}(\omega)}{\omega^2 +\gamma^2}.\label{eq:B13-lange2}
+  }
+  A továbbiakhoz a sztochasztikus erőre kell feltételezéseket tennünk. 
+  \begin{itemize}
+   \item A sztochasztikus erőnek nincs kitüntetett iránya: $\mv{\varphi(t)}=0$.
+   \item A molekulákkal való ütközés az általunk vizsgált időskálán korrelálatlan: \al{
+    C_{\varphi\varphi}(t-t')=\mv{\varphi(t)\varphi(t')}=C\delta(t-t').
+   }
+   A prefaktor a Wiener--Khintchin-tétel alapján kapható: $S_{\varphi\varphi}(\omega)=\intl{}{}\dd\omega\,e^{i\omega t}C_{\varphi\varphi}(t)=C=S_{\varphi\varphi}$. A spektrális sűrűség tehát frekvenciafüggetlen.
+  \end{itemize}
+  
+  Ezek alapján \eqaref{eq:B13-lange2} egyenlet időbe visszatranszformálva:
+  \al{
+   C_{vv}(t)
+    =\frac{1}{2\pi}\intl{}{}\dd t\, e^{-i\omega t}\frac{S_{\varphi\varphi}}{\omega^2 +\gamma^2}
+    =\frac{S_{\varphi\varphi}}{2\pi}\intl{}{}\dd t\, \frac{e^{-i\omega t}}{\omega^2 +\gamma^2}
+    =\frac{S_{\varphi\varphi}}{2\gamma}e^{-\gamma\abs{t}}.
+  }
+  Az integrálás pl. a reziduum-tétellel viszonylag egyszerűen elvégezhető. $S_{\varphi\varphi}$ értéke a $t=0$-ban meghatározható, hiszen $C_{vv}(t=0)=\mv{v^2}$, ami pedig az ekvipartíció tétele miatt $\frac{1}{2}m\mv{v^2}=\frac{1}{2}\kB T$. Ezzel tehát:
+  \al{
+   &S_{\varphi\varphi}=\frac{2\gamma\kB T}{m}
+   &C_{vv}(t)=\frac{\kB T}{m}e^{-\gamma\abs{t}}
+  }
+  
+  A várható eltávolodásnégyzet:
+  \al{
+   \mv{(x(t)-x_0)^2}
+    &=\mv{\left(\intl{0}{t}\dd t'\,v(t')\right)^2}
+     =\intl{0}{t}\dd t'\,\intl{0}{t}\dd t''\,\mv{v(t')v(t'')}
+     =\intl{0}{t}\dd t'\,\intl{0}{t}\dd t''\,C_{vv}(t'-t'')\\
+    &=\frac{\kB T}{m}\intl{0}{t}\dd t'\,\intl{0}{t}\dd t''\,e^{-\gamma\abs{t'-t''}}
+     =\frac{2\kB T}{m}\intl{0}{t}\dd t'\,\intl{t'}{t}\dd t''\,e^{-\gamma(t''-t')}\\
+    &=-\frac{2\kB T}{m\gamma}\intl{0}{t}\dd t'\,\left[e^{-\gamma(t''-t')}\right]_{t'}^{t}
+     =\frac{2\kB T}{m\gamma}\intl{0}{t}\dd t'\,\left(1-e^{-\gamma(t-t')}\right)\\
+    &=\frac{2\kB T}{m\gamma}\left(t-\frac{1}{\gamma}\left(1-e^{-\gamma t}\right)\right).
+  }
+  
+  Kis időkre az exponenciális sorfejtéséből $\sim t^2$-es időfüggést, míg nagy távolságokra $\sim t$-s időfüggést kapunk az eltávolodás négyzetének várhatóértékére. Rövid időre a részecske ballisztikus, majd a viszkozitás lelassítja, és a korábban kapott négyzetgyökös időfüggéssel távolodik el. 
+  
+  \section{Markov-folyamatok, master-egyenlet}
+   
+   Markov-folyamatok azok a folyamatok, melyeknek nincs memóriájuk, vagyis a rendszer állapota a következő pillanatban csak attól függ, hogy a rendszernek milyen most az állapota, attól nem hogy milyen volt. Ez a feltételes valószínűségekkel $t_n>t_{n-1}\dots t_1$:
+   \al{
+    P\big(t_{n+1},x_{n+1}\big|t_{n}x_{n};t_{n-1}x_{n-1};\dots;t_{1}x_{1}\big)
+     =P\big(t_{n+1},x_{n+1}\big|t_{n}x_{n}\big),
+   }
+   vagyis ha van egy feltételünk $t_n$-ben, akkor a valószínűség a korábbi időpontokban megadott feltételektől független.
+   
+   Felhasználva a feltételes valószínűségek definícióját (FVD), a teljes valószínűségek tételét (TVT) és a Markov-folyamatok memóriavesztését (MEM):
+   \al{
+    \intl{}{}\dd x_2\,P(t_3,x_3;t_2,x_2;t_1,x_1)
+     &\stackrel{\text{TVT}}{=}P(t_3,x_3;t_1,x_1)\\
+     &\stackrel{\text{FVD}}{=}\intl{}{}\dd x_2\,P(t_3,x_3|t_2,x_2;t_1,x_1)P(t_2,x_2|t_1,x_1)P(t_1,x_1)\\
+     &\stackrel{\text{MEM}}{=}\intl{}{}\dd x_2\,P(t_3,x_3|t_2,x_2)P(t_2,x_2|t_1,x_1)P(t_1,x_1)\\
+    P(t_3,x_3|t_1,x_1)
+     &=\intl{}{}\dd x_2\,P(t_3,x_3|t_2,x_2)P(t_2,x_2|t_1,x_1)
+   }
+   Az utolsó egyenlet a Chapman--Kolmogorov-egyenlet. 
+   
+   \paragraph{Master-egyenlet}
+    
+    Induljunk ki a következő azonosságból:
+    \al{
+     P(t_1+\tau,x_2)=\intl{}{}\dd x_1\,P\big(t_1+\tau,x_2|t_1,x_1\big)P(t_1,x_1),
+    }
+    ami azt fejezi ki, hogy annak a valószínűsége, hogy $\tau$ idővel később $x_2$-ben leszünk annyi, mint hogy feltesszük, hogy $t_1$-ben voltunk valahol, és integrálunk arra a feltételre, hogy voltunk valahol. 
+    
+    A feltételes valószínűséget felírhatjuk az időegységre jutó átmeneti valószínűségekkel. Ha a rendszer mikroszkopikus szinten időfüggetlen, akkor $w$ nem függ a kezdeti időponttól, így :
+    \al{
+     P\big(t_1+\tau,x_2|t_1,x_1\big)
+      =\tau w(x_1\to x_2)+\left[1-\tau\intl{}{}\dd x\, w(x_1\to x)\right]\delta (x_1-x_2).
+    }
+    Itt az első tag azt fejezi ki, hogy mennyi a valószínűsége annak, hogy $x_1$-ből $x_2$-be találtunk, a második tag pedig megadja, hogy ha már ott lettünk volna $t_1$-ben az $x_2$ pontban, akkor mennyi a valószínűsége, hogy nem megyünk el onnan.
+    
+    Ha $\tau=0$, akkor értelemszerűen $P\big(t_1,x_2|t_1,x_1\big)=\delta(x_1-x_2)$.
+    
+    A feltételes valószínűség kifejtett alakját helyettesítsük be a fenti egyenletbe, majd deriváljuk $\tau$ szerint:
+    \aln{
+     P(t_1+\tau,x_2)
+      &=\intl{}{}\dd x_1\,P(t_1,x_1)\left\{\tau w(x_1\to x_2)+\left[1-\tau\intl{}{}\dd x\, w(x_1\to x)\right]\delta (x_1-x_2)\right\}\nonumber\\
+     \partial_t P(t_1,x_2)
+      &=\intl{}{}\dd x_1\,P(t_1,x_1)\left\{w(x_1\to x_2)-\intl{}{}\dd x\, w(x_1\to x)\delta (x_1-x_2)\right\}\nonumber\\
+      &=\intl{}{}\dd x_1\,P(t_1,x_1)w(x_1\to x_2)-\intl{}{}\dd x\,P(t_1,x_2) w(x_2\to x)\nonumber\\
+      &=\intl{}{}\dd x\,\Big[P(t_1,x)w(x\to x_2)-P(t_1,x_2) w(x_2\to x)\Big]\nonumber\\
+     \partial_t P(t,x)
+      &=\intl{}{}\dd x'\,\Big[P(t,x')w(x'\to x)-P(t,x) w(x\to x')\Big].\label{eq:B13-master}
+    }
+    Ez a master-egyenlet, melynek jelentése nagyon szemléletes: azzal változik az $x$-ben tartózkodásunk valószínűsége, hogy onnan az adott átmeneti valószínűséggel kiszóródunk egy $x'$ állapotba, vagy egy másik állapotból az adott átmeneti valószínűséggel beszóródunk $x$-be. Minden ilyen átmenet súlyozva van azzal, hogy mennyi a valószínűsége annak, hogy az adott kezdeti állapotban vagyunk.
+   
+   
+ \section{Fokker--Planck-egyenlet}
+  
+  Tegyük fel, hogy $w$ folytonos paramétere a változóinak. Vezessük be a $\xi=x-x'$ jelölést, illetve az átmeneti valószínűségekben a $w(x\to x')=w(x\to x-\xi)=w(x,-\xi)$ jelölést. Ezzel:
+  \al{
+   \partial_t P(t,x)
+      &=\intl{}{}\dd \xi\,\Big[P(t,x-\xi)w(x-\xi\to x)-P(t,x) w(x\to x-\xi)\Big]\\
+      &=\intl{}{}\dd \xi\,\Big[P(t,x-\xi)w(x-\xi,\xi)-P(t,x) w(x,-\xi)\Big].
+  }
+  Itt az első tagban sorbafejtünk a kicsi $-\xi$ szerint (az $x$ mellett kicsi csak):
+  \al{
+   &P(t,x-\xi)w(x-\xi,\xi)\\
+    &\qquad=P(t,x)w(x,\xi)
+     +\der{}{x}\big[P(t,x)w(x,\xi)\big]\cdot (-\xi)
+     +\frac{1}{2!}\der{^2}{x^2}\big[P(t,x)w(x,\xi)\big]\cdot (-\xi)^2
+     +\dots
+  }
+  Ezt behelyettesítve láthatjuk, hogy az első tag kiesik, így
+  \al{
+   \partial_t P(t,x)
+      &=\suml{n=1}{\infty}\frac{(-1)^{n}}{n!}\pder{^n}{x^n}\big[\alpha_n(x)P(t,x)\big]&
+    \alpha_n(x)=\intl{}{}\dd\xi\,\xi^n w(x,\xi)=\lim_{\tau\to 0}\frac{1}{\tau}\mv{\xi^n}.
+  }
+   
+   
+  \paragraph{Alkalmazás a Brown-mozgásra}
+   
+   A Langevin-egyenlet (\eqref{eq:B13-langevin} egyenlet) integrálva egy rövid $\tau$ időtartalmra:
+   \al{
+    \Delta v(t)=-\gamma v\tau+\intl{t}{t+\tau}\dd t'\,\varphi(t')+\mathcal{O}(\tau^2)
+   }
+   
+   Kérdés, hogy hogyan tudjuk erre alkalmazni a fenti megfontolásokat. Itt egy állapot az, hogy a részecske sebessége $v$. Az állapot kis megváltozása $\xi=\Delta v$. Számoljuk ki az $\alpha_n(x)$-eket $\mathcal{O}(\tau)$ rendig:
+   \al{
+    \alpha_1(x)
+     &=\lim_{\tau\to 0}\frac{1}{\tau}\mv{\Delta v}
+      =\lim_{\tau\to 0}\frac{1}{\tau}\bigg(-\gamma \mv{v}\tau+\intl{t}{t+\tau}\dd t'\,\underbrace{\mv{\varphi(t')}}_{0}\bigg)
+      =-\gamma v\\
+    \alpha_2(x)
+     &=\lim_{\tau\to 0}\frac{1}{\tau}\mv{(\Delta v)^2}
+      =\lim_{\tau\to 0}\frac{1}{\tau}\bigg(\gamma^2 \mv{v^2}\tau^2+\intl{t}{t+\tau}\dd t'\,\intl{t}{t+\tau}\dd t''\,\mv{\varphi(t')\varphi(t'')}+(\dots)\underbrace{\mv{\varphi(t')}}_{0}\bigg)\\
+     &=\lim_{\tau\to 0}\frac{1}{\tau}\intl{t}{t+\tau}\dd t'\,\intl{t}{t+\tau}\dd t''\,\underbrace{\mv{\varphi(t')\varphi(t'')}}_{=S_{\varphi\varphi}\delta(t'-t'')}
+      =\lim_{\tau\to 0}\frac{1}{\tau}\intl{t}{t+\tau}\dd t'\,S_{\varphi\varphi}
+      =\lim_{\tau\to 0}\frac{1}{\tau}\tau S_{\varphi\varphi}
+      =S_{\varphi\varphi}.
+   }
+   Itt tesszük fel a sztohasztikus zajra kirótt harmadik követelményt: a zaj minden további momentuma tűnjön el, azaz $\alpha_n(x)=0$, ha $n>2$. 
+   
+   Behelyettesítve a Fokker--Planck-egyenletbe:
+   \al{
+    \partial_t P(t,v)
+      &=-\pder{}{v}\left[(-\gamma v) P(t,v)\right]+\frac{1}{2}\pder{^2}{v^2}\left[S_{\varphi\varphi} P(t,v)\right],
+   }
+   majd beírva $S_{\varphi\varphi}$ értékét:
+   \al{
+    \partial_t P(t,v)
+      &=\pder{}{v}\left[\gamma \left( v +\frac{\kB T}{m}\pder{}{v} \right)\right]P(t,v)
+   }
+   
+   Ez az egyenlet megoldható. A megoldás nagyon csúnya, de kijön belőle ugyanaz, mint amit megkaptunk a Langevin-egyenlet megoldásánál. A megoldás annyiban több, hogy a $P(t,v)$ eloszlást is megkaptuk.
+%    Minket a stacioner eset érdekel, ekkor a bal oldal nulla. A jobb oldalon akkor az első deriválás után konstans áll. Ennek az értéke nulla kell, hogy legyen, hiszen $P(v\to\infty)=0$ és $P'(v\to\infty)=0$. Az egyenlet tehát:
+%    \al{
+%     &0=\gamma v P(v) +\frac{\kB T}{m}P'(v)
+%     &\Rightarrow
+%     && P_\text{eq}(v)=\sqrt{\frac{m}{2\pi\kB T}}e^{-\frac{m}{2\kB T}v^2}.
+%    }
+   

@@ -1,0 +1,722 @@
+\chapter{A klasszikus fizika \'es a nemrelativisztikus kvantummechanika alapegyenletei}\label{1tetel}
+ 
+ \section{Mechanika}
+  
+  \subsection{Newton axiómák}
+   
+   Tér lokálisan euklideszi. Ebben választunk egy kitüntetett pontot (origó) és egy koordináta-rendszert, ez egy vonatkoztatási rendszer. Tömegpontok (testek) helyzetének leírása vektorokkal: $\vect{r}(t)$, itt $t$ az idő, paraméter. Kinematika: mozgás leírása: $\frac{\dd\vect{r}}{\dd t}= \vect{v}(t)$, $\frac{\dd\vect{v}}{\dd t}= \vect{a}(t)$\dots. 
+   
+   Newton axiómái inerciarendszerekben:
+   
+   {\bf Newton I. axiómája:} Minden test nyugalomban marad vagy egyenes vonalú egyenletes mozgást végez mindaddig, míg ezt az állapotot egy másik test vagy mező meg nem változtatja. Egy vonatkoztatási rendszer akkor inerciarendszer, ha ez a törvény minden esetben teljesül.
+   
+   Következmény, ha egy testnek változik a mozgásállapota, akkor van gyorsulása, aminek az oka egy másik test: erőhatás. Mozgásállapot jellemző mennyisége az impulzus: $\vect{p}=m\vect{v}$. Ahol $m$ a tömeg. Tömeg definíciója: a) {\it dinamikai tömeg}: egy álló és egy mozgó test tökéletesen rugalmas ütközésénél: $m_1 \Delta v_1=m_2 \Delta v_2$. Tömeg egysége definíció alapján (Párizs, platina-irídium), b) {\it súlyos tömeg}: Nehézségi erő által előidézett gyorsulásváltozás: $\vect{G}=m_s g$. Ezek egyenlőek Eötvös ingakísérletei alapján, az általános relativitáselmélet pedig {\color{red}definíciószerűen ???}.
+   
+   {\bf Newton II. axiómája:} Egy pontszerű test lendületének (impulzusának) a megváltozása egyenesen arányos és azonos irányú a testre ható $\vect{F}$ erővel. $\vect{F}=\frac{\dd \vect{p}}{\dd t}$. 
+   
+   {\bf Newton III. axiómája:} Két test kölcsönhatása során mindkét testre azonos nagyságú, egymással ellentétes irányú erő hat. Ez a hatás-ellenhatás törvénye. 
+   
+   {\bf Newton IV. törvénye:} Több erő együttes hatása megegyezik az erők eredőjének (vektori összegének) hatásával. 
+   
+  \subsection{A virtuális munka elve (statika)}
+   
+   Tekintsünk $n$ darab tömegpontból álló pontrendszert. A pontokra ható erők lehetnek szabad- és kényszererők. Kényszererő: olyan erő, amelynek irányában nem lehetséges elmozdulás. A pontrendszer egyensúlyban van, ha a tömegpontokra ható erők eredője nulla tömegpontonként: $\forall i\in [1,n]:\; \vect{F}_i=0$. Ezzel ekvivalens a 
+   \eqn{
+    \delta A:=\sum\limits_{i=1}^{n}\vect{F}_i\delta\vect{r}_i \label{eq:01vme}
+   }
+   összeg, ahol $\delta A$ a virtuális munka, $\vect{F}_i$ az $i$-edik tömegpontra ható erők eredője, $\delta\vect{r}_i$ pedig az $i$-edik tömegpont virtuális elmozdulása: nagysága infinitezimálisan kicsi és bármerre mutathat, amerre a test el tud mozdulni. Ebből következik, hogy csak a szabad erőket kell \eqaref{eq:01vme} egyenletbe írni. 
+   
+   $\delta A=0$ $\Rightarrow$ $\forall i\in [1,n]:\; \vect{F}_i=0$, így az egyensúly akkor és csak akkor állhat fenn, ha $\delta A=0$.
+   
+   Áttérés egységes jelölésre: $[\vect{r}_1]_1=x_1$, $[\vect{r}_1]_2=x_2$,\dots,$[\vect{r}_n]_3=x_{3n}$; $[\vect{F}_1]_1=X_1$, $[\vect{F}_1]_2=X_2$,\dots, $[\vect{F}_n]_1=X_{3n}$:
+   \eqn{
+    \delta A:=\sum\limits_{i=1}^{3n}X_i\delta x_i. \label{eq:01vme-alt}
+   }
+   Kényszerfeltételek egyenletek formájában\footnote{Itt csak a holonom kényszerekkel foglalkozunk. Továbbiak \aref{ss3:kenyszerfeletetelek}. fejezetben.}: 
+   \eqn{
+    \phi_j(x_1,x_2,\dots,x_{3n},t)=0\qquad\forall j=1\dots s.\label{eq:01-kenyszerek}
+   }
+   Ezek az egyenletek a mozgás során végig igazak, ezeket idő szerinte deriválva:
+   \al{
+    \der{\phi_j}{t}=\suml{i=1}{3n}\pder{\phi_j}{x_i}\der{x_i}{t}+ \pder{\phi_j}{t}&=0 \qquad \forall j=1\dots s \\
+    \dd\phi_j=\suml{i=1}{3n}\pder{\phi_j}{x_i}\dd x_i+ \pder{\phi_j}{t}\dd t&=0 
+   }
+   A virtuális elmozdulások egy időpillanatban történnek meg, így a köztük lévő kapcsolatot a $\dd t=0$-ban keressük:
+   \eqn{
+    \delta\phi_j=\suml{i=1}{3n}\pder{\phi_j}{x_i}\delta x_i=0 \label{eq:01-kenyszer}
+   }
+   Ez az egyenlet a virtuális elmozdulások közötti kapcsolatokat fejezi ki.  Ezeket a kényszerfeltételeket be kell foglalni a virtuális munka elvébe. Ezt megtehetjük Lagrange-multiplikátorokkal: 
+   \eq{
+    \delta A:
+    =\sum\limits_{i=1}^{3n}X_i\delta x_i + \suml{j=1}{s}\lambda_j\delta\phi_j
+    =\sum\limits_{i=1}^{3n} X_i\delta x_i + \suml{j=1}{s}\lambda_j\suml{i=1}{3n} \pder{\phi_j}{x_i}\delta x_i
+    =\sum\limits_{i=1}^{3n} \left(X_i + \suml{j=1}{s}\lambda_j\pder{\phi_j}{x_i}\right)\delta x_i=0
+   }
+   Ebből pedig, mivel a $\delta x_i$-k függetlenek, az egyensúlyi egyenletek adódnak:
+   \eqn{
+    \boxed{X_i + \suml{j=1}{s}\lambda_j\pder{\phi_j}{x_i}=0 \qquad\forall i=1\dots 3n}\label{eq:01-ee}
+   }
+   $3n$ egyenlet, $3n+s$ ismeretlen, de hozzávesszük, \eqaref{eq:01-kenyszerek} egyenleteket, akkor a feladat jól definiált. 
+  
+  \subsection{A d'Alembert-elv (dinamika)}\label{ss1:dalembert}
+   
+   Ugyanaz, mint a virtuális munka elvénél, csak nem $\vect{F}_i$-re, hanem $X_i-m_i\ddot{x}_i$-re írjuk fel az összefüggést: $\delta A = \suml{i=1}{3n}(X_i-m_i\ddot{x}_i)\delta x_i=0$. Ez akkor és csak akkor nulla, ha teljesülnek a mozgásegyenletek. Kényszerfeltételek esetében:
+   \eq{
+    \delta A = \suml{i=1}{3n}(X_i-m_i\ddot{x}_i)\delta x_i+\suml{j=1}{s}\lambda_j\delta\phi_j=0,
+   }
+   ahonnan hasonlóan az következik, hogy 
+   \eqn{
+    \boxed{m_i\ddot{x}_i=X_i+\suml{j=1}{s}\lambda_j\pder{\phi_j}{x_i}}.\label{eq:01-LIE}
+   }
+   Ezek a Lagrange-féle elsőfajú egyenletek. 
+   
+   Kényszerek fajtái, osztályozása \aref{ss3:kenyszerfeletetelek}. fejezetben.
+   
+   
+  \subsection{Általánosított koordináták, Lagrange-formalizmus}\label{ss1:lagrange2}
+   
+   Praktikus okok: Descartes-féle koordináta-rendszer nem mindig kényelmes. Holonom kényszerek esetében a független változók száma: $3n-s=f$, ez a szabadsági fokok száma, ennyi mennyiséggel le lehet írni a rendszert: ezek az általánosított koordináták: $q_1$, $q_2$,\dots, $q_f$. 
+   
+   Koordinátatranszformáció:
+   \eq{
+    x_i=x_i(q_1, q_2,\dots,q_f,t)\qquad\forall i=1\dots 3n
+   }
+   Transzformáljuk a d'Alembert-elvet az általánosított koordináta-rendszerbe:
+   \al{
+    0 &= \suml{i=1}{3n}(X_i-m_i\ddot{x}_i)\delta x_i 
+      = \suml{i=1}{3n}\left( X_i-m_i\ddot{x}_i \right)\left(\suml{j=1}{f}\pder{x_i}{q_j}\delta q_j\right)
+      = \suml{j=1}{f}\left[\underbrace{\suml{i=1}{3n} X_i\pder{x_i}{q_j}}_{:=Q_j}-\underbrace{\suml{i=1}{3n}m_i\ddot{x}_i\pder{x_i}{q_j}}_{\text{II.}}\right]\delta q_j
+   }
+   A második tagot átalakítjuk. Ehhez az alábbi azonosságokra van szükség: a koordinátatranszformáció definíciójába deriválva:
+   \aln{
+    \dtx_i&=\suml{k=1}{f}\pder{x_i}{q_k}\dtq_k+\pder{x_i}{t} & \Rightarrow & & \pder{\dtx_i}{\dtq_j}&=\pder{x_i}{q_j}, \label{eq:01-altd}
+   }
+   illetve az alábbi átalakításokat elvégezve:
+   \eqn{
+    \der{}{t}\pder{x_i}{q_j}
+    = \suml{k=1}{f}\pder{}{q_k}\pder{x_i}{q_j}\dtq_k + \pder{}{t}\pder{x_i}{q_j}
+     = \pder{}{q_j}\left[\suml{k=1}{f}\pder{x_i}{q_k}\dtq_k + \pder{}{t}x_i\right ] 
+     = \pder{}{q_j}\left[\der{x_i}{t}\right ] 
+     = \pder{\dtx_i}{q_j}. \label{eq:01-dtdqcsere}
+   }
+   
+   Ezek felhasználásával a nagy zárójel második tagja:
+   \eq{
+    \text{II.}=\suml{i=1}{3n}m_i\ddot{x}_i\pder{x_i}{q_j}
+    = \suml{i=1}{3n}m_i\left[\der{}{t}\left(\dtx_i\pder{x_i}{q_j}\right)-\dtx_i\der{}{t}\left(\pder{x_i}{q_j}\right)\right],
+   }
+   ahol az első részben \eqaref{eq:01-altd} egyeneltet a másodikban pedig \eqaref{eq:01-dtdqcsere} egyenletet használjuk fel:
+   \eq{
+    \text{II.}
+     = \suml{i=1}{3n}m_i\left[\der{}{t}\left(\dtx_i\pder{\dtx_i}{\dtq_j}\right)-\dtx_i\pder{\dtx_i}{q_j}\right]
+     = \suml{i=1}{3n}\frac{m_i}{2}\left[\der{}{t}\pder{\dtx_i^2}{\dtq_j}-\pder{\dtx_i^2}{q_j}\right]
+   }
+   A kinetikus energia definícióját $\left(K=\suml{i=1}{3n}\frac{m_i}{2}\dtx_i^2\right)$ felhasználva:
+   \eq{
+    \text{II.}
+     = \der{}{t}\pder{K}{\dtq_j}-\pder{K}{q_j}.
+   }
+   Így az általánosított d'Alembert-elv a
+   \eqn{
+    \suml{j=1}{f}\left[Q_j-\der{}{t}\pder{K}{\dtq_j}+\pder{K}{q_j}\right]\delta q_j=0
+   }
+   alakot ölti, mely akkor és csak akkor teljesül, ha a szögletes zárójelben szereplő mennyiség minden $j$-re eltűnik:
+   \eq{
+    Q_j=\der{}{t}\pder{K}{\dtq_j}-\pder{K}{q_j}
+   }
+   Tegyük fel, hogy a pontrendszerre ható erők potenciálosak, akkor $Q_j$-k átalakíthatóak:
+   \eq{
+    Q_j=\suml{i=1}{3n} X_i\pder{x_i}{q_j}=-\suml{i=1}{3n} \pder{U}{x_i}\pder{x_i}{q_j}=-\pder{U}{q_j}.
+   }
+   Az előző összefüggés átalakításához kihasználjuk azt is, hogy a potenciálok $\dtq_i$-ktől nem függnek:
+   \al{
+    \der{}{t}\pder{K}{\dtq_j}-\pder{K}{q_j}&=-\pder{U}{q_j} \\
+    \der{}{t}\pder{(K-U)}{\dtq_j}-\pder{K}{q_j}&=-\pder{U}{q_j} \\
+    \der{}{t}\pder{(K-U)}{\dtq_j}-\pder{(K-U)}{q_j}&=0. \\
+   }
+   Itt bevezetve az Lagrange-függvényt, melynek független változói $q$, $\dtq$ és $t$:
+   \eqn{
+    L=L(q,\dtq,t)=K-U,
+   }
+   a másodfajú Lagrange-egyenleteket kapjuk:
+   \eqn{
+    \boxed{0=\der{}{t}\pder{L}{\dtq_j}-\pder{L}{q_j} \qquad\forall j=1\dots f.}
+   }
+   
+  \subsection{Hamilton-elv}\label{ss1:hamiltonelv}
+   
+   A Lagrange-egyenletet más formalizmussal is le lehet vezetni. Tekintsük az 
+   \eqn{
+    S=\intl{t_1}{t_2}\dd t L = \intl{t_1}{t_2}\dd t L(q,\dtq,t)
+   }
+   mennyiséget. Ez a hatás. A Hamilton-elv kimondja, hogy a hatás variációja akkor és csak akkor tűnik el, ha a rendszer a mozgásegyenletek szerint mozog, azaz teljesülnek a másodrendű Lagrange-egyenletek. A variálás $q$  szerint zajlik.
+   
+   Készítsük el a hatás variációját: 
+   \al{
+    \delta S 
+     &= \delta \intl{t_1}{t_2}\dd t L(q_1,\dots,q_f,\dtq_1,\dots,\dtq_f,t) \\
+     &= \intl{t_1}{t_2}\dd t L(q_1+\delta q_1,\dots,q_f+\delta q_f,\dtq_1+\delta \dtq_1,\dots,\dtq_f+\delta \dtq_f,t)-\intl{t_1}{t_2}\dd t L(q_1,\dots,q_f,\dtq_1,\dots,\dtq_f,t) \\
+     &= \intl{t_1}{t_2}\dd t \delta L 
+      = \intl{t_1}{t_2}\dd t \left[\suml{i=1}{f}\left(\pder{L}{q_i}\delta q_i+\pder{L}{\dtq_i}\delta \dtq_i\right)\right]
+      = \suml{i=1}{f}\intl{t_1}{t_2}\dd t \left(\pder{L}{q_i}\delta q_i+\pder{L}{\dtq_i}\delta \dtq_i\right) \\
+     &= \suml{i=1}{f}\left[\intl{t_1}{t_2}\dd t \pder{L}{q_i}\delta q_i+\underbrace{\intl{t_1}{t_2}\dd t\pder{L}{\dtq_i}\delta \dtq_i}_{\text{II.}}\right]
+   }
+   Felhasználjuk, hogy a deriválás idő szerint és a variálás felcserélhető, hiszen $t$-ben nem variálunk. Így a második tag:
+   \eq{
+   \text{II.}=\intl{t_1}{t_2}\dd t \pder{L}{\dtq_i}\der{\delta q_i}{t} = \{\text{parc.int}\}
+    = \underbrace{\left[\pder{L}{\dtq_i}\delta q_i\right]_{t_1}^{t_2}}_{=0} - \intl{t_1}{t_2}\dd t \der{}{t}\pder{L}{\dtq_i}\delta q_i,
+   }
+   vagyis a variáció:
+   \eq{
+    \delta S = \suml{i=1}{f}\intl{t_1}{t_2}\dd t \left[\pder{L}{q_i}-\der{}{t}\pder{L}{\dtq_i}\right]\delta q_i
+   }
+   
+   Ennek eltűnése akkor és csak akkor következhet be, ha minden $i$-re eltűnik az integrál külön-külön. {\color{red} Az időintegrálok eltűnéséből hogyan jön, hogy a zárójeleknek el kell tűnni???} Így:
+   \eq{
+    \pder{L}{q_i}-\der{}{t}\pder{L}{\dtq_i}=0 \qquad\forall i=1,\dots, f,
+   }
+   vagyis megkaptuk a másodfajú Lagrange egyenleteket. 
+  
+  \subsection{Kanonikus-formalizmus}
+   
+   Definiáljuk a Hamilton-függvényt és a kanonikus impulzust:
+   \aln{
+    H&=H(p,q,t)=\suml{i=1}{f}p_i\dtq_i-L, & \text{ahol} & & p_i=\pder{L}{\dtq_i}.
+   }
+   A Hamilton-függvény saját változói a $q$ a $p$ és $t$. Készítsük el a Hamilton-függvény deriváltjait:
+   \eq{
+    \pder{H}{q_k} = \suml{i=1}{f}p_i\pder{\dtq_i}{q_k}-\suml{i=1}{f}\pder{L}{\dtq_i}\pder{\dtq_i}{q_k}-\pder{L}{q_k} = -\pder{L}{q_k} = -\der{}{t}\pder{L}{\dtq_k} = -\dtp_k
+   }
+   \eq{
+    \pder{H}{p_k} = \dtq_k +\suml{i=1}{f}p_i\pder{\dtq_i}{p_k}-\suml{i=1}{f}\pder{L}{\dtq_i}\pder{\dtq_i}{p_k} = \dtq_k
+   }
+   \eq{
+    \pder{H}{t}=\suml{i=1}{f}p_i\pder{\dtq_i}{t}-\suml{i=1}{f}\pder{L}{\dtq_i}\pder{\dtq_i}{t} -\pder{L}{t}= -\pder{L}{t}
+   }
+   
+   Összefoglalva a három kanonikus-egyenlet:
+   \aln{
+    &\boxed{\pder{H}{q_k} =-\dtp_k} & &\boxed{\pder{H}{p_k} =\dtq_k }& \boxed{\pder{H}{t}=-\pder{L}{t}} \label{eq:01-kanonikus}
+   }
+   
+   \subsection{Módosított Hamilton-elv}
+   
+   A Hamilton-elvnél az $S=\intl{t_1}{t_2}\dd t\,L(q,\dtq,t)$ hatás variációit számoltuk. Itt a variálás a $q_i$, $i=1\dots f$ szerint történt. Azonban a kanonikus formalizmusban a $q_i$-ket és a $p_i$-ket független koordinátánként kezeljük. Kérdés, hogy így is igaz-e a Hamilton-elv. Tekintsük az $L=\suml{i=1}{f}p_i\dtq_i-H(q,p,t)$ Lagrange-függvényt, és nézzük meg, hogy az ezzel felírt hatás variációja mikor tűnik el:
+   \al{
+    \delta S
+     &=\intl{t_1}{t_2}\dd t\,\delta\left(\suml{i=1}{f}p_i\dtq_i-H(q,p,t)\right)
+      =\intl{t_1}{t_2}\dd t\,\suml{i=1}{f}\left(\delta p_i\dtq_i+p_i\delta\dtq_i-\pder{H}{q_i}\delta q_i-\pder{H}{p_i}\delta p_i\right) \\
+     &=\intl{t_1}{t_2}\dd t\,\suml{i=1}{f}\left(\delta p_i\dtq_i-\pder{H}{q_i}\delta q_i-\pder{H}{p_i}\delta p_i\right)
+       +\suml{i=1}{f}\intl{t_1}{t_2}\dd t\,p_i\delta\dtq_i \\
+     &=\intl{t_1}{t_2}\dd t\,\suml{i=1}{f}\left(\delta p_i\dtq_i-\pder{H}{q_i}\delta q_i-\pder{H}{p_i}\delta p_i\right)
+       +\suml{i=1}{f}\left(\underbrace{\left[p_i\delta q_i\right]_{t_1}^{t_2}}_{=0}-\intl{t_1}{t_2}\dd t\,\dtp_i\delta q_i \right)\\
+     &=\intl{t_1}{t_2}\dd t\,\suml{i=1}{f}\left[
+     \left(\dtq_i-\pder{H}{p_i}\right)\delta p_i-\left(\dtp_i+\pder{H}{q_i}\right)\delta q_i
+     \right]
+   }
+   
+   Ennek megfelelően itt a hatás egy $2f$ dimenziós térben az $S=\intl{t_1}{t_2}\dd t\,L(q,p,t)$ vonalintegrál. Ebben a térben a $\big\{\{q_i\}_{i=1}^{f},\{p_i\}_{i=1}^{f}\big\}$ koordináták lineárisan függetlenek. A módosított Hamilton-elv pedig azt mondja ki, hogy az ebben a térben végzett variáció is pontosan akkor tűnik el, ha a rendszer a mozgásegyenlet szerint mozog.
+   
+  \subsection{Hamilton--Jacobi-egyenlet}
+   
+   A cél, hogy a kanonikus egyenleteket a legegyszerűbb alakra hozzuk, vagyis:
+   \al{
+    &\pder{H'}{P_i}=\dtQ_i=0 &\pder{H'}{Q_i}=-\dtP_i=0
+   }
+   A Hamilton--Jacobi-egyenlethez egy 2-es típusú kanonikus transzformációval tudunk eljutni. Ennek alkotófüggvénye legyen $S=S(q_i,P_i,t)$ alakú, a transzformációs szabályok:
+   \aln{
+    &p_i=\pder{S}{q_i}
+    &Q_i=\pder{S}{P_i}&
+    &H'=H+\pder{S}{t}.
+   }
+   Akkor lesznek triviálisak az új kanonikus egyenletek, ha $H'=0$, vagyis 
+   \al{
+    H(q,p,t)+\pder{S(q,P,t)}{t}=0.
+   }
+   Mivel az új impulzusok ciklikusak, ezért $P_i=\alpha_i=\text{állandó}$. Az áttérésre vonatkozó egyenletek alapján:
+   \aln{
+    0=H\left(q,\pder{S}{q},t\right)+\pder{S(q,P,t)}{t},\label{eq:01-hatas}
+   }
+   ami $S$-re egy parciális differenciálegyenlet. Készítsük el $S$ deriváltját:
+   \al{
+    \der{S}{t}=\suml{i=1}{f}\pder{S}{q_i}\dtq_i+\pder{S}{t}
+     =\suml{i=1}{f}p_i\dtq_i-H
+     =L,
+   }
+   vagyis $S(t)=S(0)+\intl{0}{t}\dd t\,L$, így $S$ maga a hatás. Ha sikerül megoldani \eqaref{eq:01-hatas} egyenletet $S$-re, akkor a kanonikus egyenletek megoldása már triviális. Tudjuk, hogy $Q_i=\beta_i=\text{állandó}$ és $P_i=\alpha_i=\text{állandó}$, és $S$ ismeretében azt is tudjuk, hogy hogyan lehet áttérni a $Q,P$-től $q,p$-re:
+   \al{
+    \beta_i=\pder{S}{\alpha_i},
+   }
+   ami egy algebrai egyenletrendszer ($i=1\dots f$), melyet meg lehet oldani $q_i$-ra.
+   
+ \section{Elektrodinamika}
+  
+  \subsection{Elektrosztatika vákuumban}\label{ss:01-CoulombMaxwell}
+   
+   Elektrodinamika alapfogalma a mező: a fizikai tér minden pontjában minden időpillanatban létező mennyiség. A testek a mezővel hatnak kölcsön. Megfigyelés: töltések közötti erő arányos a töltéssel, távolság reciproknégyzetével $\vect{F}\sim\frac{q_1q_2}{r^2}$, iránya a töltésekre fektetett egyenesre esik.  Egységválasztás: $k=9\cdot 10^9\me{\frac{Nm^2}{C^2}}$
+   \footnote{SI-ben az alapmennyiség az Amper. Ennek definíciója: két egyenes vezető egymástól 1 méterre, 1 Ampert áthajtva $2\cdot 10^{-7}\me{N}$ nagyságú erővel hatnak egymásra. A töltés definíciója az Amper alapján: C$=$As. Ebből már következik az $\ep_0$ értékének választása.}
+   . A Coulomb-törvény ponttöltések által létrehozott térerősségre mint mezőre felírva:
+   \eq{
+    \vect{E}(\vect{r}):=\suml{i}{}\frac{q_i}{4\pi\ep_0}\frac{\vect{r}-\vect{r}_i}{\abs{\vect{r}-\vect{r}_i}^3}.
+   }
+   Ha a töltéseloszlás folytonos, vagy jó közelítéssel annak tekinthető, akkor :
+   \eq{
+    \vect{E}(\vect{r}):=\int\drkh\frac{q_i}{4\pi\ep_0}\frac{\vect{r}-\vect{r'}}{\abs{\vect{r}-\vect{r'}}^3}.
+   }
+   
+   A ponttöltés tere zárt felületre integrálva:
+   \eq{
+    \oint\df\vect{E}
+     = \oint\dd f\; \vect{n}\vect{E} 
+      = \int\dd \Omega\; \underbrace{\frac{r^2}{\cos\vartheta}}_\text{Jacobi}\frac{q}{4\pi\ep_0}\frac{1}{r^2}\underbrace{\cos\vartheta}_\text{vetület} = \frac{q}{4\pi\ep_0}\int\dd \Omega = \begin{cases}
+                                   \frac{q}{\ep_0},\quad\text{ha }q\in V \\
+                                   0,\quad\text{ha }q\notin V
+                                  \end{cases}
+   }
+   Kiterjedt töltéseloszlásra:
+   \eq{
+    \oint\limits_{\partial V}\df\vect{E}(\vect{r}) = \frac{1}{\ep_0}\intl{V}{}\drh \rho(\vect{r}).
+   }
+   Ez a Stokes-tétellel átalakítva az alábbi lokális formát veszi fel:
+   \eqn{
+    \divo{\vect{E}(\vect{r})}=\frac{1}{\ep_0}\rho{(\vect{r})}.\label{eq:01-MX1s}
+   }
+   
+   A ponttöltés tere felírható egy $\phi(\vect{r})$ skalárfüggvény negatív gradienseként, ez a potenciálfüggvény:
+   \al{
+    &\phi(\vect{r})=\frac{1}{4\pi\ep_0}\frac{1}{\abs{\vect{r}-\vect{r}_0}} & \vect{E}(\vect{r})=-\grad{\phi(\vect{r})}
+   }
+   
+   Kiterjedt töltéseloszlásra hasonlóan:
+   \aln{
+    \phi(\vect{r})=\frac{1}{4\pi\ep_0}\int\drkh\frac{\rho(\vect{r}')}{\abs{\vect{r}-\vect{r}'}}.\label{eq:01-pot}
+   }
+   
+   A potenciál definícióját behelyettesítve \eqaref{eq:01-MX1s}. egyenletbe, a Poisson-egyenletet kapjuk:
+   \eqn{
+    \Delta\phi( \vect{r})=-\frac{1}{\ep}\rho(\vect{r}).\label{eq:01-Poi}
+   }
+   
+   Mivel a térerősség gradiensként áll elő, azért annak rotációja mindenképp eltűnik:
+   \eqn{
+    \rot{\vect{E}(\vect{r})}=0.\label{eq:MX3s}
+   }
+   
+  \subsection{Elektrosztatika anyagban}\label{ss1:elsztat}
+   
+   Ha az anyagban vannak szabadon elmozdítható töltéshordozók, akkor azok addig áramlanak, amíg hat rájuk erő, vagyis míg $\vect{E}(\vect{r})\ne 0$ az anyagban. Ha nincsenek szabadon elmozduló töltések, akkor az anyagot az elektromos tér csak polarizálni tudja. A polarizáció során elemi dipólmomentumok jönnek lére az anyagban. 
+   
+   Egy $\rho(\vect{r})$ töltéseloszlás  hatására $\vect{P}(\vect{r})$ dipólmomentum-sűrűség (\ref{ss:A06-dipol}. fejezet) jön létre. Ezek együttes potenciálja:
+   \eq{
+    \phi(\vect{r})=\frac{1}{4\pi\ep_0}\int\drkh\frac{\rho(\vect{r}')}{\abs{\vect{r}-\vect{r}'}} + \frac{1}{4\pi\ep_0}\int\drkh\left(-\vect{P}(\vect{r}')\grad\frac{1}{\abs{\vect{r}-\vect{r}'}}\right).
+   }
+   A második tagban a deriválásban áttérünk az $\vect{r}'$-re, majd parciálisan integráljuk és elhagyjuk a felületi tagot, hiszen $\vect{P}(\vect{r})=0$, ha $r\to\infty$:
+   \eq{
+   \phi(\vect{r})=\frac{1}{4\pi\ep_0}\int\drkh\left(\frac{\rho(\vect{r}')-\grad{\vect{P}}(\vect{r}')}{\abs{\vect{r}-\vect{r}'}}\right).
+   }
+   
+   Így tehát nem az eredeti $\rho(\vect{r})$ töltéssűrűséget látjuk, hanem az leárnyékolódik: 
+   \aln{
+   & \rho_\text{tot}(\vect{r})=\rho(\vect{r})+\rho_\text{ind}(\vect{r}) & \rho_\text{ind}(\vect{r})=-\divo{\vect{P}(\vect{r})},\label{eq:01-toltsuru}
+   }
+   $\rho_\text{ind}(\vect{r})$ töltéssűrűség indukálódik. 
+   Az új töltéssűrűséget behelyettesítve \eqaref{eq:01-MX1s} egyenletbe, és definiálva a dielektromos eltolást ($\vect{D}(\vect{r})$):
+   \al{
+    & \vect{D}(\vect{r})=\ep_0\vect{E}(\vect{r})+\vect{P}(\vect{r}) & \divo{\vect{D}}(\vect{r})=\rho(\vect{r}).
+   }
+   
+   Az anyag viselkedéséhez szükséges megadni a $\vect{D}(\vect{r})$, a $\vect{P}(\vect{r})$ és az $\vect{E}(\vect{r})$ mennyiségek között egy összefüggést. Ez az anyagi egyenlet. Lineáris anyagokra: $\vect{P}(\vect{r})=\ep_0\mat{\chi}\vect{E}(\vect{r})$. Ha az anyag általános, akkor $\mat\chi$ egy $3\times 3$-as tenzor. Ha az anyag izotrop, akkor $\mat\chi=\chi\mat 1$, vagyis $\vect{P}(\vect{r})=\ep_0\chi\vect{E}(\vect{r})$. Ekkor definiálhatjuk egy anyag relatív dielektromos állandóját: $\ep_r=1+\chi$, amivel $\vect{D}(\vect{r})=\ep_0\ep_r\vect{E}(\vect{r})$. 
+   
+   A térerősségre és a dielektromos eltolásra vonatkozó határfeltételeket a megfelelő tartományra való integrálással kaphatjuk. Különböző anyagi tulajdonsággal rendelkező tartományok határfelületén a dielektromos eltolás normális, illetve a térerősség tangenciális komponense halad át változatlanul. 
+   
+   A potenciálra vonatkozó határfeltételek: mivel a térerősség véges, ezért a potenciálnak folytonosnak kell lennie. $E_n$ ugrása a potenciál felületre merőleges gradiensének ugrását implikálja: $\ep_1\pder{\phi}{\vect{n}_1}=\ep_2\pder{\phi}{\vect{n}_2}$. 
+   
+  \subsection{Magnetosztatika vákuumban}
+   
+   Tekintsünk egy $\rho(\vect{r})$ töltéssűrűséget, amely $\vect{v}(\vect{r})$ sebességmezővel leírható áramlást végez. Ekkor ez az áramlás mágneses mezőt hoz létre (Biot--Savart-törvény):
+   \al{
+    &\vect{B}(\vect{r})=\frac{\mu_0}{4\pi}\int\drkh\frac{\vect{J}(\vect{r}')\times(\vect{r}-\vect{r}')}{\abs{\vect{r}-\vect{r}'}^3}
+    &\vect{B}(\vect{r})=\frac{\mu_0 I}{4\pi}\int\frac{\dd\vect{s}\times(\vect{r}-\vect{s})}{\abs{\vect{r}-\vect{s}}^3}.
+   }
+   A $\mu_0=4\pi\cdot 10^{-7}\me{\frac{N}{A^2}}$. A jobb oldali összefüggés vékony vezetőkre alkalmazható, ahol $\drh\,\vect{J}(\vect{r})\leftrightarrow I\,\dd \vect{s}$.
+   
+   A $\vect{v}(\vect{r})$ sebességgel mozgó töltésekre ható erő és forgatónyomaték:
+   \al{
+    &\vect{F}=\int\drh\vect{J}(\vect{r})\times\vect{B}(\vect{r}) &\vect{N}=\int\drh \vect{r}\times\big(\vect{J}(\vect{r})\times\vect{B}(\vect{r}) \big).
+   }
+   
+   A Biot--Savart-törvénynek is van lokális alakja, felhasználva, hogy:
+   \eq{
+    \frac{\vect{J}(\vect{r}')\times(\vect{r}-\vect{r}')}{\abs{\vect{r}-\vect{r}'}^3}
+     = -\vect{J}(\vect{r}')\times \grad_\vect{r}\left(\frac{1}{\abs{\vect{r}-\vect{r}'}}\right)
+     =\rot_\vect{r}\left(\frac{\vect{J}(\vect{r}')}{\abs{\vect{r}-\vect{r}'}}\right).
+   }
+   Így bevezethető egy vektorpotenciál, hogy 
+   \aln{
+    &\vect{A}(\vect{r})=\frac{\mu_0}{4\pi}\int\drkh\frac{\vect{J}(\vect{r}')}{\abs{\vect{r}-\vect{r}'}}
+    &\vect{B}(\vect{r})=\rot{\vect{A}(\vect{r})}
+    & &\Rightarrow &
+    &\divo{\vect{B}(\vect{r})}=0.\label{01-MX2s}
+   }
+   
+   Kiszámolhatjuk $\vect{B}(\vect{r})$ rotációját is:
+   \eq{
+    \rot{\vect{B}(\vect{r})}=\rot(\rot\vect{A}(\vect{r}))=\grad\divo\vect{A}(\vect{r})-\Delta\vect{A}(\vect{r}).
+   }
+   Itt $\divo\vect{A}(\vect{r})=0$, hiszen a div csak az $1/x$-re hat, majd parciálisan integrálva a felületen kellene $\partial_i J_i$-t számolni, ami úgyis nulla. A második tagban:$\Delta\frac{1}{\abs{\vect{r}-\vect{r}'}} =4\pi\delta(\vect{r}-\vect{r}')$, vagyis:
+   \eqn{
+    \rot{\vect{B}(\vect{r})}=\mu_0\vect{J}(\vect{r}). \label{eq:01-MX4s}
+   }
+   
+  \subsection{Magnetosztatika anyagban}\label{ss1:magnetosztatika}
+   
+   Hasonlóan az elektromos jelenségekhez is, itt is a külső mágneses tér hatására az anyag polarizálódik, és $\vect{M}(\vect{r})$ mágnesezettségi sűrűség alakul ki. A külső tér és ennek az együttes vektorpotenciálja:
+   \eq{
+    \vect{A}(\vect{r})=\frac{\mu_0}{4\pi}\int\drkh\frac{\vect{J}(\vect{r}')}{\abs{\vect{r}-\vect{r}'}}+\frac{\mu_0}{4\pi}\int\drkh\frac{\vect{M}(\vect{r}')\times(\vect{r}-\vect{r}')}{\abs{\vect{r}-\vect{r}'}^3}
+   }
+   A második tagot átalakíthatjuk: a törtet felírjuk gradiensként, a deriválást áthárítjuk $\vect{r}'$-re, parciálisan integrálunk és eldobjuk a felületi tagot, így:
+   \eq{
+    \vect{A}(\vect{r})=\frac{\mu_0}{4\pi}\int\drkh\frac{\vect{J}(\vect{r}')+\rot{\vect{M}(\vect{r}')}}{\abs{\vect{r}-\vect{r}'}}.
+   }
+   Itt is hasonló eredményt kaptunk, mint az elektromos esetben: 
+   \eq{
+    \vect{J}_\text{tot}(\vect{r})=\vect{J}(\vect{r})+\rot\vect{M}(\vect{r})
+   }
+   Ezt behelyettesítve \eqaref{eq:01-MX4s} egyenletbe:
+   \al{
+    &\rot{\vect{B}(\vect{r})}=\mu_0(\vect{J}(\vect{r})+\rot\vect{M}(\vect{r}))
+    &\vect{H}(\vect{r})=\frac{1}{\mu_0}\vect{B}(\vect{r})-\vect{M}(\vect{r})
+    & &\rot{\vect{H}(\vect{r})}=\vect{J}(\vect{r})
+   }
+   
+   Itt is szükség van egy anyagi egyenletre ($\vect{B}(\vect{H})$ vagy $\vect{H}(\vect{M})$ vagy $\vect{B}(\vect{M})$), hogy az egyenletrendszer zárt legyen. Lineáris anyagoknál a mágnesezettség a mágneses tér lineáris függvénye: $\vect{M}(\vect{r})=\mat{\chi}\vect{H}(\vect{r})$. Itt $\mat{\chi}$ a mágneses szuszceptibilitás tenzor. Ha az anyag izotrop, akkor ez helyettesíthető egy skalárral: $\vect{M}(\vect{r})=\chi\vect{H}(\vect{r})$. Ekkor $\vect{B}(\vect{r})=\mu_0(1+\chi)\vect{H}(\vect{r})=\mu\vect{H}(\vect{r})$. 
+   
+   \begin{description}
+    \item[Diamágneses] anyagoknál $-1\leq\chi<0$, vagyis $\mu<\mu_0$. A generálódó mágnesezettség csökkenteni kívánja a külső teret. Akkor áll fenn általában, ha az elemi összetevőknek nincsen mágneses momentumuk kezdetben.
+    \item[Paramágneses] anyagoknál az elemi összetevők kezdetben mágnesesek, a külső tér ezekre forgatónyomatékkal hat, a saját irányába akarja forgatni: $0<\chi$, vagyis $\mu>\mu_0$. 
+    \item[Ferromágneses] anyagoknál az elemi részek közötti mágneses kölcsönhatás erős. Külső tér nélkül is van eredő mágnesezettség, energia csökkentésére doménszerkezet alakul ki. Nem lineáris: $\vect{B}=\mu(\vect{H})\vect{H}$. 
+   \end{description}
+   Dia- és paramágneses esetben $\abs{\chi}\sim 10^{-5}\ll 1$, így általában elhanyagolható, de ferromágneses esetben $\chi\sim 10-10^{4}$. 
+   
+   Különböző anyagi minőségű tartományok határfelületén a mágneses mennyiségekre is vonatkoznak határfeltételek: a $\vect{B}$-nek a normális, a $\vect{H}$-nak pedig a tangenciális komponense halad át változatlanul. Ez a vektorpotenciálra azt a megkötést adja, hogy $\vect{A}$ folytonos és $\frac{1}{\mu_1}\rot{\vect{A_1}}=\frac{1}{\mu_2}\rot{\vect{A_2}}$
+
+   
+  \subsection{Időfüggő Maxwell-egyenletek}
+   
+   Időfüggő folyamatoknál figyelembe vesszük, hogy a töltések elmozdulhatnak. A töltés megmaradó mennyiség, így igaz, hogy 
+   \al{
+    &\ointl{\partial V}{}\df_\rv \Jv(t,\rv)=\der{}{t}\intl{V}{}\drh\rho(t,\rv)
+    &\Rightarrow
+    &&\partial_t\rho(t,\rv)+\divo\Jv(t,\rv)=0.
+   }
+   Magnetosztatikában az áramok időben állandóak, így $\partial_t\rho(\rv)=0=\divo\Jv(\rv)$.
+   
+   A Faraday-törvény kimondja, hogy 
+   \eq{
+    \oint\limits_{\partial F}\dd\vect{l}\;\vect{E}=-\der{}{t}\intl{F}{}\df\vect{B},
+   }
+   melyben, ha a felület időben állandó, a deriválás és az integrálás sorrendjét megcserélve, majd a Stokes-tétellel átalakítva:
+   \eq{
+    \rot{\vect{E}(\vect{r})}=-\partial_t \vect{B}(\vect{r}).
+   }
+   Ez visszaadja a stacioner esetet is. 
+   
+   \Eqaref{eq:01-MX4s} egyenlet sem érvényes, hiszen a bal oldal divergenciája nulla, a jobb oldalé pedig: $\mu_0\divo{\vect{J}(\vect{r})}=-\mu_0\partial_t\rho(\vect{r})\neq 0$. Így az egyenletet ki kell egészíteni egy taggal:
+   \eq{
+    \divo{\left[\rot\vect{B}(\vect{r})-\mu_0\vect{J}(\vect{r})\right]} = \mu_0\partial_t\rho(\vect{r}) = \mu_0\ep_0\partial_t\divo{\vect{E}(\vect{r})}
+   }
+   \eq{
+    \divo{\left[\rot\vect{B}(\vect{r})-\mu_0\vect{J}(\vect{r})-\mu_0\ep_0\partial_t\vect{E}(\vect{r})\right]}=0.
+   }
+   Innen nem következik egyértelműen, de a sztatikával akkor kapunk egyezést, ha a $\divo$ argumentuma eltűnik. 
+   
+   Ezzel a négy Maxwell-egyenlet vákuumban:
+   \al{
+    \divo{\vect{E}(\vect{r})}&=\frac{1}{\ep_0}\rho(\vect{r}) &
+    \divo\vect{B}(\vect{r})&=0 \\
+    \rot{\vect{E}(\vect{r})}&=-\partial_t\vect{B}(\vect{r}) 
+    &\rot{\vect{B}(\vect{r})}&=\mu_0\vect{J}(\vect{r})+\frac{1}{c^2}\partial_t\vect{E}(\vect{r}), 
+   }
+   ahol $\frac{1}{c^2}=\mu_0\ep_0$.
+   
+   Anyag jelenlétében a töltéssűrűség $\rho_\text{tot}=\rho+\rho_\text{ind}$ alakú. Itt $\rho_\text{ind}=-\divo{\vect{P}}$ (\eqref{eq:01-toltsuru} egyenlet). Az indukált töltések viszont az áramsűrűségben is adnak járulékot, így   $\vect{J}_\text{tot}=\vect{J}+\rot{\vect{M}}+\vect{J}_\text{ind}$. $\vect{J}_\text{ind}$-det a kontinuitási egyenlet kapcsolja össze az indukált töltéssűrűséggel: 
+   \eq{
+    0=\partial_t\rho_\text{ind}+\divo{\vect{J}_\text{ind}}=\divo{\left[\vect{J}_\text{ind}-\partial_t\vect{P}\right]}.
+   }
+   A divergenciában lévő mennyiséget választhatjuk nullának. Ha egy függvény rotációját hozzáadnánk, akkor csak az $\vect{M}$-ben okoznánk változást. Tehát:
+   \eq{
+    \vect{J}_\text{ind}=\partial_t\vect{P},
+   }
+   amivel a homogén anyagban igaz időfüggő Maxwell egyenletek:
+  \\[6pt]
+   \fbox{
+    \addtolength{\linewidth}{-10\fboxsep}%
+    \addtolength{\linewidth}{-5\fboxrule}%
+    \begin{minipage}{\linewidth}
+     \vspace{-12pt}
+     \aln{
+      \divo{\vect{D}(\vect{r})}&=\rho(\vect{r}) 
+       &\divo\vect{B}(\vect{r})&=0 \label{eq:01-MXanyagban1}\\
+       \rot{\vect{E}(\vect{r})}&=-\partial_t\vect{B}(\vect{r}) 
+       &\rot{\vect{H}(\vect{r})}&=\vect{J}(\vect{r})+\partial_t\vect{D}(\vect{r}),\label{eq:01-MXanyagban2}
+     }
+    \end{minipage}
+   }
+  \\[10pt]
+  melyekhez a határfeltételek, hogy $D_n$, $E_t$, $B_n$ és $H_t$ folytonosan mennek át a határfelületeken.
+   
+   
+  \subsection{Sztatikus, kvázisztatikus és gyorsan változó terek}\label{ss:01-eldidofugges}
+   
+   \paragraph{Sztatika}
+   
+    A megoldandó egyenletrendszer Coulomb-mértékben:
+    \al{
+     &\Delta\phi(\vect{r})=-\frac{1}{\ep_0}\rho(\vect{r})
+     &\Delta\vect{A}(\vect{r})=-\mu_0\vect{J}(\vect{r}),
+    }
+    Melyhez szükséges az időben állandó töltéseloszlást és áramsűrűséget ismerni. A határfeltételek: Dirichlet: a potenciálok a határfelületen adottak, Neumann: a potenciálok felületre merőleges gradiense adott a határfelületen. A megoldás egyértelmű. 
+  
+   \paragraph{Kvázisztatika}
+    
+    Az időfüggő Maxwell-egyenletekből az $\frac{1}{c^2}$-tel elnyomott tagot elhagyjuk, mert az nagyon kicsi:
+    \al{
+    & &\divo{\vect{E}(\vect{r})}=\frac{1}{\ep_0}\rho(\vect{r}) &&
+     &\divo\vect{B}(\vect{r})=0& \\
+     & &\rot{\vect{E}(\vect{r})}=-\partial_t\vect{B}(\vect{r}) &&
+     &\rot{\vect{B}(\vect{r})}=\mu_0\vect{J}(\vect{r}). &
+    }
+    Ezek egy, a vezetési jelenségeket leíró egyenlettel kiegészítve megoldhatóak. Fémben, ahol $\vect{J}=\sigma\vect{E}$, a skin-effektust láthatjuk: $\vect{B}$-re és $\vect{E}$-re is ugyanolyan hővezetési egyenleteket kapunk, a megoldás pedig a fém belseje felé exponenciálisan levág. 
+    
+   \paragraph{Gyorsan változó terek}
+    
+    Ekkor a teljes időfüggő Maxwell-egyenleteket kell megoldani. Forrásmentes esetben Lorentz-mértéket $\left(0=\divo \Av+\frac{1}{c^2}\partial_t\phi\right)$ használva a Maxwell-egyenletek az alábbi két egyenletben foglalhatóak össze:
+    \al{
+     &&\left(\Delta-\frac{1}{c^2}\partial_t^2\right)\phi=-\frac{1}{\ep_0}\rho &&& \left(\Delta-\frac{1}{c^2}\partial_t^2\right)\vect{A}=-\mu_0\vect{J}. &
+    }
+    
+    Ez két hullámegyenlet ugyanakkora terjedési sebességgel, ezek megoldásai az elektromágneses hullámok. Az egyenletek teljes forrásokkal történő megoldása Green-függvényekkel lehetséges. 
+    
+    
+ \section{Kvantummechanika}\label{ss:01-kvantum}
+  
+  \subsection{A kvantummechanika axiómái}
+   
+   \begin{enumerate}[I.]
+    \item Egy fizikai rendszer állapotait egy $\mathbb{H}$ szeparálható Hilbert-tér normált vektoraiként reprezentáljuk: $\ket{\psi}\in\mathbb{H}$. 
+    \item A rendszert jellemző fizikai mennyiségeket a Hilbert-tér elemein ható hermitikus operátorokkal reprezentáljuk: $\hat{A}\in\Lin{(\mathbb{H})}$.
+    
+    Az operátornak a sajátértékegyenlete az alábbi:
+    \eq{
+     \hat{A}\ket{n}=a_n\ket{n}.
+    }
+    Hermitikus operátorok sajátfüggvényei ($\{\ket{n}\}_{n=1}^{\infty}$) teljes ortonormált rendszert alkotnak, vagyis $\suml{n=1}{ }\ket{n}\bra{n}=\hat{I}$, és minden $\ket{\psi}\in\mathbb{H}:$ $\ket{\psi}=\suml{n}{} \bra{n}\et{\psi}\ket{n}=\suml{n}{} c_n\ket{n}$, ahol $c_n$ a $\ket{\psi}$ kifejtési együtthatói az $\{\ket{n}\}$ bázisra nézve. Az $\{a_n\}$ sajátértékek valós számok az operátor hermitikussága miatt.
+    
+    \item Az $\hat{A}$ operátorhoz tartozó fizikai mennyiség lehetséges értékei csak az $\{a_n\}$ értékek közül kerülhet ki. Ha a rendszer $\ket{\psi}$ állapotban van, akkor annak a valószínűsége, hogy méréssel az $a_n$ értéket kapjuk, éppen $W(k)=\abs{c_k}^2$.
+    
+    Az $\hat{A}$ operátorhoz tartozó fizikai mennyiség várható értéke: $\mv{\hat{A}}=\lim\limits_{N\to\infty}{\suml{n}{}a_n\frac{N_n}{N}}$, ahol $N$ a mérések száma, amivel a végtelenbe tartunk, miközben $N_n$-szer kapuk az $a_n$ értéket. Fejtsük ki, hogy ez mit jelent:
+    \al{
+     \mv{\hat{A}}
+     &= \suml{n}{}a_n\lim\limits_{N\to\infty}{\frac{N_n}{N}}
+      = \suml{n}{}a_n W(n) 
+      = \suml{n}{}a_n \abs{c_n}^2 
+      = \suml{n,m}{}a_n c_n^*c_m \delta_{n,m} 
+      = \suml{n,m}{}a_n c_n^*c_m \bra{n}\et{m} \\ 
+     &= \suml{n,m}{} c_n^*c_m \bra{a_n n}\et{m} 
+      = \suml{n,m}{} c_n^*c_m \bra{\hat{A} n}\et{m} 
+      = \suml{n}{} c_n^* \bra{\hat{A} n}\suml{m}{}c_m\et{m}
+      = \suml{n}{} c_n^* \bra{\hat{A} n}\et{\psi}  \\
+     &= \suml{n}{} c_n^* \bra{ n}\et{\hat{A}\psi} 
+      = \bra{\suml{n}{} c_n n}\et{\hat{A}\psi} 
+      = \bra{\psi}\et{\hat{A}\psi}
+      = \bra{\psi}\hat{A}\ket\psi,
+    }
+    vagyis 
+    \eqn{
+     \boxed{\mv{A}=\bra{\psi}\hat{A}\ket\psi}.\label{eq:01-meres}
+    }
+    \item A kvantummechanikai állapot időfejlődését a:
+    \eqn{
+     \boxed{(i\hbar\partial_t-\hat{H}(t))\ket{\psi(t)}=0}
+    }
+    egyenlet írja le.
+    
+%     Ezt a következőképpen kell érteni: a rendszer egy $t_1$ időpillanatbeli állapota a $\mathbb{H}(t_1)$ Hilbert-térbeli $\ket{\psi(t_i)}$ vektorral jellemezhető. Egy másik időpillanatban egy másik $\mathbb{H}(t_2)$ Hilbert-tér $\ket{\psi(t_2)}$ vektorával jellemezhető. 
+    A hullámfüggvények és a Hamilton-operátor itt az időt mint paramétert tartalmazzák. 
+    \item Ha az $\hat{A}$ operátor mérése során $a_k$ értéket kapunk, akkor ezután a rendszer biztosan a $\ket{k}$ állapotban található.
+   \end{enumerate}
+   
+  \subsection{Méréselmélet, sűrűségoperátor}\label{ss:01-mereselmelet}
+   
+   Egy rendszer tiszta állapotban van, ha létezik $\ket{\psi}=\suml{n}{}c_n\ket{n}\in\mathbb{H}$, hogy a rendszernek ez az állapota. Ha a rendszer állapota nem reprezentálható egy Hilbert-tér elemmel, akkor az kevert állapotban van: $p_i$ valószínűséggel van $\ket{\psi_i}$ állapotban, ahol $\suml{i=1}{N}p_i=1$. 
+   
+   A sűrűségoperátor definíciója tiszta és kevert állapotra:
+   \aln{
+    &\hat{\rho} = \ket{\psi}\bra{\psi} &\hat{\rho} = \suml{i=1}{N}p_i\ket{\psi_i}\bra{\psi_i}=\suml{i=1}{N}p_i\hat{\rho}_i
+   }
+   A sűrűségoperátor tulajdonságai: a sűrűségoperátor nyoma tiszta állapotra:
+   \eq{
+    \tr{\hat{\rho}}=
+     \suml{n}{}\bra{n}\hat{\rho}\ket{n} 
+     = \suml{n}{}\bra{n}\et{\psi}\bra{\psi}\et{n} 
+     = \suml{n}{}c_i^*c_i 
+     = 1, 
+   }
+   illetve kevert állapotban:
+   \eq{
+    \tr{\hat{\rho}}=
+     \suml{n}{}\bra{n}\bigg(\suml{i=1}{N}p_i\ket{\psi_i}\bra{\psi_i}\bigg)\ket{n} 
+     = \suml{i=1}{N}p_i\suml{n}{}\bra{n}\et{\psi_i}\bra{\psi_i}\et{n} 
+     = \suml{i=1}{N}p_i\suml{n}{}c_n^*c_n 
+     = \suml{i=1}{N}p_i
+     = 1,
+   }
+   vagyis mindenképp $\tr{\hat{\rho}}=1$. A $\hat\rho$ hermitikus: $\hat\rho^+=\hat\rho$. Nézzük a négyzetének a nyomát tiszta:
+   \eq{
+    \tr{\hat\rho^2} = \tr{\ket{\psi}\underbrace{\bra{\psi}\et{\psi}}_{=1}\bra{\psi}}= \tr{\ket{\psi}\bra{\psi}}=1,
+   }
+   illetve kevert állapotban:
+   \al{
+    \tr{\hat\rho^2} 
+     &= \tr{\left(\suml{i,j=1}{N}p_ip_j\ket{\psi_i}\bra{\psi_i}\et{\psi_j}\bra{\psi_j}\right)}
+      = \tr{\left(\suml{i,j=1}{N}p_ip_j\abs{\bra{\psi_i}\et{\psi_j}}^2\right)} \\
+     &= \left(\suml{i,j=1}{N}p_ip_j\abs{\bra{\psi_i}\et{\psi_j}}^2\right)
+      < \left(\suml{i,j=1}{N}p_ip_j \cdot 1\right)
+      = \left(\suml{i=1}{N}p_i\right) \left(\suml{j=1}{N}p_j\right)
+      = 1\cdot 1 = 1.
+   }
+   Az egyenlőtlenségnél kihasználtuk azt, hogy a rendszer kevert állapotban van, melynek a felbontásában nem szerepelhet két ugyanolyan $\ket{\psi_i}$ állapot. 
+   
+   A sűrűségmátrix használható a várhatóérték kiszámítására tiszta és kevert állapotban is:
+   \al{
+    \mv{\hat{A}}_\text{t}&=\bra{\psi}\hat{A}\ket{\psi} = \tr{\bra{\psi}\hat{A}\ket{\psi}} = \tr{\left(\ket{\psi}\bra{\psi}\hat{A}\right)} = \tr{\hat{\rho}\hat{A}} \\
+    \mv{\hat{A}}_\text{k}&=\suml{i=1}{N}p_i\bra{\psi_i}\hat{A}\ket{\psi_i}= \dots = \tr{\hat{\rho}\hat{A}}
+   }
+   
+   A rendszernek tiszta állapotban csak látszólagosan van statisztikus jellege a mérés szempontjából. Ez a látszólagos statisztikus jelleg a kvantummechanika sajátja, a tiszta állapotok velejárója, tőlünk független, a $c_n$ kifejtési együtthatók által jelenik meg. Kevert állapotban viszont a fizikai rendszernek valódi statisztikus jellege van, amelyeket a $p_i$ együtthatók fejeznek ki. 
+   
+   A tiszta és kevert állapotok egymástól méréssel különböztethetőek meg. Ha a mérendő mennyisége $\hat{A}$, és a rendszer bázisa a $\hat B$ operátor sajátfüggvényeiből épül fel, akkor az $\hat A$ mérésével csak akkor lehetséges elkülöníteni a kevert és a tiszta állapotokat, ha $[\hat{A},\hat{B}]\neq 0$.
+   
+   Ha több részrendszerből épül fel a kvantummechanikai rendszerünk, akkor a rendszer tiszta állapotát $\mathbb{H}_1\otimes\mathbb{H}_2\ni\ket\psi=\suml{n,m}{}c_{n,m}\ket{1,n}\ket{2,m}$ formában írhatjuk fel általánosan, ahol persze $\suml{n,m}{}c_{n,m}=1$. Ennek a rendszernek a sűrűségoperátora: $\hat\rho= \ket{\psi}\bra{\psi}$.
+   
+   Mérjünk a rendszeren egy olyan mennyiséget, amely csak az 1. alrendszerhez csatolódik: $\tr{\hat\rho\hat A_1}=\tr_1{\big(\tr_2{(\hat\rho\hat A_1)}\big)}=\tr_1{\big(\left(\tr_2{\hat\rho}\right)\hat A_1\big)}= \tr_1\big(\hat\rho_1\hat A_1\big)$. Itt $\hat\rho_1=\tr_2\hat\rho$ az 1. alrendszerhez tartozó redukált sűrűségoperátor. Lehet, hogy $\hat\rho$ még tiszta állapotot jellemzett, de $\hat\rho_1$ már valószínű, hogy nem azt fog. Akkor látom az első részrendszer tiszta állapotban, ha a két részrendszer egymástól független, vagyis $\ket{\psi}=\ket{1,\phi_1}\ket{2,\phi_2}$, ekkor pedig $\hat\rho=\hat\rho_1\hat\rho_2$. 
+   
+  \subsection{Folytonos és diszkrét reprezentációk}
+   
+   Fontos kérdés az, hogy milyen teljes ortonormált bázist választunk. Az első eset a koordináta-reprezentáció. A koordinátához tartozó hermitikus operátor $\hat{x}$:
+   \eq{
+    \hat{x}\ket{x}=x\ket{x}. 
+   }
+   Innen $\bra{x}\hat{x}\ket{x'}=x\delta (x-x')$. Az impulzus operátor mátrixelemei $\bra{x}\hat{p}\ket{x'}=\frac{\hbar}{i}\pder{}{x}\delta (x-x')$-nek kell lenni, hogy teljesüljön a kommutációs reláció:
+   \eq{
+    \bra{x}[\hat{p},\hat{x}]\ket{x'}=\frac{\hbar}{i}\delta (x-x').
+   }
+   Egy tetszőleges $\ket{\psi}$ vektor kifejthető az $\ket{x}$ báziselemek segítségével:
+   \eq{
+    \ket{\psi}=\int\dd x\; \ket{x}\bra{x}\et{\psi}=\int\dd x \;\psi(x)\ket{x}.
+   }
+   Itt $\psi(x)$ a $\ket\psi$ vektor koordináta-reprezentált alakja, egy sima függvény, amelyre persze teljesül, hogy $\int \dd x \abs{\psi(x)}^2=1$.
+   
+   A Hamilton-operátor hatását egy időfüggetlen rendszer kvantummechanikai állapotára is felírhatjuk koordináta-reprezentációban:
+   \al{
+    0&=\big(\hat{H}(\hat{p},\hat{x},\dots)-E\big)\ket{\psi} 
+      =\bra{x}\big(\hat{H}(\hat{p},\hat{x},\dots)-E\big)\ket{\psi} \\
+     &=\bra{x}(\hat{H}\big(\hat{p},\hat{x},\dots)-E\big)\left(\int \dd x'\ket{x'}\bra{x'}\right)\ket{\psi} \\
+     &=\int \dd x'\bra{x}\big(\hat{H}(\hat{p},\hat{x},\dots)-E\big)\ket{x'}\bra{x'}\et{\psi} \\
+     &=\int \dd x'\left[H\left(\frac{\hbar}{i}\pder{}{x},x,\dots\right)-E\right]\delta(x-x')\psi(x') \\
+     &= \left[H\left(\frac{\hbar}{i}\pder{}{x},x,\dots\right)-E\right]\psi(x),
+   }
+   ami az időfüggetlen Schrödinger-egyenlet. 
+   
+   Az impulzus reprezentáció teljesen hasonló: itt a $\hat{p}\ket{p}=p\ket{p}$ teljes ortonormált bázist használjuk. $\hat{p}$ impulzus-reprezentált alakja $p$, $\hat{x}$-é $-\frac{\hbar}{i}\pder{}{p}$. A kommutációs relációk reprezentációfüggetlenek. 
+   
+   A diszkrét reprezentációk esetében olyan operátor sajátrendszerét választjuk, melynek spektruma diszkrét: $\{\ket{n}\}_{n=1}^{\infty}$. Minden hasonlít a fentiekhez. Egyedül annyival másabb ez a reprezentáció, hogy az operátorok felírhatók végtelen mátrix alakban. 
+   
+   {\color{red} Esetleg valamit lehetne a repik között áttérésről.}
+   
+  \subsection{Kvantummechanikai képek}
+   
+   \paragraph{Schrödinger-kép}
+    
+    A Schrödinger-képben az időfüggést a hullámfüggvények hordozzák: $\ket{\psi}=\ket{\psi(t)}$, $\hat{A}=\hat{A}$. A hullámfüggvények időfüggését a Schrödinger-egyenlet írja le:
+    \eq{
+     i\hbar\partial_t\ket{\psi_S(t)}=\hat{H}_S(t)\ket{\psi_S(t)}.
+    }
+    A Schrödinger-egyenletet formálisan integrálva:
+    \eq{
+     \ket{\psi_S(t)}=\ket{\psi_S(0)}-\frac{i}{\hbar}\intl{0}{t}\dd t'\hat{H}_S(t')\ket{\psi_S(t')},
+    }
+    melynek megoldása:
+    \al{
+     \ket{\psi_S(t)}
+     &= \left[ 1-\frac{i}{\hbar}\intl{0}{t}\dd t'\hat{H}_S(t')+\left(\frac{i}{\hbar}\right)^2\intl{0}{t}\dd t'\intl{0}{t'}\dd t''\hat{H}_S(t')\hat{H}_S(t'')`+\dots \right] \ket{\psi_S(0)} \\
+     &= \left[ \suml{n=0}{\infty}\frac{1}{n!}\left(-\frac{i}{\hbar}\right)^n\intl{0}{1}\dotsi\intl{0}{t}\dd\tau_1\dots\dd\tau_n \T\big(\hat{H}_S(\tau_1)\cdots \hat{H}_S(\tau_n)\big)\right] \ket{\psi_S(0)} \\
+     &= \left[ \T e^{-\frac{i}{\hbar}\intl{0}{t}\dd \tau \hat{H}_S(\tau)}\right] \ket{\psi_S(0)},
+    }
+    ahol $\T$ az időrendező operátor. Az időfejlesztés az $\hat{R}(t,t')=\T e^{-\frac{i}{\hbar}\intl{t'}{t}\dd \tau \opH_S(\tau)}$ rezolvens végzi:
+    \eq{
+     \ket{\psi(t)}=R(t,t')\ket{\psi(t')}.
+    }
+    
+   \paragraph{Heisenberg-kép}
+   
+    A Heisenberg-képben az időfejlődést az operátorokra hárítjuk. Legyen $t_0=0$ kezdeti időpillanat. Az operátorok időfejlődését az alapján lehet meghatározni, hogy a kvantummechanikai várható értékeknek képektől függetleneknek kell lennie:
+    \eq{
+     \mv{\hat{A}(t)}
+      = \bra{\psi_S(t)}\hat{A}_S\ket{\psi_S(t)}=\bra{\psi_S(0)}\hat{R}^+(t)\hat{A}_S\hat{R}(t)\ket{\psi_S(0)}=\bra{\psi_H}\hat{A}_H(t)\ket{\psi_H},
+    }
+    így tehát
+    \aln{
+     &\ket{\psi_H}= \ket{\psi_S(0)}, &A_H(t)=\hat{R}^+(t)\hat{A}_S\hat{R}(t).
+    }
+    
+    Az operátorok időfejlődéséhez kiszámoljuk az operátor idő szerinti deriváltját. Figyelem, $\opH_S$ és $\opR$ általában nem cserélhető fel az időrendezés miatt!
+    \eq{
+     \partial_t \hat{A}_H(t)=\partial_t\big(\hat{R}^+(t)\hat{A}_S\hat{R}(t)\big) 
+      = \partial_t\hat{R}^+(t)\hat{A}_S\hat{R}(t)+\hat{R}^+(t)\hat{A}_S\partial_t\hat{R}(t).
+    }
+    Itt az első tagot átalakítjuk, a másodikat is ugyanúgy lehet:
+    \al{
+     \partial_t\hat{R}^+(t)\hat{A}_S\hat{R}(t)
+      &= \frac{i}{\hbar}\hat{R}^+(t)\hat{H}_S(t)\hat{A}_S\hat{R}(t) 
+       = \frac{i}{\hbar}\hat{R}^+(t)\hat{H}_S(t)\underbrace{\hat{R}(t)\hat{R}^+(t)}_{=1}\hat{A}_S\hat{R}(t) \\
+      &= \frac{i}{\hbar}\underbrace{\hat{R}^+(t)\hat{H}_S(t)\hat{R}(t)}_{=\hat{H}_H(t)}\underbrace{\hat{R}^+(t)\hat{A}_S\hat{R}(t)}_{=\hat{A}_H(t)} 
+       = \frac{i}{\hbar}\hat{H}_H(t)\hat{A}_H(t),
+    }
+    vagyis:
+    \eq{
+     \boxed{\partial_t \hat{A}_H(t)=\frac{i}{\hbar}\big[\hat{H}_H(t),\hat{A}_H(t)\big]}.
+    }
+   
+   \paragraph{Kölcsönhatási, Dirac-kép}\label{ss:A01-dirac}
+    A kölcsönhatási vagy Dirac-képben a hullámfüggvények és az operátorok is hordoznak időfüggést. Schrödinger-képben a rendszer Hamilton-operátora: $\hat{H}_S(t)=\hat{H}_S^0(t)+\hat{V}_S(t)$. 
+   
+    Az operátorok a kölcsönhatásmentes Hamilton-operátor szerint fejlődnek:
+    \al{
+     &\hat{R}_0(t,t')=\T e^{-\frac{i}{\hbar}\intl{t'}{t}\dd \tau  \hat{H}_S^0(\tau)} &\hat{A}_i(t)=\hat{R}_0^+(t)\hat{A}_S\hat{R}_0(t).
+    }
+    A várható értékek állandósága miatt a hullámfüggvények a
+    \eq{
+     \ket{\psi_i(t)}=\hat{R}_0^+(t)\ket{\psi_S(t)}
+    }
+    alakúak. A hullámfüggvények időfejlődése kölcsönhatási képben:
+    \al{
+     \partial_t\ket{\psi_i(t)}
+      &= \partial_t\hat{R}_0^+(t)\ket{\psi_S(t)}+\hat{R}_0^+(t)\partial_t\ket{\psi_S(t)} \\
+      &= \frac{i}{\hbar}\hat{R}_0^+(t)\hat{H}_S(t)\ket{\psi_S(t)}-\frac{i}{\hbar}\hat{R}_0^+(t)\big(\hat{H}_S^0(t)+\hat{V}_S(t)\big)\ket{\psi_S(t)} \\
+      &= -\frac{i}{\hbar}\hat{R}_0^+(t)\hat{V}_S(t)\ket{\psi_S(t)} \\
+      &= -\frac{i}{\hbar}\hat{R}_0^+(t)\hat{V}_S(t)\hat{R}_0(t)\hat{R}^+_0(t)\ket{\psi_S(t)} \\
+      &= -\frac{i}{\hbar}\hat{V}_i(t)\ket{\psi_i(t)},
+    }
+    vagyis a hullámfüggvényeket az 
+    \eq{
+     \boxed{S(t,t')=\T e^{-\frac{i}{\hbar}\intl{t'}{t}\dd \tau \op{V}_i(\tau)}}
+    }
+    rezolvens fejleszti. 
+   
+  \subsection{Korrespondencia-elv}
+   
+   A kvantummechanikai effektusok a klasszikus energia és méretskálán nem láthatóak. A kvantumelmélet akkor lehet csak helyes, ha visszaadja a nagyenergiás határesetet. Ez a $\hbar\to 0$, ha diszkrét az energiaspektrum akkor az $n\to \infty$ esetnek felel meg. 
+   
+%    {\color{red} Lehetne írni a kommutátor, Poisson-zárójel analógiáról, arról, amit Jakovác mondott részfizen a Lagrange végébe írt kommutátoros kifejezésekről, stb.}
+   

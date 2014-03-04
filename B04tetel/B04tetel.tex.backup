@@ -1,0 +1,289 @@
+\chapter{Sokas\'agok, eloszl\'asok, potenci\'alok}
+ 
+ \section{Mikrokanonikus sokaság}
+  
+  Lásd \aref{ss:B03-mikrokansok}. fejezetet.
+  
+ \section{Kanonikus sokaság ($T$,$V$,$N$)}
+  
+  Kanonikus sokaságban egy zárt rendszer kis alrendszerét tekintjük. Az egész rendszer energiája rögzített ($E_0=E+E_\text{K}$), ahol $E$ az alrendszer energiája, míg $E_\text{K}$ a környezeté. Mivel a környezet jóval nagyobb, mint az alrendszer, ezért $E\approx E_\text{K}=\text{áll}$. 
+  
+  \subsection{A kanonikus eloszlás}
+   
+   Az eloszlás meghatározásához kiszámoljuk annak a valószínűségét, hogy az alrendszer az $i$-edik mikroállapotban van. Ez a szám azzal lesz egyenlő ahányféleképpen a környezet energiája $E_0-E_i$ lehet:
+   \al{
+    \rho(i)
+     =\frac{\Omega_\text{K}(E_0-E_i,\delta E)}{\Omega_0(E_0,\delta E)}.
+   }
+   Mivel $E_i$ kicsi, így ezt sorbafejthetjük (a logaritmusát):
+   \al{
+    \ln\rho(i)
+     &=\underbrace{\ln\frac{\Omega_\text{K}(E_0,\delta E)}{\Omega_0(E_0,\delta E)}}_{\text{const.}}-\pder{\ln\Omega_\text{K}(E_0,\delta E)}{E}\cdot E_i+\mathcal{O}(E_i^2)\\
+     &=\underbrace{\ln\frac{\Omega_\text{K}(E_0,\delta E)}{\Omega_0(E_0,\delta E)}}_{\text{const.}}-\underbrace{\pder{\ln\Omega_\text{K}(E_\text{K},\delta E)}{E}}_{=\frac{1}{\kB T_\text{K}}}\cdot E_i+\mathcal{O}(E_i^2)
+      \approx\text{const.}-\beta_\text{K}E_i.
+   }
+   Igy $\rho(i)\sim e^{-\beta_\text{K} E_i}$. A normálással együtt klasszikus és kvantumos rendszerre:
+   \al{
+    &\text{Klasszikus rendszerre:}
+    &\rho(q,p)&=\frac{1}{Z}e^{-\beta E(q,p)}
+    &Z&=\intl{}{}\frac{\dd q^{dN}\dd p^{dN}}{h^{dN}N!}\,e^{-\beta E(q,p)}\\
+    &\text{Kvantumos rendszerre:}
+    &\op\rho&=\frac{1}{Z}e^{-\beta \opH}
+    &Z&=\tr\left(e^{-\beta \opH}\right),
+   }
+   ahol megelőlegeztük, hogy a környezet és a rendszer hőmérséklete egyenlő. Ehhez vizsgáljuk meg, hogy mekkora annak a valószínűségi sűrűsége, hogy az általunk vizsgált alrendszer energiája $E$. Ez abból adódik, hogy a rendszer mekkora valószínűséggel van az $i$-edik mikroállapotban, illetve hogy az állapotok milyen sűrűn vannak ($\omega(E)$ az energia-állapotsűrűség): 
+   \al{
+    P(E)=\rho(E)\omega(E)=\frac{e^{-\beta_\text{K}E}\omega(E)}{Z}.
+   }
+   Ez egy éles eloszlás, hiszen a számláló első tagja az energia növelésével élesen levág, míg $\omega(E)$ az energia növelésével élesen nő. Az éles eloszlás miatt a várható érték és a legvalószínűbb érték itt is jó közelítéssel megegyezik. Az eloszlás (logaritmusának) maximuma:
+   \al{
+    \ln P(E)&=-\beta_\text{K}E+\ln\omega(E)+\text{const.}\\
+    0&=\pder{\ln P(E)}{E}=-\beta_\text{K}+\underbrace{\pder{\ln \omega(E)}{E}}_{\frac{1}{\kB T}}
+    &\Rightarrow
+    &&T=T_\text{K}.
+   }
+  
+  \subsection{Energia várható értéke, fluktuációi}
+   
+   Az energia várható értéke:
+   \al{
+    \mv{E}
+     &=\suml{i}{}E_i\rho(i)
+      =\suml{i}{}\frac{E_i e^{-\beta E_i}}{\suml{j}{}e^{-\beta E_j}}
+      =-\pder{\ln Z}{\beta},
+   }
+   illetve szórásnégyzete:
+   \al{
+    \mv{(\Delta E)^2}
+     &=\mv{E^2}-\mv{E}^2
+      =\frac{1}{Z}\pder{^2 Z}{\beta^2}-\left(\frac{1}{Z}\pder{Z}{\beta}\right)^2
+      =\pder{}{\beta}\left(\frac{1}{Z}\pder{Z}{\beta}\right)
+      =\pder{}{\beta}\left(\pder{\ln Z}{\beta}\right)\\
+     &=-\pder{E}{\beta}
+      =-\underbrace{\kB\pder{E}{T}}_{C_V}\underbrace{\pder{T}{\frac{1}{T}}}_{-T^2}
+      =\kB T^2 C_V.
+   }
+   Az energia szórásnégyzete egy statisztikus fizikai mennyiség, míg a jobb oldalon állók termodinamikai mennyiségek. Mivel feltételeztük, hogy normál rendszerben vagyunk, így $C_V>0$ adódik. A termodinamikában ez stabilitási feltétel.
+   
+  \subsection{Szabadenergia}
+   
+   A termodinamikában az energiából Legendre-transzformációval előállítjuk a szabadenergiát: $F=E-TS$. A statisztikus fizikában:
+   \al{
+    F=-\kB T\ln Z,
+   }
+   ahol $Z$ az állapotszám. Mivel az eloszlás nagyon éles, ezért az állapotösszeg közelíthető:
+   \aln{
+    Z=\intl{E_\text{min}}{\infty}\dd E\,e^{-\beta E}\omega(E)
+     =e^{-\beta E} \omega(E)\cdot \Delta E,\label{eq:B04-kanallszam}
+   }
+   ahol $\Delta E$ az eloszlás szélessége. A szórásnégyzetből adódik, hogy $\Delta E\sim C_V\sim N$. Így tehát
+   \al{
+    F=-\kB T\ln Z
+     =-\kB T \big(\underbrace{-\beta E}_{\mathcal{O}(N)} +\underbrace{\ln\omega(E)}_{\mathcal{O}(N)}+ \underbrace{\ln\Delta E}_{\mathcal{O}(\ln N)}\big)
+     \approx -\kB T (-\beta E + \ln\omega(E))
+     =E-TS,
+   }
+   vagyis makroszkopikusan megegyezik a termodinamikai definícióval.
+   A termodinamikai deriváltaknak megfelelő összefüggéseket is megkapjuk:
+   \al{
+    \pder{F}{T}
+     &=\pder{}{T}(-\kB T \ln Z)
+      =-\kB\ln Z-\kB T\pder{\ln Z}{T}
+      =\frac{F}{T}+\frac{1}{T}\pder{\ln Z}{\beta}
+      =\frac{F}{T}-\frac{E}{T}
+      =-S\\
+    \pder{F}{V}
+     &=\pder{}{V}(-\kB T \ln Z)
+      =-\kB T \pder{\ln Z}{V}
+      =-\kB T \frac{1}{Z}\suml{i}{}\beta\left(-\pder{E_i}{V}\right)e^{-\beta E_i}
+      =\frac{1}{Z}\suml{i}{}\pder{E_i}{V}e^{-\beta E_i}\\
+     &=\mv{\pder{E}{V}}=-p
+   }
+   
+   $F$ extenzív mennyiség, hiszen független alrendszerek összességére $Z$ szorzódik. Az információs entrópiába helyettesítve a kanonikus eloszlás az $S$ entrópiát adja:
+   \al{
+    \kB S_\text{inf}
+     &=-\kB\suml{}{}\rho(i)\ln\rho(i)
+      =-\kB\frac{1}{Z}\suml{}{}e^{-\beta E_i}\ln\left(\frac{1}{Z}e^{-\beta E_i}\right)\\
+     &=-\kB\frac{1}{Z}\suml{}{}e^{-\beta E_i}\left(-\beta E_i-\ln Z \right)
+      =\kB\beta\underbrace{\frac{1}{Z}\suml{}{} E_i e^{-\beta E_i}}_{E}
+       +\kB\ln Z\underbrace{\frac{1}{Z}\suml{}{}e^{-\beta E_i}}_{1}\\
+     &=\frac{E}{T}-\frac{F}{T}
+      =S.
+   }
+   Az információs entrópiát a mikrokanonikus eloszlás maximalizálta. A kanonikus eloszlás az információs entrópiát az a mellékfeltétel mellett maximalizálja, hogy $E$ állandó. Ezt onnan tudjuk, hogy $T$-t rögzíti a környezet, és $T$ az átlagenergia, így fix részecskeszám mellett $E=\suml{}{}E_i\rho(i)=\text{const.}$ A variálás:
+   \al{
+    0&=\delta\left(-\suml{i}{}\rho(i)\ln\rho(i)-\lambda\suml{i}{}E_i\rho(i)\right)
+      =-\suml{i}{}\left(\delta\rho(i)\ln\rho(i)+\rho(i)\frac{1}{\rho(i)}\delta\rho(i)\right)-\lambda\suml{i}{}E_i\delta\rho(i)\\
+     &=\suml{i}{}\delta\rho(i)\big(-\ln\rho(i)-1-\lambda E_i\big)\\
+    0&=-\ln\rho(i)-1-\lambda E_i\\
+    \rho(i)&=C e^{-\lambda E_i},
+   }
+   ahol $C=Z$ és $\lambda=\beta$. 
+   
+  \section{Nagykanonikus sokaság ($T$,$V$,$\mu$)}
+   
+   A konstrukció hasonló az előzőhöz: most is egy elszigetelt nagy rendszer pici alrendszerét vizsgáljuk. Az alrendszer és a környezet között anyagi kölcsönhatás és energiatranszfer történhet, de mechanikai munka nincs ($\delta V=0$). 
+   
+   Bevezetjük a nagykanonikus potenciált:
+   \al{
+    \Phi(T,V,N)&=E-TS-\mu N=-pV
+    &\dd\Phi=-S\dd T-p\dd V-N\dd\mu
+   }
+   A termodinamikai deriváltak:
+   \al{
+    &\left(\pder{\Phi}{T}\right)_{V,\mu}=-S
+    &&\left(\pder{\Phi}{V}\right)_{T,\mu}=-p
+    &&\left(\pder{\Phi}{\mu}\right)_{T,V}=-N.
+   }
+   Ebben az esetben egy mikroállapot valószínűsége: $\rho(N,i_N$. A mikroállapotok valószínűsége attól is függ, hogy hány részecske van épp a rendszerben. Ez felírva a környezet és a teljes rendszer állapotszámaival:
+   \al{
+    \rho(N,i_N)=\frac{\Omega_{0,\text{K}}(E_0-E,N_0-N)}{\Omega_0(E_0,N_0)}.
+   }
+   Itt is sorfejtést alkalmazunk a kis $E$ és $N$-re:
+   \al{
+    \ln\rho(N,i_N)=\text{const}-\pder{\ln\Omega_\text{K}(E_0,N_0)}{E}E_i-\pder{\ln\Omega_\text{K}(E_0,N_0)}{N}N,
+   }
+   ahonnan exponencializálva és elnevezve az együtthatókat:
+   \al{
+    &\rho(N,i_N)=\frac{1}{\mathcal{Z}}e^{-\beta_\text{K}(E_i-\mu_\text{K} N)}
+    &\mathcal{Z}=\mathcal{Z}(T,V,\mu)=\suml{N=0}{\infty}\suml{i_N}{}e^{-\beta_\text{K}(E_i-\mu_\text{K} N)}
+   }
+   Itt is a környezet kémiai potenciálja és redukált hőmérséklete szerepel. A kanonikus esethez hasonlóan itt is be lehet látni, hogy a $\beta_\text{K}=\beta$ és $\mu_\text{K}=\mu$.
+   
+   A nagykanonikus potenciál statisztikus fizikai definíciója:
+   \al{
+    \Phi=-\kB T\ln\mathcal{Z},
+   }
+   melyről be lehet látni, hogy az megegyezik a termodinamikai definícióval:
+   \al{
+    \Phi
+     &=-\kB T\ln\mathcal{Z}
+      =-\kB T\ln\left(\suml{i}{}e^{-\beta(E_i-\mu N)}\right)
+      =-\kB T\ln\left(\suml{N=0}{\infty}e^{\beta\mu N} Z_n\right),
+   }
+   ahol $Z_N$ a kanonikus állapotszám $N$ részecskére. Használva \eqaref{eq:B04-kanallszam} egyenletet, illetve hogy az eloszlás $N$ szerint is éles
+   \al{
+    \Phi
+     &=-\kB T\ln\left(\suml{N=0}{\infty}e^{\beta\mu N} e^{-\beta E} \omega(E)\cdot \Delta E\right)
+      =-\kB T\ln\left(e^{\beta\mu N} e^{-\beta E} \omega(E)\cdot \Delta E\Delta N\right)\\
+     &=-\kB T\left(\beta\mu N -\beta E +\ln\omega(E)+\ln\Delta E+\ln\Delta N\right)
+      \approx -\mu N + E -\kB T\ln\omega(E)\\
+     &=E-TS-\mu N.
+   }
+   
+ \section{TPN sokaság ($T$,$p$,$N$)}
+  
+  Tekintsünk egy olyan alrendszer, amely mechanikai kapcsolatban van a környezettel és hőátadás is lehetséges. Ennek a termodinamikai potenciálja a szabadentalpia:
+  \al{
+   &G(T,p,N)=E-TS+pV=\mu N
+   &\dd G=-S\dd T+V\dd p+\mu\dd N.
+  }
+  
+  A mikroállapotok valószínűsége:
+  \al{
+   &\rho(V,i_V)=\frac{1}{Y}e^{-\beta(E_{i_V}+pV)}
+   &Y=Y(T,p,N)=\intl{V}{}\drh\suml{i_V}{}e^{-\beta(E_{i_V}+pV)}.
+  }
+  
+  A statisztikus fizikai potenciál definíciója:
+  \al{
+   G=-\kB T\ln Y,
+  }
+  amiről szintén meg lehet mutatni, hogy a termodinamikai határesetben megegyezik a szabadentalpiával. A termodinamikai deriváltak:
+  \al{
+   \pder{G}{T}
+    &=-\kB\ln Y-\kB T\pder{\ln Y}{T}
+     =\frac{G}{T}+\frac{1}{T}\pder{\ln Y}{\beta}
+     =\frac{G}{T}-\frac{E+pV}{T}
+     =-S\\
+   \pder{G}{p}
+    &=-\kB T\pder{\ln Y}{p}
+     =\kB T\beta V
+     =V\\
+   \mv{(\Delta E)^2}
+    &=\mv{E^2}-\mv{E}^2
+     =\frac{1}{Y}\pder{^2 Y}{\beta^2}-\left(\frac{1}{Y}\pder{Y}{\beta}\right)^2
+     =\pder{}{\beta}\left(\frac{1}{Y}\pder{Y}{\beta}\right)
+     =\pder{}{\beta}\left(\pder{\ln Y}{\beta}\right)\\
+    &=-\pder{E}{\beta}
+     =\kB T^2\pder{E}{T}
+     =\kB T^2 C_V\\
+   \mv{(\Delta V)^2}
+    &=\mv{V^2}-\mv{V}^2
+     =\frac{1}{Y}\frac{1}{\beta^2}\pder{^2 Y}{p^2}-\left(-\frac{1}{Y}\frac{1}{\beta}\pder{Y}{p}\right)^2
+     =\frac{1}{\beta^2}\pder{}{p}\left(\frac{1}{Y}\pder{Y}{p}\right) 
+     =\frac{1}{\beta^2}\pder{}{p}\left(\pder{\ln Y}{p}\right) \\
+    &=-\kB T\pder{V}{p}
+     =\kB T V \kappa_T.
+  }
+  
+%   \newgeometry{margin=1cm}
+  \begin{landscape}
+   \thispagestyle{empty}
+   \begin{table}[!p]
+    \hspace{-4cm}
+    \begin{tabular}{r||l|l|l|l}
+     & Mikrokanonikus ($E$,$V$,$N$) & Kanonikus ($T$,$V$,$N$) & Nagykanonikus ($T$,$V$,$\mu$) & TPN ($T$,$p$,$N$)\\ \hline\hline
+     kölcsönhatás&  & energia & energia és anyagi & energia és mechanikai\\ \hline
+     környezet &  & hő ($T$) & hő ($T$) és részecske ($\mu$) & hő ($T$) és nyomás ($p$)\\ \hline
+     $\rho(i)$ & $\frac{1}{\Omega(E,\delta E)}$, ha $E_i\in [E,E+\delta E]$ & $\frac{1}{Z}e^{-\beta E_i}$ & $\frac{1}{\mathcal{Z}}e^{-\beta (E_i-\mu N)}$ & $\frac{1}{Y}e^{-\beta (E_i+pV)}$\\ \hline
+     áll. össz. $\begin{array}{l}\text{QM}\\\text{CL}\end{array}$
+      & $\Omega(E,\delta E)
+         =\begin{array}{l}
+           \suml{n}{}\Theta(E-E_n) \\
+           \intl{E'<E}{}\frac{\dd^{dN}p\dd^{dN}q}{N! h^{dN}}\,
+          \end{array}$
+      & $Z=\begin{array}{l}
+            \tr\left(e^{-\beta \opH}\right) \\
+            \intl{}{}\frac{\dd q^{dN}\dd p^{dN}}{h^{dN}N!}\,e^{-\beta E(q,p)} 
+           \end{array}
+        $ 
+      & $\mathcal{Z}=\begin{array}{l}
+                      \tr\left(e^{-\beta (\opH)-\mu\opN}\right) \\
+                      \suml{N=0}{\infty}\intl{}{}\frac{\dd q^{dN}\dd p^{dN}}{h^{dN}N!}\,e^{-\beta (E(q,p)-\mu N)} 
+                     \end{array}
+        $ 
+      & $Y=\begin{array}{l}
+            {\color{red}\tr\left(e^{-\beta (\opH+pV)}\right)}\\
+            \intl{0}{\infty}\dd V\,\intl{}{}\frac{\dd q^{dN}\dd p^{dN}}{h^{dN}N!}\,e^{-\beta (E(q,p)+pV)} 
+           \end{array}
+        $\\ \hline
+     TD. potenciál 
+      & $S$ 
+      & $F=E-TS=-pV+\mu N$ 
+      & $\Phi=E-TS-\mu N=-pV$ 
+      & $G=E-TS+pV=\mu N$\\ \hline
+     Stat. fiz pot. 
+      & $S=\kB T \ln \Omega(E,\delta E)$ 
+      & $F=-\kB T\ln Z$ 
+      & $\Phi=-\kB T\ln \mathcal{Z}$ 
+      & $G=-\kB T\ln Y$\\ \hline
+     diff. fund. egy 
+      & $\dd S=\frac{1}{T}\dd E+\frac{p}{T}\dd V-\frac{\mu}{T}\dd V$
+      & $\dd F=-S\dd T-p\dd V+\mu\dd N$
+      & $\dd \Phi=-S\dd T-p\dd V-N\dd \mu$
+      & $\dd G=-S\dd T+V\dd p+\mu\dd N$\\ \hline
+     egyensúlyi felt
+      & $S$ maximuma
+      & $F$ minimuma
+      & $\Phi$ minimuma
+      & $G$ minimuma \\ \hline
+     várható ért:
+      & 
+      & $\mv{E}=-\pder{\ln Z}{\beta}$
+      & $\mv{N}=\pder{\ln \mathcal{Z}}{(\mu\beta)}$
+      & $\mv{V}=-\pder{\ln Y}{(p\beta)}$\\ \hline
+     fluktuáció:
+      &
+      & $\mv{(\Delta E)^2}=\kB T^2 C_V$
+      & $\mv{(\Delta N)^2}=\kB T \frac{N^2}{V} \kappa_T$
+      & $\mv{(\Delta V)^2}=\kB T V \kappa_T$
+    \end{tabular}
+    \caption{A statisztikus fizikai sokaságok összefoglaló táblázata.}\label{tabl:B04-sokasagok}
+   \end{table}
+  \end{landscape}
+%   \restoregeometry
+  
+  
+  

@@ -1,0 +1,273 @@
+% \linespread{1.3}
+
+\usepackage[T1]{fontenc}
+\usepackage[magyar]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{url}
+\usepackage{subfig}
+\usepackage[abs]{overpic}
+\usepackage{enumerate}
+\usepackage{datetime}
+
+\usepackage{pgf}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{patterns}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{scopes,arrows}
+\usetikzlibrary{decorations.markings}
+% \usepackage{tikz-3dplot}
+
+\frenchspacing
+\usepackage{icomma}
+\usepackage{indentfirst}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{fullpage}
+% \usepackage[margin=2cm]{geometry}
+\usepackage[top=1.8cm, bottom=2.2cm, left=2.25cm, right=2.25cm]{geometry}
+% \usepackage[top=1.8cm, bottom=2.2cm, left=2.5cm, right=2cm]{geometry}
+
+
+\usepackage{array}
+\usepackage{graphicx}
+
+\allowdisplaybreaks[1]
+
+\newcommand{\eqaref}[1]{\az+\eqref{#1}}
+\newcommand{\Eqaref}[1]{\Az+\eqref{#1}}
+
+\newcommand{\ce}[3]{{_{#1}^{#2}}\mathrm{#3}}
+
+%%%%%%%%% Numbering %%%%%%%%%%%%%
+\numberwithin{equation}{chapter}   %Equation numbering
+\numberwithin{chapter}{part}   %chapter numbering
+\numberwithin{section}{chapter}   %chapter numbering
+\numberwithin{subsection}{section}   %chapter numbering
+\addto\captionsmagyar{\renewcommand{\chaptername}{t\'etel}} %Change ``#. fejezet'' to ``#. tétel''
+\addto\captionsmagyar{\renewcommand{\partname}{t\'etelek}} %Change ``#. fejezet'' to ``#. tétel''
+\renewcommand\thechapter{\Alph{part}-\arabic{chapter}} %Change the chapter numbering ``chapternumber'' to ``partnumber-chapternumber'' where partnumber is like A, B, C, ...
+\renewcommand\thepart{\Alph{part}} %Change ``chapternumber'' to A, B, C, ...
+\usepackage{tocstyle}   %Package to calculate space for chapter numbering in TOC.
+\usetocstyle{standard}
+\usepackage{titlesec}
+
+\usepackage{multirow}
+\usepackage{pdflscape}
+% \usepackage{bookmark}
+
+\newtheorem{feladat}{feladat}
+\newcommand{\me}[1]{\mathrm{\, #1}}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ep}{\varepsilon}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\tg}{\mathop{\mathrm{tg}}\nolimits}
+\newcommand{\ctg}{\mathop{\mathrm{ctg}}\nolimits}
+\renewcommand{\Im}{\mathop{\mathrm{Im}}\nolimits}
+\renewcommand{\Re}{\mathop{\mathrm{Re}}\nolimits}
+\newcommand{\arctg}{\mathop{\mathrm{arctg}}\nolimits}
+\newcommand{\tr}{\mathop{\mathrm{Tr}}\nolimits}
+\newcommand{\sh}{\mathop{\mathrm{sh}}\nolimits}
+\newcommand{\tgh}{\mathop{\mathrm{th}}\nolimits}
+\newcommand{\ctgh}{\mathop{\mathrm{cth}}\nolimits}
+\newcommand{\arcth}{\mathop{\mathrm{arcth}}\nolimits}
+\newcommand{\ch}{\mathop{\mathrm{ch}}\nolimits}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}\nolimits}
+\newcommand{\intdom}{\mathop{\mathrm{int}}\nolimits}
+
+\newcommand{\grad}{\mathop{\vects{\nabla}}\nolimits}
+\providecommand{\divo}{\mathop{\vects{\nabla}}\nolimits}
+\providecommand{\rot}{\mathop{\vects{\nabla}\times}\nolimits}
+
+\newcommand{\Lin}{\mathop{\mathrm{Lin}}\nolimits}
+\newcommand{\T}{\mathop{\mathrm{T}}\nolimits}
+
+
+\providecommand{\abs}[1]{\left\lvert#1\right\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\bra}[1]{\langle#1\rvert}
+\providecommand{\ket}[1]{\lvert#1\rangle}
+\providecommand{\et}[1]{#1\rangle}
+\providecommand{\mv}[1]{\left\langle#1\right\rangle}
+
+\providecommand{\eq}[1]{\begin{equation*} #1 \end{equation*}}
+\providecommand{\eqn}[1]{\begin{equation} #1 \end{equation}}
+
+\providecommand{\al}[1]{\begin{align*} #1 \end{align*}}
+\providecommand{\aln}[1]{\begin{align} #1 \end{align}}
+
+\providecommand{\der}[2]{\frac{\dd #1}{\dd #2}}
+\providecommand{\pder}[2]{\frac{\partial #1}{\partial #2}}
+\providecommand{\suml}[2]{\sum\limits_{#1}^{#2}}
+\providecommand{\prodl}[2]{\prod\limits_{#1}^{#2}}
+\providecommand{\intl}[2]{\int\limits_{#1}^{#2}}
+\providecommand{\ointl}[2]{\oint\limits_{#1}^{#2}}
+
+\newcommand{\ddtx}{\ddot{x}}
+\newcommand{\dtx}{\dot{x}}
+\newcommand{\ddtq}{\ddot{q}}
+\newcommand{\dtq}{\dot{q}}
+\newcommand{\dtp}{\dot{p}}
+\newcommand{\ddtQ}{\ddot{Q}}
+\newcommand{\dtQ}{\dot{Q}}
+\newcommand{\dtP}{\dot{P}}
+
+\newcommand{\dtr}{\dot{\vect{r}}}
+\newcommand{\ddtr}{\ddot{\vect{r}}}
+
+\newcommand{\Av}{\vect{A}}
+\newcommand{\av}{\vect{a}}
+\newcommand{\Bv}{\vect{B}}
+\newcommand{\bv}{\vect{b}}
+\newcommand{\Dv}{\vect{D}}
+\newcommand{\ev}{\vect{e}}
+\newcommand{\Ev}{\vect{E}}
+\newcommand{\Fv}{\vect{F}}
+\newcommand{\fv}{\vect{f}}
+\newcommand{\gv}{\vect{g}}
+\newcommand{\Gv}{\vect{G}}
+\newcommand{\Hv}{\vect{H}}
+\newcommand{\hv}{\vect{h}}
+\newcommand{\Jv}{\vect{J}}
+\newcommand{\jv}{\vect{j}}
+\newcommand{\kv}{\vect{k}}
+\newcommand{\lv}{\vect{l}}
+\newcommand{\Lv}{\vect{L}}
+\newcommand{\Mv}{\vect{M}}
+\newcommand{\emv}{\vect{m}}
+\newcommand{\nv}{\vect{n}}
+\newcommand{\pv}{\vect{p}}
+\newcommand{\Pv}{\vect{P}}
+\newcommand{\qv}{\vect{q}}
+\newcommand{\rv}{\vect{r}}
+\newcommand{\Rv}{\vect{R}}
+\newcommand{\Sv}{\vect{S}}
+\newcommand{\sv}{\vect{s}}
+\newcommand{\uv}{\vect{u}}
+\newcommand{\vv}{\vect{v}}
+\newcommand{\xv}{\vect{x}}
+\newcommand{\Xv}{\vect{X}}
+
+\newcommand{\alv}{\vects{\alpha}}
+\newcommand{\betav}{\vects{\beta}}
+\newcommand{\gammav}{\vects{\gamma}}
+\newcommand{\muv}{\vects{\mu}}
+\newcommand{\Piv}{\vects{\Pi}}
+\newcommand{\sigv}{\vects{\sigma}}
+\newcommand{\omv}{\vects{\omega}}
+
+
+\newcommand{\oprv}{\op{\vect{r}}}
+\newcommand{\opvv}{\op{\vect{v}}}
+\newcommand{\oppv}{\op{\vect{p}}}
+\newcommand{\opLv}{\op{\vect{L}}}
+\newcommand{\opav}{\op{\vect{a}}}
+\newcommand{\opkv}{\op{\vect{k}}}
+
+
+\newcommand{\opA}{\op{A}}
+\newcommand{\opa}{\op{a}}
+\newcommand{\opad}{\op{a}^\dagger}
+\newcommand{\opB}{\op{B}}
+\newcommand{\opC}{\op{C}}
+\newcommand{\opH}{\op{H}}
+\newcommand{\opG}{\op{G}}
+\newcommand{\opI}{\op{I}}
+\newcommand{\opL}{\op{L}}
+\newcommand{\opN}{\op{N}}
+\newcommand{\opp}{\op{p}}
+\newcommand{\opr}{\op{r}}
+\newcommand{\opR}{\op{R}}
+\newcommand{\opS}{\op{S}}
+\newcommand{\opT}{\op{T}}
+\newcommand{\opV}{\op{V}}
+\newcommand{\opx}{\op{x}}
+\newcommand{\opX}{\op{X}}
+\newcommand{\opy}{\op{y}}
+\newcommand{\opY}{\op{Y}}
+\newcommand{\opSv}{\op{\vect{S}}}
+
+\newcommand{\opmuv}{\op{\vects{\mu}}}
+\newcommand{\opsigv}{\op{\vects{\sigma}}}
+
+
+
+% \providecommand{\brapsii}{\langle\psi_i\rvert}
+% \newcommand{\ketpsii}{\lvert\psi_i\rangle}
+% \newcommand{\econr}{\vect{e}_\text{con}(\vect{r})}
+% \newcommand{\bconr}{\vect{B}_\text{con}(\vect{r})}
+% \newcommand{\bxcr}{\vect{B}_\text{xc}(\vect{r})}
+% \newcommand{\evecr}{\vect{e}(\vect{r})}
+% \newcommand{\cvecr}{\vect{c}(\vect{r})}
+% \newcommand{\econ}{\vect{e}_\text{con}}
+% \newcommand{\bcon}{\vect{B}_\text{con}}
+% \newcommand{\evec}{\vect{e}}
+% \newcommand{\cvec}{\vect{c}}
+% \newcommand{\psig}{\boldsymbol{\sigma}}
+% \newcommand{\pSig}{\boldsymbol{\Sigma}}
+% \newcommand{\palpha}{\boldsymbol{\alpha}}
+% 
+% \providecommand{\spsiir}{\ket{\psi_i(\vect{r})}}
+% \providecommand{\spsiipr}{\bra{\psi_i(\vect{r})}}
+% \providecommand{\psiir}{\psi_i(\vect{r})\rangle}
+% \providecommand{\spsikr}{\ket{\psi_k(\vect{r})}}
+% \providecommand{\spsikpr}{\bra{\psi_k(\vect{r})}}
+% \providecommand{\psikr}{\psi_k(\vect{r})\rangle}
+% \providecommand{\nur}{n_\uparrow(\vect{r})}
+% \providecommand{\ndr}{n_\downarrow(\vect{r})}
+
+\providecommand{\vect}[1]{\mathbf{#1}}
+\providecommand{\vects}[1]{\boldsymbol{#1}}
+\providecommand{\mat}[1]{\underline{\underline{#1}}}
+\providecommand{\minv}[1]{\mathsf{#1}}
+\providecommand{\ominv}[1]{\op{\mathsf{#1}}}
+
+\providecommand{\op}[1]{\hat{#1}}
+\newcommand{\drh}{\dd^3\vect{r}\,}
+\newcommand{\drkh}{\dd^3\vect{r'}\,}
+\newcommand{\df}{\dd^2\vect{f}\,}
+\newcommand{\ds}{\dd^2\vect{s}\,}
+\newcommand{\ddt}{\dd t\,}
+\newcommand{\drv}{\dd \rv\,}
+\newcommand{\TC}{T_\text{C}}
+\newcommand{\kB}{k_\text{B}}
+
+\usepackage{hyperref}
+\hypersetup{
+%     bookmarks=true,         % show bookmarks bar?
+    unicode=true,          % non-Latin characters in Acrobat’s bookmarks
+%     pdftoolbar=false,        % show Acrobat’s toolbar?
+%     pdfmenubar=true,        % show Acrobat’s menu?
+%     pdffitwindow=false,     % window fit to page when opened
+%     pdfstartview={FitH},    % fits the width of the page to the window
+%     pdfcenterwindow={true}
+%     pdfdisplaydoctitle={true}
+    pdftitle={Elm\'eleti fizika szigorlati t\'etelek},    % title
+    pdfauthor={Vida Gy\"orgy J\'ozsef},     % author
+    pdfsubject={elm\'eleti fizika},   % subject of the document
+    pdfcreator={PDFLaTeX},   % creator of the document
+% %     pdfproducer={Producer}, % producer of the document
+% %     pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+%     pdfnewwindow=true,      % links in new window
+    colorlinks=false,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+    linktoc=all
+}
+
+%%%%%%%%% Numbering %%%%%%%%%%%%%
+\numberwithin{equation}{chapter}   %Equation numbering
+\numberwithin{chapter}{part}   %chapter numbering
+\numberwithin{section}{chapter}   %chapter numbering
+\numberwithin{subsection}{section}   %chapter numbering
+\addto\captionsmagyar{\renewcommand{\chaptername}{t\'etel}} %Change ``#. fejezet'' to ``#. tétel''
+\renewcommand\thechapter{\Alph{part}-\arabic{chapter}} %Change the chapter numbering ``chapternumber'' to ``partnumber-chapternumber'' where partnumber is like A, B, C, ...
+\renewcommand\thepart{\Alph{part}} %Change ``chapternumber'' to A, B, C, ...
+\usepackage{tocstyle}   %Package to calculate space for chapter numbering in TOC.
+\usetocstyle{standard}
+\usepackage{titlesec}

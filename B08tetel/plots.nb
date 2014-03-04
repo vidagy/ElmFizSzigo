@@ -1,0 +1,472 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     15939,        463]
+NotebookOptionsPosition[     15023,        427]
+NotebookOutlinePosition[     15357,        442]
+CellTagsIndexPosition[     15314,        439]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Chi]", "[", 
+    RowBox[{"T_", ",", "h_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"1", "/", "T"}], "*", 
+    RowBox[{"1", "/", 
+     RowBox[{
+      RowBox[{"Cosh", "[", 
+       RowBox[{"h", "/", "T"}], "]"}], "^", "2"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"m", "[", 
+    RowBox[{"T_", ",", "h_"}], "]"}], ":=", 
+   RowBox[{"Tanh", "[", 
+    RowBox[{"h", "/", "T"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.56892805807894*^9, 3.568928062955192*^9}, {
+  3.56892811504161*^9, 3.56892814756659*^9}, {3.568928347643244*^9, 
+  3.56892839867389*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<~/Dokumentumok/chi-t.pdf\>\"", ",", 
+   RowBox[{"Show", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Plot", "[", 
+       RowBox[{
+        RowBox[{"\[Chi]", "[", 
+         RowBox[{"T", ",", "h"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"T", ",", "0", ",", "10"}], "}"}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1"}], "}"}]}], ",", 
+        RowBox[{"PlotStyle", "\[Rule]", 
+         RowBox[{"{", "Thick", "}"}]}], ",", 
+        RowBox[{"AxesLabel", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<T\>\"", ",", "18", ",", "Black", ",", 
+             RowBox[{"FontFamily", "\[Rule]", "\"\<ComputerModern\>\""}]}], 
+            "]"}], ",", 
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<\[Chi](T)\>\"", ",", "18", ",", "Black", ",", 
+             RowBox[{"FontFamily", "\[Rule]", "\"\<ComputerModern\>\""}]}], 
+            "]"}]}], "}"}]}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"h", ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "1", ",", "2"}], "}"}]}], "}"}]}], "]"}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.568928150640264*^9, 3.568928205569544*^9}, {
+  3.568928247255468*^9, 3.56892826060197*^9}, {3.568928294119346*^9, 
+  3.568928300748526*^9}, {3.568928500032824*^9, 3.56892856291582*^9}, {
+  3.568928619568292*^9, 3.568928640845013*^9}}],
+
+Cell[BoxData["\<\"~/Dokumentumok/chi-t.pdf\"\>"], "Output",
+ CellChangeTimes->{{3.568928201156349*^9, 3.568928206346636*^9}, 
+   3.568928261162813*^9, {3.568928294821013*^9, 3.568928301382386*^9}, 
+   3.568928506683647*^9, {3.568928542704874*^9, 3.568928567964269*^9}, 
+   3.568928642598919*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<~/Dokumentumok/m-h.pdf\>\"", ",", 
+   RowBox[{"Show", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Plot", "[", 
+       RowBox[{
+        RowBox[{"m", "[", 
+         RowBox[{"T", ",", "h"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"h", ",", 
+          RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "1"}], ",", "1"}], "}"}]}], ",", 
+        RowBox[{"PlotStyle", "\[Rule]", 
+         RowBox[{"{", "Thick", "}"}]}], ",", 
+        RowBox[{"AxesLabel", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<h\>\"", ",", "18", ",", "Black", ",", 
+             RowBox[{"FontFamily", "\[Rule]", "\"\<ComputerModern\>\""}]}], 
+            "]"}], ",", 
+           RowBox[{"Style", "[", 
+            RowBox[{"\"\<m(h)\>\"", ",", "18", ",", "Black", ",", 
+             RowBox[{"FontFamily", "\[Rule]", "\"\<ComputerModern\>\""}]}], 
+            "]"}]}], "}"}]}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"T", ",", 
+        RowBox[{"{", 
+         RowBox[{"0.001", ",", "0.5", ",", "1", ",", "2"}], "}"}]}], "}"}]}], 
+     "]"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.568928381297399*^9, 3.568928453609077*^9}, {
+  3.568928581196456*^9, 3.568928591259312*^9}, {3.568928646631591*^9, 
+  3.568928654398137*^9}}],
+
+Cell[BoxData["\<\"~/Dokumentumok/m-h.pdf\"\>"], "Output",
+ CellChangeTimes->{{3.568928385909758*^9, 3.568928454081815*^9}, 
+   3.568928591802854*^9, 3.56892865526412*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"S", "[", 
+   RowBox[{"N_", ",", "M_"}], "]"}], ":=", 
+  RowBox[{"-", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"N", "+", "M"}], ")"}], "/", "2"}], "*", 
+      RowBox[{"Log", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"N", "+", "M"}], ")"}], "/", "2"}], "/", "N"}], "]"}]}], 
+     "+", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"N", "-", "M"}], ")"}], "/", "2"}], "*", 
+      RowBox[{"Log", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"N", "-", "M"}], ")"}], "/", "2"}], "/", "N"}], "]"}]}]}], 
+    ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.568962308855686*^9, 3.568962419873098*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"T", "[", 
+   RowBox[{"N_", ",", "M_"}], "]"}], ":=", 
+  RowBox[{"1", "/", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "1"}], "/", "2"}], "*", 
+     RowBox[{"Log", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"N", "+", "M"}], ")"}], "/", 
+       RowBox[{"(", 
+        RowBox[{"N", "-", "M"}], ")"}]}], "]"}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.568962428378513*^9, 3.568962474731943*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<~/Dokumentumok/S-E.pdf\>\"", ",", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"S", "[", 
+       RowBox[{"1", ",", "M"}], "]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"M", ",", 
+       RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", "Thick", "}"}]}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<E\>\"", ",", "18", ",", "Black", ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<ComputerModern\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<S\>\"", ",", "18", ",", "Black", ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<ComputerModern\>\""}]}], 
+         "]"}]}], "}"}]}]}], "]"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<~/Dokumentumok/T-E.pdf\>\"", ",", 
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"T", "[", 
+       RowBox[{"1", ",", "M"}], "]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"M", ",", 
+       RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"{", "Thick", "}"}]}], ",", 
+     RowBox[{"AxesLabel", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<E\>\"", ",", "18", ",", "Black", ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<ComputerModern\>\""}]}], 
+         "]"}], ",", 
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<T\>\"", ",", "18", ",", "Black", ",", 
+          RowBox[{"FontFamily", "\[Rule]", "\"\<ComputerModern\>\""}]}], 
+         "]"}]}], "}"}]}]}], "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.568962479136901*^9, 3.568962537585112*^9}, {
+  3.568962597774698*^9, 3.568962699615617*^9}, {3.568964674495402*^9, 
+  3.568964704200949*^9}, {3.568964734545131*^9, 3.568964741292867*^9}, {
+  3.56896479087412*^9, 3.568964834194536*^9}, {3.5689654533466*^9, 
+  3.568965457439285*^9}, {3.568965504346456*^9, 3.568965518749231*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<~/Dokumentumok/m-T-grafikusmegoldas.pdf\>\"", ",", 
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Plot", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"m", ",", 
+           RowBox[{"Tanh", "[", 
+            RowBox[{
+             RowBox[{"0", "/", "T"}], "+", 
+             RowBox[{
+              RowBox[{"1", "/", "T"}], "*", "m"}]}], "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"m", ",", 
+           RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+         RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], ",", 
+         RowBox[{"PlotStyle", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"Thick", ",", "Blue"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"Thick", ",", "Purple"}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"AxesLabel", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<m\>\"", ",", "18", ",", "Black", ",", 
+              RowBox[{"FontFamily", "\[Rule]", "\"\<ComputerModern\>\""}]}], 
+             "]"}], ",", 
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<\>\"", ",", "18", ",", "Black", ",", 
+              RowBox[{"FontFamily", "\[Rule]", "\"\<ComputerModern\>\""}]}], 
+             "]"}]}], "}"}]}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"T", ",", 
+         RowBox[{"{", 
+          RowBox[{"0.001", ",", "0.6", ",", "1", ",", "2"}], "}"}]}], "}"}]}],
+       "]"}], ",", 
+     RowBox[{"ListPlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "1"}], ",", 
+           RowBox[{"-", "1"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0.90733231664531`", ",", "0.90733231664531`"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "0.90733231664531`"}], ",", 
+           RowBox[{"-", "0.90733231664531`"}]}], "}"}]}], "}"}], ",", 
+       RowBox[{"PlotStyle", "\[Rule]", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"PointSize", "[", "Large", "]"}], ",", "Black"}], "]"}]}]}],
+       "]"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.568965736264498*^9, 3.568965892742654*^9}, {
+  3.56897501698124*^9, 3.568975045126125*^9}, {3.56897510477443*^9, 
+  3.568975221577027*^9}, {3.568975251580849*^9, 3.568975331211283*^9}, {
+  3.568975636165441*^9, 3.568975704170782*^9}, {3.568975744227682*^9, 
+  3.56897578869166*^9}}],
+
+Cell[BoxData["\<\"~/Dokumentumok/m-T-grafikusmegoldas.pdf\"\>"], "Output",
+ CellChangeTimes->{{3.568975023035521*^9, 3.568975045700642*^9}, {
+   3.568975128085367*^9, 3.568975222284164*^9}, 3.568975253458524*^9, {
+   3.568975286185295*^9, 3.568975332378077*^9}, 3.568975516797902*^9, 
+   3.568975650677969*^9, 3.568975705715249*^9, 3.568975757747434*^9, 
+   3.568975792789926*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<~/Dokumentumok/m-h-grafikusmegoldas.pdf\>\"", ",", 
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Plot", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"m", ",", 
+           RowBox[{"Tanh", "[", 
+            RowBox[{
+             RowBox[{"h", "/", "1.1"}], "+", 
+             RowBox[{
+              RowBox[{"1", "/", "1.1"}], "*", "m"}]}], "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"m", ",", 
+           RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+         RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], ",", 
+         RowBox[{"PlotStyle", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"Thick", ",", "Blue"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"Thick", ",", "Purple"}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"AxesLabel", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<m\>\"", ",", "18", ",", "Black", ",", 
+              RowBox[{"FontFamily", "\[Rule]", "\"\<ComputerModern\>\""}]}], 
+             "]"}], ",", 
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<\>\"", ",", "18", ",", "Black", ",", 
+              RowBox[{"FontFamily", "\[Rule]", "\"\<ComputerModern\>\""}]}], 
+             "]"}]}], "}"}]}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"h", ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0.3", ",", "0.6", ",", "0.9"}], "}"}]}], "}"}]}],
+       "]"}], ",", 
+     RowBox[{"ListPlot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0.7360968309541109`", ",", "0.7360968309541109`"}], "}"}], 
+         ",", 
+         RowBox[{"{", 
+          RowBox[{"0.871020024125201`", ",", "0.871020024125201`"}], "}"}], 
+         ",", 
+         RowBox[{"{", 
+          RowBox[{"0.9308029223502031`", ",", "0.9308029223502031`"}], 
+          "}"}]}], "}"}], ",", 
+       RowBox[{"PlotStyle", "\[Rule]", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"PointSize", "[", "Large", "]"}], ",", "Black"}], "]"}]}]}],
+       "]"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.568975846802279*^9, 3.568975877133914*^9}, {
+  3.568975914078163*^9, 3.568975919134504*^9}, {3.568975973018686*^9, 
+  3.568975989510569*^9}, {3.568976073840498*^9, 3.568976158715389*^9}}],
+
+Cell[BoxData["\<\"~/Dokumentumok/m-h-grafikusmegoldas.pdf\"\>"], "Output",
+ CellChangeTimes->{{3.568976130250105*^9, 3.568976159532297*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"FindRoot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"m", "==", 
+       RowBox[{"Tanh", "[", 
+        RowBox[{
+         RowBox[{"h", "/", "1.1"}], "+", 
+         RowBox[{
+          RowBox[{"1", "/", "1.1"}], "*", "m"}]}], "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"m", ",", "1"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"h", ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0.3", ",", "0.6", ",", "0.9"}], "}"}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.568976020915533*^9, 3.568976041523296*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"m", "\[Rule]", "5.169878828456423`*^-26"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"m", "\[Rule]", "0.7360968309541109`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"m", "\[Rule]", "0.871020024125201`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"m", "\[Rule]", "0.9308029223502031`"}], "}"}]}], "}"}]], "Output",\
+
+ CellChangeTimes->{3.568976046875085*^9}]
+}, Open  ]]
+},
+WindowSize->{740, 629},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"8.0 for Linux x86 (32-bit) (October 10, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 639, 20, 50, "Input"],
+Cell[CellGroupData[{
+Cell[1221, 44, 1494, 36, 126, "Input"],
+Cell[2718, 82, 295, 4, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3050, 91, 1460, 37, 126, "Input"],
+Cell[4513, 130, 170, 2, 30, "Output"]
+}, Open  ]],
+Cell[4698, 135, 772, 27, 30, "Input"],
+Cell[5473, 164, 464, 15, 30, "Input"],
+Cell[5940, 181, 2118, 51, 164, "Input"],
+Cell[CellGroupData[{
+Cell[8083, 236, 2740, 70, 183, "Input"],
+Cell[10826, 308, 380, 5, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11243, 318, 2543, 65, 202, "Input"],
+Cell[13789, 385, 140, 1, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13966, 391, 606, 19, 30, "Input"],
+Cell[14575, 412, 432, 12, 34, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

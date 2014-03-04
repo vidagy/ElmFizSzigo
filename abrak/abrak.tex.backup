@@ -1,0 +1,181 @@
+\documentclass[a4paper,12pt,notitlepage,oneside]{book}
+
+\input{../mymacros.sty}
+
+
+\author{Feh\'{e}r Andr\'as (\texttt{oregtolgy@gmail.com}) \\
+        Vida György J\'{o}zsef (\texttt{vidagyorgy@gmail.com})}
+\title{Fizika 2 - Gyakorlatjegyzet}
+
+\begin{document}
+
+
+%     \begin{tikzpicture}
+%     \draw[-latex] (0,0) -- (4,0) node[below right] {$V$};
+%     \draw[-latex] (0,0) -- (0,4) node[above left] {$p$};
+%     \draw[line width=1pt] (0.5,0.5) .. controls (1.5,1.25) and (2.2,2.0) .. (2.5,2.5);
+%     \fill (2.5,2.5) circle (0.1) node[above right=-1pt] {CP};
+%     \draw[-latex,red,line width=1.3pt] (0.5,1.5) -- (1.5,0.5) node[below right=-5pt] {$(2)$};
+%     \draw[-latex,red,line width=1.3pt] (2.3,1.8) .. controls (5,2.2) and (2,4.8) .. (2,2.3) node[above left ] {$(1)$};
+%     \draw[-latex,red,line width=1.3pt] (1.5,1.34) node[above left=-6pt]{$(3)$} .. controls (1.6,1.43) and (1.9,1.72) .. (2.1,1.965);
+%     \end{tikzpicture}
+
+%     \begin{tikzpicture}
+%      \draw[-latex] (-2,0) -- (5,0) node[below right] {$x$};
+%      \draw[-latex] (0,-3) -- (0,3) node[above left] {$y$};
+%      \draw[densely dashed] (-1,-2.2) -- (-1,2.2);
+%      \draw[densely dashed] (4,-2.2) -- (4,2.2);
+%      \draw[blue,line width=1.2pt] (1.5,0) ellipse (2.5 and 2);
+%      \fill (1.5,0) circle (1.3 pt) node[above right] {$C$};
+%      \fill (0,0) circle (1.3 pt) node[above left] {$F$};
+%      \fill (1.5,2) circle (1.3 pt);
+%      \draw[decorate,decoration={brace,raise=2pt,mirror}] (-1,0) -- node[below=2pt]{$a$} (1.5,0);
+%      \draw (1.5,2) -- node[right=2pt]{$b$} (1.5,0);
+%      \draw (0,0) -- node[left=2pt]{$a$} (1.5,2);
+%      \draw[decorate,decoration={brace,mirror,raise=2pt}] (-1,-2) -- node[below=2pt]{$r_\text{min}$} (0,-2);
+%      \draw[decorate,decoration={brace,mirror,raise=2pt}] (0,-2) -- node[below=2pt]{$r_\text{max}$} (4,-2);
+%     \end{tikzpicture}
+    
+%     \begin{tikzpicture}
+%     \draw[-latex] (0,0) -- (5,0) node[below right] {$p$};
+%     \draw[-latex] (0,0) -- (0,4) node[above left] {$G$};
+%     \draw[line width=1pt] (0.5,0.5) node[below right=-4pt] {$A$} .. controls (1,1.1) and (2,2.2) .. (3,3) node[above right=-4pt] {$C$};
+%     \draw[line width=1pt] (3,3) .. controls (2.5,2.8) and (2.3,2.7) .. (1.8,2.3);
+%     \draw[line width=1pt] (1.8,2.3) node[below left=-4pt] {$D$} .. controls (2,2.45) and (3.6,2.95) .. (4.5,3) node[below=-2pt] {$F$};
+%     \node[below=-2pt] at (3,2.5) {$B=E$};
+%     \end{tikzpicture}
+    
+%     \begin{tikzpicture}
+%     \draw[-latex] (0,0) -- (5,0) node[below right] {$T$};
+%     \draw[-latex] (0,0) -- (0,4) node[above left] {$S$};
+%     \draw[line width=1pt] (0,0) .. controls (1,0.4) and (4,2.5) .. (4,3.5);
+%     \draw[line width=1pt] (0,0) .. controls (2,0.2) and (5,2.5) .. (5,3.5);
+%     \draw[-latex,line width=0.7pt,red] (4.92,3.2) -- (3.93,3.2);
+%     \draw[-latex,line width=0.7pt,blue] (3.93,3.2) -- (3.93,2);
+%     \draw[-latex,line width=0.7pt,red] (3.93,2) -- (2.94,2);
+%     \draw[-latex,line width=0.7pt,blue] (2.94,2) -- (2.94,1.24);
+%     \draw[-latex,line width=0.7pt,red] (2.94,1.24) -- (2.01,1.24);
+%     \draw[-latex,line width=0.7pt,blue] (2.01,1.24) -- (2.01,0.68);
+%     \draw[-latex,line width=0.7pt,red] (2.01,0.68) -- (1.2,0.68);
+%     \draw[-latex,line width=0.7pt,blue] (1.2,0.68) -- (1.2,0.29);
+%     \draw[-latex,line width=0.7pt,red] (1.2,0.29) -- (0.58,0.29);
+%     \node at (4.5,3.7) {$H_1 < H_2$};
+%     \end{tikzpicture}
+    
+%     \begin{figure}[ht!]
+%     \centering
+%     \subfloat[$\Ev(\rv)$ ($\ep_\text{k}<\ep_\text{g}$)\label{fig:10-1}]{\begin{overpic}[width= 0.3\textwidth]{../A10tetel/Db}
+%       \put(0,0){\includegraphics[width= 0.3\textwidth]{../A10tetel/Eb}}
+%       \put(8.4,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(32.8,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(47.8,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(62.6,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(77.5,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(93.0,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(107.6,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(131.8,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%      \end{overpic}}
+%     \hspace{6pt}
+%     \subfloat[$\Dv(\rv)$ ($\ep_\text{k}<\ep_\text{g}$)\label{fig:10-2}]{\begin{overpic}[width= 0.3\textwidth]{../A10tetel/Db}
+%       \put(8.4,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(27.7,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(37.8,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(48.2,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(58.8,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(70.2,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(81.5,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(92.2,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(102.7,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(112.7,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(131.8,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%      \end{overpic}}
+%     \hspace{6pt}
+%     \subfloat[$\Ev_\text{dipól}(\rv)$ ($\ep_\text{k}<\ep_\text{g}$)\label{fig:10-3}]{\begin{overpic}[width= 0.3\textwidth]{../A10tetel/Pk}
+%       \put(3.4,68){\tikz \draw[latex-,thick,blue] (0,0) -- (0,0.1);}
+%       \put(35.3,68){\tikz \draw[latex-,thick,blue] (0,0) -- (0,0.1);}
+%       \put(52.9,68){\tikz \draw[latex-,thick,blue] (0,0) -- (0,0.1);}
+%       \put(70.4,68){\tikz \draw[latex-,thick,blue] (0,0) -- (0,0.1);}
+%       \put(88,68){\tikz \draw[latex-,thick,blue] (0,0) -- (0,0.1);}
+%       \put(105.2,68){\tikz \draw[latex-,thick,blue] (0,0) -- (0,0.1);}
+%       \put(137,68){\tikz \draw[latex-,thick,blue] (0,0) -- (0,0.1);}      \put(60,106.3){\tikz\node[red] at (0,0) {\tiny $\pmb{\oplus}$};}
+%       \put(68,106.3){\tikz\node[red] at (0,0) {\tiny $\pmb{\oplus}$};}
+%       \put(89,98){\tikz\node[red] at (0,0) {\tiny $\pmb{\oplus}$};}
+%       \put(39,98){\tikz\node[red] at (0,0) {\tiny $\pmb{\oplus}$};}
+%       \put(60,21.7){\tikz\node[blue] at (0,0) {\tiny $\pmb{\ominus}$};}
+%       \put(68,21.7){\tikz\node[blue] at (0,0) {\tiny $\pmb{\ominus}$};}
+%       \put(89,30){\tikz\node[blue] at (0,0) {\tiny $\pmb{\ominus}$};}
+%       \put(39,30){\tikz\node[blue] at (0,0) {\tiny $\pmb{\ominus}$};}
+%      \end{overpic}}
+%      %
+%      \\
+%      %
+%      \subfloat[$\Ev(\rv)$ ($\ep_\text{k}>\ep_\text{g}$)\label{fig:10-4}]{\begin{overpic}[width= 0.3\textwidth]{../A10tetel/Dk}
+%       \put(0,0){\includegraphics[width= 0.3\textwidth]{../A10tetel/Ek}}
+%       \put(10.5,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(20,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(30.7,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(42,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(53.2,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(64.4,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(75.9,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(87,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(98.4,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(109.6,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(120.2,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(130,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%      \end{overpic}}
+%     \hspace{6pt}
+%     \subfloat[$\Dv(\rv)$ ($\ep_\text{k}>\ep_\text{g}$)\label{fig:10-5}]{\begin{overpic}[width= 0.3\textwidth]{../A10tetel/Dk}
+%       \put(10.5,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(20,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(31.7,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(51.2,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(70.2,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(89.2,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(108.5,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(120.2,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(130,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%      \end{overpic}}
+%     \hspace{6pt}
+%     \subfloat[$\Ev_\text{dipól}(\rv)$ ($\ep_\text{k}>\ep_\text{g}$)\label{fig:10-6}]{\begin{overpic}[width= 0.3\textwidth]{../A10tetel/Pk}
+%       \put(3.4,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(35.3,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(52.9,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(70.4,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(88,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(105.2,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(137,71){\tikz \draw[-latex,thick,blue] (0,0) -- (0,0.1);}
+%       \put(60,106.3){\tikz\node[blue] at (0,0) {\tiny $\pmb{\ominus}$};}
+%       \put(68,106.3){\tikz\node[blue] at (0,0) {\tiny $\pmb{\ominus}$};}
+%       \put(89,98){\tikz\node[blue] at (0,0) {\tiny $\pmb{\ominus}$};}
+%       \put(39,98){\tikz\node[blue] at (0,0) {\tiny $\pmb{\ominus}$};}
+%       \put(60,21.7){\tikz\node[red] at (0,0) {\tiny $\pmb{\oplus}$};}
+%       \put(68,21.7){\tikz\node[red] at (0,0) {\tiny $\pmb{\oplus}$};}
+%       \put(89,30){\tikz\node[red] at (0,0) {\tiny $\pmb{\oplus}$};}
+%       \put(39,30){\tikz\node[red] at (0,0) {\tiny $\pmb{\oplus}$};}
+%      \end{overpic}}
+%     \caption{A homogén gömb körüli elektromos térerősség, eltolás és polarizációs tér, ha $\ep_\text{k}<\ep_\text{g}$ (első sor), illetve ha $\ep_\text{k}>\ep_\text{g}$ (második sor). Mivel $\Dv$ forrása a szabad töltések, ezért az itt folytonos. $\Ev$ forrása bármilyen töltés, és itt van felületi töltéssűrűség, ezért vannak olyan $\Ev$ vonalak, amelyek a felületen keletkeznek/végződnek.}
+%     \end{figure}
+    A szobák méretei:
+    \begin{figure}[ht!]
+     \centering
+     \begin{tikzpicture}
+      \draw[thick] (0,0) -- node[left] {$4,99$\,m} (0,5.08);
+      \draw[thick] (0,0) -- node[below] {$4,35$\,m} (4.35,0);
+      \draw[thick] (4.35,5.08) -- node[right] {$5,08$\,m} (4.35,0);
+      \draw[thick] (4.35,5.08) -- node[above] {$4,22$\,m} (0,5.08);
+      \node at (2.155,2.54) {Nappali};
+      
+      \draw[thick,xshift=8cm] (0,0) -- node[left] {$5,04$\,m} (0,5.04);
+      \draw[thick,xshift=8cm] (0,0) -- node[below] {$4,25$\,m} (4.25,0);
+      \draw[thick,xshift=8cm] (4.25,5.04) -- node[right] {$5,04$\,m} (4.25,0);
+      \draw[thick,xshift=8cm] (4.25,5.04) -- node[above] {$4,31$\,m} (0,5.04);
+      \node[xshift=8cm] at (2.155,2.54) {Háló};
+     \end{tikzpicture}
+    \end{figure}
+    
+    A szobák alapterülete: $A_\text{Nappali}=\left(\frac{4,99+5,08}{2}\right)\cdot\left(\frac{4,22+4,35}{2}\right)=$
+    A parketta $45,5$\,cm$\times6,5$\,cm-es.
+
+    
+\end{document}

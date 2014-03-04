@@ -1,0 +1,68 @@
+\cleardoublepage
+  \begin{landscape}
+   \thispagestyle{empty}
+   \begin{table}[!p]
+    {\renewcommand{\arraystretch}{1.8}
+    \hspace{-1.5cm}
+    \begin{tabular}{r||l|l|l|l}
+     & Mikrokanonikus ($E$,$V$,$N$) & Kanonikus ($T$,$V$,$N$) & Nagykanonikus ($T$,$V$,$\mu$) & TPN ($T$,$p$,$N$)\\ \hline\hline
+     kölcsönhatás&  & energia & energia és anyagi & energia és mechanikai\\ \hline
+     környezet &  & hő ($T$) & hő ($T$) és részecske ($\mu$) & hő ($T$) és nyomás ($p$)\\ \hline
+     $\rho(i)$ & $\frac{1}{\Omega(E,\delta E)}$, ha $E_i\in [E,E+\delta E]$ & $\frac{1}{Z}e^{-\beta E_i}$ & $\frac{1}{\mathcal{Z}}e^{-\beta (E_i-\mu N)}$ & $\frac{1}{Y}e^{-\beta (E_i+pV)}$\\ \hline
+     áll. össz. $\left\{\begin{array}{l}\text{QM}\\\text{CL}\end{array}\right.$
+      & $\Omega(E,\delta E)
+         =\left\{\begin{array}{l}
+           \suml{n}{}\Theta(E-E_n) \\
+           \intl{E'<E}{}\frac{\dd^{dN}p\dd^{dN}q}{N! h^{dN}}\,
+          \end{array}\right.$
+      & $Z=\left\{\begin{array}{l}
+            \tr\left(e^{-\beta \opH}\right) \\
+            \intl{}{}\frac{\dd q^{dN}\dd p^{dN}}{h^{dN}N!}\,e^{-\beta E(q,p)} 
+           \end{array}\right.
+        $ 
+      & $\mathcal{Z}=\left\{\begin{array}{l}
+                      \tr\left(e^{-\beta (\opH-\mu\opN)}\right) \\
+                      \suml{N=0}{\infty}\intl{}{}\frac{\dd q^{dN}\dd p^{dN}}{h^{dN}N!}\,e^{-\beta (E(q,p)-\mu N)} 
+                     \end{array}\right.
+        $ 
+      & $Y=\left\{\begin{array}{l}
+            \tr\left(e^{-\beta (\opH+pV)}\right)\\
+            \intl{0}{\infty}\dd V\,\intl{}{}\frac{\dd q^{dN}\dd p^{dN}}{h^{dN}N!}\,e^{-\beta (E(q,p)+pV)} 
+           \end{array}\right.
+        $\\ \hline
+     potenciál (TD)
+      & $S$ 
+      & $F=E-TS=-pV+\mu N$ 
+      & $\Phi=E-TS-\mu N=-pV$ 
+      & $G=E-TS+pV=\mu N$\\ \hline
+     potenciál (Stat. fiz.) 
+      & $S=\kB T \ln \Omega(E,\delta E)$ 
+      & $F=-\kB T\ln Z$ 
+      & $\Phi=-\kB T\ln \mathcal{Z}$ 
+      & $G=-\kB T\ln Y$\\ \hline
+     diff. fund. egy 
+      & $\dd S=\frac{1}{T}\dd E+\frac{p}{T}\dd V-\frac{\mu}{T}\dd N$
+      & $\dd F=-S\dd T-p\dd V+\mu\dd N$
+      & $\dd \Phi=-S\dd T-p\dd V-N\dd \mu$
+      & $\dd G=-S\dd T+V\dd p+\mu\dd N$\\ \hline
+     egyensúlyi felt
+      & $S$ maximuma
+      & $F$ minimuma
+      & $\Phi$ minimuma
+      & $G$ minimuma \\ \hline
+     várható ért:
+      & 
+      & $\mv{E}=-\pder{\ln Z}{\beta}$
+      & $\mv{N}=\pder{\ln \mathcal{Z}}{(\mu\beta)}$
+      & $\mv{V}=-\pder{\ln Y}{(p\beta)}$\\ \hline
+     fluktuáció:
+      &
+      & $\mv{(\Delta E)^2}=\kB T^2 C_V$
+      & $\mv{(\Delta N)^2}=\kB T \frac{N^2}{V} \kappa_T$
+      & $\mv{(\Delta V)^2}=\kB T V \kappa_T$
+    \end{tabular}}
+    \begin{center}
+     {A statisztikus fizikai sokaságok összefoglaló táblázata.}
+    \end{center}
+   \end{table}
+  \end{landscape} 

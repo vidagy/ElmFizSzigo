@@ -1,0 +1,201 @@
+\chapter{Fluktu\'aci\'ok, stabilit\'as, helyf\"ugg\H{o} korrel\'aci\'o, szuszceptibilit\'as, v\'alasz}
+ 
+ \section{Egyensúlyi feltételek}
+  
+  \subsection{Mikrokanonikus sokaságon}
+   
+   Legyen $X$ egy extenzív mennyiség, melynek értéke $x$. $S(x)$ a feltételes entrópia, rögzítjük az $X$ értékét $x$-nek, és megnézzük, hogy akkor mennyi az entrópia. Az állapotszámra való átírással: $S(x)=\kB\ln\Omega(E,x)$. Annak a valószínűsége, hogy az extenzív mennyiség értéke $x$:
+   \al{
+    P(X=x)
+     =\frac{\Omega(E,x)}{\suml{X}{}\Omega(E,x)}
+     =\frac{\Omega(E,x)}{\Omega(E)}
+     =\frac{e^{\frac{1}{\kB} S(x)}}{e^{\frac{1}{\kB} S(x_\text{eq.})}}
+     =e^{\frac{1}{\kB} \big(S(x)-S(x_\text{eq.})\big)},
+   }
+   ahol felhasználtuk, hogy a makroszkopikus rendszerekben az átlagos $x_\text{eq.}$ érték megegyezik a legvalószínűbbel. Ez alapján azt látjuk, hogy olyan $x$ értékek valósulnak meg, amelyek $S$-et maximalizálják. Ha $X$ nem az egyensúlyi $x$ értéket veszi fel, akkor annak a valószínűsége exponenciálisan kicsi ($S(x)-S(x_\text{eq.}<0$). Mivel $S\sim N$, így $\Delta S\sim N$, $P(X=x)\sim e^{-N}$, azaz $T\sim e^{N}$ idő alatt látunk csak makroszkopikus eltérést a legvalószínűbb értéktől.
+   
+  \subsection{Kanonikus sokaságban}
+   
+   Hasonlóan gondolkodunk itt is. Legyen az $X$ extenzív mennyiség értéke $x$. Kérdés, hogy ennek mekkora a valószínűsége.
+   \al{
+    P(X=x)
+    &=\suml{\substack{i\\X=x}}{}\frac{1}{Z}e^{-\beta E_i}
+     =\frac{1}{Z}\intl{}{}\dd E\,\omega(E,x) e^{-\beta E_i}
+     =\frac{1}{Z}\omega(E_\text{eq.},x) e^{-\beta E_\text{eq.}}\Delta E\\
+    &=\frac{1}{Z}e^{\frac{1}{\kB} S(x)} e^{-\beta E_\text{eq.}}
+     =\frac{1}{Z}e^{-\beta\big(E_\text{eq.}-T S(x)\big)}
+     =\frac{1}{Z}e^{-\beta F(x)}
+     =\frac{e^{-\beta F(x)}}{e^{-\beta F(x_\text{eq.})}}\\
+    &=e^{-\beta \big(F(x)-F(x_\text{eq.})\big)}.
+   }
+   
+   Tehát itt is látszik, hogy a legvalószínűbb $X$ érték minimalizálja $F$-et, és mivel éles az eloszlás, ezért a legvalószínűbb érték az $x$ várható értékével egyenlő.
+   
+  \subsection{Nagykanonikus sokaságra}
+   
+   Ugyanezt kell felírni, és adódik, hogy $P(X=x)=e^{-\beta\big(\Phi(x)-\Phi(x_\text{eq.})\big)}$, és $x_\text{eq.}$ minimalizálja $\Phi$-t. 
+   
+  \subsection{TPN sokaságra}
+  
+   Szintén $P(X=x)=e^{-\beta\big(G(x)-G(x_\text{eq.})\big)}$, és $x_\text{eq.}$ minimalizálja $G$-t. 
+  
+ \section{Eistein-módszer a fluktuációk számítására} 
+  
+  Az extenzív mennyiségek fluktuációja és a termodinamikai második deriváltak ra vonatkozó stabilitási kritériumok között van valamilyen kapcsolat. Ezt általánosan az Einsteint-módszerrel lehet megadni. 
+  
+  Egy mikrokanonikus sokaságban legyenek $\Xv=X_1,X_2,\dots,X_n$ azok az extenzív mennyiségek, amelyeket mint feltételeket írjuk az entrópia kifejezésébe. Ezek az értékek az egyensúlyi értéküktől ($\Xv_\text{eq.}=X_{1,\text{eq.}},X_{2,\text{eq.}},\dots,X_{n,\text{eq.}},$) csak nagyon kicsit térnek el ($\delta X_i=X_i-X_{i,\text{eq.}}$). Fejtsük sorba az entrópiát:
+  \al{
+   S(E,\Xv)
+    &=S(E,\Xv_\text{eq.})+\frac{1}{2}\suml{i,j}{}\underbrace{\left.\pder{^2 S}{X_i\partial X_j}\right|_{\Xv_\text{eq.}}}_{-g_{ij}}\delta X_i\delta X_j+\dots,
+  }
+  ahol bevezettük a $g_{ij}$ mátrixot, ami pozitív definit, hiszen $S$ maximuma körül végezzük a sorfejtést. Ezzel megadhatjuk, hogy mekkora annak a valószínűsége, hogy az $\Xv$ állapot valósul meg:
+  \al{
+   P(\Xv)
+    &=\frac{\Omega(E,\Xv)}{\Omega(E)}
+     \sim e^{-\frac{1}{2}\suml{i,j}{}g_{ij}\delta X_i\delta X_j}\\
+    &=\sqrt{\frac{\det{g}}{(2\pi\kB)^n}}e^{-\frac{1}{2}\suml{i,j}{}g_{ij}\delta X_i\delta X_j},
+  }
+  ahol a normálási faktor abból jött, hogy $X_i$-k szerint integrálva Gauss-integrálokat kapunk, és annak ismerjük az értékét. 
+  
+  Vezessük be az $X_i$ extenzív mennyiségekhez tartozó konjugált tereket $h_i$, és írjuk fel az alábbi integrált:
+  \al{
+   f(\Xv,\hv)
+    =\sqrt{\frac{\det{g}}{(2\pi\kB)^n}}\intl{}{}\dd X_1\dots \dd X_n\,e^{-\frac{1}{2}\suml{i,j}{}g_{ij}\delta X_i\delta X_j-\suml{i}{} h_i \delta X_i},
+  }
+  ahonnan 
+  \al{
+   \mv{\delta X_i\delta X_j}
+    =\lim_{\hv\to 0}\pder{^2 f}{h_i\partial h_j}=\kB [g^{-1}]_{ij}.
+  }
+  
+  \subsection{Példa: állandó anyagmennyiség}
+   
+   A feltételes entrópiát írjuk fel úgy, hogy $\Xv=E,V$, vagyis a rendszer energiáját és térfogatát adjuk meg mi előre. Ekkor az $S$ sorfejtése:
+   \al{
+    S(E,V)
+     &=S(E_\text{eq.},V_\text{eq.})
+     +\frac{1}{2}
+       \left(
+        \left.\pder{^2 S}{E^2}\right|_{\text{eq.}}\delta E^2
+       +2\left.\pder{^2 S}{E\partial V}\right|_{\text{eq.}}\delta E\delta V
+       +\left.\pder{^2 S}{V^2}\right|_{\text{eq.}}\delta V^2
+       \right)
+   }
+   Használjuk fel, hogy 
+   \al{
+    \delta\left(\pder{S}{V}\right)
+     &=\pder{^2 S}{V^2}\delta V+\pder{^2 S}{V\partial E}\delta E
+    &\delta\left(\pder{S}{E}\right)
+     &=\pder{^2 S}{E^2}\delta E+\pder{^2 S}{E\partial V}\delta V,
+   }
+   így
+   \al{
+    S(E,V)-S(E_\text{eq.},V_\text{eq.})
+     &=\frac{1}{2}\left(\delta V\delta\left(\pder{S}{V}\right)+\delta E\delta\left(\pder{S}{E}\right)\right)
+      =\frac{1}{2}\left(\delta V\delta \frac{p}{T}+\delta E\delta\frac{1}{T}\right)\\
+     &=\frac{1}{2}\left(\delta V \frac{1}{T}\delta p-\delta V \frac{1}{T^2}p\delta T-\delta E\frac{1}{T^2}\delta T\right)\\
+     &=\frac{1}{2T}\left(\delta V \delta p-\frac{\delta T}{T}(\delta E+p\delta V)\right)\\
+     &=\frac{1}{2T}\left(\delta V \delta p-\delta T\delta S\right)
+   }
+   Fejtsük ki $\delta S$-t és $\delta p$-t:
+   \al{
+    \delta S
+     &=\pder{S}{T}\delta T+\pder{S}{V}\delta V
+      =\frac{1}{T}C_V\delta T +\pder{p}{T}\delta V\\
+    \delta p
+    &=\pder{p}{T}\delta T+\pder{p}{V}\delta V
+     =\pder{p}{T}\delta T-(V\kappa_T)^{-1}\delta V.
+   }
+   Az első átalakításánál használtuk az egyik Maxwell-összefüggést. Ezeket behelyettesítve:
+   \al{
+    S(E,V)-S(E_\text{eq.},V_\text{eq.})
+     &=\frac{1}{2T}\left(\pder{p}{T}\delta V\delta T-(V\kappa_T)^{-1}\delta V^2-\frac{1}{T}C_V\delta T^2 -\pder{p}{T}\delta T\delta V\right)\\
+     &=-\frac{1}{2T}\left((V\kappa_T)^{-1}\delta V^2+\frac{1}{T}C_V\delta T^2\right),
+   } 
+   ahonnan valószínűség:
+   \al{
+    P(E,V)
+     =e^{\frac{1}{\kB}\big(S(E,V)-S(E_\text{eq.},V_\text{eq.})\big)}
+     =e^{-\frac{1}{2 \kB T}\left((V\kappa_T)^{-1}\delta V^2+\frac{1}{T}C_V\delta T^2\right)}.
+   }
+   Innen le tudjuk olvasni, hogy 
+   \al{
+    &\mv{(\delta V)^2}
+     =\frac{\kB T}{(V\kappa_T)^{-1}}
+      =\kB T V\kappa_T
+    &\mv{(\delta T)^2}
+     =\frac{\kB T^2}{C_V}
+    &&\mv{\delta V\delta T}
+     =0.
+   }
+   
+  \subsection{Példa: sűrűségfluktuációk}
+   
+   Legyen elször $N$ fix. Ekkor
+   \al{
+    \mv{(\delta n)^2}
+     &=\mv{\left(\delta \frac{N}{V}\right)^2}
+      =\mv{\left(-\frac{N}{V^2}\delta V\right)^2}
+      =\frac{N^2}{V^4}\mv{(\delta V)^2}
+      =\frac{N^2}{V^4}\kB T V\kappa_T
+      =\frac{n^2}{V}\kB T \kappa_T.
+   }
+   Ha $V$ fix, akkor 
+   \al{
+    \mv{(\delta n)^2}
+     &=\mv{\left(\delta \frac{N}{V}\right)^2}
+      =\frac{1}{V^2}\mv{(\delta N)^2}
+     &\Rightarrow
+     &&\mv{(\delta N)^2}=\kB T n^2 V\kappa_T.
+   }
+   {\color{red} Most akkor mi van? A $V$=fix esethez felhasználunk egy olyan eredményt amit úgy kaptunk, hogy $N$=fix? Miért használhatjuk fel?}
+   
+ \section{Lineáris válasz}
+  
+  Nézzük meg, hogy milyen a rendszer válasza egy klasszikus $F$ külső erőre. Tegyük fel, hogy kezdetben a rendszer Hamilton-operátora $\opH_0$, majd a klasszikus erő az $X$ extenzív mennyiséghez csatolódik:
+  \al{
+   \opH=\opH_0-\opX F.
+  }
+  Kanonikus sokasággal leírva a rendszert:
+  \al{
+   \mv{X(F)}
+    &=\frac{\tr\left(\opX e^{-\beta\big(\opH_0-\opX F\big)}\right)}{\tr\left( e^{-\beta\big(\opH_0-\opX F\big)}\right)}&
+   \mv{X(F=0)}
+    &=\frac{\tr\left(\opX e^{-\beta\opH_0}\right)}{\tr\left( e^{-\beta\opH_0}\right)}.
+  }
+  Mivel $F$ kicsi valamilyen értelemben, ezért $X$ megváltozása kicsi, arányos $F$-fel: $\mv{X(F)}-\mv{X(F=0)}\approx\chi X(F=0)$, ahol $\chi$ az általánosított szuszceptibilitás. 
+  \al{
+   \chi
+    &=\lim_{F\to 0}\frac{\mv{X(F)}-\mv{X(F=0)}}{F}
+     =\lim_{F\to 0}\pder{\mv{X}}{F}
+     =\lim_{F\to 0}\pder{}{F}\frac{\tr\left(\opX e^{-\beta\big(\opH_0-\opX F\big)}\right)}{\tr\left( e^{-\beta\big(\opH_0-\opX F\big)}\right)}\\
+    &=\lim_{F\to 0}
+      \left(
+       \beta\frac{\tr\left(\opX^2 e^{-\beta\big(\opH_0-\opX F\big)}\right)}{\tr\left( e^{-\beta\big(\opH_0-\opX F\big)}\right)}
+       -\frac{\tr\left(\opX e^{-\beta\big(\opH_0-\opX F\big)}\right)}{\left[\tr\left( e^{-\beta\big(\opH_0-\opX F\big)}\right)\right]^2}\beta\tr\left(\opX e^{-\beta\big(\opH_0-\opX F\big)}\right)
+      \right)\\
+    &=\lim_{F\to 0}
+      \left(
+       \beta\mv{\opX^2}_{\opH}
+       -\beta\mv{\opX}^2_{\opH}\right)
+     =\beta\mv{\opX^2}_{\opH_0}-\beta\mv{\opX}^2_{\opH_0}
+     =\beta\mv{(\delta \opX)^2}_{\opH_0}.
+  }
+  
+ 
+ \section{Helyfüggés, korrelációk}
+  
+  Legyen az $X$ egy extenzív mennyiség. Ennek sűrűsége helyfüggő: $x(\rv)$, mellyel $X=\intl{}{}\drh x(\rv)$ és $x_\text{eq.}=\frac{X_\text{eq.}}{V}$. A korrelációs függvény:
+  \al{
+   C(\rv,\rv')=\mv{\big(x(\rv)-x_\text{eq.}\big)\big(x(\rv')-x_\text{eq.}\big)}.
+  }
+  Transzlációinvariáns rendszerben $C(\rv,\rv')=C(\rv-\rv')$. Ennek kapcsolata a fluktuációkkal:
+  \al{
+   V\cdot \intl{}{}\drh C(\rv)
+    &=\intl{}{}\drh\intl{}{}\drkh C(\rv-\rv')\\
+    &=\intl{}{}\drh\intl{}{}\drkh \mv{\big(x(\rv)-x_\text{eq.}\big)\big(x(\rv')-x_\text{eq.}\big)}\\
+    &=\mv{\intl{}{}\drh\big(x(\rv)-x_\text{eq.}\big)\intl{}{}\drkh \big(x(\rv')-x_\text{eq.}\big)}\\
+    &=\mv{\big(X-X_\text{eq.}\big)\big(X-X_\text{eq.}\big)}
+     =\mv{(\delta X)^2}.
+  }
+  
