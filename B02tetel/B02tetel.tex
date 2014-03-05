@@ -4,24 +4,30 @@
   
   \subsection{Liouville-tétel}
    
-   Tekintsünk egy zárt rendszert és annak egy fázistérfogat tartományát ($\Gamma$). A térfogat minden pontjából elindítjuk az időfejlődést a kanonikus egyenleteknek megfelelően. A kérdés, hogy a fázistérfogat, hogyan változik az időben. 
+   Tekintsünk egy zárt rendszert és annak egy fázistérfogat tartományát ($\Gamma$).
+   A térfogat minden pontjából elindítjuk az időfejlődést a kanonikus egyenleteknek megfelelően.
+   A kérdés, hogy a fázistérfogat, hogyan változik az időben. 
    
-   A fázissebesség a fázistér $(q,p)$ pontjában: $\vv(q,p)=\big(\{\dot{q}_i\},\{\dot{p}_i\}\big)$. Számoljuk ki ennek a divergenciáját:
+   A fázissebesség a fázistér $(q,p)$ pontjában: $\vv(q,p)=\big(\{\dot{q}_i\},\{\dot{p}_i\}\big)$.
+   Számoljuk ki ennek a divergenciáját:
    \al{
     \divo{\vv}(q,p)
      =\suml{i=1}{f}\left(\pder{\dtq_i}{q_i}+\pder{\dtp_i}{p_i}\right)
      =\suml{i=1}{f}\left(\pder{^2 H}{q_i\partial p_i}-\pder{^2 H}{p_i\partial q_i}\right)
      =0,
    }
-   ami azt jelenti, hogy a fázistérfogat összenyomhatatlan folyadékként viselkedik. Ha kezdetben egy $\Gamma$ térfogatból indultunk, akkor annak térfogata nem változik, az alak változásáról azonban nem állíthatunk semmit, de általában ez hosszú idő elteltével az egész fázisteret behálózza.
+   ami azt jelenti, hogy a fázistérfogat összenyomhatatlan folyadékként viselkedik.
+   Ha kezdetben egy $\Gamma$ térfogatból indultunk, akkor annak térfogata nem változik, az alak változásáról azonban nem állíthatunk semmit, de általában ez hosszú idő elteltével az egész fázisteret behálózza.
    
   \subsection{Liouville-egyenlet}
    
-   Tekintsünk egy sokaságot, és annak a fázisterében egy $\Gamma$ tartományt. Az ebben található fázispontok száma:
+   Tekintsünk egy sokaságot, és annak a fázisterében egy $\Gamma$ tartományt.
+   Az ebben található fázispontok száma:
    \al{
     n_\Gamma=\intl{\Gamma}{}\dd^{dN}q\dd^{dN}p\,\rho(q,p,t).
    }
-   Ennek a szubsztanciális deriváltja nulla, mert a $\Gamma$ térfogat együtt mozog a fázispontokkal és fázispont nem keletkezik/tűnik el. Ez kiírva (lásd \eqref{eq:08-szubsztancialisderivalt} egyenlet):
+   Ennek a szubsztanciális deriváltja nulla, mert a $\Gamma$ térfogat együtt mozog a fázispontokkal és fázispont nem keletkezik/tűnik el.
+   Ez kiírva (lásd \eqref{eq:08-szubsztancialisderivalt} egyenlet):
    \al{
     0
      &=\der{n_\Gamma}{t}
@@ -41,57 +47,17 @@
      \partial_t\rho(q,p,t)&=\{H,\rho\}
    }
    
-   Egyensúlyi eloszlásnál a valószínűségi sűrűségnek nem lehet explicit időfüggése, így $0=\partial_t\rho(q,p,t)$, vagyis $\rho$ mozgásállandó. Emiatt csak más mozgásállandóktól függhet, azonban ezek (pl.\ $\Lv$, $\Pv$) kitranszformálhatóak, így $\rho=\rho(H(q,p))$. 
-  
-%   Valójában az energia nem állandó sosem $E\in[E,E+\delta E]$, így elvileg ismerni kellene $\rho(E)$ eloszlását. Ezt azonban nem ismerjük, a tapasztalat viszont azt sugallja, hogy az ekvienergiás felületen minden mikroállapot azonos valószínűségű.  
-  
+   Egyensúlyi eloszlásnál a valószínűségi sűrűségnek nem lehet explicit időfüggése, így $0=\partial_t\rho(q,p,t)$, vagyis $\rho$ mozgásállandó.
+   Emiatt csak más mozgásállandóktól függhet, azonban ezek (pl.\ $\Lv$, $\Pv$) kitranszformálhatóak, így $\rho=\rho(H(q,p))$. 
+
  \section{Sűrűségmátrix, Neumann-egyenlet}
   
   A sűrűségmátrixok definícióját, tulajdonságait lásd \aref{ss:01-mereselmelet}. fejezetben. 
   
-  Itt annyi kiegészítést tennék, hogy ha a rendszer zárt, akkor az állapota reprezentálható egy Hilbert-tér elemmel, így akkor a sűrűségmátrixa a tiszta állapotnak megfelelő. Nyílt rendszernél, ahol leválasztjuk a környezetet, a rendszer kevert állapotba kerül. 
-%   Tekintsünk egy zárt kvantummechanikai rendszert. Schrö\-din\-ger-kép\-ben az időfejlődés a Schrö\-din\-ger-egy\-en\-let alapján:
-%   \al{
-%    i\partial_t\ket{\Psi}=\opH\ket{\Psi},
-%   }
-%   illetve Heisenberg-képben:
-%   \al{
-%    \der{\opA}{t}=\frac{i}{\hbar}\big[\opH,\opA\big].
-%   }
-%   
-%   Legyen $\ket{\phi_i}$ egy teljes ortonormált bázis. Ezen kifejtve a rendszer egy $\Psi$ állapota: $\ket{\Psi}=\suml{i}{}\ket{\phi_i}\bra{\phi_i}\et{\Psi}=\suml{i}{}c_i\ket{\phi_i}$, ahol $c_i=\bra{\phi_i}\et{\Psi}$.
-%   
-%   A $\ket{\Psi}$ állapothoz tartozó sűrűségoperátor: $\op{\rho}=\ket{\Psi}\bra{\Psi}$. Ennek bármelyik hatványa: $\op\rho^n=\op\rho$, hiszen $\ket{\Psi}$ normált. A sűrűségoperátor egy mátrixeleme:
-%   \al{
-%    \rho_{ij}
-%     =\bra{\phi_i}\op{\rho}\ket{\phi_j}
-%     =\bra{\phi_i}\et{\Psi}\bra{\Psi}\et{\phi_j}
-%     =c_i c_j^*
-%   }
-%   Az előző összefüggésből látszik, hogy $\tr{\op\rho}=\tr{\op\rho^2}=1$.
-%   
-%   Egy tetszőleges operátor kvantummechanikai várható értéke ebben az állapotban:
-%   \al{
-%    \mv{A}
-%     =\bra{\Psi}\opA\ket{\Psi}
-%     =\tr\big(\bra{\Psi}\opA\ket{\Psi}\big)
-%     =\tr\big(\ket{\Psi}\bra{\Psi}\opA\big)
-%     =\tr\big(\op\rho\opA\big).
-%   }
-%   
-%   Koordináta-reprezentációban $\rho(x,x')=\Psi(x)\Psi^*(x')$, melynek diagonális része: $\rho(x,x)=\Psi(x)\Psi^*(x)=\abs{\Psi}^2$, ami a megtalálási valószínűség-sűrűséggel egyenlő. 
-%   
-%   Tekintsünk most egy nyílt rendszert. Legyen ez egy nagy rendszer alrendszere, az ezen kívüli rész pedig a környezet. A teljes rendszer Hamilton-operátora: $\opH=\opH_\text{R}+\opH_\text{K}$. Mivel a két alrendszer kölcsönhat, ezért a rendszer állapotát nem lehet csak $\opH_\text{R}$ sajátfüggvényeivel leírni. A sűrűségoperátor azonban definiálható:
-%   \al{
-%    \op\rho_\text{R}=\tr_\text{K}\rho,
-%   }
-%   ahol $\rho$ a teljes rendszer $\Psi$ állapothoz tartozó hullámfüggvénnyel elkészített sűrűségoperátor és $\tr_\text{K}$ egy parciális trace művelet, ami a a környezet szabadsági fokaira végzi csak el a nyomképzést. Praktikusan ez azt jelenti, hogy szendvicsel a $\opH_\text{K}$ teljes sajátfüggvényrendszerével. 
-%   
-%   Ha a környezettel való kapcsolat állandó, $\rho_\text{R}$ kifejthető a $\opH_\text{R}$ teljes sajátfüggvényrendszeréből képzett projektorok bázisán:
-%   \al{
-%    \rho_\text{R}=\suml{i}{}P_i\ket{\Psi_{\text{R},i}}\bra{\Psi_{\text{R},i}}.
-%   }
-  Vizsgáljuk meg, hogy milyen a sűrűségoperátornak időfejlődése. Ehhez:
+  Itt annyi kiegészítést tennék, hogy ha a rendszer zárt, akkor az állapota reprezentálható egy Hilbert-tér elemmel, így akkor a sűrűségmátrixa a tiszta állapotnak megfelelő.
+   Nyílt rendszernél, ahol leválasztjuk a környezetet, a rendszer kevert állapotba kerül. 
+  Vizsgáljuk meg, hogy milyen a sűrűségoperátornak időfejlődése.
+   Ehhez:
   \al{
    \pder{}{t}\mv{\opA}
     &=\pder{}{t}\tr\left(\op\rho\opA\right)
@@ -103,12 +69,15 @@
     &=\tr\left(\op\rho\frac{i}{\hbar}\big[\opH,\hat{A}\big]\right)
      =\tr\left(\frac{i}{\hbar}\big[\op\rho,\opH\big]\hat{A}\right),
   }
-  ahol kihasználtuk, hogy a $\tr$ alatt az operátorok ciklikusan felcserélhetőek. Ennek minden $\opA$-ra igaznak kell lennie, így:
+  ahol kihasználtuk, hogy a $\tr$ alatt az operátorok ciklikusan felcserélhetőek.
+   Ennek minden $\opA$-ra igaznak kell lennie, így:
   \al{
    \pder{\op\rho}{t}=\frac{i}{\hbar}\big[\op\rho,\opH\big],
   }
-  ami a Neumann-egyenlet. Vegyük észre, hogy ez az egyenlet éppen a Liouville-egyenlet kvantummechanikai megfelelője, abból a $\{\cdot,\cdot\}\to\frac{1}{i\hbar}[\cdot,\cdot]$ analógiával kapható. Ez egy előjelben különbözik a mérhető mennyiségekre levezetett Heisenberg-képbeli mozgásegyenlettől, azonban ez nem ellentmondás, mert a sűrűségoperátor egyrészt nem mérhető mennyiség, másrészt pedig az egyenletet a Schrödinger-képben vezettük le.
+  ami a Neumann-egyenlet.
+   Vegyük észre, hogy ez az egyenlet éppen a Liouville-egyenlet kvantummechanikai megfelelője, abból a $\{\cdot,\cdot\}\to\frac{1}{i\hbar}[\cdot,\cdot]$ analógiával kapható.
+   Ez egy előjelben különbözik a mérhető mennyiségekre levezetett Heisenberg-képbeli mozgásegyenlettől, azonban ez nem ellentmondás, mert a sűrűségoperátor egyrészt nem mérhető mennyiség, másrészt pedig az egyenletet a Schrödinger-képben vezettük le.
   
-  Egyensúlyban, mikor a rendszer időfüggetlen állapotban van (a bal oldal nulla), így a sűrűségoperátor kommutál a Hamilton-operátorral, vagyis $\op\rho=\text{állandó}$, itt is csak az energiától függ. Mivel a két operátor kommutál, ezért létezik közös sajátfüggvény-rendszerük. Ekkor $\op\rho$ diagonalizálható, a diagonálisban $p_i$ valószínűségek állnak, melyek megadják, hogy a rendszer az $i$-edik energia sajátállapotban mekkora valószínűséggel tartózkodik.
-  
-  
+  Egyensúlyban, mikor a rendszer időfüggetlen állapotban van (a bal oldal nulla), így a sűrűségoperátor kommutál a Hamilton-operátorral, vagyis $\op\rho=\text{állandó}$, itt is csak az energiától függ.
+   Mivel a két operátor kommutál, ezért létezik közös sajátfüggvény-rendszerük.
+   Ekkor $\op\rho$ diagonalizálható, a diagonálisban $p_i$ valószínűségek állnak, melyek megadják, hogy a rendszer az $i$-edik energia sajátállapotban mekkora valószínűséggel tartózkodik.

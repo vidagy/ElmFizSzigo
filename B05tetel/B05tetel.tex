@@ -4,7 +4,9 @@
   
   \subsection{Mikrokanonikus sokaságon}
    
-   Legyen $X$ egy extenzív mennyiség, melynek értéke $x$. $S(x)$ a feltételes entrópia, rögzítjük az $X$ értékét $x$-nek, és megnézzük, hogy akkor mennyi az entrópia. Az állapotszámra való átírással: $S(x)=\kB\ln\Omega(E,x)$. Annak a valószínűsége, hogy az extenzív mennyiség értéke $x$:
+   Legyen $X$ egy extenzív mennyiség, melynek értéke $x$. $S(x)$ a feltételes entrópia, rögzítjük az $X$ értékét $x$-nek, és megnézzük, hogy akkor mennyi az entrópia.
+   Az állapotszámra való átírással: $S(x)=\kB\ln\Omega(E,x)$.
+   Annak a valószínűsége, hogy az extenzív mennyiség értéke $x$:
    \al{
     P(X=x)
      =\frac{\Omega(E,x)}{\suml{X}{}\Omega(E,x)}
@@ -12,11 +14,16 @@
      =\frac{e^{\frac{1}{\kB} S(x)}}{e^{\frac{1}{\kB} S(x_\text{eq})}}
      =e^{\frac{1}{\kB} \big(S(x)-S(x_\text{eq})\big)},
    }
-   ahol felhasználtuk, hogy a makroszkopikus rendszerekben az átlagos $x_\text{eq}$ érték megegyezik a legvalószínűbbel. Ez alapján azt látjuk, hogy olyan $x$ értékek valósulnak meg, amelyek $S$-et maximalizálják. Ha $X$ nem az egyensúlyi $x$ értéket veszi fel, akkor annak a valószínűsége exponenciálisan kicsi ($S(x)-S(x_\text{eq}<0)$). Mivel $S\sim N$, így $\Delta S\sim N$, $P(X=x)\sim e^{-N}$, azaz $T\sim e^{N}$ idő alatt látunk csak makroszkopikus eltérést a legvalószínűbb értéktől.
+   ahol felhasználtuk, hogy a makroszkopikus rendszerekben az átlagos $x_\text{eq}$ érték megegyezik a legvalószínűbbel.
+   Ez alapján azt látjuk, hogy olyan $x$ értékek valósulnak meg, amelyek $S$-et maximalizálják.
+   Ha $X$ nem az egyensúlyi $x$ értéket veszi fel, akkor annak a valószínűsége exponenciálisan kicsi ($S(x)-S(x_\text{eq}<0)$).
+   Mivel $S\sim N$, így $\Delta S\sim N$, $P(X=x)\sim e^{-N}$, azaz $T\sim e^{N}$ idő alatt látunk csak makroszkopikus eltérést a legvalószínűbb értéktől.
    
   \subsection{Kanonikus sokaságban}
    
-   Hasonlóan gondolkodunk itt is. Legyen az $X$ extenzív mennyiség értéke $x$. Kérdés, hogy ennek mekkora a valószínűsége.
+   Hasonlóan gondolkodunk itt is.
+   Legyen az $X$ extenzív mennyiség értéke $x$.
+   Kérdés, hogy ennek mekkora a valószínűsége.
    \al{
     P(X=x)
     &=\suml{\substack{i\\X=x}}{}\frac{1}{Z}e^{-\beta E_i}
@@ -42,14 +49,18 @@
   
  \section{Einstein-módszer a fluktuációk számítására} 
   
-  Az extenzív mennyiségek fluktuációja és a termodinamikai második deriváltakra vonatkozó stabilitási kritériumok között van valamilyen kapcsolat. Ezt általánosan az Einsteint-módszerrel lehet megadni. 
+  Az extenzív mennyiségek fluktuációja és a termodinamikai második deriváltakra vonatkozó stabilitási kritériumok között van valamilyen kapcsolat.
+   Ezt általánosan az Einsteint-módszerrel lehet megadni. 
   
-  Egy mikrokanonikus sokaságban legyenek $\Xv=X_1,X_2,\dots,X_n$ azok az extenzív mennyiségek, amelyeket mint feltételeket írjuk az entrópia kifejezésébe. Ezek az értékek az egyensúlyi értéküktől ($\Xv_\text{eq}=X_{1,\text{eq}},X_{2,\text{eq}},\dots,X_{n,\text{eq}},$) csak nagyon kicsit térnek el ($\delta X_i=X_i-X_{i,\text{eq}}$). Fejtsük sorba az entrópiát:
+  Egy mikrokanonikus sokaságban legyenek $\Xv=X_1,X_2,\dots,X_n$ azok az extenzív mennyiségek, amelyeket mint feltételeket írjuk az entrópia kifejezésébe.
+   Ezek az értékek az egyensúlyi értéküktől ($\Xv_\text{eq}=X_{1,\text{eq}},X_{2,\text{eq}},\dots,X_{n,\text{eq}},$) csak nagyon kicsit térnek el ($\delta X_i=X_i-X_{i,\text{eq}}$).
+   Fejtsük sorba az entrópiát:
   \al{
    S(E,\Xv)
     &=S(E,\Xv_\text{eq})+\frac{1}{2}\suml{i,j}{}\underbrace{\left.\pder{^2 S}{X_i\partial X_j}\right|_{\Xv_\text{eq}}}_{-g_{ij}}\delta X_i\delta X_j+\dots,
   }
-  ahol bevezettük a $g_{ij}$ mátrixot, ami pozitív definit, hiszen $S$ maximuma körül végezzük a sorfejtést. Ezzel megadhatjuk, hogy mekkora annak a valószínűsége, hogy az $\Xv$ állapot valósul meg:
+  ahol bevezettük a $g_{ij}$ mátrixot, ami pozitív definit, hiszen $S$ maximuma körül végezzük a sorfejtést.
+   Ezzel megadhatjuk, hogy mekkora annak a valószínűsége, hogy az $\Xv$ állapot valósul meg:
   \al{
    P(\Xv)
     &=\frac{\Omega(E,\Xv)}{\Omega(E)}
@@ -71,7 +82,8 @@
   
   \subsection{Példa: állandó anyagmennyiség}
    
-   A feltételes entrópiát írjuk fel úgy, hogy $\Xv=(E,V)$, vagyis a rendszer energiáját és térfogatát adjuk meg mi előre. Ekkor az $S$ sorfejtése:
+   A feltételes entrópiát írjuk fel úgy, hogy $\Xv=(E,V)$, vagyis a rendszer energiáját és térfogatát adjuk meg mi előre.
+   Ekkor az $S$ sorfejtése:
    \al{
     S(E,V)
      &=S(E_\text{eq},V_\text{eq})
@@ -107,7 +119,8 @@
     &=\left(\pder{p}{T}\right)_V\delta T+\left(\pder{p}{V}\right)_T\delta V
      =\left(\pder{p}{T}\right)_V\delta T-(V\kappa_T)^{-1}\delta V.
    }
-   Az első átalakításánál használtuk az egyik Maxwell-összefüggést. Ezeket behelyettesítve:
+   Az első átalakításánál használtuk az egyik Maxwell-összefüggést.
+   Ezeket behelyettesítve:
    \al{
     S(E,V)-S(E_\text{eq},V_\text{eq})
      &=\frac{1}{2T}\left(\left(\pder{p}{T}\right)_V \delta V\delta T-(V\kappa_T)^{-1}\delta V^2-\frac{1}{T}C_V\delta T^2 -\left(\pder{p}{T}\right)_V\delta T\delta V\right)\\
@@ -132,7 +145,8 @@
    
   \subsection{Példa: sűrűségfluktuációk}
    
-   Legyen elször $N$ fix. Ekkor
+   Legyen elször $N$ fix.
+   Ekkor
    \al{
     \mv{(\delta n)^2}
      &=\mv{\left(\delta \frac{N}{V}\right)^2}
@@ -152,7 +166,8 @@
    
  \section{Lineáris válasz}\label{ss:B05-linvalasz}
   
-  Nézzük meg, hogy milyen a rendszer válasza egy klasszikus $F$ külső erőre. Tegyük fel, hogy kezdetben a rendszer Hamilton-függvénye $H_0$, majd a klasszikus erő az $Y$ extenzív mennyiséghez csatolódik:
+  Nézzük meg, hogy milyen a rendszer válasza egy klasszikus $F$ külső erőre.
+   Tegyük fel, hogy kezdetben a rendszer Hamilton-függvénye $H_0$, majd a klasszikus erő az $Y$ extenzív mennyiséghez csatolódik:
   \al{
    H=H_0-Y F.
   }
@@ -182,15 +197,18 @@
      =\beta\mv{(\delta X)(\delta Y)}_{\opH_0}.
   }
   Tehát a rendszer válasza kizárólag a perturbálatlan rendszertől függ.
-  
- 
+
  \section{Helyfüggés, korrelációk}
   
-  Legyen az $X$ és $Y$ egy-egy extenzív mennyiség. Ezeknek sűrűsége helyfüggő: $x(\rv)$ és $y(\rv)$, mellyel $X=\intl{}{}\drh x(\rv)$ és $x_\text{eq}=\frac{X_\text{eq}}{V}$. Az $Y$-ra teljesen hasonló összefüggések írhatóak fel. A korrelációs függvény:
+  Legyen az $X$ és $Y$ egy-egy extenzív mennyiség.
+   Ezeknek sűrűsége helyfüggő: $x(\rv)$ és $y(\rv)$, mellyel $X=\intl{}{}\drh x(\rv)$ és $x_\text{eq}=\frac{X_\text{eq}}{V}$.
+   Az $Y$-ra teljesen hasonló összefüggések írhatóak fel.
+   A korrelációs függvény:
   \al{
    C_{XY}(\rv,\rv')=\mv{\big(x(\rv)-x_\text{eq}\big)\big(y(\rv')-y_\text{eq}\big)}.
   }
-  Transzlációinvariáns rendszerben $C_{XY}(\rv,\rv')=C_{XY}(\rv-\rv')$. Ennek kapcsolata a fluktuációkkal:
+  Transzlációinvariáns rendszerben $C_{XY}(\rv,\rv')=C_{XY}(\rv-\rv')$.
+   Ennek kapcsolata a fluktuációkkal:
   \al{
     \intl{}{}\drh\intl{}{}\drkh C_{XY}(\rv,\rv')=
     &=\intl{}{}\drh\intl{}{}\drkh \mv{\big(x(\rv)-x_\text{eq}\big)\big(y(\rv')-y_\text{eq}\big)}\\
@@ -199,7 +217,8 @@
      =\mv{(\delta X)(\delta Y)}.
   }
   
-  Fontos kapcsolat álla fenn a korrelációs függvények és a lineáris válasz között. Az előző két eredményt összevetve:
+  Fontos kapcsolat álla fenn a korrelációs függvények és a lineáris válasz között.
+   Az előző két eredményt összevetve:
   \al{
    \chi_{XY}=\beta \intl{}{}\drh\intl{}{}\drkh C_{XY}(\rv,\rv').
   }

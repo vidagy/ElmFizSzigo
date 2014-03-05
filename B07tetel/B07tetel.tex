@@ -6,18 +6,24 @@
   \al{
    \opH=\suml{i=1}{dN}\opH_i
   }
-  egyrészecske Hamilton-operátorok összegeként fel lehet írni. Klasszikus esetben $\opH_i=\frac{\opp_i^2}{2m}$. Tekintsük ezt a gázt egy $V$ térfogatú dobozban. A hullámfüggvényeket úgy választjuk, hogy azok eltűnjenek a dogoz falán. Ekkor az energia $\ep(k_i)=\frac{\hbar^2 k_i^2}{2m}$, ahol $k_i=\frac{\pi}{L}n_i$ $n_i\in\mathbb{N}^+$ minden $i$-re.
+  egyrészecske Hamilton-operátorok összegeként fel lehet írni.
+   Klasszikus esetben $\opH_i=\frac{\opp_i^2}{2m}$.
+   Tekintsük ezt a gázt egy $V$ térfogatú dobozban.
+   A hullámfüggvényeket úgy választjuk, hogy azok eltűnjenek a dogoz falán.
+   Ekkor az energia $\ep(k_i)=\frac{\hbar^2 k_i^2}{2m}$, ahol $k_i=\frac{\pi}{L}n_i$ $n_i\in\mathbb{N}^+$ minden $i$-re.
   
   \subsection{Állapotszám}
   
-   A rendszer egy mikroállapotát egy $\alpha=\{n_1, n_2,\dots,n_{dN}\}$ számsorozat jellemzi. Az állapotszám:
+   A rendszer egy mikroállapotát egy $\alpha=\{n_1, n_2,\dots,n_{dN}\}$ számsorozat jellemzi.
+   Az állapotszám:
    \al{
     \Omega_0(E)
      &=\suml{E_v}{}\Theta\left(E-E_\alpha\right)
       =\suml{\alpha}{}\Theta\left(E-\frac{\hbar^2 }{2m}\frac{\pi^2}{L^2}n_\alpha^2\right)
       =\suml{\alpha}{}\Theta\left(\frac{2mE L^2}{\hbar^2\pi^2}-n_\alpha^2\right).
    }
-   Ha elég sűrűn helyezkednek el az állapotok, akkor ez éppen egy $dN$ dimenziós gömb ``pozitív'' $\left(\frac{1}{2}\right)^{dN}$-ed részének a térfogata. Mivel a részecskék nem megkülönböztethetőek, ezért:
+   Ha elég sűrűn helyezkednek el az állapotok, akkor ez éppen egy $dN$ dimenziós gömb ``pozitív'' $\left(\frac{1}{2}\right)^{dN}$-ed részének a térfogata.
+   Mivel a részecskék nem megkülönböztethetőek, ezért:
    \al{
     \Omega_0(E)=\frac{1}{N!}\cdot \frac{\pi^{\frac{dN}{2}}}{\Gamma\left({\frac{dN}{2}}+1\right)}\left(\frac{2mE L^2}{\hbar^2\pi^2}\right)^{\frac{dN}{2}}\left(\frac{1}{2}\right)^{dN}.
    } 
@@ -36,7 +42,10 @@
     \opH\Psi_{m_1,\dots,m_{dN}}\big(r_1,\sigma_1;\dots;r_{dN},\sigma_{dN}\big)
      &=\bigg(\suml{i=1}{N}\ep_{m_i}\bigg)\Psi_{m_1,\dots,m_{dN}}\big(r_1,\sigma_1;\dots;r_{dN},\sigma_{dN}\big)
    }
-   Fontos azonban, hogy a részecskék nem megkülönböztethetőek. Ennek következménye, hogy két részecske cseréjére minden mérhető fizikai mennyiségnek változatlannak kell lennie. Legalább két dimenzióban a részecskecsere elvégezhető forgatással. Így belátható, hogy ha a rendszer spinje félegész akkor a hullámfüggvény előjelet vált a részecskecserére, ha pedig egész, akkor nem vált előjelet. Az előzőt fermionikus, az utóbbit bozonikus rendszernek hívjuk. 
+   Fontos azonban, hogy a részecskék nem megkülönböztethetőek.
+   Ennek következménye, hogy két részecske cseréjére minden mérhető fizikai mennyiségnek változatlannak kell lennie.
+   Legalább két dimenzióban a részecskecsere elvégezhető forgatással. Így belátható, hogy ha a rendszer spinje félegész akkor a hullámfüggvény előjelet vált a részecskecserére, ha pedig egész, akkor nem vált előjelet.
+   Az előzőt fermionikus, az utóbbit bozonikus rendszernek hívjuk. 
    
    Hogy ezt a hullámfüggvények is tükrözzék, fermionikus rendszerben teljesen antiszimmetrizálni kell a hullámfüggvényt:
    \al{
@@ -44,14 +53,19 @@
      &\qquad\qquad=\frac{1}{\sqrt{N!}}\suml{p\in S_n}{}(-1)^{\pi(p)}\prodl{i=1}{dN}\varphi_{m_i}(r_{p(i)},\sigma_{p(i)})\\
      &\qquad\qquad=\frac{1}{\sqrt{N!}}\suml{p\in S_n}{}(-1)^{\pi(p)}\varphi_{m_1}(r_{p(1)},\sigma_{p(1)})\cdot\varphi_{m_2}(r_{p(2)},\sigma_{p(2)})\cdots\varphi_{m_{dN}}(r_{p(dN)},\sigma_{p(dN)}).
    }
-   Itt a $p$ egy permutáció, $\pi(p)$ a permutáció paritása. Az $\frac{1}{\sqrt{N!}}$ faktor a normálás miatt szükséges.
+   Itt a $p$ egy permutáció, $\pi(p)$ a permutáció paritása.
+   Az $\frac{1}{\sqrt{N!}}$ faktor a normálás miatt szükséges.
    
    Bozonikus rendszerre a hullámfüggvényt szimmetrizáljuk:
    \al{
     \Psi^\text{B}_{m_1,\dots,m_{dN}}\big(r_1,\sigma_1;\dots;r_{dN},\sigma_{dN}\big)
      =\sqrt{\frac{n_1!n_2!\cdots n_{dN}!}{N!}}\suml{p\in S_n}{}\prodl{i=1}{dN}\varphi_{m_i}(r_{p(i)},\sigma_{p(i)}),
    }
-   ahol csak azokra az állapotokra összegzünk, ahol a betöltési számok különbözőek. A betöltési számok ($n_m$)-k azt adják meg, hogy hány részecske található az $\varphi_m$ állapotban. Ez egy számsorozat, aminek ismeretében a hullámfüggvényeket meg lehet konstruálni. Fermionikus rendszerre $n_m=\{0,1\}$, bozonikusra $n_m=\{0,1,2,\dots\}$. A betöltési számokkal felírható a rendszer teljes energiája: $E=\suml{m=1}{\infty}n_m\ep_m$, ahol az összegzés az egyrészecske állapotokra történik.
+   ahol csak azokra az állapotokra összegzünk, ahol a betöltési számok különbözőek.
+   A betöltési számok ($n_m$)-k azt adják meg, hogy hány részecske található az $\varphi_m$ állapotban.
+   Ez egy számsorozat, aminek ismeretében a hullámfüggvényeket meg lehet konstruálni.
+   Fermionikus rendszerre $n_m=\{0,1\}$, bozonikusra $n_m=\{0,1,2,\dots\}$.
+   A betöltési számokkal felírható a rendszer teljes energiája: $E=\suml{m=1}{\infty}n_m\ep_m$, ahol az összegzés az egyrészecske állapotokra történik.
    
   \subsection{Betöltési számok}
   
@@ -64,12 +78,15 @@
       =\suml{\{n_m\}}{}e^{-\beta \suml{m=1}{\infty}n_m(\ep_m-\mu)}
       =\suml{\{n_m\}}{}\prodl{m=1}{\infty}e^{-\beta n_m(\ep_m-\mu)}.
    }
-   Itt megcseréljük a szummát és a produktumot. Eddig azt történt, hogy fixáltunk egy betöltési szám konfigurációt, és végigmentünk minden egyrészecske állapoton, és annyiszor vettük figyelembe a hozzá tartozó súlyt, ahány részecske volt abban az állapotban. Most úgy fogunk összegezni, hogy végigmegyünk egyesével az összes egyrészecske állapoton, és mindegyik állapotban sorra vesszük az összes lehetséges betöltés súlyát:
+   Itt megcseréljük a szummát és a produktumot.
+   Eddig azt történt, hogy fixáltunk egy betöltési szám konfigurációt, és végigmentünk minden egyrészecske állapoton, és annyiszor vettük figyelembe a hozzá tartozó súlyt, ahány részecske volt abban az állapotban.
+   Most úgy fogunk összegezni, hogy végigmegyünk egyesével az összes egyrészecske állapoton, és mindegyik állapotban sorra vesszük az összes lehetséges betöltés súlyát:
    \al{
     \mathcal{Z}
      &=\prodl{m}{}\underbrace{\suml{n=0}{n_\text{max}}e^{-\beta n(\ep_m-\mu)}}_{\mathcal{Z}^{F/B}_m}.
    }
-   Az $n_\text{max}$ attól függ, hogy milyen típusúak a részecskéink. Fermionokra, illetve bozonokra:
+   Az $n_\text{max}$ attól függ, hogy milyen típusúak a részecskéink.
+   Fermionokra, illetve bozonokra:
    \al{
     \mathcal{Z}^{F}_m
      &=\suml{n=0}{n_\text{max}=1}e^{-\beta n(\ep_m-\mu)}
@@ -117,7 +134,9 @@
    
    \paragraph{Áttérés integrálásra}
     
-    Ha makroszkopikus rendszert tekintünk makroszkopikus energiákon, akkor impulzustérben az állapotok nagyon sűrűek lesznek. Az állapotra való összegzést így át lehet írni impulzusra való összegzésre, azt pedig integrálra. Ehhez:
+    Ha makroszkopikus rendszert tekintünk makroszkopikus energiákon, akkor impulzustérben az állapotok nagyon sűrűek lesznek.
+   Az állapotra való összegzést így át lehet írni impulzusra való összegzésre, azt pedig integrálra.
+   Ehhez:
     \al{
      p_i&=\hbar k_i=\frac{h}{L_i}m_i&
      \Delta p_i=\frac{h}{L_i}\Delta m_i=\frac{h}{L_i}.
@@ -143,7 +162,10 @@
       =\pm\kB T \frac{gV}{h^{d}}\intl{}{}\dd^d p \ln\big(1\pm e^{-\beta (\ep(p)-\mu)}\big)\\
      &=\pm\kB T \frac{gV}{h^{d}}\intl{}{}\dd p \,p^{d-1}A_d \ln\big(1\pm e^{-\beta (\ep(p)-\mu)}\big).
    }
-   Az integrál parciális integrálással elvégezhető, ha feltesszük, hogy az $\ep(p)=a p^\gamma$. A parciális integráláshoz válasszuk $v'=p^{d-1}$, és $u=\ln(\dots)$. A kiintegrált rész eltűnik a határokon, a másik integrálban pedig felismerhetjük az energia várható értékét. Az eredmény:
+   Az integrál parciális integrálással elvégezhető, ha feltesszük, hogy az $\ep(p)=a p^\gamma$.
+   A parciális integráláshoz válasszuk $v'=p^{d-1}$, és $u=\ln(\dots)$.
+   A kiintegrált rész eltűnik a határokon, a másik integrálban pedig felismerhetjük az energia várható értékét.
+   Az eredmény:
    \aln{
     pV=\frac{\gamma}{d}\mv{E}.\label{eq:B07-alle}
    }
@@ -151,7 +173,9 @@
    
  \section{Klasszikus határeset}
   
-  A klasszikus határesetben a rendszer betöltési számainak a Maxwell--Boltzmann-eloszláshoz kell tartaniuk. Ez azt jelenti, hogy $\mv{n^{F/B}_k}=\frac{1}{e^{\beta(\ep_k-\mu)}\pm 1}\approx e^{-\beta(\ep_k-\mu)}$, így vagy $\ep_k\gg \kB T$ vagy $e^{\beta\mu}\ll 1$. Az első azt jelenti, hogy a $k$-adik nívó kezelhető klasszikusként, míg a második azt, hogy az egész rendszer. 
+  A klasszikus határesetben a rendszer betöltési számainak a Maxwell--Boltzmann-eloszláshoz kell tartaniuk.
+   Ez azt jelenti, hogy $\mv{n^{F/B}_k}=\frac{1}{e^{\beta(\ep_k-\mu)}\pm 1}\approx e^{-\beta(\ep_k-\mu)}$, így vagy $\ep_k\gg \kB T$ vagy $e^{\beta\mu}\ll 1$.
+   Az első azt jelenti, hogy a $k$-adik nívó kezelhető klasszikusként, míg a második azt, hogy az egész rendszer. 
   
   A nagykanonikus potenciál ebben az esetben:
   \al{
@@ -175,7 +199,8 @@
   }
   Itt látszik, hogy miért kellett bevezetni az $N!$ osztót a klasszikus statisztikus fizikában.
   
-  Felmerül, hogy mikor igaz a klasszikus közelítés. A szükséges feltétel
+  Felmerül, hogy mikor igaz a klasszikus közelítés.
+   A szükséges feltétel
   \al{
    1\gg e^{\mu\beta}
     =\frac{N}{Z_1}
@@ -183,12 +208,15 @@
     =\frac{1}{g}\frac{\left(\frac{h}{\left(2\pi m\kB T\right)^{\frac{3}{2}}}\right)^3}{\left(\left(\frac{V}{N}\right)^{\frac{1}{3}}\right)^3}
     =\frac{1}{g}\frac{\lambda_T^3}{R^3},
   }
-  ahol $R$ a részecskék közötti átlagos távolság. Tehát annak kell teljesülnie, hogy a de Broglie hullámhossznál az átlagos távolság sokkal nagyobb legyen.
+  ahol $R$ a részecskék közötti átlagos távolság.
+   Tehát annak kell teljesülnie, hogy a de Broglie hullámhossznál az átlagos távolság sokkal nagyobb legyen.
   
-  Ha a sorfejtésben egy renddel tovább megyünk, akkor is ki tudjuk fejezni az $\mv{N}$-t és a $\mv{E}$-t. Az előbbiből a kémiai potenciál elsőrendű korrekcióját kapjuk, az utóbbiból pedig az átlagos energiáét. Felhasználva \eqaref{eq:B07-alle} egyenletet, a nyomás elsőrendű korrekcióját kapjuk. Az eredmény: $p^B<p^{\text{CL}}<p^F$. Ez könnyen értelmezhető azzal a képpel, hogy a hullámfüggvény szimmetriájából adódóan a bozonok korrelációjában egy effektív vonzás, míg a fermionokéban egy effektív taszítás jelenik meg. 
-  
-%   {\color{red} Kellene ábra $\mv{n}-\ep$-re és $\mu-T$-re.}
-  
+  Ha a sorfejtésben egy renddel tovább megyünk, akkor is ki tudjuk fejezni az $\mv{N}$-t és a $\mv{E}$-t.
+   Az előbbiből a kémiai potenciál elsőrendű korrekcióját kapjuk, az utóbbiból pedig az átlagos energiáét.
+   Felhasználva \eqaref{eq:B07-alle} egyenletet, a nyomás elsőrendű korrekcióját kapjuk.
+   Az eredmény: $p^B<p^{\text{CL}}<p^F$.
+   Ez könnyen értelmezhető azzal a képpel, hogy a hullámfüggvény szimmetriájából adódóan a bozonok korrelációjában egy effektív vonzás, míg a fermionokéban egy effektív taszítás jelenik meg. 
+
  \section{Alacsony hőmérsékletű viselkedés}
   
   \subsection{Fermi-gáz}
@@ -202,7 +230,8 @@
              0&\text{ha }\ep>\mu(T=0).
             \end{cases}
     }
-    A kémiai potenciál maga a Fermi-energia, vagyis a legmagasabb betöltött energiaszint, $\ep_\text{F}=\mu(T=0)$. A részecskeszám:
+    A kémiai potenciál maga a Fermi-energia, vagyis a legmagasabb betöltött energiaszint, $\ep_\text{F}=\mu(T=0)$.
+   A részecskeszám:
     \al{
      &N=\suml{p<p_\text{F}}{}
       =g\frac{V}{h^3}\intl{p<p_\text{F}}{}\dd^3 \pv\,
@@ -238,12 +267,13 @@
     }
     Ez két dolog miatt fontos: egyrészt innen látszik, hogy a Fermi-gáznak $T=0$-n is van nyomása, másrészt a $\kappa_T=-\frac{1}{V}\pder{p}{V}>0$.
     
-    A $T=0$ közelítés addig igaz, amíg $T<<T_\text{F}$, ahol $\kB T_\text{F}=\ep_\text{F}$. A $T_\text{F}$ szilárd testekben tipikusan $\sim 10^4-10^{5} K\sim \me{eV}$.
+    A $T=0$ közelítés addig igaz, amíg $T<<T_\text{F}$, ahol $\kB T_\text{F}=\ep_\text{F}$.
+   A $T_\text{F}$ szilárd testekben tipikusan $\sim 10^4-10^{5} K\sim \me{eV}$.
     
    \paragraph{$T\ll T_\text{F}$, Sommerfeld-sorfejtés}
-    
-    
-    Ebben az esetben is a fenti integrálokat végezzük el, de itt a betöltési számot nem tudjuk egységugrásnak kezelni. Olyan alakú integrálokat kell általában számolni, hogy 
+
+    Ebben az esetben is a fenti integrálokat végezzük el, de itt a betöltési számot nem tudjuk egységugrásnak kezelni.
+   Olyan alakú integrálokat kell általában számolni, hogy 
     \al{
      I=\intl{0}{\infty}\dd \ep\, g(\ep)n(\ep).
     }
@@ -251,7 +281,8 @@
     \al{
      I=\underbrace{\left[G(\ep)n(\ep)\right]_{-\infty}^{\infty}}_{=0}+\intl{-\infty}{\infty}\dd \ep\, G(\ep)\left(-\der{n}{\ep}\right),
     }
-    ahol a kiintegrált rész eltűnik, mert $G(-\infty)=0$ és $n(\infty)=0$. A betöltési szám deriváltját el tudjuk végezni:
+    ahol a kiintegrált rész eltűnik, mert $G(-\infty)=0$ és $n(\infty)=0$.
+   A betöltési szám deriváltját el tudjuk végezni:
     \al{
      \der{n}{\ep}
       &=\der{}{\ep}\frac{1}{e^{\beta(\ep_k-\mu)}+1}
@@ -259,7 +290,9 @@
        =-\beta \frac{1}{\left(e^{\frac{1}{2}\beta(\ep-\mu)}+e^{-\frac{1}{2}\beta(\ep-\mu)}\right)^2}\\
       &=-\frac{\beta}{4} \frac{1}{\ch^2\left(\frac{1}{2}\beta(\ep-\mu)\right)}.
     }
-    Az integrálba való behelyettesítés után célszerű lesz eltolni az integrálási változót: $\ep'=\ep-\mu$. Ekkor a $G$ argumentuma is más lesz $G=G(\ep'+\mu)$, ahol egy sorfejtést fogunk végezni $\mu$ körül, hiszen $\ep\approx \mu$ környezetben vagyunk, és $\ep'$ kicsi értékei jelentősek csak. Ezzel:
+    Az integrálba való behelyettesítés után célszerű lesz eltolni az integrálási változót: $\ep'=\ep-\mu$.
+   Ekkor a $G$ argumentuma is más lesz $G=G(\ep'+\mu)$, ahol egy sorfejtést fogunk végezni $\mu$ körül, hiszen $\ep\approx \mu$ környezetben vagyunk, és $\ep'$ kicsi értékei jelentősek csak.
+   Ezzel:
     \al{
      G(\ep'+\mu)=G(\mu)+(\ep'+\mu)G'(\mu)+\frac{1}{2}(\ep'+\mu)^2 G''(\mu)+\dots
     }
@@ -271,7 +304,8 @@
        +0
        +G''(\mu)\frac{1}{2}\underbrace{\intl{-\infty}{\infty}\dd \ep' \,\ep'^2\frac{\beta}{4} \frac{1}{\ch^2\left(\frac{1}{2}\beta\ep'\right)}}_{(\kB T)^2\frac{\pi^2}{3}}.
     }
-    A második integrál nulla, hiszen egy páros és egy páratlan függvényt szorzatát integráltuk. Tehát
+    A második integrál nulla, hiszen egy páros és egy páratlan függvényt szorzatát integráltuk.
+   Tehát
     \al{
      \boxed{\intl{0}{\infty}\dd \ep\, g(\ep)n(\ep)=\intl{0}{\mu}\dd\ep\,g(\ep)+\frac{\pi^2}{6}(\kB T)^2 g'(\mu)+\mathcal{O}\left(\frac{(\kB T)^4}{\mu^4}\right)).}
     }
@@ -293,7 +327,9 @@
        =g\frac{V}{h^3}\pi 2(2m)^{\frac{3}{2}}\frac{2}{5}\mu^{\frac{5}{2}}\left(1+\frac{5\pi^2}{8}\left(\frac{\kB T}{\mu}\right)^{2}\right)
     }
     
-    Az első összefüggés alapján a kémiai potenciál hőmérsékletfüggése fejezhető ki. Mivel a részecskeszám attól nem változik meg, hogy bekapcsoljuk a hőmérsékletet, ezért a bal oldal egyenlő a $T=0$ esetben számolttal. A szorzó előtagok kiesnek, és az egyenlet $\frac{2}{3}$-ik hatványát véve, majd a jobb oldalon a zárójel hatványát sorfejtve első rendig adódik $\mu$-re egy egyenlet:
+    Az első összefüggés alapján a kémiai potenciál hőmérsékletfüggése fejezhető ki.
+   Mivel a részecskeszám attól nem változik meg, hogy bekapcsoljuk a hőmérsékletet, ezért a bal oldal egyenlő a $T=0$ esetben számolttal.
+   A szorzó előtagok kiesnek, és az egyenlet $\frac{2}{3}$-ik hatványát véve, majd a jobb oldalon a zárójel hatványát sorfejtve első rendig adódik $\mu$-re egy egyenlet:
     \al{
      \mu=\ep_\text{F}\left(1-\frac{\pi}{12}\frac{T^2}{T_\text{F}^2}\right)+\dots
     }
@@ -310,13 +346,25 @@
       &=g\frac{V}{h^3}\pi 2(2m)^{\frac{3}{2}}\intl{0}{\infty}\dd\ep\,\ep^{\frac{1}{2}}\frac{1}{e^{\beta(\ep-\mu)}-1}
        =g\frac{V}{h^3}\pi 2(2m\kB T)^{\frac{3}{2}}\underbrace{\intl{0}{\infty}\dd x\,\frac{x^{\frac{1}{2}}}{e^{x+\alpha}-1}}_{=I}.
    }
-   Az $I$ integrálnak van egy maximális értéke $\alpha=0$-ra. Ez kiszámolható, az értéke $2,613$. Ekkor kapjuk a kritikus $\mv{N_\text{C}(T)}$ értéket. Ha $N<\mv{N_\text{C}(T)}$, akkor nincsen semmi baj, létezik olyan $\alpha$, vagyis kémiai potenciál, amivel a fenti egyenlet megoldható. 
+   Az $I$ integrálnak van egy maximális értéke $\alpha=0$-ra.
+   Ez kiszámolható, az értéke $2,613$.
+   Ekkor kapjuk a kritikus $\mv{N_\text{C}(T)}$ értéket.
+   Ha $N<\mv{N_\text{C}(T)}$, akkor nincsen semmi baj, létezik olyan $\alpha$, vagyis kémiai potenciál, amivel a fenti egyenlet megoldható. 
    
-   Akkor van gond, ha $N>\mv{N_\text{C}(T)}$. Ekkor a fenti egyenlet nem értelmezhető. Ez amiatt van, hogy az állapotsűrűség itt $\sim\sqrt{\ep}$, ebben az állapotban azonban makroszkopikusan részecske kerül ugyanabba az állapotba, amit a fenti egyenlet nem tud kezelni. Vezessünk akkor be egy olyan részecskeszámot, ami a makroszkopikusan degenerált állapotban lévő részecskéket számolja meg. Ezzel $N=N_{\ep=0}+N_{\ep>0}$. Az alapállapot részecskeszáma: $N_{\ep=0}=g_0\frac{1}{e^{-\beta\mu}-1}$, ahol $g_0$ a degeneráció foka. 
+   Akkor van gond, ha $N>\mv{N_\text{C}(T)}$.
+   Ekkor a fenti egyenlet nem értelmezhető.
+   Ez amiatt van, hogy az állapotsűrűség itt $\sim\sqrt{\ep}$, ebben az állapotban azonban makroszkopikusan részecske kerül ugyanabba az állapotba, amit a fenti egyenlet nem tud kezelni.
+   Vezessünk akkor be egy olyan részecskeszámot, ami a makroszkopikusan degenerált állapotban lévő részecskéket számolja meg.
+   Ezzel $N=N_{\ep=0}+N_{\ep>0}$.
+   Az alapállapot részecskeszáma: $N_{\ep=0}=g_0\frac{1}{e^{-\beta\mu}-1}$, ahol $g_0$ a degeneráció foka. 
    
-   Ha még nem értük el a kritikus részecskeszámot, akkor $N_{\ep=0}$ elhanyagolható nagyságú járulékot ad. Mihelyt azonban elérjük a kritikus $\mv{N_\text{C}(T)}$-t, akkor $N_{\ep=0}\sim\mathcal{O}(N)$, vagyis szükséges, hogy $-\beta\mu\sim\mathcal{O}(1/N)$. 
+   Ha még nem értük el a kritikus részecskeszámot, akkor $N_{\ep=0}$ elhanyagolható nagyságú járulékot ad.
+   Mihelyt azonban elérjük a kritikus $\mv{N_\text{C}(T)}$-t, akkor $N_{\ep=0}\sim\mathcal{O}(N)$, vagyis szükséges, hogy $-\beta\mu\sim\mathcal{O}(1/N)$. 
    
-   A részecskeszámot fixen tartva és a hőmérsékletet változtatva is elérhetjük $\mv{N_\text{C}(T)}$-t. Legyen $T_0$, ahol $N=\mv{N_\text{C}(T_0)}$. Ha $T>T_0$, akkor minden oké: $N_{\ep=0}\sim\mathcal{O}(1)$, $\mu<0$. De ha $T<T_0$, akkor 
+   A részecskeszámot fixen tartva és a hőmérsékletet változtatva is elérhetjük $\mv{N_\text{C}(T)}$-t.
+   Legyen $T_0$, ahol $N=\mv{N_\text{C}(T_0)}$.
+   Ha $T>T_0$, akkor minden oké: $N_{\ep=0}\sim\mathcal{O}(1)$, $\mu<0$.
+   De ha $T<T_0$, akkor 
    \al{
     N_{\ep>0}
      &=N_\text{C}(T)
@@ -333,22 +381,15 @@
      &=g\frac{V}{h^3}\pi 2(2m)^{\frac{3}{2}}\intl{0}{\infty}\dd\ep\,\ep^{\frac{3}{2}}\frac{1}{e^{\beta(\ep-\mu)}-1}
       =g\frac{V}{h^3}\pi 2(2m)^{\frac{3}{2}}(\kB T)^{\frac{5}{2}}\underbrace{\intl{0}{\infty}\dd x\,\frac{x^{\frac{3}{2}}}{e^{x+\alpha}-1}}_{=\text{szám}\sim\mathcal{O}(1)},
    }
-   ahonnan $\mv{E}\sim T^{\frac{5}{2}}$, vagyis $C_V\sim T^{\frac{3}{2}}$. A rendszer nyomása az ideális gázokra vonatkozó \eqaref{eq:B07-alle} egyenlet alapján:
+   ahonnan $\mv{E}\sim T^{\frac{5}{2}}$, vagyis $C_V\sim T^{\frac{3}{2}}$.
+   A rendszer nyomása az ideális gázokra vonatkozó \eqaref{eq:B07-alle} egyenlet alapján:
    \al{
     p&=\frac{2}{3}\frac{\mv{E}}{V}\sim
      g\frac{2}{3 h^3}\pi 2(2m)^{\frac{3}{2}}(\kB T)^{\frac{5}{2}},
    }
-   ami láthatjuk, hogy független a térfogattól. Ez érthető, a pluszban hozzáadott részecskék nem a nyomást növelik, hanem a kondenzálódnak. 
+   ami láthatjuk, hogy független a térfogattól.
+   Ez érthető, a pluszban hozzáadott részecskék nem a nyomást növelik, hanem a kondenzálódnak. 
    
-   A jelenség felettébb hasonlít egy fázisátalakulásra. Ennek oka, hogy ez az is. Egyedül annyi a különbség, hogy a fázisátalakulás itt az impulzustérben történik.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+   A jelenség felettébb hasonlít egy fázisátalakulásra.
+   Ennek oka, hogy ez az is.
+   Egyedül annyi a különbség, hogy a fázisátalakulás itt az impulzustérben történik.

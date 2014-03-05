@@ -2,12 +2,15 @@
  
  \section{Időfüggő egyensúlyi korrelációs függvények}
   
-  Legyen két időfüggő fizikai mennyiség $X(t)$ és $Y(t)$. Ezek átlaguktól való eltérése: $x(t)=X(t)-\mv{X}(t)$ és $y(t)=Y(t)-\mv{Y}(t)$. Az időfüggő korrelációs függvény:
+  Legyen két időfüggő fizikai mennyiség $X(t)$ és $Y(t)$.
+   Ezek átlaguktól való eltérése: $x(t)=X(t)-\mv{X}(t)$ és $y(t)=Y(t)-\mv{Y}(t)$.
+   Az időfüggő korrelációs függvény:
   \al{
    C_{xy}(t)=\mv{x(t')y(t'+t)}_{t'}
     =\lim_{T\to\infty}\frac{1}{T}\intl{0}{T}\dd t'\, x(t')y(t+t').
   }
-  Ha a rendszer stacioner és ergodikus, akkor az így definiált időátlag, $\mv{\,\cdot\,}_{t'}$, megegyezik a sokaságátlaggal, $\mv{\,\cdot\,}$. A korrelációs függvény tulajdonságai:
+  Ha a rendszer stacioner és ergodikus, akkor az így definiált időátlag, $\mv{\,\cdot\,}_{t'}$, megegyezik a sokaságátlaggal, $\mv{\,\cdot\,}$.
+   A korrelációs függvény tulajdonságai:
   \begin{itemize}
    \item 
     $t\to\infty$-re a korrelációk függetlenek lesznek egymástól:
@@ -36,12 +39,15 @@
        =C_{yx}(-t)
     }
    \item 
-    A korrelációs függvény szimmetrikus: $C_{xy}(t)=C_{yx}(t)$ (ha a rendszer időtükrözésre invariáns). Ehhez fejtsük ki a fenti sokaságátlagot:
+    A korrelációs függvény szimmetrikus: $C_{xy}(t)=C_{yx}(t)$ (ha a rendszer időtükrözésre invariáns).
+   Ehhez fejtsük ki a fenti sokaságátlagot:
     \al{
      C_{xy}(t)
       &=\intl{}{}\dd x\,\intl{}{}\dd y\, xy\cdot P(x) P(y,t|x) ,
     }
-    ahol $P(x)$ annak a valószínűsége, hogy $x$ fluktuációja $x$, illetve $P(t,y|0,x) $ annak a valószínűsége, hogy $y$ a fluktuáció értéke $t$-ben, ha $t=0$-ban $x$ értéke $x$ volt. A részletes egyensúly következménye, hogy $P(x) P(t,y|0,x)=P(y) P(t,x|0,y)$. Ezt behelyettesítve:
+    ahol $P(x)$ annak a valószínűsége, hogy $x$ fluktuációja $x$, illetve $P(t,y|0,x) $ annak a valószínűsége, hogy $y$ a fluktuáció értéke $t$-ben, ha $t=0$-ban $x$ értéke $x$ volt.
+   A részletes egyensúly következménye, hogy $P(x) P(t,y|0,x)=P(y) P(t,x|0,y)$.
+   Ezt behelyettesítve:
     \al{
      C_{xy}(t)
       &=\intl{}{}\dd x\,\intl{}{}\dd y\, xy\cdot P(y) P(t,x|0,y)
@@ -52,43 +58,59 @@
     Az előző kettőből $C_{yx}(t)=C_{xy}(-t)$, vagyis a korrelációs függvény időben is szimmetrikus. 
   \end{itemize}
   
-  A korrelációs függvények kiterjeszthetőek a kvantummechanikai esetre is. Itt azonban figyelembe kell venni, hogy az operátorok nem felcserélhetőek. Ehhez szimmetrizálni/antiszimmetrizálni kell:
+  A korrelációs függvények kiterjeszthetőek a kvantummechanikai esetre is.
+   Itt azonban figyelembe kell venni, hogy az operátorok nem felcserélhetőek.
+   Ehhez szimmetrizálni/antiszimmetrizálni kell:
   \al{
    C^{F/B}_{\opx\opy}=\frac{1}{2}\mv{\mv{\opx(t')\opy(t'+t)\pm\opy(t'+t)\opx(t')}}_{t'}.
   } 
-  A belső várható érték a kvantummechanikai várható értéket jelenti, a külső pedig az időbelit. Az előbb bizonyított tulajdonságok továbbra is fennállnak. 
+  A belső várható érték a kvantummechanikai várható értéket jelenti, a külső pedig az időbelit.
+   Az előbb bizonyított tulajdonságok továbbra is fennállnak. 
   
  \section{Lineáris transzport}
   
-  Egyensúlyban a fluktuációk várható értéke nulla, azonban az értékük az egyes időpillanatokban nem nulla. Az fluktuáció oka a statisztikus jelleg, az, hogy az eloszlásnak van valamilyen szélessége. A fluktuáció véges értékét úgy is el tudjuk érni, hogy a rendszerre valamilyen külső teret kapcsolunk, majd ezt a teret kikapcsoljuk. Amíg a teret bekapcsoltuk, a rendszerbe beleavatkoztunk, így az nem-egyensúlyi állapotban van.
+  Egyensúlyban a fluktuációk várható értéke nulla, azonban az értékük az egyes időpillanatokban nem nulla.
+   Az fluktuáció oka a statisztikus jelleg, az, hogy az eloszlásnak van valamilyen szélessége.
+   A fluktuáció véges értékét úgy is el tudjuk érni, hogy a rendszerre valamilyen külső teret kapcsolunk, majd ezt a teret kikapcsoljuk.
+   Amíg a teret bekapcsoltuk, a rendszerbe beleavatkoztunk, így az nem-egyensúlyi állapotban van.
   
   Bárhogy is jött létre az átlagértéktől való eltérés, a várható értéke $t\to\infty$-re újra lecseng:
   \al{
    \lim_{t\to\infty}\mv{\xv(t)|\xv(t=0)=\xv_0}=0.
   }
   
-  A nem egyensúlyi sokaságok lényege, hogy a valamilyen módon előállt $x_0$ makroállapotnak megfelelő sokaságot állítjuk elő, azzal a feltételes eloszlással, hogy $x_0$ fennáll. A rendszerben a dinamika változatlan, egyedül az eloszlás különbözik. 
+  A nem egyensúlyi sokaságok lényege, hogy a valamilyen módon előállt $x_0$ makroállapotnak megfelelő sokaságot állítjuk elő, azzal a feltételes eloszlással, hogy $x_0$ fennáll.
+   A rendszerben a dinamika változatlan, egyedül az eloszlás különbözik. 
   
-  Térítsünk ki egy mennyiséget az egyensúlyi értékéből. Az átlaghoz való visszatérési sebessége ekkor arányos lesz a kitéréssel, vagyis:
+  Térítsünk ki egy mennyiséget az egyensúlyi értékéből.
+   Az átlaghoz való visszatérési sebessége ekkor arányos lesz a kitéréssel, vagyis:
   \al{
    \mv{\dot x_i}_{\xv_0}=-\suml{k}{}\lambda_{ik}\mv{x_k}_{\xv_0}.
   }
-  Definiáljunk a termodinamikai erőt: $y_i=-\pder{S}{x_i}$. Az entrópia sorfejtése: $S=S_0-\frac{1}{2}\suml{ij}{}x_ig_{ij}x_j$, ahol $g_{ij}$ szimmetrikus. Innen $y_i=\suml{j}{}g_{ij}x_j$, ami megfordítva $x_i=\suml{j}{}\big[g^{-1}\big]_{ij}y_j$. Ezt felhasználva:
+  Definiáljunk a termodinamikai erőt: $y_i=-\pder{S}{x_i}$.
+   Az entrópia sorfejtése: $S=S_0-\frac{1}{2}\suml{ij}{}x_ig_{ij}x_j$, ahol $g_{ij}$ szimmetrikus.
+   Innen $y_i=\suml{j}{}g_{ij}x_j$, ami megfordítva $x_i=\suml{j}{}\big[g^{-1}\big]_{ij}y_j$.
+   Ezt felhasználva:
   \al{
    \mv{\dot x_i}_{\xv_0}
     =-\suml{k}{}\lambda_{ik}\suml{j}{}\big[g^{-1}\big]_{kj}\mv{y_j}_{\xv_0}
     =-\suml{j}{}\underbrace{\suml{k}{}\lambda_{ik}\big[g^{-1}\big]_{kj}}_{L_{ij}}\mv{y_j}_{\xv_0}
     =-\suml{j}{}L_{ij}\mv{y_j}_{\xv_0}
   }
-  Ez a transzportegyenlet. A termodinamikai erőre másik definíciót is adhatunk. Az előző alapján felírhatjuk, hogy $\dd S=-\suml{i}{}y_i\dd x_i$. Innen az entrópiaprodukció: $\dot S=-\suml{i}{}y_i\dot x_i$, vagyis $y_i=-\pder{\dot S}{\dot x_i}$. 
+  Ez a transzportegyenlet.
+   A termodinamikai erőre másik definíciót is adhatunk.
+   Az előző alapján felírhatjuk, hogy $\dd S=-\suml{i}{}y_i\dd x_i$.
+   Innen az entrópiaprodukció: $\dot S=-\suml{i}{}y_i\dot x_i$, vagyis $y_i=-\pder{\dot S}{\dot x_i}$. 
   
   \subsection{Onsager-hipotézis}
    
-   Az Onsager-hipotézis lényege, hogy az egyensúlyi fluktuációk és a nem egyensúlyi kitérítés között nincs különbség, miközben a rendszer relaxál mindegy, hogy mi volt az eredeti kitérés oka. Ez azt jelenti, hogy a transzportegyenlet a korrelációs függvényekre felírva is igaz:
+   Az Onsager-hipotézis lényege, hogy az egyensúlyi fluktuációk és a nem egyensúlyi kitérítés között nincs különbség, miközben a rendszer relaxál mindegy, hogy mi volt az eredeti kitérés oka.
+   Ez azt jelenti, hogy a transzportegyenlet a korrelációs függvényekre felírva is igaz:
    \al{
     \der{}{t}\mv{x_i(t),x_j(0)}=-\suml{k}{}L_{ik}\mv{y_k(t),x_j(0)}.
    }
-   A hipotézis következményének belátásához felhasználjuk a korrelációs függvény szimmetrikusságát ($C_{ij}(t)=C_{ji}(t)$), illetve az alábbi azonosságot: $\mv{y_k x_j}=\kB\delta_{kj}$. Ennek belátásához nézzük a 
+   A hipotézis következményének belátásához felhasználjuk a korrelációs függvény szimmetrikusságát ($C_{ij}(t)=C_{ji}(t)$), illetve az alábbi azonosságot: $\mv{y_k x_j}=\kB\delta_{kj}$.
+   Ennek belátásához nézzük a 
    \al{
     0
      &=N\intl{}{}\dd^{n}x\,\pder{}{x_j}\left(x_i e^{-\frac{1}{2\kB}\suml{lm}{}x_l g_{lm}x_m}\right)\\
@@ -104,16 +126,22 @@
     &\Rightarrow&
     &-\suml{k}{}L_{ik}\mv{y_k(t),x_j(0)}=-\suml{k}{}L_{jk}\mv{y_k(t),x_i(0)},
    }
-   majd tekintsük a relációt $t=0$-ban. Ekkor felhasználva a másik azonosságot:
+   majd tekintsük a relációt $t=0$-ban.
+   Ekkor felhasználva a másik azonosságot:
    \al{
     L_{ij}=L_{ji}
    }
-   adódik, ami az Onsager-féle reciprocitási törvény. Mivel a korrelációs törvény szimmetrikusságának követelménye az volt, hogy a mikroszkopikus folyamatok reverzibilisek, ezért ezt itt is meg kell követelni. Az időtükrözési invariancia lehetséges, hogy nem teljesül pl. mágneses tér jelenlétében, vannak olyan mennyiségek, amelyek előjelet váltanak az időtükrözésre. Ekkor $C_{xy}(t)=I_x I_y C_{yx}(t)$, ahol $I$ az időtökrözéshez tartozó sajátérték, és így $L_{xy}=I_x I_y L_{yx}$.
+   adódik, ami az Onsager-féle reciprocitási törvény.
+   Mivel a korrelációs törvény szimmetrikusságának követelménye az volt, hogy a mikroszkopikus folyamatok reverzibilisek, ezért ezt itt is meg kell követelni.
+   Az időtükrözési invariancia lehetséges, hogy nem teljesül pl. mágneses tér jelenlétében, vannak olyan mennyiségek, amelyek előjelet váltanak az időtükrözésre.
+   Ekkor $C_{xy}(t)=I_x I_y C_{yx}(t)$, ahol $I$ az időtökrözéshez tartozó sajátérték, és így $L_{xy}=I_x I_y L_{yx}$.
    
   \subsection{Példa: hő- és elektromos vezetés}
    
    \begin{description}
-    \item[Elektromos vezetés:] Az entrópiaprodukció: $\der{S}{t}=\frac{P}{T}=\frac{EJ}{T}$, ahol $E$ az elektromos térerősség, $J$ az elektromos áramsűrűség és $T$ a hőmérséklet. A fenti jelöléssel $\dot x_e=J$. Az ehhez tartozó termodinamikai erő: $y_e=-\pder{\dot S}{\dot x_e}=-\frac{E}{T}$.
+    \item[Elektromos vezetés:] Az entrópiaprodukció: $\der{S}{t}=\frac{P}{T}=\frac{EJ}{T}$, ahol $E$ az elektromos térerősség, $J$ az elektromos áramsűrűség és $T$ a hőmérséklet.
+   A fenti jelöléssel $\dot x_e=J$.
+   Az ehhez tartozó termodinamikai erő: $y_e=-\pder{\dot S}{\dot x_e}=-\frac{E}{T}$.
     
     Ezek alapján a transzportegyenlet: 
     \al{
@@ -121,7 +149,8 @@
     }
     Ez az Ohm-törvény, ahol $L_{ee}=\sigma T$.
     
-    \item[Hővezetés: ] Az entrópiaprodukció itt arányos a hőárammal és a hőmérséklet inverzének gradiensével: $\dot S=w\nabla\frac{1}{T}$. Innen $\dot x_{q}=w$, vagyis $y_q=-\pder{\dot S}{\dot x_{q}}=-\grad\frac{1}{T}=\frac{1}{T^2}\nabla T$.
+    \item[Hővezetés: ] Az entrópiaprodukció itt arányos a hőárammal és a hőmérséklet inverzének gradiensével: $\dot S=w\nabla\frac{1}{T}$.
+   Innen $\dot x_{q}=w$, vagyis $y_q=-\pder{\dot S}{\dot x_{q}}=-\grad\frac{1}{T}=\frac{1}{T^2}\nabla T$.
     
     Itt a transzportegyenlet:
     \al{
@@ -129,7 +158,8 @@
     }
     ami a hővezetési egyenletnek felel meg $L_{qq}=\lambda T^2$.
     
-    \item[Kereszteffektusok: ] Az elektromos áram létrehozhat hőáramot, illetve fordítva. Ezeket is figyelembe véve a transzportegyenletek:
+    \item[Kereszteffektusok: ] Az elektromos áram létrehozhat hőáramot, illetve fordítva.
+   Ezeket is figyelembe véve a transzportegyenletek:
     \al{
      J&=-L_{ee}\left(-\frac{E}{T}\right)-L_{eq}\frac{1}{T^2}\nabla T
       &
@@ -138,5 +168,8 @@
       &
      w&=\pi J-\lambda\nabla T
     }
-    A jobb oldalon a korábbi ``kísérleti'' törvények állnak, $\pi$ a Peltier-együttható, míg $\eta$ a Seebeck-együttható. A kísérletek alapján a Thomson-összefüggés: $\pi=\eta T$. Ha $\grad T=0$, akkor $\pi=\frac{w}{J}=\frac{L_{qe}}{L_{ee}}$, illetve ha $J=0$, akkor $\eta=\frac{L_{eq}}{L_{ee}T}$. A Thomson-összefüggésbe helyettesítve $L_{eq}=L_{qe}$.
+    A jobb oldalon a korábbi ``kísérleti'' törvények állnak, $\pi$ a Peltier-együttható, míg $\eta$ a Seebeck-együttható.
+   A kísérletek alapján a Thomson-összefüggés: $\pi=\eta T$.
+   Ha $\grad T=0$, akkor $\pi=\frac{w}{J}=\frac{L_{qe}}{L_{ee}}$, illetve ha $J=0$, akkor $\eta=\frac{L_{eq}}{L_{ee}T}$.
+   A Thomson-összefüggésbe helyettesítve $L_{eq}=L_{qe}$.
    \end{description}

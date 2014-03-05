@@ -8,7 +8,9 @@
    \eq{
     \Lv=\rv\times\pv=m\rv\times\dot\rv.
    }
-   Hengerkoordinátákban kifejtve: $\Lv=m\cdot(r\ev_r)\times(\dot{r}\ev_r+r\dot{\phi}\ev_\varphi)=mr^2\dot{\varphi}\cdot\ev_z$. Centrális erőtérben a tömegpont perdülete állandó. Legyen $\Fv=F(r)\frac{\rv}{r}=F(r)\ev_r$, akkor $\dot{\Lv}=\dot{\rv}\times\pv+\rv\times\dot\pv=0+0=0$, hiszen $\dot\rv\parallel \vv$ és $\dot\pv=\Fv\parallel\rv$.
+   Hengerkoordinátákban kifejtve: $\Lv=m\cdot(r\ev_r)\times(\dot{r}\ev_r+r\dot{\phi}\ev_\varphi)=mr^2\dot{\varphi}\cdot\ev_z$.
+   Centrális erőtérben a tömegpont perdülete állandó.
+   Legyen $\Fv=F(r)\frac{\rv}{r}=F(r)\ev_r$, akkor $\dot{\Lv}=\dot{\rv}\times\pv+\rv\times\dot\pv=0+0=0$, hiszen $\dot\rv\parallel \vv$ és $\dot\pv=\Fv\parallel\rv$.
    
    Számítsuk ki az $\Lv^2$-et is:
    \al{
@@ -22,7 +24,8 @@
    \eq{
     \Mv=\rv\times\Fv.
    }
-   Az impulzusmomentum csak adott koordináta-rendszerben értelmezett, minden esetben meg kell adni, hogy milyen pontra vonatkoztatjuk a perdületet. A forgatónyomaték is ehhez hasonló, ott is egy $\Fv$ erő adott pontra vonatkoztatott forgatónyomatékát lehet csak értelmezni.
+   Az impulzusmomentum csak adott koordináta-rendszerben értelmezett, minden esetben meg kell adni, hogy milyen pontra vonatkoztatjuk a perdületet.
+   A forgatónyomaték is ehhez hasonló, ott is egy $\Fv$ erő adott pontra vonatkoztatott forgatónyomatékát lehet csak értelmezni.
    
    Számítsuk ki a tömegpont mozgási energiáját szintén hengerkoordináta-rendszerben:
    \al{
@@ -36,7 +39,9 @@
   
   \subsection{Pontrendszerek}\label{ss6:pontrendszerek}
    
-   Térjünk át a pontrendszerek esetére. Legyen egy $N$ pontból álló rendszerünk. Ennek perdülete:
+   Térjünk át a pontrendszerek esetére.
+   Legyen egy $N$ pontból álló rendszerünk.
+   Ennek perdülete:
    \eq{
     \Lv=\suml{i=1}{N}\Lv_i=\suml{i=1}{N}\rv_i\times\pv_i=\suml{i=1}{N}m_i\rv_i\times\dot\rv_i.
    }
@@ -47,7 +52,10 @@
      =\suml{i=1}{N}\rv_i\times\Fv_i
      =\suml{i=1}{N}\rv_i\times\left(\suml{j=1(\neq i)}{N}\Fv_{ji}+\Fv_{\text{k},i}\right),
    }
-   ahol az $i$-edik tömegpontra ható erőt felbontottuk egy külső $\Fv_{\text{k},i}$ és a belső erők eredőjére. A külső erők járuléka egy külső forgatónyomaték: $\Mv_\text{k}=\suml{i=1}{N}\rv_i\times\Fv_{\text{k},i}$. A belső erők járulékánál kihasználjuk a III. Newton-törvényt:
+   ahol az $i$-edik tömegpontra ható erőt felbontottuk egy külső $\Fv_{\text{k},i}$ és a belső erők eredőjére.
+   A külső erők járuléka egy külső forgatónyomaték: $\Mv_\text{k}=\suml{i=1}{N}\rv_i\times\Fv_{\text{k},i}$.
+   A belső erők járulékánál kihasználjuk a III.
+   Newton-törvényt:
    \al{
     \dot{\Lv}
      &=\Mv_\text{k}+\suml{i\neq j}{N}\rv_i\times\Fv_{ji}
@@ -55,7 +63,8 @@
       =\Mv_\text{k}+\frac 12\suml{i\neq j}{N}\big(\rv_i\times\Fv_{ji}-\rv_j\times\Fv_{ji}\big)\\
      &=\Mv_\text{k}+\frac 12\suml{i\neq j}{N}\big(\rv_i-\rv_j\big)\times\Fv_{ji}.
    }
-   A második tag pl. centrális erőkre nulla. Ha a rendszerre ható forgatónyomaték nulla, akkor a rendszer teljes impulzusmomentuma megmarad. 
+   A második tag pl. centrális erőkre nulla.
+   Ha a rendszerre ható forgatónyomaték nulla, akkor a rendszer teljes impulzusmomentuma megmarad. 
   
   \subsection{Pontrendszerek tömegközépponti koordináta-rendszerben}
    
@@ -63,7 +72,9 @@
    \eq{
     \Rv_\text{tkp}=\frac{\suml{i=1}{N}m_i\rv_i}{\suml{i=1}{N}m_i}=\frac{\suml{i=1}{N}m_i\rv_i}{M}.
    }
-   Ez a mennyiség jól definiált, mert koordinátatranszformációkra vektorként viselkedik. Toljuk el az origót $\rv_0$-lal, akkor a tömegközéppont $\bar{\Rv}_\text{tkp}={\Rv}_\text{tkp}+\rv_0$ lesz. Deriváljuk idő szerint a tömegközéppontot definiáló egyenletet:
+   Ez a mennyiség jól definiált, mert koordinátatranszformációkra vektorként viselkedik.
+   Toljuk el az origót $\rv_0$-lal, akkor a tömegközéppont $\bar{\Rv}_\text{tkp}={\Rv}_\text{tkp}+\rv_0$ lesz.
+   Deriváljuk idő szerint a tömegközéppontot definiáló egyenletet:
    \eq{
     M\dot{\Rv}_\text{tkp}=\suml{i=1}{N}m_i\dot\rv_i=\Pv_\text{tkp},
    }
@@ -77,9 +88,11 @@
       =\underbrace{\suml{i\neq j}{N}\Fv_{ji}}_{=0}+\suml{i=1}{N}\Fv_{\text{k},i}
       =\Fv_\text{k}.
    }
-   Tehát a Newton-egyenlet igaz egy pontrendszerre olyan értelemben, hogy annak tömegközéppontjának mozgását a külső erők eredője határozza meg. Ha a külső erők eredője nulla, akkor a tömegközéppont egyenesvonalú egyenletes mozgást végez, ez a tömegközéppont-megmaradás tétele. 
+   Tehát a Newton-egyenlet igaz egy pontrendszerre olyan értelemben, hogy annak tömegközéppontjának mozgását a külső erők eredője határozza meg.
+   Ha a külső erők eredője nulla, akkor a tömegközéppont egyenesvonalú egyenletes mozgást végez, ez a tömegközéppont-megmaradás tétele. 
    
-   Számoljuk ki a fenti mennyiségeket a tömegközépponti koordinátákat használva: $\rv_i=\bar\rv_i+\Rv_\text{tkp}$, ahol $\bar\rv_i$ a tömegközéppontból mért helyvektor. Az impulzus:
+   Számoljuk ki a fenti mennyiségeket a tömegközépponti koordinátákat használva: $\rv_i=\bar\rv_i+\Rv_\text{tkp}$, ahol $\bar\rv_i$ a tömegközéppontból mért helyvektor.
+   Az impulzus:
    \al{
     \Pv
      =\suml{i=1}{N}m_i\dot\rv_i
@@ -144,20 +157,25 @@
    
    \subsection{Merev testek, forgás, tehetetlenségi nyomaték}
    
-   Merev test az olyan pontrendszer, ahol $\{\bar\rv_i\}$ $\forall i$-re rögzített, az a mozgás során állandó. Egy ilyen test mozgása haladó- és forgómozgásból áll (Euler-tétel). Minden tömegpont sebességét felírhatjuk a 
+   Merev test az olyan pontrendszer, ahol $\{\bar\rv_i\}$ $\forall i$-re rögzített, az a mozgás során állandó.
+   Egy ilyen test mozgása haladó- és forgómozgásból áll (Euler-tétel).
+   Minden tömegpont sebességét felírhatjuk a 
    \eq{
     \vv_i=\vv_0+\omv\times(\rv_i-\rv_0)
    }
-   felbontásban, ahol $\vv_0$ és $\rv_0$ a merev test egy kitüntetett pontjának haladó mozgását, míg $\omv$ az ez a pont körüli forgómozgást írja le. Az impulzusmomentum:
+   felbontásban, ahol $\vv_0$ és $\rv_0$ a merev test egy kitüntetett pontjának haladó mozgását, míg $\omv$ az ez a pont körüli forgómozgást írja le.
+   Az impulzusmomentum:
    \al{
     \Lv
      &=\suml{i=1}{N}m_i\rv_i\times\vv_i
       =\suml{i=1}{N}m_i\rv_i\times\big(\vv_0+\omv\times(\rv_i-\rv_0)\big)
       =M\Rv\times\vv_0+\suml{i=1}{N}m_i\rv_i\times\big(\omv\times(\rv_i-\rv_0)\big).
    }
-   Az első tag a test haladásához kapcsolódó impulzusmomentum. Ez eltűnik, ha az origó a test tömegközéppontjában van, vagy ha a test nem végez haladómozgást. 
+   Az első tag a test haladásához kapcsolódó impulzusmomentum.
+   Ez eltűnik, ha az origó a test tömegközéppontjában van, vagy ha a test nem végez haladómozgást. 
    
-   Legyen a kitüntetett pont az origó, így $\rv_0=0$. Fejtsük ki a második tagot:
+   Legyen a kitüntetett pont az origó, így $\rv_0=0$.
+   Fejtsük ki a második tagot:
    \al{
     \Big[m_i\rv_i\times\big(\omv\times\rv_i\big)\Big]_j
      &=m_i\ep_{jkl}\big[\rv_i\big]_k\ep_{lmn}[\omv]_m\big[\rv_i\big]_n
@@ -175,7 +193,8 @@
        \suml{i=1}{N}m_i\big(-x_iz_i\big) & \suml{i=1}{N}m_i\big(-y_iz_i\big) & \suml{i=1}{N}m_i\big(x_i^2+y_i^2 \big)
       \end{pmatrix},&
    }
-   ahol bevezettük a $\mat\Theta$ tehetetlenségi nyomatékot. Ennek alakja folytonos $\rho(\rv)$ tömegeloszlás esetén:
+   ahol bevezettük a $\mat\Theta$ tehetetlenségi nyomatékot.
+   Ennek alakja folytonos $\rho(\rv)$ tömegeloszlás esetén:
    \eq{
     [\mat\Theta]_{jk}=\intl{V}{}\drh\rho(\rv)\Big(\delta_{jk}r^2-\big[\rv\big]_j\big[\rv\big]_k\Big)
    }
@@ -189,7 +208,9 @@
        +\vv_0\left(\omv\times\suml{i=1}{N}m_i\rv_i\right)
        +\frac{1}{2}\suml{i=1}{N}m_i\big(\omv\times\rv_i\big)^2.
    }
-   Itt az első tag a test transzlációs mozgásához kapcsolódó kinetikus energia. A második tag a tömegközépponti koordináta-rendszerben eltűnik, míg a harmadik tag a forgómozgáshoz kapcsolódó kinetikus energia. Ez kifejtve:
+   Itt az első tag a test transzlációs mozgásához kapcsolódó kinetikus energia.
+   A második tag a tömegközépponti koordináta-rendszerben eltűnik, míg a harmadik tag a forgómozgáshoz kapcsolódó kinetikus energia.
+   Ez kifejtve:
    \al{
     m_i\big(\omv\times\rv_i\big)^2
      &=m_i(\omv\times\rv_i)\cdot(\omv\times\rv_i)
@@ -210,7 +231,10 @@
    }
    ahol az $\rv_{i,\perp}$ az $i$-edik tömegpont forgástengelytől mért távolsága. 
    
-   Nézzünk egy speciális esetet, amikor a forgástengely a tömegközépponton megy át. Kérdés, hogy mekkora lesz a forgatónyomaték, ha ezt a tengelyt eltoljuk a tömegközéppontból $\lv$-lel. A forgástengely iránya nem változik, csak annak helye. A Steiner-tétel:
+   Nézzünk egy speciális esetet, amikor a forgástengely a tömegközépponton megy át.
+   Kérdés, hogy mekkora lesz a forgatónyomaték, ha ezt a tengelyt eltoljuk a tömegközéppontból $\lv$-lel.
+   A forgástengely iránya nem változik, csak annak helye.
+   A Steiner-tétel:
    \al{
     \bar{I}
      &=\suml{i=1}{N}m_i\big(\rv_{i,\perp}-\lv\big)^2
@@ -219,11 +243,9 @@
        +\suml{i=1}{N}m_i\lv^2
      =I+M\lv^2.
    }
-%    {\color{red} Esetleg írni lehetne még, hogy miért deviációs nyomatékok a $\mat\Theta$ offdiagonális elemei, talán a pörgettyűkről, nutáció, precesszió, az örök szenvedély\dots}
    
  \section{Elektrodinamika}
   
-%    {\color{red} Hiányosság: írd bele azt is, hogy az origóban nem értelmezhetőek a terek, ott még egy dirac-delta töltés hiányzik, számoljuk is ki!!!}
   \subsection{A mágneses dipólmomentum}
   
   Definíciója (részletek a multipól sorfejtésnél \aref{eq:ss-11multipol}. fejezet): 
@@ -243,7 +265,8 @@
   
  \subsection{Kapcsolat a dipólmomentum és a perdület között}
   
-  Legyen egy elektron, melyre alkalmazzuk az előző összefüggést. Ennek $\Jv(\rv)=-e\vv\delta\big(\rv-\rv_0(t)\big)$. Így
+  Legyen egy elektron, melyre alkalmazzuk az előző összefüggést.
+   Ennek $\Jv(\rv)=-e\vv\delta\big(\rv-\rv_0(t)\big)$. Így
   \eq{
    \emv=-e\frac{1}{2}\intl{}{}\drh\rv\times\vv\delta\big(\rv-\rv_0(t)\big)
       =-e\frac{1}{2}\rv_0(t)\times \vv
@@ -269,7 +292,8 @@
   
   \subsection{Statikus elektromos dipólusok és azok kölcsönhatása}\label{ss:A06-dipol}
    
-   Legyen a $+\frac{\av}{2}$ és a $-\frac{\av}{2}$-ben egy $+q$ és egy $-q$ töltés. Ezek elektromos potenciálja, ha $a\to0$:
+   Legyen a $+\frac{\av}{2}$ és a $-\frac{\av}{2}$-ben egy $+q$ és egy $-q$ töltés.
+   Ezek elektromos potenciálja, ha $a\to0$:
    \al{
     \phi(\rv)
      &=\frac{q}{4\pi\ep_0}\left[\frac{1}{\abs{\rv-\frac{\av}{2}}}-\frac{1}{\abs{\rv+\frac{\av}{2}}}\right]
@@ -277,7 +301,8 @@
       =\frac{1}{4\pi\ep_0}\frac{\pv\rv}{\abs{\rv}^3}
       =-\frac{1}{4\pi\ep_0}\pv\grad\frac{1}{\abs{\rv}},
    }
-   ahol $\pv=q\av$ a dipólus erőssége. Az elektromos térerősség:
+   ahol $\pv=q\av$ a dipólus erőssége.
+   Az elektromos térerősség:
    \eq{
     \Ev(\rv)
      =-\grad{\phi(\rv)}
@@ -311,9 +336,9 @@
     \end{tabular}
    \end{center}
    
-   Az elektromos és a mágneses dipólus között különbség a közeltérben való szerkezetük. Az elektromos dipólban a két töltés között a térerősség iránya párhuzamos a külső térrel, míg a mágneses dipólnál a gyűrű közepén a tér ellentétesen mutat, mint a gyűrű mellett azon kívül.
+   Az elektromos és a mágneses dipólus között különbség a közeltérben való szerkezetük.
+   Az elektromos dipólban a két töltés között a térerősség iránya párhuzamos a külső térrel, míg a mágneses dipólnál a gyűrű közepén a tér ellentétesen mutat, mint a gyűrű mellett azon kívül.
 
-   
  \section{Kvantummechanika}
   
   \subsection{Az impulzusmomentum operátora, algebrája}
@@ -381,7 +406,8 @@
    
   \subsection{Radiális impulzus, $\oppv^2$ és $\opLv^2$ kapcsolata}
    
-   A célunk, hogy az impulzus operátorának négyzetét fel tudjuk bontani egy radiális és egy szögektől függő komponensre. A szögektől függő rész az $\opLv^2$-tel lesz kapcsolatban, a radiális rész pedig egy új operátorral fejezhető ki, ez a radiális impulzus lesz. 
+   A célunk, hogy az impulzus operátorának négyzetét fel tudjuk bontani egy radiális és egy szögektől függő komponensre.
+   A szögektől függő rész az $\opLv^2$-tel lesz kapcsolatban, a radiális rész pedig egy új operátorral fejezhető ki, ez a radiális impulzus lesz. 
    
    Fejtsük ki az $\opLv^2$ operátor értékét:
    \al{
@@ -395,7 +421,8 @@
       =\op{r}^2\op{p}^2+2\frac{\hbar}{i}\oprv\oppv-\op{p}_j\op{x}_j\op{p}_k\op{x}_k-3\frac{\hbar}{i}\oprv\oppv
       =\op{r}^2\op{p}^2-\big(\oprv\oppv\big)^2-\frac{\hbar}{i}\oprv\oppv.
    }
-   Felhasználva az $[\opA,\opB^{-1}]=-\opB^{-1}[\opA,\opB]\opB^{-1}$ azonosságot, láthatjuk, hogy $\left[\opLv^2,\frac{1}{\op{r}^2}\right]=0$. Emiatt átalakíthatjuk az előző egyenletet:
+   Felhasználva az $[\opA,\opB^{-1}]=-\opB^{-1}[\opA,\opB]\opB^{-1}$ azonosságot, láthatjuk, hogy $\left[\opLv^2,\frac{1}{\op{r}^2}\right]=0$.
+   Emiatt átalakíthatjuk az előző egyenletet:
    \eq{
     \op{p}^2 = \frac{1}{\op{r}^2}\left(\big(\oprv\oppv\big)^2+\frac{\hbar}{i}\oprv\oppv\right) +\frac{\op{L}^2}{\op{r}^2}.
    }
@@ -404,58 +431,6 @@
     &\op{p}^2 = \op{p}^2_r+\frac{\op{L}^2}{\op{r}^2}&
     &\op{p}_r=\frac{1}{\op{r}}\oprv\oppv+\frac{\hbar}{i}\frac{1}{\op{r}}.\label{eq:06radmom}&
    }
-%    Ennek bizonyításához felhasználunk két kommutációs azonosságot:
-%    \al{
-%     &[\op{p}_i,f(r)]=\frac{\hbar}{i}f'(\op{r})\frac{\op{x}_i}{\op{r}}&
-%     &[\op{p}_i,f(\op{r})x_j]=\frac{\hbar}{i}\left(f(\op{r})\delta_{ij}+f'(\op{r})\frac{\op{x}_i\op{x}_j}{\op{r}}\right).&
-%    }
-%    Így
-%    \al{
-%     \op{p}_r^2=
-%      \left(\frac{1}{\op{r}}\oprv\oppv\right)^2
-%      -\frac{\hbar^2}{\op{r}^2}
-%      +\frac{\hbar}{i}\frac{1}{\op{r}^2}\oprv\oppv
-%      +\frac{\hbar}{i}\frac{1}{\op{r}}\oprv\oppv\frac{1}{\op{r}}.
-%    }
-%    Az első tagban kihasználva a második azonosságot:
-%    \al{
-%     \left(\frac{1}{\op{r}}\oprv\oppv\right)^2
-%      &=\frac{\op{x}_j}{\op{r}}\op{p}_j\frac{\op{x}_k}{\op{r}}\op{p}_k
-%       =\frac{\op{x}_j}{\op{r}}
-%       \left[
-%       \frac{\hbar}{i}\left(\frac{1}{\op{r}}\delta_{jk}-\frac{\op{x}_j\op{x}_k}{\op{r}^3}\right)+\frac{\op{x}_k}{\op{r}}\op{p}_j
-%       \right]
-%       \op{p}_k\\
-%      &=
-%       \frac{\hbar}{i}\frac{1}{\op{r}^2}\op{x}_k\op{p}_k
-%        +\frac{1}{\op{r}^2}\op{x}_j\op{x}_k\op{p}_j\op{p}_k
-%        -\frac{\hbar}{i}\frac{1}{\op{r}^2}\op{x}_k\op{p}_k\\
-%      &=
-%       \frac{1}{\op{r}^2}\op{x}_j\left(\op{x}_k\op{p}_j+\frac{\hbar}{i}\delta_{jk}\right)\op{p}_k
-%        -\frac{\hbar}{i}\frac{1}{\op{r}^2}\op{x}_k\op{p}_k\\
-%      &=
-%       \frac{1}{\op{r}^2}\op{x}_j\op{p}_j\op{x}_k\op{p}_k
-%        -\frac{\hbar}{i}\frac{1}{\op{r}^2}\op{x}_k\op{p}_k
-%       =
-%        \frac{1}{\op{r}^2}(\oprv\oppv)^2
-%        -\frac{\hbar}{i}\frac{1}{\op{r}^2}\oprv\oppv,
-%    }
-%    az utolsó tag pedig az első azonosság felhasználásával:
-%    \al{
-%     \frac{\hbar}{i}\frac{1}{\op{r}}\oprv\oppv\frac{1}{\op{r}}
-%      &=\frac{\hbar}{i}\frac{1}{\op{r}^2}\oprv\oppv+\frac{\hbar^2}{\op{r}^2}.
-%    }
-%    Tehát
-%    \al{
-%     \op{p}_r^2=
-%       \left(\frac{1}{\op{r}^2}(\oprv\oppv)^2
-%      -\frac{\hbar}{i}\frac{1}{\op{r}^2}\oprv\oppv\right)
-%      -\frac{\hbar^2}{\op{r}^2}
-%      +\frac{\hbar}{i}\frac{1}{\op{r}^2}\oprv\oppv
-%      +\left(\frac{\hbar}{i}\frac{1}{\op{r}^2}\oprv\oppv+\frac{\hbar^2}{\op{r}^2}\right)
-%      =\frac{1}{\op{r}^2}\left((\oprv\oppv)^2+\frac{\hbar}{i}\oprv\oppv\right),
-%    }
-%    vagyis beláttuk az állítást. 
    
    Ez a $\op{p}_r^2$ operátor azért nagyon kényelmes, mert az $\opLv$ ezzel felcserélhető:
    \eq{
@@ -483,7 +458,8 @@
     \al{
      \op{L}_z=\frac{\hbar}{i}(x\partial_y-y\partial_x)=\frac{\hbar}{i}\partial_\varphi.
     }
-    Az $\op{L}_z$ operátor az $\mathbb{L}^2[0,2\pi]=\{\psi | \int\abs{\psi}^2<\infty\text{, és }\psi(0)=\psi(2\pi)\}$ téren értelmezett, ott hermitikus. A sajátérték-egyenlet:
+    Az $\op{L}_z$ operátor az $\mathbb{L}^2[0,2\pi]=\{\psi | \int\abs{\psi}^2<\infty\text{, és }\psi(0)=\psi(2\pi)\}$ téren értelmezett, ott hermitikus.
+   A sajátérték-egyenlet:
     \al{
      \op{L}_z\psi(\varphi)=\frac{\hbar}{i}\partial_\varphi\psi(\varphi)=\hbar m\psi(\varphi).
     }
@@ -495,7 +471,8 @@
     
    \paragraph{Az $\opLv^2$ operátor sajátértékproblémája}\label{ss:06-L2spme}
     
-    Használjuk fel \az+\eqref{eq:06radmom} összefüggéseit. A bal oldal gömbi koordináta-reprezentációban:
+    Használjuk fel \az+\eqref{eq:06radmom} összefüggéseit.
+   A bal oldal gömbi koordináta-reprezentációban:
     \al{
      \op{p}^2
       =-\hbar^2\grad^2
@@ -520,7 +497,9 @@
     \al{
      \frac{\sin^2{\vartheta}}{F(\vartheta)}\left(F''(\vartheta)+\frac{1}{\tg(\vartheta)}F'(\vartheta)+\Lambda F(\vartheta)\right)=-\frac{G''(\varphi)}{G(\varphi)}
     }
-    Az egyenlet csak úgy lehet igaz, ha az egyenlet mindkét oldala egyenlő egy konstanssal. Jelöljük ezt $m^2$-tel. Ekkor a jobb oldal visszaadja az $\op{L}_z$ operátor sajátérték egyenletét:
+    Az egyenlet csak úgy lehet igaz, ha az egyenlet mindkét oldala egyenlő egy konstanssal.
+   Jelöljük ezt $m^2$-tel.
+   Ekkor a jobb oldal visszaadja az $\op{L}_z$ operátor sajátérték egyenletét:
     \al{
      &G_m(\varphi)=\frac{1}{\sqrt{2\pi}}e^{i m\varphi}&
      &m\in\mathbb{Z} =0,\pm 1,\pm 2,\dots.&
@@ -529,7 +508,8 @@
     \al{
      F''(\vartheta)+\frac{1}{\tg(\vartheta)}F'(\vartheta)+\left(\Lambda -\frac{m^2}{\sin^2{\vartheta}}\right)F(\vartheta)=0.
     }
-    Mivel a $\cos\vartheta$ a $\vartheta\in[0,\pi]$ intervallumon szigorúan monoton, ezért bevezethetjük az $x=\cos\vartheta$ változót. Ezzel az egyenlet:
+    Mivel a $\cos\vartheta$ a $\vartheta\in[0,\pi]$ intervallumon szigorúan monoton, ezért bevezethetjük az $x=\cos\vartheta$ változót.
+   Ezzel az egyenlet:
     \eq{
      \der{}{x}\left[(1-x^2)\der{}{x}F(x)\right]+\left(\Lambda -\frac{m^2}{1-x^2}\right)F(x)=0,
     }
@@ -603,53 +583,7 @@
      \\
      \caption{Gömbharmonikusok abszolútértéke ($\abs{Y_l^m(\vartheta,\varphi)}$). (Az ábrák egymáshoz képest méretarányosak.)}
     \end{figure}
-% 
-%   WIKIPÉDIÁS KONVENCIÓ, nekem jobban tetszik, de Szunyinál a másik van.
-%      A Legendre-polinomok:
-%      \al{
-%       P_l(\cos\vartheta)
-%        = \frac{1}{2^l l!} \frac{\dd^l}{\dd (\cos\vartheta)^l} \left[ (\cos^2\vartheta -1)^l \right],
-%      }
-%      amelyekkel az asszociált Legendre-polinomok:
-%      \al{
-%       P_l^m (\cos\vartheta)
-%        &=(-1)^m \sin^{m}(\cos\vartheta)\frac{\dd^{\abs{m}}}{\dd (\cos\vartheta)^{\abs{m}}}P_l(\cos\vartheta) 
-%       &0\le m\le l\\
-%       &P_l^{-m} (\cos\vartheta)
-%        =(-1)^m \frac{(l-m)!}{(l+m)!}P_l^m(\cos\vartheta).&
-%      }
-%      ahol így $m$ értéke már $-l$ és $l$ között lehet.
-%      
-%      A teljes normált megoldások:
-%      \al{
-%       &Y_l^m(\vartheta,\varphi)=A_l^{m}P_l^m(\cos\vartheta)\cdot e^{im\varphi},
-%       &A_l^{m}=\sqrt{\frac{2l+1}{4\pi}}\sqrt{\frac{(l-m)!}{(l+m)!}},
-%      }
-%      melyek ortogonalitása:
-%      \al{
-%       \intl{}{}\dd\Omega\,Y_l^m(Y_{l'}^{m'})^*=\delta_{ll'}\delta_{mm'}.
-%      }
-%      
-%      Az $l$ és az $m$ értékei kötöttek: $\Lambda=l(l+1)$, ahol $l=0,1,2,\dots$ és $m=-l,-l+1,\dots,l-1,l$.
-%      
-%      Tehát az $\opLv^2$ operátor sajátértékproblémájának megoldása:
-%      \\[6pt]
-%      \fbox{
-%       \addtolength{\linewidth}{-10\fboxsep}%
-%       \addtolength{\linewidth}{-5\fboxrule}%
-%       \begin{minipage}{\linewidth}
-%        \vspace{-14pt}
-%        \al{
-%         &L^2 Y_l^{m}(\vartheta,\varphi)=\hbar^2 l(l+1)Y_l^{m}(\vartheta,\varphi),\\
-%         &Y_l^{m}(\vartheta,\varphi)=A_l^{m}P_l^m(\cos\vartheta)\cdot e^{im\varphi} \\
-%         &l=0,1,2,\dots\\
-%         &m=-l,-l+1,\dots,0,\dots,l-1,l.
-%        }
-%       \end{minipage}
-%      }
-% 
-    
-    
+
   \subsection{Az $\op{L}_z$ és az $\opLv^2$ sajátértékproblémája léptetőoperátorokkal}
    
    A következő részben olyan operátor-struktúra sajátérték--sajátvektor problémájával foglalkozunk, amelyre egyedül egy megkötés van, azok a $[\op{L}_i,\op{L}_j]=i\hbar\ep_{ijk}\op{L}_k$ kommutációs relációnak tegyenek eleget. 
@@ -730,12 +664,15 @@
     &\op{L}_+\ket{\Lambda,m_\text{max}}=\ket{}_0,&
     &\op{L}_-\ket{\Lambda,m_\text{min}}=\ket{}_0.&
    }
-   Helyettesítsük be $\ket{\Lambda,m_\text{min}}$-t \eqaref{eq:06-pm}, illetve a $\ket{\Lambda,m_\text{max}}$-t \eqaref{eq:06-mp} egyenletbe. Ekkor: $\Lambda=m_\text{min}^2-m_\text{min}$ és $\Lambda=m_\text{max}^2+m_\text{max}$. Innen következik, hogy 
+   Helyettesítsük be $\ket{\Lambda,m_\text{min}}$-t \eqaref{eq:06-pm}, illetve a $\ket{\Lambda,m_\text{max}}$-t \eqaref{eq:06-mp} egyenletbe.
+   Ekkor: $\Lambda=m_\text{min}^2-m_\text{min}$ és $\Lambda=m_\text{max}^2+m_\text{max}$.
+   Innen következik, hogy 
    \al{
     m_\text{max}^2+m_\text{max}=m_\text{min}^2-m_\text{min}\\
     \big(m_\text{max}+m_\text{min}\big)\big(m_\text{max}-m_\text{min}+1\big)=0.
    } 
-   Ennek értelmes megoldása csak a $l:=m_\text{max}=-m_\text{min}$, amivel $\Lambda=l(l+1)$. Mivel $\Lambda$ és $l$ között egyértelmű a kapcsolat, ezért átindexelhetjük a sajátfüggvényeket.
+   Ennek értelmes megoldása csak a $l:=m_\text{max}=-m_\text{min}$, amivel $\Lambda=l(l+1)$.
+   Mivel $\Lambda$ és $l$ között egyértelmű a kapcsolat, ezért átindexelhetjük a sajátfüggvényeket.
    
    Összefoglalva tehát:
    \\[6pt]
@@ -756,7 +693,10 @@
    
   \subsection{Impulzusmomentum-összeadás}
    
-   Vizsgáljuk meg azt az esetet, mikor egy kvantum rendszerhez két impulzusmomentum jellegű mennyiség is tartozik. Ezek különböző Hilbert-téren hatnak: $\Lin(\mathbb{H}_1)\ni\opLv'_1$ és $\Lin(\mathbb{H}_2)\ni\opLv'_2$. A rendszer teljes állapotát a $\mathbb{H}_1\otimes\mathbb{H}_2$ tenzorszorzat Hilbert-téren tudjuk reprezentálni. Terjesszük ki az operátorokat erre a térre: 
+   Vizsgáljuk meg azt az esetet, mikor egy kvantum rendszerhez két impulzusmomentum jellegű mennyiség is tartozik.
+   Ezek különböző Hilbert-téren hatnak: $\Lin(\mathbb{H}_1)\ni\opLv'_1$ és $\Lin(\mathbb{H}_2)\ni\opLv'_2$.
+   A rendszer teljes állapotát a $\mathbb{H}_1\otimes\mathbb{H}_2$ tenzorszorzat Hilbert-téren tudjuk reprezentálni.
+   Terjesszük ki az operátorokat erre a térre: 
    \al{
     &\opLv_1\colon\mathbb{H}_1\otimes\mathbb{H}_2\mapsto\mathbb{H}_1\otimes\mathbb{H}_2,\;\opLv_1=\opLv_1'\otimes\text{id}_{\mathbb{H}_2}&
     &\opLv_1\colon\mathbb{H}_1\otimes\mathbb{H}_2\mapsto\mathbb{H}_1\otimes\mathbb{H}_2,\;\opLv_2=\text{id}_{\mathbb{H}_1}\otimes\opLv'_2.&
@@ -799,7 +739,8 @@
     \ket{l,m}
      =\suml{m_1,m_2}{}\bra{l_1,m_1,l_2,m_2}\et{l,m}\ket{l_1,m_1,l_2,m_2},\label{eq:06-cg}
    }
-   itt az $\bra{l_1,m_1,l_2,m_2}\et{l,m}$ együtthatók a Clebsch--Gordan-együtthatók. A célunk ezek meghatározása. 
+   itt az $\bra{l_1,m_1,l_2,m_2}\et{l,m}$ együtthatók a Clebsch--Gordan-együtthatók.
+   A célunk ezek meghatározása. 
    
    Nézzük meg az $\op{L}_z$ hatását egy általános, \eqref{eq:06-cg} egyenletben megadott állapotra:
    \al{
@@ -820,7 +761,9 @@
    }
    különben $\bra{l_1,m_1,l_2,m_2}\et{l,m}=0$.
    
-   Innen az is következik, hogy $l$ maximálisan $l_\text{max}=l_1+l_1$ lehet. A Clebsch--Gor\-dan-egy\-ütt\-ha\-tók meghatározásához szükségünk lesz az egyik együttható ismeretére. Ehhez először fejtsük ki az $\opLv^2$ operátort a léptető és az $\opL_z$ operátorokkal:
+   Innen az is következik, hogy $l$ maximálisan $l_\text{max}=l_1+l_1$ lehet.
+   A Clebsch--Gor\-dan-egy\-ütt\-ha\-tók meghatározásához szükségünk lesz az egyik együttható ismeretére.
+   Ehhez először fejtsük ki az $\opLv^2$ operátort a léptető és az $\opL_z$ operátorokkal:
    \al{
     \op{L}_1^{+}\op{L}_2^{-}+\op{L}_1^{-}\op{L}_2^{+}
      &=
@@ -846,7 +789,8 @@
      &\quad+\hbar^2\sqrt{l_1(l_1+1)-m(m_1+ 1)}\sqrt{l_2(l_2+1)-m_2(m_2- 1)}\ket{l_1,m_1+1,l_2,m_2-1}\\
      &\quad+\hbar^2\sqrt{l_1(l_1+1)-m(m_1- 1)}\sqrt{l_2(l_2+1)-m_2(m_2+ 1)}\ket{l_1,m_1-1,l_2,m_2+1}.
    } 
-   Vegyünk egy speciális báziselemet: $\ket{l_1,m_1,l_2,m_2}\to\ket{l_1,l_1,l_2,l_2}$. Erre a léptetők nullát adnak, így:
+   Vegyünk egy speciális báziselemet: $\ket{l_1,m_1,l_2,m_2}\to\ket{l_1,l_1,l_2,l_2}$.
+   Erre a léptetők nullát adnak, így:
    \al{
     \opLv^2\ket{l_1,l_1,l_2,l_2}
      &=\hbar^2\Big[l_1(l_1+1)+l_2(l_2+1)+2l_1l_2\Big]\ket{l_1,l_1,l_2,l_2}\\
@@ -858,14 +802,17 @@
      &=\big(\op{L}_{1,z}+\op{L}_{2,z}\big)\ket{l_1,l_1,l_2,l_2}
      =\hbar\Big[l_1+l_2\Big]\ket{l_1,l_1,l_2,l_2}.
    }
-   Láthatjuk, hogy az $\opLv^2$ és az $\op{L}_z$ úgy hat az $\ket{l_1,l_1,l_2,l_2}$ báziselemen, mintha az a saját $\ket{l_1+l_2,l_1+l_2}$ báziseleme lenne. Ha az operátorok nem látnak különbséget a báziselemek között, akkor azok megkülönböztethetetlenek, vagyis ugyanazok: $\ket{l_1+l_2,l_1+l_2}=\ket{l_1,l_1,l_2,l_2}$, így
+   Láthatjuk, hogy az $\opLv^2$ és az $\op{L}_z$ úgy hat az $\ket{l_1,l_1,l_2,l_2}$ báziselemen, mintha az a saját $\ket{l_1+l_2,l_1+l_2}$ báziseleme lenne.
+   Ha az operátorok nem látnak különbséget a báziselemek között, akkor azok megkülönböztethetetlenek, vagyis ugyanazok: $\ket{l_1+l_2,l_1+l_2}=\ket{l_1,l_1,l_2,l_2}$, így
    \eq{
     \bra{l_1,l_1,l_2,l_2}\et{l_1+l_2,l_1+l_2}=1.
    }
    
-   A többi Clebsch--Gordan-együtthatót a léptetőoperátorok segítségével tudjuk elkészíteni. A léptetés során ki kell használni az egyes báziselemek ortonormáltságát is. 
+   A többi Clebsch--Gordan-együtthatót a léptetőoperátorok segítségével tudjuk elkészíteni.
+   A léptetés során ki kell használni az egyes báziselemek ortonormáltságát is. 
    
-   A kérdés, hogy $l$ milyen értékeket járhat be. Ennek meghatározásához figyelembe kell venni azt, hogy a bázisok elemszáma azonos: $\dim(\mathbb{H}_1)=2l_1+1$, $\dim(\mathbb{H}_2)=2l_2+1$ és $\dim(\mathbb{H}_1\otimes\mathbb{H}_2)=\suml{l=l_\text{min}}{l_\text{max}}(2l+1)$, illetve a direkt szorzat tulajdonságai miatt:
+   A kérdés, hogy $l$ milyen értékeket járhat be.
+   Ennek meghatározásához figyelembe kell venni azt, hogy a bázisok elemszáma azonos: $\dim(\mathbb{H}_1)=2l_1+1$, $\dim(\mathbb{H}_2)=2l_2+1$ és $\dim(\mathbb{H}_1\otimes\mathbb{H}_2)=\suml{l=l_\text{min}}{l_\text{max}}(2l+1)$, illetve a direkt szorzat tulajdonságai miatt:
    \al{
     (2l_1+1)(2l_2+1)
      &=\suml{l=l_\text{min}}{l_\text{max}}(2l+1)
@@ -901,16 +848,23 @@
    
   \subsection{A spin létezésére utaló kísérletek: Stern--Gerlach-kísérlet}
    
-   A Stern--Gerlach-kísérlet során inhomogén mágneses téren keresztül bocsátanak egy ezüstatomokból álló nyalábot. Az ernyőn két részre oszlik a becsapódások helye. Az eredmény a pályamomentummal nem magyarázható, hiszen az ezüst atomok elektronszerkezete: $[\text{Kr}]\;4\text{d}^{10}\;5\text{s}^1$, vagyis a teljes atom pályamomentuma $L=0$. 
+   A Stern--Gerlach-kísérlet során inhomogén mágneses téren keresztül bocsátanak egy ezüstatomokból álló nyalábot.
+   Az ernyőn két részre oszlik a becsapódások helye.
+   Az eredmény a pályamomentummal nem magyarázható, hiszen az ezüst atomok elektronszerkezete: $[\text{Kr}]\;4\text{d}^{10}\;5\text{s}^1$, vagyis a teljes atom pályamomentuma $L=0$. 
    
-   A lehetséges magyarázat, hogy az elektron rendelkezik egy saját impulzusmomentummal, így mágneses momentummal ($\muv_s$) is. Ekkor a mágneses térben a potenciális energia: $V=-\muv_s \Bv$. Ha $\Bv(\rv)$ inhomogén (pl. a $z$ irányban), akkor az ezüst atomokra erő hat: $\Fv=-\grad{V}=\mu_{s,z}\der{B}{z}$. A mérés alapján $\mu_{s,z}=\mp\mu_\text{B}$, így jó választás az előzőek alapján $m_s=\pm\frac{1}{2}$, mellyel
+   A lehetséges magyarázat, hogy az elektron rendelkezik egy saját impulzusmomentummal, így mágneses momentummal ($\muv_s$) is.
+   Ekkor a mágneses térben a potenciális energia: $V=-\muv_s \Bv$.
+   Ha $\Bv(\rv)$ inhomogén (pl. a $z$ irányban), akkor az ezüst atomokra erő hat: $\Fv=-\grad{V}=\mu_{s,z}\der{B}{z}$.
+   A mérés alapján $\mu_{s,z}=\mp\mu_\text{B}$, így jó választás az előzőek alapján $m_s=\pm\frac{1}{2}$, mellyel
    \eq{
     \opmuv_s=-2\mu_\text{B}\frac{1}{\hbar}\opSv.
    }
    
   \subsection{Spin a klasszikus kvantummechanikában}
    
-   A spin operátora és a spinállapotok egy a korábbi leírásban szereplő Hilbert-tértől független térhez tartoznak. A feles spin operátorainak legkisebb ábrázolása $2\times2$-esek. A Hilbert-tér bázisának az $\opS_z$ operátor két sajátértékét választjuk: $\ket{\uparrow}$ és $\ket{\downarrow}$.  Ezen a bázison az operátorok a Pauli-mátrixokkal kifejezhetőek: 
+   A spin operátora és a spinállapotok egy a korábbi leírásban szereplő Hilbert-tértől független térhez tartoznak.
+   A feles spin operátorainak legkisebb ábrázolása $2\times2$-esek.
+   A Hilbert-tér bázisának az $\opS_z$ operátor két sajátértékét választjuk: $\ket{\uparrow}$ és $\ket{\downarrow}$.  Ezen a bázison az operátorok a Pauli-mátrixokkal kifejezhetőek: 
    \eq{
     \opSv=\frac{\hbar}{2}\opsigv.
    }
@@ -940,7 +894,8 @@
    
   \subsection{Spin a relativisztikus kvantummechanikában}
    
-   Relativisztikusan a spin nem jó kvantumszám, így az önmagában nem értelmezett mennyiség. Kisenergiás határesetben azonban vissza kell kapnunk a fenti összefüggéseket és a fenti értelmezést. 
+   Relativisztikusan a spin nem jó kvantumszám, így az önmagában nem értelmezett mennyiség.
+   Kisenergiás határesetben azonban vissza kell kapnunk a fenti összefüggéseket és a fenti értelmezést. 
    
    A stacionárius Dirac-egyenlet (\eqref{eq:02-DE} egyenlet alapján):
    \eq{
@@ -964,7 +919,8 @@
     \end{pmatrix}=
     0
    }
-   A második egyenletből fejezzük ki a nagykomponenst: $\chi(\minv{x})=(E+mc^2-q\phi)^{-1}\phi(\minv{x})$, ahol közelítsük az első tagot kis energiákra $2mc^2$-tel. Ezt az első egyenletbe helyettesítve:
+   A második egyenletből fejezzük ki a nagykomponenst: $\chi(\minv{x})=(E+mc^2-q\phi)^{-1}\phi(\minv{x})$, ahol közelítsük az első tagot kis energiákra $2mc^2$-tel.
+   Ezt az első egyenletbe helyettesítve:
    \al{
     0
      &=\big(E-mc^2-q\phi-c\opsigv\opkv\frac{1}{2mc^2}c\opsigv\opkv\big)\chi(\rv t)

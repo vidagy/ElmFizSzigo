@@ -2,14 +2,16 @@
  
  \section{Lineáris válasz}
   
-  Az időfüggetlen lineáris választ lásd \aref{ss:B05-linvalasz}. fejezetben. Itt az időfüggő válasszal fogunk foglalkozni kvantumos esetben.
+  Az időfüggetlen lineáris választ lásd \aref{ss:B05-linvalasz}. fejezetben.
+   Itt az időfüggő válasszal fogunk foglalkozni kvantumos esetben.
   
   A rendszer Hamilton-operátora:
   \al{
    \opH=\opH_0-\opY F(t)
        =\opH_0+\opV(t),
   }
-  ahol $F$ külső időfüggő perturbációkét jelen lévő klasszikus tér, mely az $\opY$ operátoron keresztül csatolódik. A perturbálatlan rendszer megoldását ismerjük, a kérdés az, hogy az időfüggő perturbációra hogyan változik meg a mérhető mennyiségek (pl. $\opX$) várható értéke. 
+  ahol $F$ külső időfüggő perturbációkét jelen lévő klasszikus tér, mely az $\opY$ operátoron keresztül csatolódik.
+   A perturbálatlan rendszer megoldását ismerjük, a kérdés az, hogy az időfüggő perturbációra hogyan változik meg a mérhető mennyiségek (pl. $\opX$) várható értéke. 
   
   Kis perturbációt tekintünk, úgyhogy $\mv{\opX}$ változását a perturbáció lineáris függvényeként keressük:
   \al{
@@ -24,7 +26,8 @@
    \mv{\opX}_0=\tr\left(\op\rho_0 \opX\right)=\frac{1}{\tr(\op\rho_0)}\suml{n}{}\bra{n}\opX\ket{n}e^{-\beta E_n}.
   }
   
-  A perturbáció kezeléséhez tekintsük a rendszer Dirac-képben (lásd \aref{ss:A01-dirac}. fejezetet). Itt az operátorok a $\opH_0$ szerint fejlődnek, míg a hullámfüggvények a perturbáció szerint:
+  A perturbáció kezeléséhez tekintsük a rendszer Dirac-képben (lásd \aref{ss:A01-dirac}. fejezetet).
+   Itt az operátorok a $\opH_0$ szerint fejlődnek, míg a hullámfüggvények a perturbáció szerint:
   \al{
    &\hat{X}(t)=e^{\frac{i}{\hbar}\opH_0 t}\op{X} e^{-\frac{i}{\hbar}\opH_0 t}
    &\ket{n(t)}=\T e^{-\frac{i}{\hbar}\intl{-\infty}{t}\dd \tau \op{V}_i(\tau)}\ket{n}.
@@ -60,7 +63,10 @@
   \al{
    \boxed{\chi_{\opX\opY}(t)=\frac{i}{\hbar}\mv{\left[\opX(t),\opY(0)\right]}_0\Theta(t).}
   }
-  A Kubo-formula tehát megadja, hogy milyen változás lesz az $\opX$ operátor várható értékében, ha az $\opY$ operátorral csatolunk egy külső teret a rendszerhez. A válasz csak a perturbálatlan rendszertől függ. Az időfejlődések az összefüggésben a kölcsönhatási képben értendőek. A képletben $\Theta(t)$ fejezi ki a kauzalitást. 
+  A Kubo-formula tehát megadja, hogy milyen változás lesz az $\opX$ operátor várható értékében, ha az $\opY$ operátorral csatolunk egy külső teret a rendszerhez.
+   A válasz csak a perturbálatlan rendszertől függ.
+   Az időfejlődések az összefüggésben a kölcsönhatási képben értendőek.
+   A képletben $\Theta(t)$ fejezi ki a kauzalitást. 
   
  \section{Kramers--Kronig-reláció}
   
@@ -76,7 +82,8 @@
     &=\frac{i}{\hbar}\Theta(t)\frac{1}{Z_0}\suml{n,m}{}\bigg(e^{-\beta E_n}e^{\frac{i}{\hbar}(E_n-E_m) t}X_{nm}Y_{mn}-e^{-\beta E_m}Y_{mn}X_{nm} e^{\frac{i}{\hbar}(E_n-E_m) t}\bigg)\\
     &=\frac{i}{\hbar}\Theta(t)\frac{1}{Z_0}\suml{n,m}{}\bigg(e^{-\beta E_n}-e^{-\beta E_m}\bigg)X_{nm}Y_{mn} e^{\frac{i}{\hbar}(E_n-E_m) t}
   }
-  Kapcsoljuk be adiabatikusan a gerjesztő szinuszos jelet: $F=F(t)=F\cdot e^{-i\omega t} e^{\delta t}$, ahol $\delta \to 0+0$. Ekkor a válasz:
+  Kapcsoljuk be adiabatikusan a gerjesztő szinuszos jelet: $F=F(t)=F\cdot e^{-i\omega t} e^{\delta t}$, ahol $\delta \to 0+0$.
+   Ekkor a válasz:
   \al{
    \mv{\Delta \opX(\omega)}=\chi_{\opX\opY}(\omega)\cdot F(t).
   }
@@ -100,7 +107,9 @@
   }
   A felbontás nem feltétlenül valós és képzetes részből áll, ugyanis a mátrixelemek lehetnek még komplex számok. 
   
-  Az $\chi_{\opX\opY}'(\omega)$-ben a főérték integrálban nem szerepelnek az átmenethez tartozó frekvenciák, így ez a rendszer rugalmas válasza. Ezzel szemben a $\chi_{\opX\opY}''(\omega)$ tagban csak a rendszer energiaszintjei közötti átmenetek találhatóak, ez a disszipatív válasz. A két mennyiség nem független, fennáll közöttük a Kramers--Kronig-reláció:
+  Az $\chi_{\opX\opY}'(\omega)$-ben a főérték integrálban nem szerepelnek az átmenethez tartozó frekvenciák, így ez a rendszer rugalmas válasza.
+   Ezzel szemben a $\chi_{\opX\opY}''(\omega)$ tagban csak a rendszer energiaszintjei közötti átmenetek találhatóak, ez a disszipatív válasz.
+   A két mennyiség nem független, fennáll közöttük a Kramers--Kronig-reláció:
   \al{
    \chi_{\opX\opY}'(\omega)=\frac{1}{\pi}\mathcal{P}\intl{-\infty}{\infty}\dd\omega'\,\frac{\chi_{\opX\opY}''(\omega')}{\omega'-\omega}.
   }
@@ -146,7 +155,8 @@
     =\hbar\ctgh\left(\frac{1}{2}\beta\hbar\omega\right)\chi_{\opX\opY}''(\omega).}
   }
   
-  Klasszikus határesetben $\hbar\to 0$, vagy $\hbar\omega\to 0$. Ekkor:
+  Klasszikus határesetben $\hbar\to 0$, vagy $\hbar\omega\to 0$.
+   Ekkor:
   \al{
    S_{\opX\opY}(\omega)
     =\frac{2}{\beta\omega}\underbrace{\frac{1}{2}\beta\hbar\omega\ctgh\left(\frac{1}{2}\beta\hbar\omega\right)}_{\to 1}\chi_{\opX\opY}''(\omega)

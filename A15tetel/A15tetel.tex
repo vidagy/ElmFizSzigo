@@ -2,7 +2,8 @@
  
  \section{Mechanika} 
   
-  A kanonikus és a kinetikus impulzust definícióját, illetve a relativisztikus Lagrange- és Hamilton-féle leírást lásd \aref{ss:02-relqLagrangeHamilton}. fejezet. A nemrelativisztikus tárgyalás \aref{ss:03-toltesEMterben}. fejezetben.
+  A kanonikus és a kinetikus impulzust definícióját, illetve a relativisztikus Lagrange- és Hamilton-féle leírást lásd \aref{ss:02-relqLagrangeHamilton}. fejezet.
+   A nemrelativisztikus tárgyalás \aref{ss:03-toltesEMterben}. fejezetben.
     
  \section{Elektrodinamika}
   
@@ -30,18 +31,22 @@
      &=\frac{q}{4\pi\ep_0}\intl{}{}\dd t'\,\frac{1}{\abs{\rv-\gammav\left(t'\right)}}\delta\left(t'-t+\frac{\abs{\rv-\gammav\left(t'\right)}}{c}\right)\\
      &=\frac{q}{4\pi\ep_0}\frac{1}{\abs{\rv-\gammav\left(\bar{t}\right)}}\intl{}{}\dd t'\,\delta\left(t'-t+\frac{\abs{\rv-\gammav\left(t'\right)}}{c}\right),
    }
-   ahol $\bar{t}$-vel jelöltük azt a $t'$-t, amire a Dirac-delta nem nulla. Ebből $\bar{t}$-re:
+   ahol $\bar{t}$-vel jelöltük azt a $t'$-t, amire a Dirac-delta nem nulla.
+   Ebből $\bar{t}$-re:
    \al{
     \bar{t}-t+\frac{\abs{\rv-\gammav\left(\bar{t}\right)}}{c}=0.
    }
-   Ez alapján $\bar t$ az az időpillanat, amikor el kellett indítani egy fényjelet $\gammav(\bar t)$-ből, hogy $t$-re $\rv$-ben legyen. Bevezetjük:
+   Ez alapján $\bar t$ az az időpillanat, amikor el kellett indítani egy fényjelet $\gammav(\bar t)$-ből, hogy $t$-re $\rv$-ben legyen.
+   Bevezetjük:
    \al{
     &\Rv=\rv-\gammav(\bar t)
     &R=\abs{\Rv}
     &&\betav=\frac{\vv}{c}
     &&c(t-\bar t)=R
    }
-   jelöléseket. Integráljuk ki a fenti Dirac-deltát. Ehhez változócsere:
+   jelöléseket.
+   Integráljuk ki a fenti Dirac-deltát.
+   Ehhez változócsere:
    \al{
     &u=t'-t+\frac{\abs{\rv-\gammav\left(t'\right)}}{c}
     &\der{u}{t'}=1-\frac{\vv\big(\rv-\gammav(t')\big)}{c\abs{\rv-\gammav\left(t'\right)}},
@@ -79,7 +84,10 @@
    }
    \\[3pt]
    
-   Ezekből a terek elkészíthetőek. A bonyodalom az, hogy $\Rv$ és $\betav$ is $\bar t$-n keresztül függ az időtől ($t$), ami pedig egy implicit egyenlettel van definiálva. Emiatt a deriválások nem egyszerűek, de elvégezhetőek. Az eredmény:
+   Ezekből a terek elkészíthetőek.
+   A bonyodalom az, hogy $\Rv$ és $\betav$ is $\bar t$-n keresztül függ az időtől ($t$), ami pedig egy implicit egyenlettel van definiálva.
+   Emiatt a deriválások nem egyszerűek, de elvégezhetőek.
+   Az eredmény:
    \al{
     \Ev(t,\rv)
      &=\frac{q}{4\pi\ep_0}\big(1-\beta^2\big)\frac{\Rv-R\betav}{\big(R-\Rv\betav\big)^3}+\frac{q\mu_0}{4\pi}\frac{\Rv\times\Big[\big(\Rv-R\betav\big)\times\av\Big]}{\big(R-\Rv\betav\big)^3}\\
@@ -87,11 +95,13 @@
      &=\frac{1}{Z_0}\,\frac{\Rv}{R}\times\Ev(t,\rv).
    }
    
-   A potenciálok a relativisztikus formalizmusban is megadhatóak. A Li\-é\-nard--Wie\-chert-po\-ten\-ci\-ál\-ok négyesvektora:
+   A potenciálok a relativisztikus formalizmusban is megadhatóak.
+   A Li\-é\-nard--Wie\-chert-po\-ten\-ci\-ál\-ok négyesvektora:
    \al{
     \minv{A}^\mu=\frac{\mu_0 q}{4\pi}\frac{(c,\vv)}{R-\vects{\beta}\Rv},
    }
-   Keressük meg a jobb oldalt, mint négyesvektorként felírt mennyiséget. Ehhez paraméterezzünk a sajátidővel: 
+   Keressük meg a jobb oldalt, mint négyesvektorként felírt mennyiséget.
+   Ehhez paraméterezzünk a sajátidővel: 
    \al{
     &\gamma^\mu=\big(ct(\tau),\vects{\gamma}(\tau)\big)
     &\minv{u}^\mu=\der{\gamma^\mu}{\tau}=\frac{(c,\vv)}{\sqrt{1-v^2/c^2}}
@@ -109,7 +119,8 @@
    
    \paragraph{Egyenesvonaló egyenletes mozgást végző töltés tere}
     
-    Legyen a megfigyelési pont az $x$ tengelyen: $\rv=\big(x;0;0\big)$, a töltés pedig mozogjon a $z$ tengelyen: $\gammav(t)=\big(0;0;vt\big)$. Innen a fontos mennyiségek:
+    Legyen a megfigyelési pont az $x$ tengelyen: $\rv=\big(x;0;0\big)$, a töltés pedig mozogjon a $z$ tengelyen: $\gammav(t)=\big(0;0;vt\big)$.
+   Innen a fontos mennyiségek:
     \al{
      \Rv
       &=\rv-\gammav(\bar{t})=\big(x;0;-v\bar{t}\big)\\
@@ -161,11 +172,12 @@
       \end{pmatrix}
     }
     
-   Eredmény, hogy az ekvipotenciális felületek nem gömbök, hanem ellipszoidok, hiszen $\phi$ ott konstans, ahol $x^2+\gamma^2z^2=r^2$. Mivel $\gamma>1$, azért az ellipszis a mozgás irányában lapított. 
+   Eredmény, hogy az ekvipotenciális felületek nem gömbök, hanem ellipszoidok, hiszen $\phi$ ott konstans, ahol $x^2+\gamma^2z^2=r^2$.
+   Mivel $\gamma>1$, azért az ellipszis a mozgás irányában lapított. 
    
-   Fontos még azt is látni, hogy a potenciálok nem a Galilei-transzformáció szerint transzformálódnak. A megfigyelési pontot helyezzük át $\rv\to\rv+\vv t$, és $t'\to t$ mozgó rendszerbe a Galilei-transzformáció szerint, akkor a ponttöltés áll, de a potenciálok nem adják vissza a nyugalmi esetben lévő potenciált.
-   
-   
+   Fontos még azt is látni, hogy a potenciálok nem a Galilei-transzformáció szerint transzformálódnak.
+   A megfigyelési pontot helyezzük át $\rv\to\rv+\vv t$, és $t'\to t$ mozgó rendszerbe a Galilei-transzformáció szerint, akkor a ponttöltés áll, de a potenciálok nem adják vissza a nyugalmi esetben lévő potenciált.
+
  \section{Kvantummechanika}
   
   \subsection{A kanonikus és kinetikus impulzus felcserélési relációi}
@@ -174,7 +186,8 @@
    
   \subsection{Landau-nívók}
    
-   Tekintsünk egy dobozba zárt nemkölcsönható spintelen elektrongázt, melyet $z$ irányú, homogén, $B$ nagyságú mágneses térbe helyezünk. Ekkor a Schrödinger-egyenlet:
+   Tekintsünk egy dobozba zárt nemkölcsönható spintelen elektrongázt, melyet $z$ irányú, homogén, $B$ nagyságú mágneses térbe helyezünk.
+   Ekkor a Schrödinger-egyenlet:
    \al{
     \frac{1}{2m}\opkv^2\psi(\rv)&=\ep\psi(\rv)\\
     \frac{1}{2m}\big(\oppv-q\Av\big)^2\psi(\rv)&=\ep\psi(\rv)\\
@@ -222,7 +235,8 @@
      +\frac{1}{2}m \omega_c^2\left(x-x_0\right)^2
      &=\left(\ep-\frac{\hbar^2 k_z^2}{2m}\right)u(x).
     }
-    Ez egy harmonikus oszcillátor Schrödinger-egyenlete. A megoldásait ismerjük:
+    Ez egy harmonikus oszcillátor Schrödinger-egyenlete.
+   A megoldásait ismerjük:
     \al{
      E&=\ep-\frac{\hbar^2 k_z^2}{2m}=\left(n+\frac{1}{2}\right)\hbar\omega_c
      &n=0,1,2,\dots\\
@@ -234,11 +248,16 @@
     \al{
      \ep=-\frac{\hbar^2 k_z^2}{2m}+\left(n+\frac{1}{2}\right)\hbar\omega_c.
     }
-    Tehát az energia két részből tevődik össze, egyrészt van a $z$ irányú szabad mozgás, illetve van egy $x$--$y$ síkú oszcillálás. A térre merőleges oszcillálás kvantumjának nagysága függ a $B$-től. 
+    Tehát az energia két részből tevődik össze, egyrészt van a $z$ irányú szabad mozgás, illetve van egy $x$--$y$ síkú oszcillálás.
+   A térre merőleges oszcillálás kvantumjának nagysága függ a $B$-től. 
     
-    A kvantáltság termodinamikai limeszben is megmarad, hiszen ha nagy a tér, akkor $\omega_c$ nagy, így $n$-ben a szintek látszanak. A $k_z$ $\frac{2\pi}{L_z}$ egységekben van kvantálva, ahol $L_z$ a $z$ irányú kiterjedés (periodikus határfeltétel). Az $n$-hez tartozó szintekből így kvázifolytonos alsávok lesznek, melyek át is fedhetnek.
+    A kvantáltság termodinamikai limeszben is megmarad, hiszen ha nagy a tér, akkor $\omega_c$ nagy, így $n$-ben a szintek látszanak.
+   A $k_z$ $\frac{2\pi}{L_z}$ egységekben van kvantálva, ahol $L_z$ a $z$ irányú kiterjedés (periodikus határfeltétel).
+   Az $n$-hez tartozó szintekből így kvázifolytonos alsávok lesznek, melyek át is fedhetnek.
     
-    Az állapotok tehát három kvantumszámmal jellemezhetőek: $n$, $k_y$, $k_z$. Az energia kifejezésében azonban csak $k_z$ és $n$ jelenik meg, így a csak $k_y$-ban különböző állapotok elfajultak. $x_0= \frac{\hbar}{\abs{q}B}k_y=l_0^2 k_y$. Mivel a Hermite-polinomok gyorsan levágnak, ezért csak azok a megoldások érdekesek, ahol $x_0$ benne van a mintában, azaz $0<x_0<L_x$, vagyis 
+    Az állapotok tehát három kvantumszámmal jellemezhetőek: $n$, $k_y$, $k_z$.
+   Az energia kifejezésében azonban csak $k_z$ és $n$ jelenik meg, így a csak $k_y$-ban különböző állapotok elfajultak. $x_0= \frac{\hbar}{\abs{q}B}k_y=l_0^2 k_y$.
+   Mivel a Hermite-polinomok gyorsan levágnak, ezért csak azok a megoldások érdekesek, ahol $x_0$ benne van a mintában, azaz $0<x_0<L_x$, vagyis 
     \al{
      0<k_y<\frac{L_x}{l_0^2}=\frac{L_x\abs{q}B}{\hbar}=\frac{L_x m\omega_c}{\hbar}.
     }
@@ -250,22 +269,13 @@
       =\frac{L_x L_y }{2 l_0^2}
       =\frac{\abs{q}B}{2\pi\hbar}L_x L_y.
     }
-    Tehát a degeneráció attól függ, hogy mennyire erős a mágneses tér. Elektronra $q=-e$, bevezetve a fluxuskvantumot $\Phi_0^*=\frac{h}{e}$, a degeneráció foka:
+    Tehát a degeneráció attól függ, hogy mennyire erős a mágneses tér.
+   Elektronra $q=-e$, bevezetve a fluxuskvantumot $\Phi_0^*=\frac{h}{e}$, a degeneráció foka:
     \al{
      N_p=\frac{L_x L_y B}{\Phi_0^*}=\frac{\Phi}{\Phi_0^*},
     }
     ahol $\Phi$ a mintára eső mágneses fluxus.
-    
-%    {\color{red} Megoldás a kommutációs relációk alapján kell? Szerintem elég ez így is...}
-    
-%     Tudjuk, hogy a kinetikus impulzus kommutációs relációi:
-%     \al{
-%      \big[\vect{k}_i,\vect{k}_j\big]
-%       &=-\frac{\hbar q}{i}\ep_{ijk}\vect{B}_k\\
-%      \big[\vect{k}_i,\vect{x}_j\big]
-%       &=\frac{\hbar}{i}\delta_{ij}.
-%     }
-  
+
   \subsection{Hullámfüggvény transzformációja mértéktranszformáció esetén. }
    
    Az elektrodinamikai potenciálok esetében a mértéktranszformáció (lásd \ref{ss:04-mertekszabadsag}. fejezet):
@@ -318,18 +328,25 @@
    
   \subsection{Aharonov--Bohm-effektus}
    
-   Tekintsünk egy időben állandó mágneses teret. Ennek bármilyen mértéktranszformációja csak időtől független mértékkel történhet: $\partial_t\Lambda=0$, vagyis $\phi'=\phi$. Készítsük el a vektorpotenciál egy adott $\gamma$ görbére vonatkozó vonalintegrálját:
+   Tekintsünk egy időben állandó mágneses teret.
+   Ennek bármilyen mértéktranszformációja csak időtől független mértékkel történhet: $\partial_t\Lambda=0$, vagyis $\phi'=\phi$.
+   Készítsük el a vektorpotenciál egy adott $\gamma$ görbére vonatkozó vonalintegrálját:
    \al{
     \intl{\gamma:\rv_0\to\rv}{}\dd\sv\,\Av'(\sv)
      =\intl{\gamma:\rv_0\to\rv}{}\dd\sv\,\big(\Av(\sv)+\grad\Lambda\big)
      =\intl{\gamma:\rv_0\to\rv}{}\dd\sv\,\Av(\sv)+\Lambda(\rv)-\Lambda(\rv_0).
    }
    
-   Legyen $\Bv=0$. Ekkor $\Av'=0$ elérhető. Az előző egyenlet alapján:
+   Legyen $\Bv=0$.
+   Ekkor $\Av'=0$ elérhető.
+   Az előző egyenlet alapján:
    \al{
     \Lambda(\rv)=\underbrace{\Lambda(\rv_0)}_{=0}-\intl{\gamma:\rv_0\to\rv}{}\dd\sv\,\Av(\sv),
    }
-   ahol a $\Lambda(\rv_0)$-t nullának választottuk. Ez a definíció így nem korrekt, mert szerepel benne az integrálási út, a $\gamma$. Az integrál akkor független $\gamma$-tól, ha $\Av$ rotációmentes vektortér azon az egyszeresen összefüggő tartományon, amiben $\rv$ és $\rv_0$ is benne van. Természetesen $\Lambda$ ekkor csak ezen a tartományon értelmezett. 
+   ahol a $\Lambda(\rv_0)$-t nullának választottuk.
+   Ez a definíció így nem korrekt, mert szerepel benne az integrálási út, a $\gamma$.
+   Az integrál akkor független $\gamma$-tól, ha $\Av$ rotációmentes vektortér azon az egyszeresen összefüggő tartományon, amiben $\rv$ és $\rv_0$ is benne van.
+   Természetesen $\Lambda$ ekkor csak ezen a tartományon értelmezett. 
    
    Ha a tartomány nem egyszeresen összefüggő, és van olyan rész ($\Omega_\text{B}$), ahol az $\Av$ rotációja nem nulla, hanem $\Bv(\ne 0)$, akkor a $\Lambda(\rv)$ értéke a
    \al{
@@ -341,7 +358,9 @@
    }
    egészszámszorosáig határozatlan. 
    
-   Tekintsünk egy olyan egyszeresen összefüggő tartományt, ahol $\Bv=0$ és $\Lambda$ előállítható egyértelműen a fenti módon. Az $\Av$ vektorpotenciálhoz tartozzon $\Psi_\text{B}$, a transzformált $\Av'=0$-hot pedig $\Psi'=\Psi_0$. A transzformációk:
+   Tekintsünk egy olyan egyszeresen összefüggő tartományt, ahol $\Bv=0$ és $\Lambda$ előállítható egyértelműen a fenti módon.
+   Az $\Av$ vektorpotenciálhoz tartozzon $\Psi_\text{B}$, a transzformált $\Av'=0$-hot pedig $\Psi'=\Psi_0$.
+   A transzformációk:
    \al{
     \Psi_0(t,\rv)
      &=\Psi_\text{B}(t,\rv)e^{\frac{iq}{\hbar}\Lambda}
@@ -351,12 +370,15 @@
    
    Kérdés, hogy mi történik akkor, ha ez az összefüggő tartományon belül bekapcsolunk egy mágneses teret, hogyan fog változni az elektronok viselkedése. 
    
-   Az Aharonov--Bohm-kísérletben egy kétréses kísérletet végeznek el, ahol a két rés között található egy szolenoid. A részecskeforrás legyen $\rv_0$-ban, a részecskék pedig mehetnek az egyik résen át az ernyő $\rv$ pontjára ($\gamma_1$ út), illetve a másik résen át is ($\gamma_2$). A fenti konstrukcióval elvégezhető a transzformáció külön-külön az egyik, illetve a másik résen átjutó elektron hullámfüggvényére, így
+   Az Aharonov--Bohm-kísérletben egy kétréses kísérletet végeznek el, ahol a két rés között található egy szolenoid.
+   A részecskeforrás legyen $\rv_0$-ban, a részecskék pedig mehetnek az egyik résen át az ernyő $\rv$ pontjára ($\gamma_1$ út), illetve a másik résen át is ($\gamma_2$).
+   A fenti konstrukcióval elvégezhető a transzformáció külön-külön az egyik, illetve a másik résen átjutó elektron hullámfüggvényére, így
    \al{
     \Psi_\text{1,B}(t,\rv)&=\Psi_{1,0}(t,\rv)\cdot e^{\frac{iq}{\hbar}\intl{\gamma_1:\rv_0\to\rv}{}\dd\sv\,\Av(\sv)}\\
     \Psi_\text{2,B}(t,\rv)&=\Psi_{2,0}(t,\rv)\cdot e^{\frac{iq}{\hbar}\intl{\gamma_2:\rv_0\to\rv}{}\dd\sv\,\Av(\sv)}.
    }
-   A csalás az, hogy mi ezeket a transzformációkat úgy konstruáltuk meg, hogy közben a másik rést letakartuk, hogy a tartomány egyszeresen összefüggő lehessen. Valójában a transzformáció így nem írható fel, de az így kapott eredmény nem lesz távol a valóságtól.
+   A csalás az, hogy mi ezeket a transzformációkat úgy konstruáltuk meg, hogy közben a másik rést letakartuk, hogy a tartomány egyszeresen összefüggő lehessen.
+   Valójában a transzformáció így nem írható fel, de az így kapott eredmény nem lesz távol a valóságtól.
    
    Tehát kérdés, hogy milyen lesz így az interferenciakép:
    \al{
@@ -368,7 +390,9 @@
      &=\frac{1}{2}\abs{\Psi_{1,0}(t,\rv)\cdot e^{\frac{iq}{\hbar}\ointl{\gamma_1-\gamma_2}{}\dd\sv\,\Av(\sv)}+\Psi_{2,0}(t,\rv)}^2
       =\frac{1}{2}\abs{\Psi_{1,0}(t,\rv)\cdot e^{\frac{iq}{\hbar}\Phi_\text{B}}+\Psi_{2,0}(t,\rv)}^2.
    }
-   Közelítsük a nulla térben közlekedő részecskék mozgását síkhullámokkal: $\Psi_{2,0}(t,\rv)=e^{i\kv\rv-i\omega t}$. Az időfüggésre kiátlagolunk, az ernyőig pedig az egyik úton $l_1$ a másikon $l_2$ utat számolunk. Ekkor az intenzitás arányos lesz:
+   Közelítsük a nulla térben közlekedő részecskék mozgását síkhullámokkal: $\Psi_{2,0}(t,\rv)=e^{i\kv\rv-i\omega t}$.
+   Az időfüggésre kiátlagolunk, az ernyőig pedig az egyik úton $l_1$ a másikon $l_2$ utat számolunk.
+   Ekkor az intenzitás arányos lesz:
    \al{
     I&\sim\frac{1}{2}\abs{e^{ikl_1}\cdot e^{\frac{iq}{\hbar}\Phi_\text{B}}+e^{ikl_2}}^2
       =\frac{1}{2}\abs{e^{ik(l_1-l_2)+\frac{iq}{\hbar}\Phi_\text{B}}+1}^2

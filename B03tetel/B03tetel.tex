@@ -2,11 +2,14 @@
  
  \paragraph{Állapotszám}
   
-  Legyen egy $N$ részecskés kvantummechanikai rendszerünk. Ebben az energiaszintek: $E_i$. Az állapotszám:
+  Legyen egy $N$ részecskés kvantummechanikai rendszerünk.
+   Ebben az energiaszintek: $E_i$.
+   Az állapotszám:
   \al{
    \Omega_{0,\text{QM}}(E)=\frac{1}{N!}\suml{n}{}\Theta(E-E_n),
   }
-  ami tehát összeszámolja, hogy hány energiaszint van $E$ alatt. Klasszikusan is hasonló a definíció:
+  ami tehát összeszámolja, hogy hány energiaszint van $E$ alatt.
+   Klasszikusan is hasonló a definíció:
   \al{
    \Omega_{0,\text{CL}}(E)=\intl{\substack{\text{állapotok,}\\ \text{ahol }E'<E}}{}\frac{\dd^{dN}p\dd^{dN}q}{N! h^{dN}}\,.
   }
@@ -21,7 +24,9 @@
   
  \paragraph{Állapotsűrűség}
   
-  Makroszkopikus rendszerben az energiaszintek nagyon sűrűn helyezkednek el, $N\to\infty$-ben folytonossá válnak. Ekkor a differenciális állapotszámban vehetjük a $\delta E\to\dd E\to 0$ határesetet. Ekkor:
+  Makroszkopikus rendszerben az energiaszintek nagyon sűrűn helyezkednek el, $N\to\infty$-ben folytonossá válnak.
+   Ekkor a differenciális állapotszámban vehetjük a $\delta E\to\dd E\to 0$ határesetet.
+   Ekkor:
   \al{
    &\Omega(E,\dd E)
     =\Omega_0(E+\dd E)-\Omega_0(E)
@@ -40,15 +45,19 @@
   
   Léteznek nem normál rendszerek is, ott ez biztosan nem teljesül, ahol véges a rendszer véges állapottal rendelkezik. 
   
-  Normál rendszerre egy példa az ideális gáz, a számolást klasszikus esetben lásd \aref{ss:B06-CID}.\ fejezetben. Nem normál rendszer bármilyen véges állapotú rendszer, például a spinrendszerek. Erre példa \aref{ss:neghom}.\ fejezetben. 
+  Normál rendszerre egy példa az ideális gáz, a számolást klasszikus esetben lásd \aref{ss:B06-CID}.\ fejezetben.
+   Nem normál rendszer bármilyen véges állapotú rendszer, például a spinrendszerek.
+   Erre példa \aref{ss:neghom}.\ fejezetben. 
   
  \section{Mikrokanonikus sokaság ($E$,$V$,$N$)}\label{ss:B03-mikrokansok}
   
-  A zárt rendszerhez tartozó sokaság a mikrokanonikus sokaság. Ekkor $E$, $N$ és $V$ rögzített. $E$-t nem tudjuk fizikailag sem rögzíteni, így abban megengedünk egy $\delta E$ makroszkopikus nagyságú bizonytalanságot, így azt állíthatjuk, hogy a rendszer energiája $E$ és $E+\delta E$ között van. 
+  A zárt rendszerhez tartozó sokaság a mikrokanonikus sokaság.
+   Ekkor $E$, $N$ és $V$ rögzített. $E$-t nem tudjuk fizikailag sem rögzíteni, így abban megengedünk egy $\delta E$ makroszkopikus nagyságú bizonytalanságot, így azt állíthatjuk, hogy a rendszer energiája $E$ és $E+\delta E$ között van. 
   
   \subsection{Egyenlő valószínűségek elve}
    
-   A rendszer állapotáról semmit nem tudunk, csak annyit, hogy az energiája a fenti sávban van. A statisztikus fizika egyik alapfeltevése az, hogy azt egyes állapotok valószínűsége ugyanakkora:
+   A rendszer állapotáról semmit nem tudunk, csak annyit, hogy az energiája a fenti sávban van.
+   A statisztikus fizika egyik alapfeltevése az, hogy azt egyes állapotok valószínűsége ugyanakkora:
    \al{
     \rho(i)=\begin{cases}
              \frac{1}{\Omega(E,\delta E)}, & \text{ha } E_i\in [E,E+\delta E]\\
@@ -63,17 +72,25 @@
    \al{
     S(E,V,N)=\kB\ln\Omega(E,\delta E),
    }
-   ahol $\kB=1,38\cdot 10^{-23}\me{\frac{J}{K}}$ a Boltzmann-állandó. Kérdés, hogy mi köze ennek a termodinamikában definiált entrópiához. Ennek eldöntéséhez vizsgáljuk meg a statisztikus fizikai entrópia tulajdonságait:
+   ahol $\kB=1,38\cdot 10^{-23}\me{\frac{J}{K}}$ a Boltzmann-állandó.
+   Kérdés, hogy mi köze ennek a termodinamikában definiált entrópiához.
+   Ennek eldöntéséhez vizsgáljuk meg a statisztikus fizikai entrópia tulajdonságait:
    
    \begin{itemize} 
     \item
-     Mivel az $\ln$ függvény monoton nő, ezért normál rendszeren $S$ akkor nő, ha $\Omega$ nő. Az állapotok számának növelésével a rendszer rendezetlensége, az, hogy milyen állapotban lehet a rendszer, nő, így az entrópia tekinthető a rendezetlenség mértékének.
+     Mivel az $\ln$ függvény monoton nő, ezért normál rendszeren $S$ akkor nő, ha $\Omega$ nő.
+   Az állapotok számának növelésével a rendszer rendezetlensége, az, hogy milyen állapotban lehet a rendszer, nő, így az entrópia tekinthető a rendezetlenség mértékének.
     
     \item
-     Spontán folyamatokban $S$ növekszik. Pl.\ ha egy gáz kezdetben el volt zárva, majd kinyitjuk a szelepet, és hagyjuk, hogy kitöltse a teret. Az entrópia nő, hiszen a tágulással a fázistér jóval megnőtt, így az állapotszám is megnövekedet.
+     Spontán folyamatokban $S$ növekszik.
+   Pl.\ ha egy gáz kezdetben el volt zárva, majd kinyitjuk a szelepet, és hagyjuk, hogy kitöltse a teret.
+   Az entrópia nő, hiszen a tágulással a fázistér jóval megnőtt, így az állapotszám is megnövekedet.
      
     \item
-     Izolált rendszerekben az entrópia additív. Legyen két izolált rendszerünk. Ezekben az állapotszám $\Omega_1(E_1,\delta E_1)$ és $\Omega_2(E_2,\delta E_2)$. A teljes rendszerben, mivel ezek függetlenek, a lehetséges állapotok száma ennek a kettőnek a szorzata, így 
+     Izolált rendszerekben az entrópia additív.
+   Legyen két izolált rendszerünk.
+   Ezekben az állapotszám $\Omega_1(E_1,\delta E_1)$ és $\Omega_2(E_2,\delta E_2)$.
+   A teljes rendszerben, mivel ezek függetlenek, a lehetséges állapotok száma ennek a kettőnek a szorzata, így 
      \al{
       S_{1+2}
       &=\kB\ln\Omega_{1+2}(E_1,\delta E_1;E_2,\delta E_2)
@@ -100,7 +117,10 @@
        =\kB\ln\big(\omega(E)\delta E)
        =\kB\ln\omega(E)+\kB\ln\delta E.
      } 
-     Normál rendszerekben $\Omega\sim e^{N}$ így $\omega\sim e^{N}$ szintén, hiszen $E/N$ állandó. A $\delta E$ makroszkópikus nagyságú, vagyis nagyságrendileg $\sim E$, azaz $\sim N$. Innen tehát az adódik, hogy $S$ arányos egy $\sim N$ és egy $\sim\ln N$ taggal. A második tag elhagyható a termodinamikai határesetben, így: $S=\kB\ln\omega(E)$, $\delta E$-től függetlenül. 
+     Normál rendszerekben $\Omega\sim e^{N}$ így $\omega\sim e^{N}$ szintén, hiszen $E/N$ állandó.
+   A $\delta E$ makroszkópikus nagyságú, vagyis nagyságrendileg $\sim E$, azaz $\sim N$.
+   Innen tehát az adódik, hogy $S$ arányos egy $\sim N$ és egy $\sim\ln N$ taggal.
+   A második tag elhagyható a termodinamikai határesetben, így: $S=\kB\ln\omega(E)$, $\delta E$-től függetlenül. 
      
      Az {\color{red} ÁBRÁ}ról látszik, hogy $\Omega(E,\delta E)<\Omega_0(E)<\omega(E)E$, melynek logaritmusát véve és kihasználva, hogy a termodinamikai határesetben $\ln E$ jóval elhagyható $\ln\omega(E)$ mellett, következik, hogy $S=\kB\Omega_0(E)$ is fennáll. Összefoglalva:
      \aln{
@@ -112,7 +132,9 @@
    
   \subsection{Termikus kapcsolatban lévő alrendszerek, hőmérséklet}
    
-   Legyen egy zárt rendszerünk, melyet két termikus kapcsolatban álló alrendszerre osztottunk. Rövidtávú kölcsönhatások esetén a kölcsönhatási energia elhanyagolható a két alrendszer között, így $E=E_1+E_2$. $E_1$ és $E_2$ változhat a kölcsönhatások miatt, egyedül annyit tudunk, hogy az egész rendszer zárt, így $E_1+E_2=E$ az $E$ és a $E+\delta E$ tartományon van. A kölcsönhatást csak abban az értelemben vesszük figyelembe, hogy ez termalizálja a két rendszert, de a rendszerek állapotának számításakor nem vesszük figyelembe.
+   Legyen egy zárt rendszerünk, melyet két termikus kapcsolatban álló alrendszerre osztottunk.
+   Rövidtávú kölcsönhatások esetén a kölcsönhatási energia elhanyagolható a két alrendszer között, így $E=E_1+E_2$. $E_1$ és $E_2$ változhat a kölcsönhatások miatt, egyedül annyit tudunk, hogy az egész rendszer zárt, így $E_1+E_2=E$ az $E$ és a $E+\delta E$ tartományon van.
+   A kölcsönhatást csak abban az értelemben vesszük figyelembe, hogy ez termalizálja a két rendszert, de a rendszerek állapotának számításakor nem vesszük figyelembe.
    
    Írjuk fel a teljes rendszer állapotszámát, figyelembe véve azt, hogy a két rendszer állapotszáma független:
    \al{
@@ -131,13 +153,16 @@
    \aln{
     f(E_1,E)=\frac{\omega_1(E_1)\omega_2(E-E_1)}{\omega(E)}\label{eq:B03-eloszlas}
    }
-   függvényt annak a valószínűségének, hogy az 1-es rendszernek $E_1$ energiája van, ha az egész rendszernek $E$ az energiája. Az $E$ indexet elhagyjuk, mert az itt most úgy jelenik meg, mint egy paraméter. 
+   függvényt annak a valószínűségének, hogy az 1-es rendszernek $E_1$ energiája van, ha az egész rendszernek $E$ az energiája.
+   Az $E$ indexet elhagyjuk, mert az itt most úgy jelenik meg, mint egy paraméter. 
    
-   Mivel $\omega(E)$ nagyon meredek függvény, ezért két ilyen fordított állású meredek függvény szorzata éles. Tehát jó közelítéssel mondhatjuk, hogy $E$ legvalószínűbb értéke megegyezik azzal az $E$-vel, ahol az $\omega(E)$ felveszi a maximumát.
+   Mivel $\omega(E)$ nagyon meredek függvény, ezért két ilyen fordított állású meredek függvény szorzata éles.
+   Tehát jó közelítéssel mondhatjuk, hogy $E$ legvalószínűbb értéke megegyezik azzal az $E$-vel, ahol az $\omega(E)$ felveszi a maximumát.
    
   \subsection{Hőmérséklet}
    
-   Tekintsük az előző zárt rendszer két alrendszere konstrukciót. A legvalószínűbb állapot az, ahol $f$-nek maximuma van, ami ugyanakkor történik meg, ha $\ln\omega_1(E_1)+\ln\omega_2(E-E_1)$-nek maximum van:
+   Tekintsük az előző zárt rendszer két alrendszere konstrukciót.
+   A legvalószínűbb állapot az, ahol $f$-nek maximuma van, ami ugyanakkor történik meg, ha $\ln\omega_1(E_1)+\ln\omega_2(E-E_1)$-nek maximum van:
    \al{
     0&=\pder{\ln\omega_1(E_1)}{E_1}+\pder{\ln\omega_2(E-E_1)}{E_1}
       =\pder{\ln\omega_1(E_1)}{E_1}-\pder{\ln\omega_2(E_2)}{E_2}\\
@@ -148,14 +173,18 @@
    \al{
     \beta=\frac{1}{\kB T}=\left(\pder{S}{E}\right)_{N,V}.
    }
-   A fenti levezetésből következik, hogy két termikusan kapcsolt rendszerben az egyensúly beálltával $T_1=T_2$. Az egyensúly akkor stabil, ha az eloszlásnak maximuma van, vagyis ha $\pder{^2f}{E_1^2}<0$. Ez akkor áll fenn, ha:
+   A fenti levezetésből következik, hogy két termikusan kapcsolt rendszerben az egyensúly beálltával $T_1=T_2$.
+   Az egyensúly akkor stabil, ha az eloszlásnak maximuma van, vagyis ha $\pder{^2f}{E_1^2}<0$.
+   Ez akkor áll fenn, ha:
    \al{
     0&>\pder{^2 S_1(E_1)}{E_1^2}+\pder{^2 S_2(E_2)}{E_1^2}
       =\pder{}{E_1}\frac{1}{T_1}-\pder{}{E_1}\frac{1}{T_2}
       =\pder{}{E_1}\frac{1}{T_1}+\pder{}{E_2}\frac{1}{T_2}
       =-\frac{1}{T_1^2}\pder{T_1}{E_1}-\frac{1}{T_2^2}\pder{T_2}{E_2}
    }
-   Mivel az egyensúlyban $T_1=T_2$, így szükséges, hogy $\pder{T_1}{E_1}+\pder{T_2}{E_2}>0$. Mivel $\pder{T_1}{E}\sim\pder{\ln\omega}{E^2}\sim\frac{\mathcal{O}(N)}{\mathcal{O}(N^2)}\sim\frac{1}{\mathcal{O}(N)}$, így ha $N_2\to\infty$ rendszert nézünk, akkor szükséges, hogy $0<\pder{T_1}{E_1}$. Tehát normál rendszerekben az energia a hőmérséklet monoton növekvő függvénye.
+   Mivel az egyensúlyban $T_1=T_2$, így szükséges, hogy $\pder{T_1}{E_1}+\pder{T_2}{E_2}>0$.
+   Mivel $\pder{T_1}{E}\sim\pder{\ln\omega}{E^2}\sim\frac{\mathcal{O}(N)}{\mathcal{O}(N^2)}\sim\frac{1}{\mathcal{O}(N)}$, így ha $N_2\to\infty$ rendszert nézünk, akkor szükséges, hogy $0<\pder{T_1}{E_1}$.
+   Tehát normál rendszerekben az energia a hőmérséklet monoton növekvő függvénye.
    
   \subsection{A hőmérséklet tulajdonságai}
    
@@ -180,15 +209,20 @@
     \item
      Egyensúlyban két termikusan kapcsolt rendszerben a hőmérséklet állandó.
     \item 
-     A stabilitás feltétele: $0>\pder{^2S}{E^2}$, így $0<\pder{T}{E}$. Ezek szerint stabil egyensúlyban a fajhő: $C_V=\pder{E}{T}>0$. 
+     A stabilitás feltétele: $0>\pder{^2S}{E^2}$, így $0<\pder{T}{E}$.
+   Ezek szerint stabil egyensúlyban a fajhő: $C_V=\pder{E}{T}>0$. 
      
     \item 
      
-     Legyen kezdetben két rendszer energiája $E_1$ és $E_2$. Ezt a két renszert termikus kapcsolatba hozzuk és a hőmérséklet egyenlő lesz. Kérdés, hogy hogyan viszonyul ez a hőmérséklet a korábbihoz. 
+     Legyen kezdetben két rendszer energiája $E_1$ és $E_2$.
+   Ezt a két renszert termikus kapcsolatba hozzuk és a hőmérséklet egyenlő lesz.
+   Kérdés, hogy hogyan viszonyul ez a hőmérséklet a korábbihoz. 
      
-     Mivel a két energia összege a fix, ezért az egyensúly megtalálásakor biztos, hogy az egyik energia csökkenni fog, a másik pedig nőni. Legyen $E_1<E_{1,\text{eq}}$ és $E_2>E_{2,\text{eq}}$.
+     Mivel a két energia összege a fix, ezért az egyensúly megtalálásakor biztos, hogy az egyik energia csökkenni fog, a másik pedig nőni.
+   Legyen $E_1<E_{1,\text{eq}}$ és $E_2>E_{2,\text{eq}}$.
      
-     Normál rendszerekre tudjuk, hogy a hőmérséklet az $E$ monoton függvénye, így $T_1(E_1)<T_1(E_{1,\text{eq}})$, illetve $T_2(E_{2,\text{eq}})<T_2(E_2)$. Mivel az egyensúlyi hőmérsékletek egyenlőek: 
+     Normál rendszerekre tudjuk, hogy a hőmérséklet az $E$ monoton függvénye, így $T_1(E_1)<T_1(E_{1,\text{eq}})$, illetve $T_2(E_{2,\text{eq}})<T_2(E_2)$.
+   Mivel az egyensúlyi hőmérsékletek egyenlőek: 
      \al{
       T_1(E_1)<T_1(E_{1,\text{eq}})=T_2(E_{2,\text{eq}})<T_2(E_2),
      }
@@ -200,9 +234,15 @@
    
   \subsection{Intenzív paraméterek}
    
-   Szintén tekintsünk egy zárt rendszert, melyet két alrendszerre osztunk. Vizsgáljuk meg, hogy milyen kölcsönhatások lehetnek ezek között. Azt láttuk már, hogy a hőmérséklet kiegyenlítődik. Mivel egy spontán folyamat történik, ezért az entrópia nőni fog.
+   Szintén tekintsünk egy zárt rendszert, melyet két alrendszerre osztunk.
+   Vizsgáljuk meg, hogy milyen kölcsönhatások lehetnek ezek között.
+   Azt láttuk már, hogy a hőmérséklet kiegyenlítődik.
+   Mivel egy spontán folyamat történik, ezért az entrópia nőni fog.
    
-   Vegyünk egy $X$ extenzív paramétert. Az egyik alrendszerben ez $X_1$ a másikban pedig $X_2$, összesen $X=X_1+X_2$. Az állapotszám ekkor $X$ értékétől is függ, így $\Omega(E,\delta E,X,\delta X)=\omega(E,X)\delta E\delta X$. A termalizálódó rendszerre:
+   Vegyünk egy $X$ extenzív paramétert.
+   Az egyik alrendszerben ez $X_1$ a másikban pedig $X_2$, összesen $X=X_1+X_2$.
+   Az állapotszám ekkor $X$ értékétől is függ, így $\Omega(E,\delta E,X,\delta X)=\omega(E,X)\delta E\delta X$.
+   A termalizálódó rendszerre:
    \al{
     f(E,E_1,X,X_1)=\frac{\omega_1(E_1,X_1)\omega_2(E_2,X_2)}{\omega(E,X)}.
    }
@@ -216,7 +256,9 @@
     &\pder{\ln\omega_1(E_1,X_1)}{E_1}=\pder{\ln\omega_2(E_2,X_2)}{E_2}
     &\pder{\ln\omega_1(E_1,X_1)}{X_1}=\pder{\ln\omega_2(E_2,X_2)}{X_2}.
    }
-   Tehát minden extenzív ($X$) mennyiséghez megadhatunk egy intenzív mennyiséget $\left(\pder{\ln\Omega_0(E,X)}{X}\right)$, amelynek egyenlősége fogja adni az egyensúlyi feltételt. Az $\omega$-t lecseréltük $\Omega_0$-ra \eqaref{eq:B03-entropia} egyenlet értelmében. A lehetséges kölcsönhatásokat figyelembe véve az extenzív mennyiségeket és a hozzájuk konjugált intenzív mennyiségeket \aref{tabl:B09-extint}. táblázat mutatja.
+   Tehát minden extenzív ($X$) mennyiséghez megadhatunk egy intenzív mennyiséget $\left(\pder{\ln\Omega_0(E,X)}{X}\right)$, amelynek egyenlősége fogja adni az egyensúlyi feltételt.
+   Az $\omega$-t lecseréltük $\Omega_0$-ra \eqaref{eq:B03-entropia} egyenlet értelmében.
+   A lehetséges kölcsönhatásokat figyelembe véve az extenzív mennyiségeket és a hozzájuk konjugált intenzív mennyiségeket \aref{tabl:B09-extint}. táblázat mutatja.
    \begin{table}[ht!]
     \centering
     \begin{tabular}{r|cc|c|c}
@@ -235,7 +277,9 @@
    
    A félreértések elkerülése miatt, itt külön jelöljük az előbb definiált mennyiségeket ($"T"$) és vesszők nélkül a megszokott termodinamikai mennyiségeket. 
    
-   Tekintsük a mechanikai kölcsönhatást: legyen egy zárt rendszerünk, amelynek az egyik falát egy rugó tartja, és elmozdítható. Legyen $z$ az a koordináta, ami mentén mozog a fal. Ha nem lenne mozgás, akkor a rendszer mikrokanonikus lenne, de így $E=E_1+U(z)$, mellyel a $\Omega_{0}(E_1,V,N)=\Omega_{0}\big(E-U(z),A(L-z),N\big)$, ahonnan az egyensúly:
+   Tekintsük a mechanikai kölcsönhatást: legyen egy zárt rendszerünk, amelynek az egyik falát egy rugó tartja, és elmozdítható.
+   Legyen $z$ az a koordináta, ami mentén mozog a fal.
+   Ha nem lenne mozgás, akkor a rendszer mikrokanonikus lenne, de így $E=E_1+U(z)$, mellyel a $\Omega_{0}(E_1,V,N)=\Omega_{0}\big(E-U(z),A(L-z),N\big)$, ahonnan az egyensúly:
    \al{
     0=\pder{\ln\Omega_0}{z}
      =\pder{\ln\Omega_0}{E}\left(-\pder{U(z)}{z}\right)-A\pder{\ln\Omega_0}{V}.
@@ -248,11 +292,18 @@
    }
    Így tehát a statisztikus fizikai $"p"$, amit definiáltunk, megegyezik a hagyományos nyomással. 
    
-   Egy pillanatra legyen $N$ fix. Az $"S"$ teljes megváltozása (\aref{tabl:B09-extint}. táblázat alapján): $\dd"S"=\pder{"S"}{E}\dd E+\pder{"S"}{V}\dd V=\frac{1}{"T"}\dd E+\frac{"p"}{"T"}\dd V$. Az I. főtételt alapján mondhatjuk, hogy $\dd E=T\dd S-p\dd V$. Ennek a kettőnek az összehasonlításából, illetve felhasználva, hogy az előbb beláttuk, hogy $"p"=p$, kapjuk, hogy 
+   Egy pillanatra legyen $N$ fix.
+   Az $"S"$ teljes megváltozása (\aref{tabl:B09-extint}. táblázat alapján): $\dd"S"=\pder{"S"}{E}\dd E+\pder{"S"}{V}\dd V=\frac{1}{"T"}\dd E+\frac{"p"}{"T"}\dd V$.
+   Az I. főtételt alapján mondhatjuk, hogy $\dd E=T\dd S-p\dd V$.
+   Ennek a kettőnek az összehasonlításából, illetve felhasználva, hogy az előbb beláttuk, hogy $"p"=p$, kapjuk, hogy 
    \al{
     "T"\dd "S"=T\dd S.
    }
-   Mivel $E=E(S,V)$, így $"S"="S"(S,V)$ lehet csak. Akkor ennek egy teljes differenciája: $\dd"S"=\pder{"S"}{V}\dd V+\pder{"S"}{S}\dd S$. Az előző egyenletre tekinthetünk úgy is, mint $\dd "S"$ kifejtésére, ahonnan látszik, hogy $\pder{"S"}{V}=0$ és $\pder{"S"}{S}=\frac{T}{"T"}$. Ebből látszik, hogy $"S"$ független $V$-től, vagyis $"S"="S"(S)$. Mivel $"S"$ és $S$ is extenzív mennyiség, ezért $\lambda"S"="S"(\lambda S)$, ez pedig csak az $"S"=\text{const}\cdot S$ lehet. 
+   Mivel $E=E(S,V)$, így $"S"="S"(S,V)$ lehet csak.
+   Akkor ennek egy teljes differenciája: $\dd"S"=\pder{"S"}{V}\dd V+\pder{"S"}{S}\dd S$.
+   Az előző egyenletre tekinthetünk úgy is, mint $\dd "S"$ kifejtésére, ahonnan látszik, hogy $\pder{"S"}{V}=0$ és $\pder{"S"}{S}=\frac{T}{"T"}$.
+   Ebből látszik, hogy $"S"$ független $V$-től, vagyis $"S"="S"(S)$.
+   Mivel $"S"$ és $S$ is extenzív mennyiség, ezért $\lambda"S"="S"(\lambda S)$, ez pedig csak az $"S"=\text{const}\cdot S$ lehet. 
    
    Ugyanilyen módszerrel belátható a többi mennyiség egyenlősége is, csak az I. főtételt kell használni, mint az előbb, pl. $N$ változik, akkor $\mu$-ről lehet ugyanezt belátni.
    
@@ -285,7 +336,8 @@
     &\Rightarrow
     &&E=TS-pV+\mu N.
    }
-   Ez a fundamentális egyenlet. Ennek teljes differenciálja: 
+   Ez a fundamentális egyenlet.
+   Ennek teljes differenciálja: 
    \al{
     \dd E&=\dd TS+T\dd S-\dd p V-p\dd V+\dd \mu V+\mu \dd V\\
     0&=\dd TS-\dd p V+\dd \mu N,
@@ -317,15 +369,28 @@
     \item 
      $\dd E=\delta Q+\delta W$, ahol $\delta Q$ a rendszerrel közölt hő, és $\delta W$ a rendszeren végzett munka.
     
-     Ha a rendszer nem egyensúlyi állapotban van, akkor $\delta Q\ne T\dd S$ és $\delta W\ne p\dd V$. Erre jó példa a Gay--Lussac-kísérlet, ahol egy elszigetelt gáz tágul. Nincs rajta se munkavégzés, se hőközlés, de tágul, így $S$ nő, vagyis $\delta Q\ne T\dd S$ egy pillanatban sem. Ez csak úgy lehet, ha $T\dd S=p\dd V$ minden pillanatban, hogy $\dd E=0$ legyen.
+     Ha a rendszer nem egyensúlyi állapotban van, akkor $\delta Q\ne T\dd S$ és $\delta W\ne p\dd V$.
+   Erre jó példa a Gay--Lussac-kísérlet, ahol egy elszigetelt gáz tágul.
+   Nincs rajta se munkavégzés, se hőközlés, de tágul, így $S$ nő, vagyis $\delta Q\ne T\dd S$ egy pillanatban sem.
+   Ez csak úgy lehet, ha $T\dd S=p\dd V$ minden pillanatban, hogy $\dd E=0$ legyen.
     
     \item
-     Zárt rendszerben spontán folyamatokban $S$ nem csökkenhet. Egyenlőség csak akkor áll fenn, ha egyensúlyi állapotokon át haladunk. Ha nyílt a rendszer és van hőcsere, akkor $\dd S\ge\frac{\delta Q}{T}$. Ez a kijelentés a statisztikus fizika valószínűségi alapjai miatt csak makroszkopikus rendszerben, nagy valószínűséggel lesz igaz.
+     Zárt rendszerben spontán folyamatokban $S$ nem csökkenhet.
+   Egyenlőség csak akkor áll fenn, ha egyensúlyi állapotokon át haladunk.
+   Ha nyílt a rendszer és van hőcsere, akkor $\dd S\ge\frac{\delta Q}{T}$.
+   Ez a kijelentés a statisztikus fizika valószínűségi alapjai miatt csak makroszkopikus rendszerben, nagy valószínűséggel lesz igaz.
      
     \item 
-     Tiszta anyagokra $\lim_{T\to 0}\lim_{N\to\infty}\frac{S}{N}=0$. Ha ez igaz, akkor az azt jelenti, hogy $\Omega(T\to 0)<e^{\text{const} \cdot N}$, vagyis a rendszernek alapállapota nem makroszkopikusan degenerált. Ezzel analóg megfogalmazás, ha azt követeljük meg, hogy $C(T\to 0)=\lim_{T\to 0}T\pder{S}{T}=0$.
+     Tiszta anyagokra $\lim_{T\to 0}\lim_{N\to\infty}\frac{S}{N}=0$.
+   Ha ez igaz, akkor az azt jelenti, hogy $\Omega(T\to 0)<e^{\text{const} \cdot N}$, vagyis a rendszernek alapállapota nem makroszkopikusan degenerált.
+   Ezzel analóg megfogalmazás, ha azt követeljük meg, hogy $C(T\to 0)=\lim_{T\to 0}T\pder{S}{T}=0$.
      
-     Ennek következménye, hogy $T=0$-t nem lehet véges számú lépésben elérni. Erre egy módszer az adiabatikus lemágnesezés (\ref{fig:B03-adiablemag}. ábra). Itt egymás utáni lépésekben izoterm mágnesezést majd adiabatikus lemágnesezést ismételgetünk. Az első lépésben az entrópia csökken, hiszen a spinek egy irányba állnak, a második lépésben pedig a hőmérséklet. Ahogy csökkentjük a mágneses teret a spinek összenergiája több szabadsági fok között oszlik el, így csökken a hőmérséklet. Mivel az entrópia ($S(H)$) a nullához tart a magasabb és az alacsonyabb mágneses tér esetében is, ezért a lemágnesezési folyamattal csak határértékben tudjuk elérni a nulla fokot. 
+     Ennek következménye, hogy $T=0$-t nem lehet véges számú lépésben elérni.
+   Erre egy módszer az adiabatikus lemágnesezés (\ref{fig:B03-adiablemag}. ábra).
+   Itt egymás utáni lépésekben izoterm mágnesezést majd adiabatikus lemágnesezést ismételgetünk.
+   Az első lépésben az entrópia csökken, hiszen a spinek egy irányba állnak, a második lépésben pedig a hőmérséklet.
+   Ahogy csökkentjük a mágneses teret a spinek összenergiája több szabadsági fok között oszlik el, így csökken a hőmérséklet.
+   Mivel az entrópia ($S(H)$) a nullához tart a magasabb és az alacsonyabb mágneses tér esetében is, ezért a lemágnesezési folyamattal csak határértékben tudjuk elérni a nulla fokot. 
      
      \begin{figure}[ht!]
       \centering
@@ -345,7 +410,8 @@
        \draw[-latex,line width=0.7pt,red] (1.2,0.29) -- (0.58,0.29);
        \node at (4.5,3.7) {$H_1 < H_2$};
        \end{tikzpicture}
-       \caption{Az adiabatikus lemágnesezés folyamata. A piros lépésekben történik az adiabatikus lemágnesezés, a kék lépésekben pedig az izotermikus mágnesezés.}\label{fig:B03-adiablemag}
+       \caption{Az adiabatikus lemágnesezés folyamata.
+   A piros lépésekben történik az adiabatikus lemágnesezés, a kék lépésekben pedig az izotermikus mágnesezés.}\label{fig:B03-adiablemag}
      \end{figure}
    \end{enumerate}
    

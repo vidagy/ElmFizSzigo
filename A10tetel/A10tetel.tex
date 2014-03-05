@@ -12,7 +12,8 @@
    
    Állítás: ha az energia funkcionál stacioner egy $\psi$-re, akkor az a $\psi$ kielégíti a Schrödinger-egyenletet, és a hozzá tartozó energia éppen $E[\psi]$. 
    
-   Bizonyítás: ha $E[\psi]$ stacioner egy adott $\psi$-re, akkor az e szerinti variációja eltűnik. Variáljunk $\bra{\psi}$ szerint:
+   Bizonyítás: ha $E[\psi]$ stacioner egy adott $\psi$-re, akkor az e szerinti variációja eltűnik.
+   Variáljunk $\bra{\psi}$ szerint:
    \al{
     0&=\delta_{\bra{\psi}}E[\psi]
       =
@@ -26,7 +27,8 @@
     \opH\ket{\psi}=E[\psi]\ket{\psi}.
    }
    
-   Ezt az eredményt úgy is megkaphatjuk, ha a $\bra{\psi}\opH\ket{\psi}$ mennyiséget variáljuk azzal a mellékfeltétellel, hogy $\bra{\psi}\et{\psi}=1$. Bevezetve az $E$ Lagrange-multiplikátort:
+   Ezt az eredményt úgy is megkaphatjuk, ha a $\bra{\psi}\opH\ket{\psi}$ mennyiséget variáljuk azzal a mellékfeltétellel, hogy $\bra{\psi}\et{\psi}=1$.
+   Bevezetve az $E$ Lagrange-multiplikátort:
    \al{
     0=\delta_{\bra{\psi}}\Big(\bra{\psi}\opH\ket{\psi}-E\big(\bra{\psi}\et{\psi}-1\big)\Big)
      =\bra{\delta\psi}\opH\ket{\psi}-E\bra{\delta\psi}\et{\psi}
@@ -35,7 +37,10 @@
    
    \paragraph{Ritz-féle variációs elv}
     
-    Az $E[\psi]$ tetszőleges $\psi$-re legalább akkora, mint az alapállapoti energia. A bizonyításhoz felhasználjuk, hogy $\opH$ hermitikus, így létezik teljes ortonormált bázist alkotó sajátfüggvény-rendszere. Ezen a bázison kifejthetőek a $\psi$ állapotok: $\psi=\suml{i}{}a_i\psi_i$. Ha ezt behelyettesítjük az energiafunkcionálba:
+    Az $E[\psi]$ tetszőleges $\psi$-re legalább akkora, mint az alapállapoti energia.
+   A bizonyításhoz felhasználjuk, hogy $\opH$ hermitikus, így létezik teljes ortonormált bázist alkotó sajátfüggvény-rendszere.
+   Ezen a bázison kifejthetőek a $\psi$ állapotok: $\psi=\suml{i}{}a_i\psi_i$.
+   Ha ezt behelyettesítjük az energiafunkcionálba:
     \al{
      E[\psi]
       =\frac{\suml{i}{}\abs{a_i}^2E_i}{\suml{i}{}\abs{a_i}^2}
@@ -43,7 +48,9 @@
        \frac{\suml{i}{}\abs{a_i}^2E_0}{\suml{i}{}\abs{a_i}^2}
        =E_0.
     }
-    Az egyenlőség akkor áll fenn, ha $\psi=\psi_0$ azaz az alapállapoti hullámfüggvényt helyettesítjük a funkcionálba. A bizonyításhoz felhasználtuk, hogy a $\opH$ operátor alulról korlátos, így sajátértékei között van minimális. Relativisztikus esetben ez nem igaz, így ott nem ezt a variációs módszert használni. 
+    Az egyenlőség akkor áll fenn, ha $\psi=\psi_0$ azaz az alapállapoti hullámfüggvényt helyettesítjük a funkcionálba.
+   A bizonyításhoz felhasználtuk, hogy a $\opH$ operátor alulról korlátos, így sajátértékei között van minimális.
+   Relativisztikus esetben ez nem igaz, így ott nem ezt a variációs módszert használni. 
     
     Az alapállapot megkeresése úgy lehetséges, hogy készítünk egy próbafüggvényt, melyben több paraméter van, ezzel elkészítjük az energia funkcionált, majd ennek a függvénynek keressük meg a minimumát. Így tehát azt az egyenletrendszert kell megoldani, hogy $\pder{E\big[\psi(a_1,a_2,\dots)\big]}{a_i}=0$, $\forall$ $i$-re. 
     
@@ -169,7 +176,10 @@
        +\left(\frac{\hbar^2}{mr_0}-\frac{e^2}{4\pi\ep_0}\right)\frac{1}{r} e^{-\frac{2r}{r_0}}
        \right].
    }
-   A második tag divergens. Ezt úgy tudjuk kiküszöbölni, ha $r_0$-at úgy választjuk, hogy a második tag eltűnjön. Emiatt: $r_0=\frac{4\pi\ep_0\hbar^2}{me^2}$. Az integrál, mivel $\intl{0}{\infty}\dd x\,e^{-\frac{2r}{r_0}}=\frac{r_0}{2}$, így
+   A második tag divergens.
+   Ezt úgy tudjuk kiküszöbölni, ha $r_0$-at úgy választjuk, hogy a második tag eltűnjön.
+   Emiatt: $r_0=\frac{4\pi\ep_0\hbar^2}{me^2}$.
+   Az integrál, mivel $\intl{0}{\infty}\dd x\,e^{-\frac{2r}{r_0}}=\frac{r_0}{2}$, így
    \al{
     \bra{\psi}\opH\ket{\psi}
      &=-A^2\frac{\hbar^2}{2mr_0^2}\frac{r_0}{2}\\
@@ -184,7 +194,9 @@
    
   \subsection{Hartree-közelítés}\label{ss:10-Hartree}
    
-   A zárt héjú kötött elektronrendszer problémáját szeretnénk megoldani. A Hartree-közelítés lényege, hogy a megoldást az egyrészecske hullámfüggvények szorzataként írjuk fel, és ezzel az próbafüggvénnyel végezzük el a variációt. A Hamilton-operátor:
+   A zárt héjú kötött elektronrendszer problémáját szeretnénk megoldani.
+   A Hartree-közelítés lényege, hogy a megoldást az egyrészecske hullámfüggvények szorzataként írjuk fel, és ezzel az próbafüggvénnyel végezzük el a variációt.
+   A Hamilton-operátor:
    \al{
     \opH=-\suml{i=1}{N}\frac{\hbar^2}{2m}\Delta_i-\frac{Ze^2}{4\pi\ep_0}\suml{i=1}{N}\frac{1}{r_i}+\frac{e^2}{4\pi\ep_0}\suml{\mv{i,j}}{}\frac{1}{\abs{r_i-r_j}}=\suml{i=1}{N}\opH_i+\suml{\mv{i,j}}{}\opV_{i,j},
    }
@@ -192,7 +204,8 @@
    \al{
     \psi(\rv_1,\rv_2,\dots\rv_N)=\phi_1(\rv_1)\phi_2(\rv_2)\cdot\cdots\cdot\phi_N(\rv_N)
    }
-   ahol $\phi_i$-k az egyrészecske hullámfüggvények. Az egyrészecske állapotok ortonormált bázist alkotnak, így $\bra{\phi_i}\et{\phi_j}=\delta_{ij}$.
+   ahol $\phi_i$-k az egyrészecske hullámfüggvények.
+   Az egyrészecske állapotok ortonormált bázist alkotnak, így $\bra{\phi_i}\et{\phi_j}=\delta_{ij}$.
    
    Az energia funkcionál, figyelembevéve a normáltsági feltételt:
    \al{
@@ -215,7 +228,11 @@
     V_k(\rv_k)
      =\frac{e^2}{4\pi\ep_0}\intl{V}{}\drh\suml{\substack{i=1\\i\ne k}}{N}\abs{\phi_i(\rv_i)}^2\frac{1}{\abs{\rv_i-\rv_k}}.
    }
-   Láthatjuk tehát, hogy a megoldandó egyenlet szétesett egyrészecske egyenletekké, azonban minden egyenlet esetében a potenciál tartalmazza a többi egyenlet megoldásaként kapott egyrészecske hullámfüggvényeket. Emiatt az egyenletek csak együtt oldhatóak meg iterációs módszerrel. Valamilyen kezdeti hullámfüggvényekből kiindulva felépítjük a potenciálokat, majd megoldjuk az egyenleteket. Ezek után a megoldásokkal elkészítjük az új potenciálokat, és újra megoldjuk az egyenletet. Ezt ismételjük, amíg a módszer nem konvergál: ez a ``selfconsistent field method''.
+   Láthatjuk tehát, hogy a megoldandó egyenlet szétesett egyrészecske egyenletekké, azonban minden egyenlet esetében a potenciál tartalmazza a többi egyenlet megoldásaként kapott egyrészecske hullámfüggvényeket.
+   Emiatt az egyenletek csak együtt oldhatóak meg iterációs módszerrel.
+   Valamilyen kezdeti hullámfüggvényekből kiindulva felépítjük a potenciálokat, majd megoldjuk az egyenleteket.
+   Ezek után a megoldásokkal elkészítjük az új potenciálokat, és újra megoldjuk az egyenletet.
+   Ezt ismételjük, amíg a módszer nem konvergál: ez a ``selfconsistent field method''.
    
    Az állapot energiáját kifejezhetjük az $\ep_i$ Lagrange-multiplikátorokkal. \Eqaref{eq:10-hartree} egyenlet alapján:
    \al{
@@ -235,9 +252,11 @@
     E_\text{H}[\psi]=\suml{k=1}{N}\ep_k-\suml{\mv{i,k}}{N}\bra{\phi_k}\bra{\phi_i}\opV_{i,k}\ket{\phi_i}\ket{\phi_k}.\label{eq:10-hartreeE}
    }
    
-   Ez a módszer nem veszi figyelembe, hogy az elektronállapotok teljesen antiszimmetrikusak. Ha azt is figyelembe szeretnénk venni, akkor nem használhatjuk a fenti próbafüggvényt.
+   Ez a módszer nem veszi figyelembe, hogy az elektronállapotok teljesen antiszimmetrikusak.
+   Ha azt is figyelembe szeretnénk venni, akkor nem használhatjuk a fenti próbafüggvényt.
    
-   A Hartree--Fock-módszerben a hullámfüggvényt antiszimmetrizáljuk, a próbafüggvények ott Sla\-ter-de\-ter\-mi\-nán\-sok, azaz az egyrészecske hullámfüggvények teljesen antiszimmetrikus kombinációjából állnak. Ekkor az energia:
+   A Hartree--Fock-módszerben a hullámfüggvényt antiszimmetrizáljuk, a próbafüggvények ott Sla\-ter-de\-ter\-mi\-nán\-sok, azaz az egyrészecske hullámfüggvények teljesen antiszimmetrikus kombinációjából állnak.
+   Ekkor az energia:
    \al{
     E_\text{HF}[\psi]=E_\text{H}[\psi]-\suml{\mv{i,k}}{N}\bra{\phi_k}\bra{\phi_i}\opV_{i,k}\ket{\phi_k}\ket{\phi_i}.
    } 
@@ -252,7 +271,9 @@
    \al{
     \Pv(\rv,t)=\intl{-\infty}{\infty}\dd t'\theta(t-t')\mat{G}(t,t')\Ev(t',\rv),
    }
-   ahol figyelembe vettük, hogy csak a múlt lehet hatással a jelen pillanatban lévő polarizációra. Tekintsünk izotrop anyagot, ahol minden egy irányba mutat, illetve tegyük fel, hogy nincs kitüntetett időpont: $G(t,t')=G(t-t')$. Ekkor a szuszceptibilitás, mint a külső térre adott válaszfüggvény:
+   ahol figyelembe vettük, hogy csak a múlt lehet hatással a jelen pillanatban lévő polarizációra.
+   Tekintsünk izotrop anyagot, ahol minden egy irányba mutat, illetve tegyük fel, hogy nincs kitüntetett időpont: $G(t,t')=G(t-t')$.
+   Ekkor a szuszceptibilitás, mint a külső térre adott válaszfüggvény:
    \al{
     &\ep_0\chi(t-t')=\theta(t-t')G(t,t')
     &P(t)=\intl{-\infty}{\infty}\dd t'\ep_0\chi(t-t')E(t').
@@ -269,13 +290,17 @@
    }
    Mivel a fizikai mennyiségek valósak, ezért $\chi^*(\omega)=\chi(-\omega)$. 
    
-   Oldjuk meg a fenti problémát egy modellre. Tekintsünk harmonikus potenciálban mozgó csillapított töltést, mint az anyag építőkövét. Ennek a mozgásegyenlete:
+   Oldjuk meg a fenti problémát egy modellre.
+   Tekintsünk harmonikus potenciálban mozgó csillapított töltést, mint az anyag építőkövét.
+   Ennek a mozgásegyenlete:
    \al{
     &m\partial_t^2x(t)+\gamma\partial_t x(t)+\omega_0^2 x(t)=qE(t)
     &\Rightarrow
     &&-\omega^2 m qx(\omega)-i\omega\gamma q x(\omega)+\omega_0^2 qx(\omega)=q^2E(\omega),
    } 
-   ahol $qx(\omega)$ a polarizáció éppen, így $p(\omega)=\frac{q^2}{m}\frac{E(\omega)}{\omega_0^2-i\gamma\omega-\omega^2}$. A makroszkópikus polarizációs sűrűség ennek az $n$-szerese, ahol $n$ a töltéssűrűség. Több sajátfrekvenciát feltételezve:
+   ahol $qx(\omega)$ a polarizáció éppen, így $p(\omega)=\frac{q^2}{m}\frac{E(\omega)}{\omega_0^2-i\gamma\omega-\omega^2}$.
+   A makroszkópikus polarizációs sűrűség ennek az $n$-szerese, ahol $n$ a töltéssűrűség.
+   Több sajátfrekvenciát feltételezve:
    \al{
     &P(\omega)=\suml{i}{}\frac{n_iq_i^2}{m_i}\frac{E(\omega)}{\omega_{i,0}^2-i\gamma\omega-\omega^2}
     &\ep_r(\omega)=1+\suml{i}{}\frac{n_iq_i^2}{\ep_0m_i}\frac{1}{\omega_{i,0}^2-i\gamma\omega-\omega^2}
@@ -306,7 +331,8 @@
    }
    \begin{itemize}
     \item $\omega<\omega_\text{P}$: $\ep_r(\omega)<0$ $\Rightarrow$ $n_\text{r}(\omega)$ tisztán képzetes, vagyis az elektrongáz nem átlátszó.
-    \item $\omega>\omega_\text{P}$: $\ep_r(\omega)>0$ $\Rightarrow$ $0<n_\text{r}(\omega)<1$ tisztán valós, vagyis az elektrongáz tökéletesen átlátszó. A fázissebesség:
+    \item $\omega>\omega_\text{P}$: $\ep_r(\omega)>0$ $\Rightarrow$ $0<n_\text{r}(\omega)<1$ tisztán valós, vagyis az elektrongáz tökéletesen átlátszó.
+   A fázissebesség:
      \al{
       v_\text{f}=\frac{\omega}{k}=\frac{c}{n_\text{r}(\omega)}>c,
      }
@@ -314,14 +340,19 @@
      \al{
       v_\text{cs}=\pder{\omega}{k}=\frac{c}{n_\text{r}(\omega)+\omega\pder{n_\text{r}}{\omega}}=\frac{c}{n_\text{r}(\omega)+\omega\frac{\omega_\text{P}^2}{n_\text{r}\omega^3}}=\frac{n_\text{r}c}{n_\text{r}^2+\frac{\omega_\text{P}^2}{\omega^2}}=nc<c.
      }
-    \item $\omega=\omega_\text{P}$: $\ep_r(\omega)=0$ $\Rightarrow$ $n_\text{r}(\omega)=0$. Ekkor a közegben a fázissebesség végtelen a csoportsebesség pedig nulla. 
+    \item $\omega=\omega_\text{P}$: $\ep_r(\omega)=0$ $\Rightarrow$ $n_\text{r}(\omega)=0$.
+   Ekkor a közegben a fázissebesség végtelen a csoportsebesség pedig nulla. 
    \end{itemize}
    
   \subsection{Homogén térbe helyezett dielektrikum/mágnesezhető gömb}
    
-   A két probléma matematikailag ugyanaz, hiszen forrásmentes esetben a statikában az Maxwell-egyenletek szimmetrikusak. Megoldjuk a problémát a dielektrikumra vonatkozóan, majd átírjuk az eredményt a mágneses esetre is. 
+   A két probléma matematikailag ugyanaz, hiszen forrásmentes esetben a statikában az Maxwell-egyenletek szimmetrikusak.
+   Megoldjuk a problémát a dielektrikumra vonatkozóan, majd átírjuk az eredményt a mágneses esetre is. 
    
-   Legyen a gömb sugara $R$ relatív permittivitása pedig $\ep_\text{g}$. A külső közegben legyen a tér $\Ev_0=(0,0,E_0)$, és ennek permittivitása legyen $\ep_\text{k}$. A potenciálra a Laplace-egyenletet kell megoldani mindkét térrészben, illetve a határon illeszteni kell a két megoldást. Az egyenletek és a határfeltételek:
+   Legyen a gömb sugara $R$ relatív permittivitása pedig $\ep_\text{g}$.
+   A külső közegben legyen a tér $\Ev_0=(0,0,E_0)$, és ennek permittivitása legyen $\ep_\text{k}$.
+   A potenciálra a Laplace-egyenletet kell megoldani mindkét térrészben, illetve a határon illeszteni kell a két megoldást.
+   Az egyenletek és a határfeltételek:
    \al{
     &\Delta\phi_\text{g}(\rv)=0
     &\Delta\phi_\text{k}(\rv)=0
@@ -332,7 +363,8 @@
        \ep_\text{k}\left.\pder{\phi_\text{k}}{r}\right|_{r=R}=\ep_\text{g}\left.\pder{\phi_\text{g}}{r}\right|_{r=R}&
       \end{cases}
    }
-   A megoldás hengerszimmetrikus. A gömbi Laplace-egyenlet általános megoldásaival felírva:
+   A megoldás hengerszimmetrikus.
+   A gömbi Laplace-egyenlet általános megoldásaival felírva:
    \al{
     &\phi_\text{k}(r,\vartheta)=\suml{l}{}\big(A_lr^l+B_lr^{-l-1}\big)P_l(\cos\vartheta),
     &\phi_\text{g}(r,\vartheta)=\suml{l}{}\big(C_lr^l+D_lr^{-l-1}\big)P_l(\cos\vartheta).
@@ -346,7 +378,8 @@
            0&l\ne 1
           \end{cases}.
    }
-   Feltehetjük, hogy $B_l=C_l=D_l=0$, ha $l\ne 1$. A többi határfeltétel:
+   Feltehetjük, hogy $B_l=C_l=D_l=0$, ha $l\ne 1$.
+   A többi határfeltétel:
    \al{
     &\phi_\text{g}(r\to 0,\vartheta)=\big(C_1r+D_1r^{-2}\big)\cos\vartheta=\text{véges}
     &\Rightarrow
@@ -372,7 +405,8 @@
     &\phi_\text{g}(\rv)=-\left(\frac{3\ep_\text{k}}{\ep_\text{g}+2\ep_\text{k}}\right)\Ev_0\rv.
    }
    
-   Belül a tér homogén, kint pedig a tér egy homogén és egy dipól terének az összege. A dipól erőssége $\left(\phi_\text{dipól}=\frac{1}{4\pi\ep}\frac{\pv\rv}{r^3}\right)$:
+   Belül a tér homogén, kint pedig a tér egy homogén és egy dipól terének az összege.
+   A dipól erőssége $\left(\phi_\text{dipól}=\frac{1}{4\pi\ep}\frac{\pv\rv}{r^3}\right)$:
    \al{
     \Pv=4\pi\ep_0\ep_\text{k}\frac{\ep_\text{g}-\ep_\text{k}}{\ep_\text{g}+2\ep_\text{k}}R^3\Ev_0.
    }
@@ -385,9 +419,12 @@
    
    \paragraph{Diszkusszió} 
    \begin{itemize}
-    \item $\ep_\text{k}=1$, $\ep_\text{g}=\infty$: először tekintsünk egy speciális esetet, legyen a közeg vákuum és az anyag fém. Ekkor $\pv=4\pi\ep_0R^3\Ev_0$, $\Ev_\text{g}=0$, $\Ev_\text{polar}=-\Ev_0$. 
-    \item $\ep_\text{k}<\ep_\text{g}$. Ekkor $\pv \parallel \Ev_0$, vagyis a gömb úgy polarizálódik, hogy belül csökken a térerősség.
-    \item $\ep_\text{k}>\ep_\text{g}$. Ekkor $\pv \parallel -\Ev_0$, így belül nő a térerősség.
+    \item $\ep_\text{k}=1$, $\ep_\text{g}=\infty$: először tekintsünk egy speciális esetet, legyen a közeg vákuum és az anyag fém.
+   Ekkor $\pv=4\pi\ep_0R^3\Ev_0$, $\Ev_\text{g}=0$, $\Ev_\text{polar}=-\Ev_0$. 
+    \item $\ep_\text{k}<\ep_\text{g}$.
+   Ekkor $\pv \parallel \Ev_0$, vagyis a gömb úgy polarizálódik, hogy belül csökken a térerősség.
+    \item $\ep_\text{k}>\ep_\text{g}$.
+   Ekkor $\pv \parallel -\Ev_0$, így belül nő a térerősség.
    \end{itemize}
    
    \begin{figure}[ht!]
@@ -482,10 +519,12 @@
       \put(89,30){\tikz\node[red] at (0,0) {\tiny $\pmb{\oplus}$};}
       \put(39,30){\tikz\node[red] at (0,0) {\tiny $\pmb{\oplus}$};}
      \end{overpic}}
-    \caption{A homogén gömb körüli elektromos térerősség, eltolás és polarizációs tér, ha $\ep_\text{k}<\ep_\text{g}$ (első sor), illetve ha $\ep_\text{k}>\ep_\text{g}$ (második sor). Mivel $\Dv$ forrása a szabad töltések, ezért az itt folytonos. $\Ev$ forrása bármilyen töltés, és itt van felületi töltéssűrűség, ezért vannak olyan $\Ev$ vonalak, amelyek a felületen keletkeznek/végződnek.}
+    \caption{A homogén gömb körüli elektromos térerősség, eltolás és polarizációs tér, ha $\ep_\text{k}<\ep_\text{g}$ (első sor), illetve ha $\ep_\text{k}>\ep_\text{g}$ (második sor).
+   Mivel $\Dv$ forrása a szabad töltések, ezért az itt folytonos. $\Ev$ forrása bármilyen töltés, és itt van felületi töltéssűrűség, ezért vannak olyan $\Ev$ vonalak, amelyek a felületen keletkeznek/végződnek.}
     \end{figure}
    
-   Térjünk át a mágneses esetre. Az analógia: $\Ev\leftrightarrow\Hv$, $\Dv\leftrightarrow\Bv$, $\ep_\text{r}\leftrightarrow\mu_\text{r}$ és $\phi\leftrightarrow\phi_\text{M}$. Így
+   Térjünk át a mágneses esetre.
+   Az analógia: $\Ev\leftrightarrow\Hv$, $\Dv\leftrightarrow\Bv$, $\ep_\text{r}\leftrightarrow\mu_\text{r}$ és $\phi\leftrightarrow\phi_\text{M}$. Így
    \al{
     &\phi_\text{M,k}(\rv)=-\left(1-\frac{\mu_\text{g}-\mu_\text{k}}{\mu_\text{g}+2\mu_\text{k}}\frac{R^3}{r^3}\right)\Hv_0\rv
     &\phi_\text{M,g}(\rv)=-\left(\frac{3\mu_\text{k}}{\mu_\text{g}+2\mu_\text{k}}\right)\Hv_0\rv.
@@ -502,13 +541,13 @@
     &&\Mv=\frac{\emv}{V}=3\frac{\mu_\text{g}-\mu_\text{k}}{\mu_\text{g}+2\mu_\text{k}}\Hv_0.
    }
    
-%    Itt a külső anyagot vákuumnak vesszük: $\mu_\text{k}=1$. 
    \begin{itemize}
-    \item $\mu_\text{g}>\mu_\text{k}$, paramágneses eset: ez felel meg az ábrák közül az első sornak. Speciális eset a ferromágneses eset, amikor $\mu_\text{g}\gg\mu_\text{k}=1$. Ekkor a belső tér $\Hv_\text{g}\approx0$, vagyis az indukálódott momentum teljesen leárnyékolja a külső teret. Az indukció: $\Bv_\text{g}=\mu_0\frac{3}{2}\Hv_0$.
-    \item $\mu_\text{g}<\mu_\text{k}$, diamágneses eset: ez pedig az ábrák második sorának fele meg. Speciális eset az ideális diamágneses eset, amikor $\chi=-1$. Ekkor $\Hv_\text{g}=\frac{3}{2}\Hv_0$ és $\Bv_\text{g}=0$. Itt $\Hv$ nem értelmezhető a gömb belsejében.
+    \item $\mu_\text{g}>\mu_\text{k}$, paramágneses eset: ez felel meg az ábrák közül az első sornak.
+   Speciális eset a ferromágneses eset, amikor $\mu_\text{g}\gg\mu_\text{k}=1$.
+   Ekkor a belső tér $\Hv_\text{g}\approx0$, vagyis az indukálódott momentum teljesen leárnyékolja a külső teret.
+   Az indukció: $\Bv_\text{g}=\mu_0\frac{3}{2}\Hv_0$.
+    \item $\mu_\text{g}<\mu_\text{k}$, diamágneses eset: ez pedig az ábrák második sorának fele meg.
+   Speciális eset az ideális diamágneses eset, amikor $\chi=-1$.
+   Ekkor $\Hv_\text{g}=\frac{3}{2}\Hv_0$ és $\Bv_\text{g}=0$.
+   Itt $\Hv$ nem értelmezhető a gömb belsejében.
    \end{itemize}
-   
-   
-   
-  
-  

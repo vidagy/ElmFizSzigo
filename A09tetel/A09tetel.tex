@@ -4,7 +4,8 @@
   
   \subsection{Hooke-törvény}
    
-   Potenciálosnak akkor nevezünk egy anyagot, ha a közeg rugalmas tulajdonságai időben állandóak. Ekkor a felhalmozódott rugalmas energia a deformáció egyértelmű függvénye:
+   Potenciálosnak akkor nevezünk egy anyagot, ha a közeg rugalmas tulajdonságai időben állandóak.
+   Ekkor a felhalmozódott rugalmas energia a deformáció egyértelmű függvénye:
    \al{
     U=\intl{}{}\drh\varphi\big(\ep_{ij}(t,\rv),\rv\big).
    }
@@ -19,7 +20,8 @@
     \sigma_{ij}=\pder{\varphi}{\ep_{ij}}.
    }
 %    
-   Innen láthatjuk, hogy potenciálos anyagnál egyértelmű kapcsolt van $\ep_{ij}$ és $\sigma_{ij}$ között. Kis deformációkra fejtsük sorba a feszültségtenzort mint a deformáció függvényét:
+   Innen láthatjuk, hogy potenciálos anyagnál egyértelmű kapcsolt van $\ep_{ij}$ és $\sigma_{ij}$ között.
+   Kis deformációkra fejtsük sorba a feszültségtenzort mint a deformáció függvényét:
    \al{
     \sigma_{ij}=\sigma_{ij}(0)+\left.\pder{\sigma_{ij}}{\ep_{kl}}\right|_{\ep_{kl}=0}\ep_{kl}+\dots
    }
@@ -38,11 +40,15 @@
           =\frac{1}{2}C_{ijkl}\partial_j s_i\partial_l s_k\label{eq:09-phic}
    }
 %    
-   Láthatjuk \eqaref{eq:09-cphi} alapján hogy $C_{ijkl}$ szimmetrikus a $\{ij\}\leftrightarrow\{kl\}$ cserére. Mivel $\ep_{ij}$ is szimmetrikus ezért $C$ szimmetrikus az $i\leftrightarrow j$ és a $k\leftrightarrow l$ cserére is külön-külön.
+   Láthatjuk \eqaref{eq:09-cphi} alapján hogy $C_{ijkl}$ szimmetrikus a $\{ij\}\leftrightarrow\{kl\}$ cserére.
+   Mivel $\ep_{ij}$ is szimmetrikus ezért $C$ szimmetrikus az $i\leftrightarrow j$ és a $k\leftrightarrow l$ cserére is külön-külön.
    
-   Ezen szimmetriák miatt a $3^4=81$ elemből csak 21 független. az $\{i,j\}$ és a $\{k,l\}$ párokban csak az azok különböznek, ahol $i\leq j$ és $k\leq l$ (6 féle lehetőség), és még az is szükséges, hogy $\{ij\} \leq \{kl\}$ lexikografikus rendezésben. Ez összesen $6+5+4+3+2+1=21$ lehetőség. 
+   Ezen szimmetriák miatt a $3^4=81$ elemből csak 21 független. az $\{i,j\}$ és a $\{k,l\}$ párokban csak az azok különböznek, ahol $i\leq j$ és $k\leq l$ (6 féle lehetőség), és még az is szükséges, hogy $\{ij\} \leq \{kl\}$ lexikografikus rendezésben.
+   Ez összesen $6+5+4+3+2+1=21$ lehetőség. 
    
-   Egyéb szimmetriák esetén a független elemek száma tovább csökken, pl. köbös kristályban $C_{1111},\,C_{1122},\,C_{1212}$ független csak. Amorf anyagban 2 független állandó van csak: $\lambda$ és $\mu$. Ezekkel az energiasűrűség:
+   Egyéb szimmetriák esetén a független elemek száma tovább csökken, pl. köbös kristályban $C_{1111},\,C_{1122},\,C_{1212}$ független csak.
+   Amorf anyagban 2 független állandó van csak: $\lambda$ és $\mu$.
+   Ezekkel az energiasűrűség:
    \aln{
     &\varphi=\frac{\lambda}{2}(\ep_{ii})^2+\mu\ep_{ij}\ep_{ij}
     &\Rightarrow
@@ -64,7 +70,9 @@
      \varphi&=\frac{1}{2}\sigma_{ij}\ep_{ij}
       =\mu\left(\ep_{ij}-\frac{1}{3}\delta_{ij}\ep_{kk}\right)^2+\frac{K}{2}\ep_{kk}^2\label{eq:09-pessm}.
    }
-   ahol $K$ a kompressziómodulus és $\mu$ a torziómodulus. Invertáljuk a $\sigma_{ij}(\ep_{kl})$ összefüggést. Ehhez
+   ahol $K$ a kompressziómodulus és $\mu$ a torziómodulus.
+   Invertáljuk a $\sigma_{ij}(\ep_{kl})$ összefüggést.
+   Ehhez
    \al{
     &\sigma_{ii}=3K\ep_{kk}
     &\Rightarrow
@@ -149,13 +157,15 @@
    
    \paragraph{Nyírási modulus}
     
-    Tiszta nyírást szeretnénk létrehozni, ezért az $xy$ síkra $y$ irányú erővel hatunk. Az elmozdulás ekkor arányos a $z$ koordinátával:
+    Tiszta nyírást szeretnénk létrehozni, ezért az $xy$ síkra $y$ irányú erővel hatunk.
+   Az elmozdulás ekkor arányos a $z$ koordinátával:
     \al{
      s_i=\begin{pmatrix}
           0\\Cx_3\\0
          \end{pmatrix},
     }
-    ahol $C$ a nyírás szögének tangense, kis szögekre pedig maga a szög. A deformációtenzor:
+    ahol $C$ a nyírás szögének tangense, kis szögekre pedig maga a szög.
+   A deformációtenzor:
     \al{
      &\ep_{ij}
       =\frac{1}{2}\big(\partial_i s_k+\partial_k s_i\big)
@@ -173,7 +183,9 @@
         0 & 1 & 0
        \end{pmatrix}
     }
-    Vagyis $\mu C=\frac{F}{A}$. Itt $C$ az $y$ irányú megnyúlásnak és a $z$ irányú hossznak az aránya. Innen leolvashatjuk, hogy $\mu$ a nyírási modulus. (A jele általános esetben $G$.)
+    Vagyis $\mu C=\frac{F}{A}$.
+   Itt $C$ az $y$ irányú megnyúlásnak és a $z$ irányú hossznak az aránya.
+   Innen leolvashatjuk, hogy $\mu$ a nyírási modulus. (A jele általános esetben $G$.)
     
   \subsection{Hullámegyenlet}
    
@@ -183,7 +195,8 @@
     &&\text{Hooke-törvény:}&&&\sigma_{ij}=C_{ijkl}\ep_{kl}&\label{eq:09-ht}\\
     &&\text{Kontinuitási egyenlet:}&&&\partial_t\rho+\partial_i(\rho v_i)=0&\label{eq:09-ke}
    }
-   Az egyenletrendszer megoldásait keressük homogén esetben. Helyettesítsük \eqaref{eq:09-ht} egyenletet \eqaref{eq:09-me} egyenletbe:
+   Az egyenletrendszer megoldásait keressük homogén esetben.
+   Helyettesítsük \eqaref{eq:09-ht} egyenletet \eqaref{eq:09-me} egyenletbe:
    \al{
     \rho\dd_t v_i
      =f_i+\partial_jC_{ijkl}\ep_{kl}
@@ -214,7 +227,8 @@
     \al{
      s_i=S_i\Psi(\nv\rv-vt),
     }
-    ahol $\vect{S}$ és $\vect{n}$ egy-egy (helytől és időtől független) vektor. Behelyettesítve:
+    ahol $\vect{S}$ és $\vect{n}$ egy-egy (helytől és időtől független) vektor.
+   Behelyettesítve:
     \al{
      \rho\partial_t^2S_i\Psi(n_pr_p-vt)&=C_{ijkl}\partial_j\partial_k S_l\Psi''\\
      \rho v^2 S_i \Psi''(n_pr_p-vt)&=C_{ijkl}n_j n_k S_l\Psi''\\
@@ -233,7 +247,8 @@
        -C_{3jk1}n_jn_k & -C_{3jk2}n_jn_k & \rho v^2-C_{3jk3}n_jn_k
       \end{vmatrix}.
     }
-    Ez $v^2$-re egy harmadfokú egyenlet, aminek legfeljebb 3 különböző megoldása lehet. Így $v$-re a lehetséges értékek: $\pm v_1$, $\pm v_2$, $\pm v_3$. Az ellentétes előjelek csak az ellentétes irányokba terjedő hullámokra vonatkoznak. 
+    Ez $v^2$-re egy harmadfokú egyenlet, aminek legfeljebb 3 különböző megoldása lehet. Így $v$-re a lehetséges értékek: $\pm v_1$, $\pm v_2$, $\pm v_3$.
+   Az ellentétes előjelek csak az ellentétes irányokba terjedő hullámokra vonatkoznak. 
     
     Egy adott terjedési irányra ($\vect{n}$) tehát háromféle $v$-t kapunk, amelyekhez tartozik három rezgési irány ($\vect{S}$) is. 
     
@@ -250,7 +265,9 @@
      \frac{\big(\rho v^2-\mu \big)}{\lambda+\mu}S_i&= n_i n_k S_k\\
      \frac{\big(\rho v^2-\mu \big)}{\lambda+\mu}\vect{S}&= (\vect{n}\circ\vect{n})\vect{S}
     }
-    Az $\vect{n}\circ\vect{n}$ az $\vect{n}$ irányra való projekció. Ennek sajátértékei a 0 (kétszer) és az 1 (egyszer). Ezek alapján:
+    Az $\vect{n}\circ\vect{n}$ az $\vect{n}$ irányra való projekció.
+   Ennek sajátértékei a 0 (kétszer) és az 1 (egyszer).
+   Ezek alapján:
     \al{
      &\frac{\big(\rho v^2-\mu \big)}{\lambda+\mu}=0
      &\Rightarrow
@@ -273,16 +290,19 @@
     & &\rot{\vect{E}}=-\partial_t\vect{B} &&
     &\rot{\vect{B}}=\mu_0\vect{J}+\frac{1}{c^2}\partial_t\vect{E}, &
    }
-   Keressük a megoldásokat a potenciálokon keresztül: $\vect{E}=-\partial_t\vect{A}-\grad\vect{\phi}$, és $\vect{B}=\rot{\vect{A}}$. Lorentz-mértéket, $\divo\vect{A}+\frac{1}{c^2}\partial_t\phi=0$, használva:
+   Keressük a megoldásokat a potenciálokon keresztül: $\vect{E}=-\partial_t\vect{A}-\grad\vect{\phi}$, és $\vect{B}=\rot{\vect{A}}$.
+   Lorentz-mértéket, $\divo\vect{A}+\frac{1}{c^2}\partial_t\phi=0$, használva:
    \al{
      & \left(\Delta-\frac{1}{c^2}\partial_t^2\right)\phi=-\frac{1}{\ep_0}\rho
      & \left(\Delta-\frac{1}{c^2}\partial_t^2\right)\vect{A}=-\mu_0\vect{J}
     }
-   Ezek az egyenletek mind ugyanolyan alakúak: ez a inhomogén d'Alambert-egyenlet. Először kezdjünk a homogén megoldásával. 
+   Ezek az egyenletek mind ugyanolyan alakúak: ez a inhomogén d'Alambert-egyenlet.
+   Először kezdjünk a homogén megoldásával. 
    
    \paragraph{Homogén megoldás}
     
-    Tehát keressük a $\square\Psi=0$ egyenlet megoldását. Fourier-transzformáljuk az egyenletet térben és időben is:
+    Tehát keressük a $\square\Psi=0$ egyenlet megoldását.
+   Fourier-transzformáljuk az egyenletet térben és időben is:
     \al{
      &\Psi(t,\rv)
       =\intl{-\infty}{\infty}\frac{\dd \omega}{2\pi}\,\intl{}{}\frac{\dd^3 \kv}{(2\pi)^3}\,e^{-i\omega t+i\kv\rv}\Psi(\omega,\kv)
@@ -297,13 +317,15 @@
     \al{
      \Psi(\omega,\kv)=a(\kv)2\pi\delta(\omega-kc)+b(\kv)2\pi\delta(\omega+kc),
     }
-    ahol $a(\kv)$ és $b(\kv)$ tetszőleges függvények. Az inverz Fourier-transzformációt elvégezzük:
+    ahol $a(\kv)$ és $b(\kv)$ tetszőleges függvények.
+   Az inverz Fourier-transzformációt elvégezzük:
     \al{
      \Psi(t,\rv)
       &=\intl{-\infty}{\infty}\frac{\dd \omega}{2\pi}\,\intl{}{}\frac{\dd^3 \kv}{(2\pi)^3}\,e^{-i\omega t+i\kv\rv}\big(a(\kv)2\pi\delta(\omega-kc)+b(\kv)2\pi\delta(\omega+kc)\big)\\
       &=\intl{}{}\frac{\dd^3 \kv}{(2\pi)^3}\,\left(a(\kv)e^{-ikc t+i\kv\rv}+b(\kv)e^{ikc t+i\kv\rv}\right)
     }
-    $\Psi(t,\rv)$ valósságából következik, hogy $a^*(-\kv)=b(\kv)$, így $a(\kv)$ lehet komplex és így nincs szükségünk $b(\kv)$-re. Ezzel
+    $\Psi(t,\rv)$ valósságából következik, hogy $a^*(-\kv)=b(\kv)$, így $a(\kv)$ lehet komplex és így nincs szükségünk $b(\kv)$-re.
+   Ezzel
     \al{
      \Psi(t,\rv)
       &=2\Re\left[\intl{}{}\frac{\dd^3 \kv}{(2\pi)^3}\,a(\kv)e^{-i\omega(\kv) t+i\kv\rv}\right] & \omega(\kv)&=ck
@@ -315,7 +337,8 @@
      &\Delta\phi=0 & \Rightarrow &&& \phi=0\\
      &\square\vect{A}=0 & \Rightarrow &&& \vect{A}(t,\vect{rv})=\intl{}{}\frac{\dd^3 \kv}{(2\pi)^3}\,\vect{A}_0(\kv)e^{-i\omega(\kv) t+i\kv\rv}
     }
-    A mértékválasztás miatt $\kv\cdot\Av_0(\kv)=0$. Az egyes monokromatikus komponensek ($\kv$ fix):
+    A mértékválasztás miatt $\kv\cdot\Av_0(\kv)=0$.
+   Az egyes monokromatikus komponensek ($\kv$ fix):
     \al{
      \vect{E}&=-\partial_t\vect{A}=i\omega\vect{A}_0(\kv)e^{-i\omega(\kv) t+i\kv\rv}=\vect{E}_0 e^{-i\omega(\kv) t+i\kv\rv}&\vect{E}_0&=i\omega\vect{A}_0(\kv)\\
      \vect{B}&=\rot\vect{A}=i\kv\times\vect{A}_0(\kv)e^{-i\omega(\kv)t+i\kv\rv}=\vect{B}_0 e^{-i\omega(\kv) t+i\kv\rv}&\vect{B}_0&=i\kv\times\vect{A}_0(\kv)=\frac{1}{c}\frac{\kv}{k}\times\vect{E}_0.
@@ -355,13 +378,15 @@
     \al{
      (\Delta+k^2)G(\omega,\rv)=-\delta(\rv).
     }
-    Mivel a jobb oldal forgásinvariáns, illetve a határfeltételek is azok, azért a $G(t,\rv)$ csak a radiális koordinátától függ. Gömbi koordináta-rendszerben ($r\ne0$):
+    Mivel a jobb oldal forgásinvariáns, illetve a határfeltételek is azok, azért a $G(t,\rv)$ csak a radiális koordinátától függ.
+   Gömbi koordináta-rendszerben ($r\ne0$):
     \al{
      &\frac{1}{r}\der{^2}{r^2}\big(rG(\omega,r)\big)+k^2G(\omega,r)=0
      &\Rightarrow
      &&G_{R/A}(\omega,r)=C\frac{e^{\pm i k r}}{r}.
     }
-    $k=0$-ra a Laplace-egyenlet Green-függvényét kell kapjuk, ahonnan következik, hogy $C=\frac{1}{4\pi}$. Valós térben a Green-függvény:
+    $k=0$-ra a Laplace-egyenlet Green-függvényét kell kapjuk, ahonnan következik, hogy $C=\frac{1}{4\pi}$.
+   Valós térben a Green-függvény:
     \al{
      G_{R/A}(t,r)
       =\frac{1}{4\pi r}\intl{-\infty}{\infty}\frac{\dd\omega}{2\pi}\,e^{-i\omega t}e^{\pm i\omega/c r}
@@ -371,11 +396,11 @@
     \al{
      G_{R/A}(t-t',\rv-\rv')=\frac{1}{4\pi \abs{\rv-\rv'}}\delta\left((t-t')\mp \frac{\abs{\rv-\rv'}}{c}\right).
     }
-    
-    
+
    \paragraph{Retardált potenciálok}
     
-    Legyen a forrástag egy időben változó ponttöltés, ami végig az origóban van, $f(t,\rv)=\frac{1}{\ep_0}q(t)\delta(\rv)$. Ekkor a két megoldás:
+    Legyen a forrástag egy időben változó ponttöltés, ami végig az origóban van, $f(t,\rv)=\frac{1}{\ep_0}q(t)\delta(\rv)$.
+   Ekkor a két megoldás:
     \al{
      \Psi_R(t,\rv)
      &=\intl{-\infty}{\infty}\dd t'\,\intl{}{}\dd^3\rv'\, G_R(t,\rv;t',\rv')f(t',\rv')\\
@@ -385,12 +410,15 @@
       &=\intl{-\infty}{\infty}\dd t'\,\intl{}{}\dd^3\rv'\, \frac{1}{4\pi\ep_0 \abs{\rv-\rv'}}\delta\left((t-t')+ \frac{\abs{\rv-\rv'}}{c}\right)q(t')\delta(\rv')
       =\frac{1}{4\pi\ep_0 \abs{\rv}}q\left(t+\frac{\abs{\rv}}{c}\right)
     }
-    Ha a ponttöltés töltése nem időfüggő, akkor mindkét egyenlet visszaadja a statika megoldását. A retardált esetben a megoldást a $(t,\rv)$ helyen a forrás korábbi értéke határozza meg. Ennek fizikai jelentése tehát az, hogy ha $t_0$-ban bekapcsolok egy forrást, akkor ez után a megoldás a retardált megoldással készíthető el:
+    Ha a ponttöltés töltése nem időfüggő, akkor mindkét egyenlet visszaadja a statika megoldását.
+   A retardált esetben a megoldást a $(t,\rv)$ helyen a forrás korábbi értéke határozza meg.
+   Ennek fizikai jelentése tehát az, hogy ha $t_0$-ban bekapcsolok egy forrást, akkor ez után a megoldás a retardált megoldással készíthető el:
     \al{
      \Psi(t,\rv)=\underbrace{\Psi(t_0,\rv)}_\text{kezd. felt.}+\Psi_R(t,\rv).
     }
     
-    Az avanzsált esetben a megoldás a $(t,\rv)$ helyen a forrás jövőbeli értékétől függ. Ha egy forrás $t_v$ időpontig működött, és tudom, hogy ekkor mi volt a megoldás, akkor egy korábbi $t$ időpontban a megoldás:
+    Az avanzsált esetben a megoldás a $(t,\rv)$ helyen a forrás jövőbeli értékétől függ.
+   Ha egy forrás $t_v$ időpontig működött, és tudom, hogy ekkor mi volt a megoldás, akkor egy korábbi $t$ időpontban a megoldás:
     \al{
      \Psi(t,\rv)=\Psi(t_v,\rv)+\Psi_A(t,\rv).
     } 
@@ -405,18 +433,22 @@
     
   \subsection{Fázis- és csoportsebesség}
    
-   \paragraph{Fázissebesség} Tekintsünk csak egy módust. Ennek azonos fázisban lévő pontjai:
+   \paragraph{Fázissebesség} Tekintsünk csak egy módust.
+   Ennek azonos fázisban lévő pontjai:
    \al{
     &e^{-i\omega(\kv)t+i\kv\rv}=e^{i\kv\rv_0}
     &\Rightarrow
     && \kv(\rv-\rv_0)=\omega(\kv)t+2\pi n\quad n\in\mathbb{Z}.
    }
-   Az egyenlet megoldását ($\rv$-re) keressük az alábbi alakban: $\rv=\rv_0+(v_\text{f} t + \lambda n)\frac{\kv}{k}+\beta\kv_{\perp}$, ahol a zárójelben szereplő szám  és $\beta$ egy-egy (furcsán megválasztott) konstans. Behelyettesítve:
+   Az egyenlet megoldását ($\rv$-re) keressük az alábbi alakban: $\rv=\rv_0+(v_\text{f} t + \lambda n)\frac{\kv}{k}+\beta\kv_{\perp}$, ahol a zárójelben szereplő szám  és $\beta$ egy-egy (furcsán megválasztott) konstans.
+   Behelyettesítve:
    \al{
     &v_\text{f}(\kv)=\frac{\omega(\kv)}{k}
     &\lambda=\frac{2\pi}{k}.
    } 
-   $\kv$-re merőlegesen vannak az azonos fázisú pontok. Ezek a felületek egymást $\lambda$ távolságra követik. A felületek pedig $\kv$ irányában haladnak $v_\text{f}$ sebességgel. 
+   $\kv$-re merőlegesen vannak az azonos fázisú pontok.
+   Ezek a felületek egymást $\lambda$ távolságra követik.
+   A felületek pedig $\kv$ irányában haladnak $v_\text{f}$ sebességgel. 
    
    \paragraph{Csoportsebesség} Vegyünk több komponenst, melyek egy irányban terjednek, illetve tegyük fel, hogy $\omega(\kv)$ lassan változik egy átlagos $\kv_0$ körül, ekkor a megoldás:
    \al{
@@ -429,13 +461,18 @@
      =e^{-i\big(\omega_0-v_\text{cs}k_0\big)t}\intl{}{}\frac{\dd k}{2\pi}\,a(k)e^{-iv_\text{cs}kt+ikx}\\
     &=e^{-i\omega_0\left(1-\frac{v_\text{cs}}{v_\text{f}}\right)t}\Psi(0,x-v_\text{cs}t).
    }
-   A hullám alakja megmarad, csak egy fázisfaktorral szorzódik, a hullám viszont halad előre $v_\text{cs}$ sebességgel. A fázisfaktor a hullám burkolója.
+   A hullám alakja megmarad, csak egy fázisfaktorral szorzódik, a hullám viszont halad előre $v_\text{cs}$ sebességgel.
+   A fázisfaktor a hullám burkolója.
    
   \subsection{Hullámvezetők}
    
-   A téglalap keresztmetszetű fémfalú hullámvezetőben az elektromágneses tereket a forrásmentes vákuumban felírt Maxwell-egyenletek szabják meg. A vezető fala ideális fém, azaz a határfeltételek: $\vect{E}_\parallel=0$, $\vect{B}_\perp=0$.
+   A téglalap keresztmetszetű fémfalú hullámvezetőben az elektromágneses tereket a forrásmentes vákuumban felírt Maxwell-egyenletek szabják meg.
+   A vezető fala ideális fém, azaz a határfeltételek: $\vect{E}_\parallel=0$, $\vect{B}_\perp=0$.
    
-   A terek megoldásai a falak irányában állóhullámok a terjedés irányában pedig síkhullám. Ezzel $k_x=\frac{n\pi}{a}$ és  $k_y=\frac{m\pi}{b}$, ahol $q$ és $b$ oldaltávolságok, $n$ és $m$ pedig egész számok. Itt $\omega(\kv)=kc$. A fázis- és a csoportsebesség, az $\omega$ hullámszámú $k_z$-vel terjedő hullámokra:
+   A terek megoldásai a falak irányában állóhullámok a terjedés irányában pedig síkhullám.
+   Ezzel $k_x=\frac{n\pi}{a}$ és  $k_y=\frac{m\pi}{b}$, ahol $q$ és $b$ oldaltávolságok, $n$ és $m$ pedig egész számok.
+   Itt $\omega(\kv)=kc$.
+   A fázis- és a csoportsebesség, az $\omega$ hullámszámú $k_z$-vel terjedő hullámokra:
    \al{
     v_\text{f}
      &=\frac{\omega}{k_z}
@@ -449,4 +486,3 @@
  \section{Kvantummechanika}
   
   Hullámegyenletek, hullámfüggvények, jelentésük: lásd \ref{1tetel}--\ref{2tetel}. tétel kvantummechanika része, illetve a mérlegegyenletek \aref{ss:A08-kv}. fejezetben.
-  

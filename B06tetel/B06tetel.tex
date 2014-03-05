@@ -2,11 +2,15 @@
  
  \section{Ekvipartíció tétele}
   
-  Tekintsünk egy klasszikus rendszert. Ennek Hamilton-függvénye $H=H(q,p)$. Jelölje $x_i$ a Hamilton-függvény tetszőleges változóját, $q_i$-t vagy akár $p_i$-t is. Az $x_i$-t szabadsági foknak hívjuk, ha 
+  Tekintsünk egy klasszikus rendszert.
+   Ennek Hamilton-függvénye $H=H(q,p)$.
+   Jelölje $x_i$ a Hamilton-függvény tetszőleges változóját, $q_i$-t vagy akár $p_i$-t is.
+   Az $x_i$-t szabadsági foknak hívjuk, ha 
   \al{
    \lim_{x_i\to \pm\infty}H(\dots,x_i,\dots)=\infty.
   }
-  Fontos, hogy mind a két határértékben divergálnia kell a Hamilton-függvénynek. Az ekvipartíció tétele kimondja, hogy ha $x_i$ szabadsági fok, akkor 
+  Fontos, hogy mind a két határértékben divergálnia kell a Hamilton-függvénynek.
+   Az ekvipartíció tétele kimondja, hogy ha $x_i$ szabadsági fok, akkor 
   \al{
    \mv{x_j\pder{H}{x_i}}=\delta_{ij}\kB T.
   }
@@ -31,7 +35,9 @@
      =\kB T\delta_{ij}.
   }
   
-  Még egyszer, ez csak klasszikus rendszerekben igaz. Alacsony hőmérsékleten nem ugyanakkora energia jut az egyes szabadsági fokokra, vannak szabadsági fokok, amelyek kifagynak. Pl. a Doulong--Petit-törvény szerint a harmonikus oszcillátor fajhője állandó, míg a kvantumos levezetésből alacsony hőmérsékleten $\sim T^2$ adódik. 
+  Még egyszer, ez csak klasszikus rendszerekben igaz.
+   Alacsony hőmérsékleten nem ugyanakkora energia jut az egyes szabadsági fokokra, vannak szabadsági fokok, amelyek kifagynak.
+   Pl. a Doulong--Petit-törvény szerint a harmonikus oszcillátor fajhője állandó, míg a kvantumos levezetésből alacsony hőmérsékleten $\sim T^2$ adódik. 
   
  \section{Klasszikus ideális gáz}\label{ss:B06-CID}
   
@@ -45,7 +51,8 @@
   
   \subsection{Állapotszám}
   
-   Legyen $N$ részecske a $d$ dimenziós, $V$ térfogatot kitöltő klasszikus ideális gázban. Mikrokanonikus sokaságként kezelve az állapotszám:
+   Legyen $N$ részecske a $d$ dimenziós, $V$ térfogatot kitöltő klasszikus ideális gázban.
+   Mikrokanonikus sokaságként kezelve az állapotszám:
    \al{
     \Omega_{0}(E)
      =\intl{\suml{i=1}{N}\frac{p_i^2}{2m}<E}{}\frac{\dd^{dN}p\dd^{dN}q}{N! h^{dN}}\,
@@ -54,7 +61,8 @@
    }
    ahol $\Gamma$ a Gamma-függvény (a faktoriális általánosítása).
    
-   Az entrópiához szükségünk van ennek a logaritmusára. A Stirling-formulát ($\ln n!\approx n\ln n-n$) használva, illetve a Gamma-függvényt közelítve ($\Gamma(n+1)\sim n!$): 
+   Az entrópiához szükségünk van ennek a logaritmusára.
+   A Stirling-formulát ($\ln n!\approx n\ln n-n$) használva, illetve a Gamma-függvényt közelítve ($\Gamma(n+1)\sim n!$): 
    \al{
     \ln{\Omega_0(E)}
      &\approx N\ln V-(N\ln N-N)-dN\ln h+\frac{dN}{2}\ln(2mE\pi)-\left(\frac{dN}{2}\ln\frac{dN}{2}-\frac{dN}{2}\right)+\mathcal{O}(\ln N)\\
@@ -66,7 +74,9 @@
    
   \subsection{Maxwell-féle sebességeloszlás}
    
-   Írjuk le az ideális gázt kanonikus sokaságban. A Hamilton-függvény $H=\suml{i=1}{N}\frac{p_i^2}{2m}$. Mivel a Hamilton kölcsönhatásmentes, így a kanonikus állapotszám:
+   Írjuk le az ideális gázt kanonikus sokaságban.
+   A Hamilton-függvény $H=\suml{i=1}{N}\frac{p_i^2}{2m}$.
+   Mivel a Hamilton kölcsönhatásmentes, így a kanonikus állapotszám:
    \al{
     Z&=\frac{Z_1^N}{N!}\\
     Z_1&=\frac{1}{h^3}\intl{}{}\dd^3 \qv\dd^3 \pv\,e^{-\beta\frac{p^2}{2m}}
@@ -81,7 +91,8 @@
      =\frac{\frac{V}{h^3}e^{-\beta\frac{\pv^2}{2m}}}{Z_1}
      =\frac{e^{-\beta\frac{\pv^2}{2m}}}{\left(2\pi m\kB T\right)^{\frac{3}{2}}}.
    }
-   Az előző állítás nem csak kölcsönhatásmentes rendszerekre igaz, hanem olyanokra is, ahol a kölcsönhatás csak a $q$-tól függ. Az előző képletben a számlálóban és a nevezőben ugyanaz a térintegrál lenne, így egyszerűsíteni lehetne vele.
+   Az előző állítás nem csak kölcsönhatásmentes rendszerekre igaz, hanem olyanokra is, ahol a kölcsönhatás csak a $q$-tól függ.
+   Az előző képletben a számlálóban és a nevezőben ugyanaz a térintegrál lenne, így egyszerűsíteni lehetne vele.
    
    Az impulzus eloszlásából kifejezhetjük, hogy mennyi a valószínűsége, hogy a részecske sebessége $\vv$, hiszen:
    \al{
@@ -177,7 +188,9 @@
   \al{
    H=E_\text{kin}+U_\text{pot}=E_\text{kin}+U_\text{int}+U_\text{w},
   }
-  ahol a kölcsönhatást két részre osztottuk, a részecskék egymással való kölcsönhatására és a fallal való kölcsönhatásra. Azt tudjuk az ekvipartíció tétele miatt, hogy $\mv{E_\text{kin}}=\frac{3}{2}\kB T$. Kérdés, hogy mennyi a potenciális energia átlagértéke. 
+  ahol a kölcsönhatást két részre osztottuk, a részecskék egymással való kölcsönhatására és a fallal való kölcsönhatásra.
+   Azt tudjuk az ekvipartíció tétele miatt, hogy $\mv{E_\text{kin}}=\frac{3}{2}\kB T$.
+   Kérdés, hogy mennyi a potenciális energia átlagértéke. 
   
   A Newton-egyenletből:
   \al{
@@ -214,7 +227,8 @@
   \al{
    U_\text{w}=\suml{i=1}{N}\ointl{\partial V}{}\dd A_\rv w(\rv_i-\rv),
   }
-  ahol az integrál a fal teljes felületére megy. Ezzel a viriál átlagértéke:
+  ahol az integrál a fal teljes felületére megy.
+   Ezzel a viriál átlagértéke:
   \al{
    \frac{1}{2}\mv{\suml{i=1}{3N}x_i F_i}
     &=-\frac{1}{2}\mv{\suml{i=1}{N}\rv_i\pder{U_\text{w}}{\rv_i}}
@@ -270,7 +284,9 @@
      =\kB T \frac{V}{\lambda_T^3} e^{\beta\mu}
      =N\kB T,
    }
-   ahonnan $e^{\beta\mu}=\lambda_T^3 n$. $\lambda_T$ értéke fix és pici, így ha $n$ kicsi, akkor $e^{\beta\mu}$ is az. Nem ideális gázra is azt gondoljuk, hogy ez kicsi marad, így ez a kis paraméter, ami szerint \eqaref{eq:B06-virialsf1} egyenlet jobb oldalát sorba fejtjük. Az állapotösszeg: $\mathcal{Z}=1+Z_1 e^{\beta\mu}+Z_2 e^{2\beta\mu}+\dots$, illetve $\ln(1+x)=x-\frac{x^2}{2}+\dots$, így
+   ahonnan $e^{\beta\mu}=\lambda_T^3 n$. $\lambda_T$ értéke fix és pici, így ha $n$ kicsi, akkor $e^{\beta\mu}$ is az.
+   Nem ideális gázra is azt gondoljuk, hogy ez kicsi marad, így ez a kis paraméter, ami szerint \eqaref{eq:B06-virialsf1} egyenlet jobb oldalát sorba fejtjük.
+   Az állapotösszeg: $\mathcal{Z}=1+Z_1 e^{\beta\mu}+Z_2 e^{2\beta\mu}+\dots$, illetve $\ln(1+x)=x-\frac{x^2}{2}+\dots$, így
    \al{
     pV&=\kB T\ln\left(1+Z_1 e^{\beta\mu}+Z_2 e^{2\beta\mu}+\dots\right)\\
       &=\kB T\Big(Z_1 e^{\beta\mu}+Z_2 e^{2\beta\mu}+\dots-\frac{1}{2}\left(Z_1 e^{\beta\mu}+Z_2 e^{2\beta\mu}+\dots\right)^2+\dots\Big)\\
@@ -296,7 +312,8 @@
       =\kB T\left(N-z_2 \frac{N^2}{z_1^2}\right)\\
      &=N\kB T\left(1-N\frac{Z_2-\frac{1}{2}Z_1^2}{Z_1^2}\right).
    }
-   Már csak $Z_1$-et és $Z_2$-t kell kiszámolni. $Z_1$ az egyrészecskés állapotösszeg, ebben nem szerepel kölcsönhatás, így ezt ismerjük. A kétrészecskés állapotösszeg definíció szerint:
+   Már csak $Z_1$-et és $Z_2$-t kell kiszámolni. $Z_1$ az egyrészecskés állapotösszeg, ebben nem szerepel kölcsönhatás, így ezt ismerjük.
+   A kétrészecskés állapotösszeg definíció szerint:
    \al{
     Z_2
      &=\intl{}{}\frac{\dd^3\pv_1\dd^3\pv_2\dd^3\rv_1\dd^3\rv_2}{2 h^6}\,e^{-\beta\big(\frac{\pv_1^2}{2m}+\frac{\pv_2^2}{2m}+U(\rv_1-\rv_2)\big)}
@@ -339,6 +356,7 @@
     
  \section{van der Waals állapotegyenlet}
   
-  Célunk, hogy leírjuk a folyadák--gáz fázisátalakulást. A viriál sorfejtéssel kapott állapotegyenlet azonban nem lesz kielégítő semmilyen fázisátalakulás közelében, hiszen ott nemanalitikus viselkedést mutatnak a termodinamikai mennyiségek, amely sorfejtésből nem származtatható.
+  Célunk, hogy leírjuk a folyadák--gáz fázisátalakulást.
+   A viriál sorfejtéssel kapott állapotegyenlet azonban nem lesz kielégítő semmilyen fázisátalakulás közelében, hiszen ott nemanalitikus viselkedést mutatnak a termodinamikai mennyiségek, amely sorfejtésből nem származtatható.
   
   A továbbiak \aref{ss:B09-vdW}. fejezetben.
