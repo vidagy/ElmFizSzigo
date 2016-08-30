@@ -4,11 +4,14 @@
   
   \subsection{Folytonos közegek alapfogalmai}
    
-   A folytonos közeget nem tömegpontokból, hanem elkent tömegsűrűségből építjük fel: $\rho(\rv)$ folytonos sima függvény. A rendszer egy $V$ térfogatának a tömege így: $m=\intl{V}{}\drh\rho(\rv)$. 
+   A folytonos közeget nem tömegpontokból, hanem elkent tömegsűrűségből építjük fel: $\rho(\rv)$ folytonos sima függvény.
+   A rendszer egy $V$ térfogatának a tömege így: $m=\intl{V}{}\drh\rho(\rv)$. 
    
-   A folytonos közeg egy tetszőleges állapotának leírásához meg kell jelölnünk annak részeit. A $t=t_0$ kezdeti pillanatban az $\rv(t=t_0)$ helyen lévő $\rho(\rv)\drh$ tömegű részt az $\rv$ vektorral indexeljük.
+   A folytonos közeg egy tetszőleges állapotának leírásához meg kell jelölnünk annak részeit.
+   A $t=t_0$ kezdeti pillanatban az $\rv(t=t_0)$ helyen lévő $\rho(\rv)\drh$ tömegű részt az $\rv$ vektorral indexeljük.
    
-   A rész elmozdulását az $\sv(t,\rv)$ elmozdulásmezővel írhatjuk le: $\rv(t,\rv)=\rv+\sv(t,\rv)$. Az elmozdulás sebességét ennek időderiválásából kapjuk, ez a sebességmező: 
+   A rész elmozdulását az $\sv(t,\rv)$ elmozdulásmezővel írhatjuk le: $\rv(t,\rv)=\rv+\sv(t,\rv)$.
+   Az elmozdulás sebességét ennek időderiválásából kapjuk, ez a sebességmező: 
    \eq{
     \vv(t,\rv)=\partial_t\sv(t,\rv).
     }
@@ -36,7 +39,9 @@
    }
    Vagyis az $a_{ij}$ tenzorral való hatás egy $\phi=\frac{1}{2}\rot{\sv}$-vel való elforgatásnak felel meg. 
    
-   A deformációnak megfelelő rész jelentéséhez nézzünk két egymáshoz közeli pontot: $\uv$-t és $\vv$-t. Legyen $\vv=\uv+\Delta \xv$. Elmozdulás után az új $x$ koordináták különbsége: 
+   A deformációnak megfelelő rész jelentéséhez nézzünk két egymáshoz közeli pontot: $\uv$-t és $\vv$-t.
+   Legyen $\vv=\uv+\Delta \xv$.
+   Elmozdulás után az új $x$ koordináták különbsége: 
    \al{
     \big[\Delta\bar \xv\big]_i
      &=\big[\bar\vv-\bar\uv\big]_i
@@ -44,7 +49,8 @@
       =\big[\Delta \xv+\sv(\uv+\Delta \xv)-\sv(\uv)\big]_i\\
      &=\Delta x_i+\partial_j s_i(\uv)\Delta x_j.
    }
-   Ha pl. $\big[\Delta\xv\big]_i=d\delta_{1i}$, tehát $\uv$ és $\vv$ egymástól $d$ távolságra vannak $x$ irányban, akkor $\ep_{11}=\frac{\bar d-d}{d}$, vagyis az $\ep$ diagonális elemei az adott irányú relatív megnyúlásokat tartalmazzák. A nem diagonális elemek az adott pontokat összekötő szakaszainak elfordulását adják. 
+   Ha pl. $\big[\Delta\xv\big]_i=d\delta_{1i}$, tehát $\uv$ és $\vv$ egymástól $d$ távolságra vannak $x$ irányban, akkor $\ep_{11}=\frac{\bar d-d}{d}$, vagyis az $\ep$ diagonális elemei az adott irányú relatív megnyúlásokat tartalmazzák.
+   A nem diagonális elemek az adott pontokat összekötő szakaszainak elfordulását adják. 
    
    A térfogatelem megváltozása: 
    \eq{
@@ -53,19 +59,27 @@
    
    \paragraph{Erők} 
    
-    A kontinuumra ható erők kétfélék lehetnek. Az egyik eset, ha az erő térfogati, azaz minden tömegpontra hat. Ilyen például a nehézségi erő vagy az elektromágneses erők. A térfogati erőkhöz bevezethető egy erősűrűség: 
+    A kontinuumra ható erők kétfélék lehetnek.
+   Az egyik eset, ha az erő térfogati, azaz minden tömegpontra hat.
+   Ilyen például a nehézségi erő vagy az elektromágneses erők.
+   A térfogati erőkhöz bevezethető egy erősűrűség: 
     \eq{
      \Fv=\intl{V}{}\drh\fv(t,\rv). 
     }
     
-    A másik eset, ha az erő csak egy felület mentén hat, akkor azt felületi erőnek hívjuk. Ilyenek pl. a molekuláris erők. Ebben az esetben az erőhöz egy feszültségtenzor vezethető be. Itt az erő iránya általános esetben nem párhuzamos a felület merőlegesével, ezért az erő és a felületmerőleges között legegyszerűbb esetben is tenzoriális a kapcsolat:
+    A másik eset, ha az erő csak egy felület mentén hat, akkor azt felületi erőnek hívjuk.
+   Ilyenek pl. a molekuláris erők.
+   Ebben az esetben az erőhöz egy feszültségtenzor vezethető be.
+   Itt az erő iránya általános esetben nem párhuzamos a felület merőlegesével, ezért az erő és a felületmerőleges között legegyszerűbb esetben is tenzoriális a kapcsolat:
     \eq{
      F_i=\ointl{\partial V}{}\sigma_{ij}\dd^2 f_j.
     }
     
   \subsection{A szubsztanciális derivált}
    
-   Egy mérhető mennyiség értékét vizsgálhatjuk egy adott $\rv$ helyen. Ekkor lokálisan ott a megváltozása $\frac{A(t+\Delta t,\rv)-A(t,\rv)}{\Delta t}\to\partial_t A(t,\rv)$. Ha azonban egy kiszemelt anyagdarabot szeretnénk követni, és annak a változását szeretnénk figyelni, akkor az anyaggal együtt kell mozognunk:
+   Egy mérhető mennyiség értékét vizsgálhatjuk egy adott $\rv$ helyen.
+   Ekkor lokálisan ott a megváltozása $\frac{A(t+\Delta t,\rv)-A(t,\rv)}{\Delta t}\to\partial_t A(t,\rv)$.
+   Ha azonban egy kiszemelt anyagdarabot szeretnénk követni, és annak a változását szeretnénk figyelni, akkor az anyaggal együtt kell mozognunk:
    \al{
     \frac{A(t+\Delta t,\rv+\vv\Delta t)-A(t,\rv)}{\Delta t}
      &=\frac{A(t+\Delta t,\rv)+\partial_i A(t+\Delta t,\rv)v_i\Delta t-A(t,\rv)}{\Delta t}\\
@@ -75,7 +89,8 @@
    }
    ez a mennyiség a szubsztanciális derivált. 
    
-   Egy integrális mennyiségnek is elkészíthetjük ezt a kétfajta deriváltját. Első esetben rögzítsük az integrálási tartományt, ekkor az integrális mennyiség megváltozása:
+   Egy integrális mennyiségnek is elkészíthetjük ezt a kétfajta deriváltját.
+   Első esetben rögzítsük az integrálási tartományt, ekkor az integrális mennyiség megváltozása:
    \al{
     \frac{I(t+\Delta t,V)-I(t,V)}{\Delta t}
      &=\frac{1}{\Delta t}\left(\intl{V}{}\drh A(t+\Delta t,\rv)-\intl{V}{}\drh A(t,\rv)\right)\\
@@ -83,7 +98,8 @@
      \to\partial_t\intl{V}{}\drh A(t,\rv)
      =\partial_t I
    }
-   A másik esetben a $V$ térfogat az anyaggal együtt mozog. Ekkor az integrális mennyiség megváltozása: 
+   A másik esetben a $V$ térfogat az anyaggal együtt mozog.
+   Ekkor az integrális mennyiség megváltozása: 
    \aln{
    \dd_t I(t,V)
     &\xleftarrow{\Delta t\to0}
@@ -128,7 +144,8 @@
    
   \subsection{Mérlegegyenletek}
    
-   Először vizsgáljunk meg egy speciális integrális mennyiséget, legyen ennek a sűrűsége $\rho(t,\rv)\cdot A(t,\rv)$. Ennek a szubsztanciális deriváltja:
+   Először vizsgáljunk meg egy speciális integrális mennyiséget, legyen ennek a sűrűsége $\rho(t,\rv)\cdot A(t,\rv)$.
+   Ennek a szubsztanciális deriváltja:
    \al{
     \dd_t I(t,V)
      &=\dd_t\intl{V}{}\drh A(t,\rv)\rho(t,\rv).
@@ -142,7 +159,8 @@
         +\rho(t,\rv)\Big(\partial_tA(t,\rv)+v_i \partial_iA(t,\rv)\Big)
        \Big].
    }
-   Itt az első tagban a kerek zárójel nullát ad a kontinuitási egyenlet miatt, ha nincsenek források a rendszerben. A második kerek zárójel pedig $A(t,\rv)$ szubsztanciális deriváltja:
+   Itt az első tagban a kerek zárójel nullát ad a kontinuitási egyenlet miatt, ha nincsenek források a rendszerben.
+   A második kerek zárójel pedig $A(t,\rv)$ szubsztanciális deriváltja:
    \eqn{
     \dd_t I(t,V)
      =\intl{V}{}\drh\rho(t,\rv)\dd_t A(t,\rv).\label{eq:08-szubsz}
@@ -171,7 +189,8 @@
     \eqn{
      \partial_t \big[v_i\rho(t,\rv)\big]+\partial_j\big[v_iv_j \rho(t,\rv)-\sigma_{ij}\big]=f_i(t,\rv).
     }
-    Ez a $\vv\rho(t,\rv)$-re, azaz az impulzussűrűségre felírt kontinuitási egyenlet. Az impulzussűrűség forrása az erősűrűség, az árama pedig a $\big[\jv_{p_i}\big]_j=v_iv_j \rho(t,\rv)-\sigma_{ij}$.
+    Ez a $\vv\rho(t,\rv)$-re, azaz az impulzussűrűségre felírt kontinuitási egyenlet.
+   Az impulzussűrűség forrása az erősűrűség, az árama pedig a $\big[\jv_{p_i}\big]_j=v_iv_j \rho(t,\rv)-\sigma_{ij}$.
     
    \paragraph{Az impulzusmomentum mozgásegyenlete}
     
@@ -196,12 +215,15 @@
         +\ointl{\partial V}{}\df_l\ep_{ijk}r_j\sigma_{kl}
         -\underbrace{\intl{V}{}\drh\ep_{ijk}\sigma_{kj}}_{=0 (!)}.
     }
-    Itt az első az $\fv$ erősűrűség forgatónyomatéka, a második tag a $\sigma_{kl}$ felületi feszültséghez tartozó forgatónyomaték. Az utolsó tag az differenciálás átírásakor jelenik meg. Tudjuk, hogy ha nincs forgatónyomaték, akkor nincs perdületváltozás, így az utolsó tagnak nullának kell lennie. Ez feltételt szab a $\sigma_{kj}$ tenzorra. A tag csak akkor tűnik el, ha a feszültségtenzor teljesen szimmetrikus:
+    Itt az első az $\fv$ erősűrűség forgatónyomatéka, a második tag a $\sigma_{kl}$ felületi feszültséghez tartozó forgatónyomaték.
+   Az utolsó tag az differenciálás átírásakor jelenik meg.
+   Tudjuk, hogy ha nincs forgatónyomaték, akkor nincs perdületváltozás, így az utolsó tagnak nullának kell lennie.
+   Ez feltételt szab a $\sigma_{kj}$ tenzorra.
+   A tag csak akkor tűnik el, ha a feszültségtenzor teljesen szimmetrikus:
     \eq{
      \sigma_{ij}=\sigma_{ji}.
     }
-    
-    
+
    \paragraph{A kinetikus energia mozgásegyenlete}
     
     A kinetikus energia sűrűséggel kifejezve:
@@ -261,11 +283,11 @@
       =v_if_i-\sigma_{ij}\partial_t\ep_{ij},\label{eq:08-kindiff}
     }
     ahol az első zárójelben a kinetikus energia sűrűsége áll, a másodikban az energiaáram-sűrűség, a jobb oldalon pedig az energiasűrűség forrása, vagyis a munka sűrűsége áll. 
-    
-   
+
   \subsection{Navier--Stokes-egyenlet}
    
-   Láttuk, hogy a mozgásegyenlet \eqaref{eq:08-diffN} alakban írhatjuk fel lokálisan. Alakítsuk át a $\sigma_{ij}$ feszültségtenzort, válasszuk le annak trace-ét (a nyomást):
+   Láttuk, hogy a mozgásegyenlet \eqaref{eq:08-diffN} alakban írhatjuk fel lokálisan.
+   Alakítsuk át a $\sigma_{ij}$ feszültségtenzort, válasszuk le annak trace-ét (a nyomást):
    \al{
     &\pi=-\frac{1}{3}\sigma_{ii}
     &\sigma_{ij}=-\delta_{ij}\pi + T_{ij}.
@@ -274,14 +296,20 @@
    \eq{
     \rho\dd_t v_i=f_i+\partial_jT_{ij}-\partial_j\pi\delta_{ij}.
    }
-   Ebben az egyenletben a feszültségtenzor elemeire szükséges valamilyen fizikai megfontolásokat tenni. Ezek a megfontolások attól függnek, hogy milyen anyagra és milyen körülmények között akarjuk alkalmazni az egyenletet. A mi esetünk a következő: folytonos, nemrelativisztikus, Newtoni folyadékokkal foglalkozunk.
+   Ebben az egyenletben a feszültségtenzor elemeire szükséges valamilyen fizikai megfontolásokat tenni.
+   Ezek a megfontolások attól függnek, hogy milyen anyagra és milyen körülmények között akarjuk alkalmazni az egyenletet.
+   A mi esetünk a következő: folytonos, nemrelativisztikus, Newtoni folyadékokkal foglalkozunk.
    
-   A feltételezések a következőek: az anyag izotrop, nyugalomban lévő anyagban $\partial_i T_{ij}=0$, hogy a hidrosztatikus esetet kapjuk, illetve hogy a feszültségtenzor arányos a deformációsebességgel. Ezek alapján a feszültségtenzor és a nyomás:
+   A feltételezések a következőek: az anyag izotrop, nyugalomban lévő anyagban $\partial_i T_{ij}=0$, hogy a hidrosztatikus esetet kapjuk, illetve hogy a feszültségtenzor arányos a deformációsebességgel.
+   Ezek alapján a feszültségtenzor és a nyomás:
    \al{
     &\pi=p-\eta'\partial_iv_i
     &T_{ij}=\eta\left(\partial_iv_j+\partial_jv_i-2\delta_{ij}\frac{1}{3}\partial_kv_k\right).
    }
-   Itt az $\eta$ a hagyományos viszkozitás, $\eta'$ pedig csak akkor jelenik meg, ha a közeg összenyomható. Ekkor a viszkozitás miatt a nyomás is megváltozik. A $p$ a termodinamikai módszerekkel számolható nyomásnak felel meg. Ezeket behelyettesítve:
+   Itt az $\eta$ a hagyományos viszkozitás, $\eta'$ pedig csak akkor jelenik meg, ha a közeg összenyomható.
+   Ekkor a viszkozitás miatt a nyomás is megváltozik.
+   A $p$ a termodinamikai módszerekkel számolható nyomásnak felel meg.
+   Ezeket behelyettesítve:
    \al{
     \rho\dd_t v_i
      &=f_i+\eta\partial_j\left(\partial_iv_j+\partial_jv_i-2\delta_{ij}\frac{1}{3}\partial_kv_k\right)-\partial_j\left[p-\eta'\partial_kv_k\right]\delta_{ij}\\
@@ -298,16 +326,21 @@
  
   \paragraph{Ponttöltések és töltéssűrűségek}
    
-   A ponttöltések helyén sűrűség divergál, így ezeket a függvény értelemben nem lehet a töltéssűrűséghez hozzávenni. Disztribúció értelemben azonban igen, ekkor egy $\rv_0$ helyen lévő ponttöltéshez tartozó sűrűség: $\rho(\rv)=q\delta(\rv-\rv_0)$. 
+   A ponttöltések helyén sűrűség divergál, így ezeket a függvény értelemben nem lehet a töltéssűrűséghez hozzávenni.
+   Disztribúció értelemben azonban igen, ekkor egy $\rv_0$ helyen lévő ponttöltéshez tartozó sűrűség: $\rho(\rv)=q\delta(\rv-\rv_0)$. 
    
   \paragraph{Áramsűrűség, töltésmegmaradás}
    
-   Az elektromágneses töltéseket vizsgálva is megállapíthatunk egy kontinuitási egyenletet. A $\rho(t,\rv)$ sűrűség itt a töltéssűrűség, és a $\vv$ sebességmező pedig a töltéshordozók mozgása. Az elektromos áramsűrűség: $\Jv(t,\rv)=\rho(t,\rv)\vv$. Az elektromos áram ennek egy adott felületre vett integrálja:
+   Az elektromágneses töltéseket vizsgálva is megállapíthatunk egy kontinuitási egyenletet.
+   A $\rho(t,\rv)$ sűrűség itt a töltéssűrűség, és a $\vv$ sebességmező pedig a töltéshordozók mozgása.
+   Az elektromos áramsűrűség: $\Jv(t,\rv)=\rho(t,\rv)\vv$.
+   Az elektromos áram ennek egy adott felületre vett integrálja:
    \eq{
     I=\intl{A}{}\df \Jv(t,\rv).
    }
    
-   Feltesszük, hogy itt töltések nem keletkezhetnek, és nem is veszhetnek el. Emiatt az együttmozgó $V$ térfogatban a töltések megmaradnak:
+   Feltesszük, hogy itt töltések nem keletkezhetnek, és nem is veszhetnek el.
+   Emiatt az együttmozgó $V$ térfogatban a töltések megmaradnak:
    \aln{
     &\dd_t\intl{V}{}\drh\rho(t,\rv)=0
     &\partial_t\rho(t,\rv)+\divo{\Jv(t,\rv)}=0.\label{eq:08-tolteskont}
@@ -315,12 +348,14 @@
    
   \paragraph{Ohm-törvény}
    
-   Az Ohm-törvény egy anyagi egyenlet, azt írja le, hogy adott térerősségre egy fémes vezetőben mekkora áramsűrűség jön létre. Az összefüggés egyszerű arányosság:
+   Az Ohm-törvény egy anyagi egyenlet, azt írja le, hogy adott térerősségre egy fémes vezetőben mekkora áramsűrűség jön létre.
+   Az összefüggés egyszerű arányosság:
    \eq{
     \Jv(t,\rv)=\sigma\Ev(t,\rv).
    }
    
-   Ezzel az egyenlettel az egyéb anyagi állandók ($\ep$, $\mu$) ismeretében meg lehet határozni az anyagdarab elektromágneses viselkedését. Ezek közül az egyik legegyszerűbb eset a kvázistacionárius  viselkedés.
+   Ezzel az egyenlettel az egyéb anyagi állandók ($\ep$, $\mu$) ismeretében meg lehet határozni az anyagdarab elektromágneses viselkedését.
+   Ezek közül az egyik legegyszerűbb eset a kvázistacionárius  viselkedés.
    
   \subsection{Kvázistacionárius dinamika}\label{ss:08-kvazistacdin}
    
@@ -339,7 +374,8 @@
     &\Delta\Bv(t,\rv)=\mu\sigma\partial_t\Bv(t,\rv)
    }
    \paragraph{Töltés szennyezés}
-    Oldjuk meg az $\Ev(t,\rv)$-re vonatkozó egyenletet homogén közegben az időben állandó $\Ev(t,\rv)=\Ev_0(\rv)$ peremfeltétel mellett. Fourier-transzformáljuk az egyenletet a térkoordináta szerint:
+    Oldjuk meg az $\Ev(t,\rv)$-re vonatkozó egyenletet homogén közegben az időben állandó $\Ev(t,\rv)=\Ev_0(\rv)$ peremfeltétel mellett.
+   Fourier-transzformáljuk az egyenletet a térkoordináta szerint:
     \al{
      &\Delta\Ev(t,\rv)=\mu\sigma\partial_t\Ev(t,\rv)&
      &\Rightarrow&
@@ -353,7 +389,8 @@
     
   \subsection{Stacionárius áramlási terek}
    
-   Stacionárius áramlási terek esetében a töltéssűrűség nem változik: $\partial_t\rho(t,\rv)=0$, így a kontinuitási egyenlet miatt $\divo{\Jv(\rv)}=0$. Ennek következménye, hogy stacionárius áramlások és az elektrosztatika összefüggései között igen erős analógiát lehet találni.
+   Stacionárius áramlási terek esetében a töltéssűrűség nem változik: $\partial_t\rho(t,\rv)=0$, így a kontinuitási egyenlet miatt $\divo{\Jv(\rv)}=0$.
+   Ennek következménye, hogy stacionárius áramlások és az elektrosztatika összefüggései között igen erős analógiát lehet találni.
    \begin{table}[h!]
     \centering
     \begin{tabular}{r||c|c}
@@ -397,11 +434,15 @@
      0&=\partial_t\big[\underbrace{\Psi^*(t,\rv)\Psi(t,\rv)}_{\rho(t,\rv)}\big]+
       \divo{\bigg(\frac{1}{m}\underbrace{\Re\big[\Psi^*(t,\rv)\oppv{\Psi(t,\rv)}\big]}_{\jv(t,\rv)}\bigg)}.
     }
-    A Schrödinger-egyenlet alakjából azonnal következik a fenti kontinuitási egyenlet. Itt az első tag mint valamilyen sűrűség, a második pedig mint az ahhoz tartozó áramsűrűség jelenik meg. Mivel $\rho(t,\rv)$ pozitív definit és normált, ezért valóban tekinthető valószínűségi-sűrűségnek. Emellett a valószínűségi-áramsűrűség is valós mennyiség.
+    A Schrödinger-egyenlet alakjából azonnal következik a fenti kontinuitási egyenlet.
+   Itt az első tag mint valamilyen sűrűség, a második pedig mint az ahhoz tartozó áramsűrűség jelenik meg.
+   Mivel $\rho(t,\rv)$ pozitív definit és normált, ezért valóban tekinthető valószínűségi-sűrűségnek.
+   Emellett a valószínűségi-áramsűrűség is valós mennyiség.
     
    \paragraph{Pauli--Schrödinger-egyenlet}
     
-    Tekintsük most az elektromágneses teret tartalmazó Ha\-mil\-ton-o\-pe\-rá\-tort  abban az esetben, mikor kétkomponensűek a hullámfüggvények. A Pauli-egyenlet és annak konjugáltja:
+    Tekintsük most az elektromágneses teret tartalmazó Ha\-mil\-ton-o\-pe\-rá\-tort  abban az esetben, mikor kétkomponensűek a hullámfüggvények.
+   A Pauli-egyenlet és annak konjugáltja:
     \al{
      i\hbar\partial_t\Psi&=\left(-\frac{\hbar^2}{2m}\Delta+\frac{i\hbar q}{2m}\big(\nabla\Av+\Av\nabla\big)+q\phi \right)\Psi+\mu_\text{B}\Bv\sigv\Psi\\
      &\Rightarrow\qquad\qquad
@@ -436,15 +477,15 @@
       =\partial_t\big(\Psi^\dagger\Psi\big)+\divo{\left(\frac{1}{m}\Re\big[\Psi^\dagger\opkv\Psi\big]\right)}.
     }
     Az áramsűrűséghez itt nem a $\oppv$, hanem a kinetikus impulzus kapcsolódik.
-    
-    
+
    \paragraph{Klein--Gordon-egyenlet}
     
     A fentihez teljesen hasonló átalakítással a
     \eq{
      0=\Psi(t,\rv)\square{\Psi^*(t,\rv)}-\Psi^*(t,\rv)\square{\Psi(t,\rv)}
     }
-    egyenletre jutunk. Ez kicsit megdolgozva:
+    egyenletre jutunk.
+   Ez kicsit megdolgozva:
     \al{
      0
       &=
@@ -459,7 +500,10 @@
      0&=
        \partial_t\bigg(\frac{\hbar}{mc^2}\Im\big[\Psi(t,\rv)\partial_t{\Psi^*(t,\rv)}\big]\bigg)+\divo{\bigg(\frac{1}{m}\Re\big[\Psi^*(t,\rv)\oppv{\Psi(t,\rv)}\big]\bigg)}.
     }
-    Az áramsűrűségnek megfelelő tag megegyezik a klasszikus esetnél lévővel, azonban a sűrűségnek megfelelő tag más, és az itt szereplővel a probléma az, hogy nem pozitív definit. A Klein--Gordon-egyenlet másodrendű, így két kezdeti feltétel szükséges a megoldásához. Az egyik a kezdeti elrendezés, $\Psi(t=t_0,\rv)$, de ettől teljesen független $\partial_t\Psi(t=t_0,\rv)$, aminek nincsen fizikai jelentése. Emellett a spin értelmezését sem tartalmazza az egyenlet.
+    Az áramsűrűségnek megfelelő tag megegyezik a klasszikus esetnél lévővel, azonban a sűrűségnek megfelelő tag más, és az itt szereplővel a probléma az, hogy nem pozitív definit.
+   A Klein--Gordon-egyenlet másodrendű, így két kezdeti feltétel szükséges a megoldásához.
+   Az egyik a kezdeti elrendezés, $\Psi(t=t_0,\rv)$, de ettől teljesen független $\partial_t\Psi(t=t_0,\rv)$, aminek nincsen fizikai jelentése.
+   Emellett a spin értelmezését sem tartalmazza az egyenlet.
     
    \paragraph{Dirac-egyenlet}
     
@@ -501,7 +545,8 @@
           0 & \text{ha } x\notin[-a,0]
          \end{cases}
    }
-   Osszuk a tartományt 3 részre, legyen $x\in[-\infty,-a]$ az I., $x\in[-a,0]$ a II. és $x\in[0,\infty]$ a III. tartomány. Ahol a $V$ nulla, ott szabad hullám (vagy azok lineáris kombinációja) a megoldás:
+   Osszuk a tartományt 3 részre, legyen $x\in[-\infty,-a]$ az I., $x\in[-a,0]$ a II. és $x\in[0,\infty]$ a III. tartomány.
+   Ahol a $V$ nulla, ott szabad hullám (vagy azok lineáris kombinációja) a megoldás:
    \al{
     &-\frac{\hbar^2}{2m}\der{^2}{x^2}\psi(x)=E\psi(x)&
     &\Rightarrow&
@@ -516,7 +561,10 @@
     &\alpha=\sqrt{\frac{2m(E-V_0)}{\hbar^2}}.&
    }
    
-   Az I. tartományon van egy jobbra haladó beérkező hullám ($A$), illetve egy visszavert ($B$) hullám. A III. tartományon csak transzmittált hullám található ($C$). A II. tartományban az I.-hez hasonlóan előre és hátrafelé haladó hullám is van. A próbafüggvények ezért legyenek:
+   Az I. tartományon van egy jobbra haladó beérkező hullám ($A$), illetve egy visszavert ($B$) hullám.
+   A III. tartományon csak transzmittált hullám található ($C$).
+   A II. tartományban az I.-hez hasonlóan előre és hátrafelé haladó hullám is van.
+   A próbafüggvények ezért legyenek:
    \al{
     \psi_\text{I.}&=Ae^{ikx}+Be^{-ikx}\\
     \psi_\text{II.}&=Fe^{i\alpha x}+Ge^{-i\alpha x}\\
@@ -524,7 +572,8 @@
    }
    a feladat megoldása pedig akkor sikeres, ha megadtuk a próbafüggvényekben szereplő paramétereket. 
    
-   Az $A$ paraméterrel tudjuk skálázni a többi paraméter nagyságát, úgyhogy a többi paraméter ehhez viszonyított értékét tudjuk csak kiszámolni. Tekintsük először az áramsűrűség:
+   Az $A$ paraméterrel tudjuk skálázni a többi paraméter nagyságát, úgyhogy a többi paraméter ehhez viszonyított értékét tudjuk csak kiszámolni.
+   Tekintsük először az áramsűrűség:
    \al{
     J_\text{I.}
      &=\frac{i\hbar}{2m}\left(\psi\der{}{x}\psi^*-\psi^*\der{}{x}\psi\right)\\
@@ -533,7 +582,8 @@
      &\qquad\qquad\qquad-\big(A^*e^{-ikx}+B^*e^{ikx}\big)\big(ikAe^{ikx}-ikBe^{-ikx}\big)\bigg]\\
      &=\underbrace{\frac{\hbar k}{m}\abs{A}^2}_{J_\text{be}}-\underbrace{\frac{\hbar k}{m}\abs{B}^2}_{J_\text{vissza}},
    }
-   innen pedig látszik, hogy a reflexió: $R=\frac{\abs{B}^2}{\abs{A}^2}$ és a transzmisszió $T=\frac{\abs{C}^2}{\abs{A}^2}$. Az anyagmegmaradás miatt:
+   innen pedig látszik, hogy a reflexió: $R=\frac{\abs{B}^2}{\abs{A}^2}$ és a transzmisszió $T=\frac{\abs{C}^2}{\abs{A}^2}$.
+   Az anyagmegmaradás miatt:
    \eq{1=R+T.}
    
    Vegyük sorra, hogy milyen határfeltételeink vannak a hullámfüggvényre:
@@ -587,10 +637,14 @@
     &T=\frac{1}{1+\frac{V_0^2\sin^2(\alpha a)}{4E(E-V_0)}}.\label{eq:08-ale}
    }
    
-   Vizsgáljuk a transzmissziós együtthatót. Láthatjuk, hogy vonzó potenciálra sem 1 a transzmisszió, csak speciális rezonáns állapotokban ($\alpha a=\pi n|n\in\mathbb{Z}$). Az áthaladás nulla, ha $m\to\infty$, $V_0\to\infty$ vagy ha $a\to\infty$. Abban az esetben, ha $E\le V_0$, akkor a fenti formula kicsit módosul ($\alpha=i\beta$):
+   Vizsgáljuk a transzmissziós együtthatót.
+   Láthatjuk, hogy vonzó potenciálra sem 1 a transzmisszió, csak speciális rezonáns állapotokban ($\alpha a=\pi n|n\in\mathbb{Z}$).
+   Az áthaladás nulla, ha $m\to\infty$, $V_0\to\infty$ vagy ha $a\to\infty$.
+   Abban az esetben, ha $E\le V_0$, akkor a fenti formula kicsit módosul ($\alpha=i\beta$):
    \eq{
     T=\frac{1}{1+\frac{V_0^2\sinh^2(\beta a)}{4E\abs{E-V_0}}}
      \xrightarrow{E\ll V_0\text{ vagy }\beta a\gg 1}
      \frac{16E(V_0-E)}{V_0^2}e^{-2\beta a}.
    }
-   Láthatjuk, hogy akkor is van transzmisszió, ha a hullám energiája kisebb, mint a potenciálfal magassága. Ez az alagúteffektus.
+   Láthatjuk, hogy akkor is van transzmisszió, ha a hullám energiája kisebb, mint a potenciálfal magassága.
+   Ez az alagúteffektus.

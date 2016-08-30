@@ -8,11 +8,16 @@
    \al{
     m\ddot x=R(x)-k\dot x+F(t).
    }
-   Az $R(x)$ tag felel meg a nemlineáris rugóerőnek, $k$ a  csillapítás erőssége, $F(t)$ pedig a gerjesztés. Az egyenlet $x(t)$ megoldásait keressük. Fejtsük sorba a rugóerőt a kitérés szerint:
+   Az $R(x)$ tag felel meg a nemlineáris rugóerőnek, $k$ a  csillapítás erőssége, $F(t)$ pedig a gerjesztés.
+   Az egyenlet $x(t)$ megoldásait keressük.
+   Fejtsük sorba a rugóerőt a kitérés szerint:
    \al{
     R(x)=R_0+R_1 x+R_2 x^2+\dots
    }
-   $R_0$ az egyensúlyi helyet tolja el, így az origó jó megválasztásával ez eltüntethető. Az első tag a lineáris rugóerő: $R_1=-D$. A következő el nem tűnő tag legyen $R_2$. Hagyjuk el a csillapítást és a gerjesztést, ekkor az egyenlet, ha $\omega_0^2=-\frac{R_1}{m}$ és $\ep=\frac{R_2}{m}$,
+   $R_0$ az egyensúlyi helyet tolja el, így az origó jó megválasztásával ez eltüntethető.
+   Az első tag a lineáris rugóerő: $R_1=-D$.
+   A következő el nem tűnő tag legyen $R_2$.
+   Hagyjuk el a csillapítást és a gerjesztést, ekkor az egyenlet, ha $\omega_0^2=-\frac{R_1}{m}$ és $\ep=\frac{R_2}{m}$,
    \al{
     \ddot x+\omega_0^2x-\ep x^2=0.
    }
@@ -20,7 +25,8 @@
    \al{
     \ddot x+\omega_0^2x-\lambda\ep x^2=0
    }
-   egyenletet. $\lambda=1$-re az eredeti megoldást kapjuk. Keressük az $x(t)$ a $\lambda$ szerinti hatványsorként:
+   egyenletet. $\lambda=1$-re az eredeti megoldást kapjuk.
+   Keressük az $x(t)$ a $\lambda$ szerinti hatványsorként:
    \al{
     x(t)=x_0(t)+x_1(t)\lambda+x_2(t)\lambda^2+\dots
    }
@@ -39,7 +45,9 @@
     0&=\ddot x_2(t)+\omega_0^2x_2(t)-2\ep x_0(t)x_1(t)\\
      &\vdots
    }
-   Az egyenletrendszer lépésenként megoldható, és az egyenletek lineárisak. Induljunk kezdetben valamilyen kitérésből nulla sebességgel: $x_0(0)=a$, $\dot x_0=0$, akkor $x_0(t)=a\cos(\omega_0 t)$. Ezt behelyettesítve a második egyenletbe:
+   Az egyenletrendszer lépésenként megoldható, és az egyenletek lineárisak.
+   Induljunk kezdetben valamilyen kitérésből nulla sebességgel: $x_0(0)=a$, $\dot x_0=0$, akkor $x_0(t)=a\cos(\omega_0 t)$.
+   Ezt behelyettesítve a második egyenletbe:
    \al{
     0&=\ddot x_1(t)+\omega_0^2x_1(t)-\ep a^2\cos^2(\omega_0 t)
       =\ddot x_1(t)+\omega_0^2x_1(t)-\ep a^2\frac{1+\cos(2\omega_0 t)}{2}
@@ -48,7 +56,9 @@
    \al{
     0&=\ddot \xi_1(t)+\omega_0^2\xi_1(t)-\frac{\ep a^2}{2}\cos(2\omega_0 t).
    }
-   Ez egy gerjesztett harmonikus oszcillátor, melynek a partikuláris megoldása $\xi_1(t)=b\cos(2\omega_0 t+\delta)$. A harmadik egyenletben a gerjesztés $\sim x_0(t)x_1(t)\sim\cos^3(\omega_0 t)$, így ott a $3\omega_0$ frekvenciájú felharmonikus jelenik meg. A nemlineáris viselkedés miatt a rendszer minden frekvencián ad választ. 
+   Ez egy gerjesztett harmonikus oszcillátor, melynek a partikuláris megoldása $\xi_1(t)=b\cos(2\omega_0 t+\delta)$.
+   A harmadik egyenletben a gerjesztés $\sim x_0(t)x_1(t)\sim\cos^3(\omega_0 t)$, így ott a $3\omega_0$ frekvenciájú felharmonikus jelenik meg.
+   A nemlineáris viselkedés miatt a rendszer minden frekvencián ad választ. 
    
   \subsection{Kanonikus perturbációszámítás}\label{ss:11-kanonikusperturbacioszamitas}
    
@@ -73,7 +83,8 @@
     &&H'_0(Q,P,t)=H_0(q,p,t)+\pder{W_2}{t}&=0\\
     &&&&H_0\left(q,\pder{W_2}{q},t\right)+\pder{W_2}{t}&=0,
    }
-   Vagyis $W_2(q,P,t)$ éppen a $H_0$-nak a principális függvénye, a $H_0$-hoz tartozó hatás, a feltétel pedig a $H_0$ Hamilton--Jacobi-egyenlete. Mivel $H_0'(Q,P,t)=0$, ezért ennek a megoldásai $\dot P_i=-\pder{H'_0}{Q_i}=0$ és $\dot Q_i=\pder{H'_0}{P_i}=0$, így $P_i=\alpha_i$ és $Q_i=\beta_i$ időfüggetlen konstansok, amelyeket ismerünk, mert a $H_0$ megoldását ismerjük. 
+   Vagyis $W_2(q,P,t)$ éppen a $H_0$-nak a principális függvénye, a $H_0$-hoz tartozó hatás, a feltétel pedig a $H_0$ Hamilton--Jacobi-egyenlete.
+   Mivel $H_0'(Q,P,t)=0$, ezért ennek a megoldásai $\dot P_i=-\pder{H'_0}{Q_i}=0$ és $\dot Q_i=\pder{H'_0}{P_i}=0$, így $P_i=\alpha_i$ és $Q_i=\beta_i$ időfüggetlen konstansok, amelyeket ismerünk, mert a $H_0$ megoldását ismerjük. 
    
    A teljes rendszer Hamilton-egyenletei:
    \al{
@@ -81,7 +92,12 @@
     &\dot Q_i=\pder{H'(Q,P,t)}{P_i}=\pder{V(q,p,t)}{P_i}.
    }
    
-   Ez az egyenletrendszer, felhasználva a kanonikus transzformáció összefüggéseit, elvileg megoldható. Azonban ez a probléma éppen olyan komplex, mintha a $H(q,p,t)$ Hamilton-függvény megoldását akarnánk közvetlenül megkeresni. Ehelyett készítsünk egy iterációt: $p^{(0)}:=\alpha$, és $q^{(0)}:=\beta$. Ezzekkel megoldjuk az egyenletrendszert $P^{(0)}$-ra és $Q^{(0)}$-ra. Ezekből az áttérésnek megfelelően előállítjuk a $p^{(1)}$-et és a $q^{(1)}$-et, majd újra megoldjuk az egyenletet, stb. Ez után pedig reménykedünk benne, hogy a sor konvergál. 
+   Ez az egyenletrendszer, felhasználva a kanonikus transzformáció összefüggéseit, elvileg megoldható.
+   Azonban ez a probléma éppen olyan komplex, mintha a $H(q,p,t)$ Hamilton-függvény megoldását akarnánk közvetlenül megkeresni.
+   Ehelyett készítsünk egy iterációt: $p^{(0)}:=\alpha$, és $q^{(0)}:=\beta$.
+   Ezzekkel megoldjuk az egyenletrendszert $P^{(0)}$-ra és $Q^{(0)}$-ra.
+   Ezekből az áttérésnek megfelelően előállítjuk a $p^{(1)}$-et és a $q^{(1)}$-et, majd újra megoldjuk az egyenletet, stb.
+   Ez után pedig reménykedünk benne, hogy a sor konvergál. 
    
    \paragraph{Harmonikus oszcillátor}
     
@@ -98,14 +114,18 @@
        &&0=\ddot p+\omega^2p \quad 0=\ddot q+\omega^2q.
       }
       Ezek azok az egyenletek, amiket ``nem tudunk megoldani''.
-     \item Amit meg tudunk oldani, az a $H_0$ rész. Ennek a kanonikus egyenletei:
+     \item Amit meg tudunk oldani, az a $H_0$ rész.
+   Ennek a kanonikus egyenletei:
       \al{
        &\dot p=-\pder{H_0}{q}=0
        &\dot q=\pder{H_0}{p}=\frac{1}{m}p
        &&\Rightarrow
        &&p=\sqrt{2mE} \quad q(t)=\sqrt{\frac{2E}{m}}t+q_0,
       }
-      ahol $E$ egy paraméter. A Hamilton-függvény: $H_0=\frac{p^2}{2m}=E$. A hatásból a II. típusú kanonikus transzformáció: $S=S(q,P,t)$. Ahhoz, hogy ezt felírjuk, felhasználjuk, azt a tényt, hogy $S$ a $H_0$-at nullába viszi:
+      ahol $E$ egy paraméter.
+   A Hamilton-függvény: $H_0=\frac{p^2}{2m}=E$.
+   A hatásból a II. típusú kanonikus transzformáció: $S=S(q,P,t)$.
+   Ahhoz, hogy ezt felírjuk, felhasználjuk, azt a tényt, hogy $S$ a $H_0$-at nullába viszi:
       \al{
        0=\frac{p^2}{2m}+\pder{S(q,P,t)}{t},
       }
@@ -113,7 +133,10 @@
       \al{
        0=\frac{1}{2m}\left(\pder{S}{q}\right)^2+\pder{S(q,P,t)}{t}.
       }
-      Keressük az $S(q,P,t)$-t összeg alakban, akkor az első tag legyen $\tilde E$ a második pedig $-\tilde E$. Innen $S(q,P,t)=-\tilde{E}t+\sqrt{2m\tilde{E}}q$. Mivel $\pder{S}{t}=-H_0=-E$, ezért $\tilde{E}=E$. Innen már behelyettesítéssel adódik, hogy 
+      Keressük az $S(q,P,t)$-t összeg alakban, akkor az első tag legyen $\tilde E$ a második pedig $-\tilde E$.
+   Innen $S(q,P,t)=-\tilde{E}t+\sqrt{2m\tilde{E}}q$.
+   Mivel $\pder{S}{t}=-H_0=-E$, ezért $\tilde{E}=E$.
+   Innen már behelyettesítéssel adódik, hogy 
       \al{
        S(q,P,t)
         =-E t+\sqrt{2mE}q
@@ -144,15 +167,18 @@
        &\ddot P=-m\omega^2\frac{P}{m}-m\omega^2\left(\frac{\dot P}{m}t+\dot Q\right)=-\omega^2 P,
        &&\ddot Q=-\omega^2 Q.
       }
-      Éppen azok az egyenletek adódnak, mint az transzformáció előtt. Ez egyrészt biztató, másrészt pedig azt mutatja, hogy eddig sehova se jutottunk el. 
+      Éppen azok az egyenletek adódnak, mint az transzformáció előtt.
+   Ez egyrészt biztató, másrészt pedig azt mutatja, hogy eddig sehova se jutottunk el. 
       
-     \item Most kezdjünk bele a kanonikus perturbációszámításba. \Eqaref{eq:11-kp1}--\eqref{eq:11-kp2} egyenleteket kell iterációval megoldanunk. Ezek úgy fognak kinézni, hogy
+     \item Most kezdjünk bele a kanonikus perturbációszámításba. \Eqaref{eq:11-kp1}--\eqref{eq:11-kp2} egyenleteket kell iterációval megoldanunk.
+   Ezek úgy fognak kinézni, hogy
       \al{
        \dot P^{(i+1)}&=-m\omega^2\left(\frac{P^{(i)}}{m}t+Q^{(i)}\right)\\
        \dot Q^{(i+1)}&=t\omega^2\left(\frac{P^{(i)}}{m}t+Q^{(i)}\right)
       }
       
-      Az első lépésben $P^{(0)}=\sqrt{2mE}$ és $Q^{(0)}=q_0=0$. Ezzel:
+      Az első lépésben $P^{(0)}=\sqrt{2mE}$ és $Q^{(0)}=q_0=0$.
+   Ezzel:
       \al{
        \dot P^{(1)}&=-m\omega^2\sqrt{\frac{2E}{m}}t
        &\Rightarrow
@@ -222,11 +248,14 @@
   
   \subsection{Multipólus sorfejtés}\label{eq:ss-11multipol}
    
-   Célunk, hogy lokalizált töltéseloszlás terét annak kiterjedéséhez képest nagy távolságból írjuk le. A potenciál:
+   Célunk, hogy lokalizált töltéseloszlás terét annak kiterjedéséhez képest nagy távolságból írjuk le.
+   A potenciál:
    \al{
     \phi(\rv)=\frac{1}{4\pi\ep_0}\intl{}{}\drkh\frac{\rho(\rv')}{\abs{\rv-\rv'}}.
    }
-   A nevező ott nagyon nagy, ahol $\rho(\rv')$ nem nulla, azaz $\abs{\rv}\gg\abs{\rv'}$. A nevezőt így sorba fejthetjük $\rv$ körül. Descartes koordináta-rendszerben:
+   A nevező ott nagyon nagy, ahol $\rho(\rv')$ nem nulla, azaz $\abs{\rv}\gg\abs{\rv'}$.
+   A nevezőt így sorba fejthetjük $\rv$ körül.
+   Descartes koordináta-rendszerben:
    \al{
     \frac{1}{\abs{\rv-\rv'}}
      =\frac{1}{r}-r'_i\partial_i{\frac{1}{r}}+\frac{1}{2}r'_ir'_j\partial_i\partial_j\frac{1}{r}\mp\dots
@@ -269,7 +298,8 @@
     &\pv=\intl{}{}\drkh\rho(\rv')\rv'
     &&\mat{Q}=\intl{}{}\drkh\rho(\rv')\Big(3\rv'\circ\rv'-\rv'^2\mat{1}\Big),
    }
-   melyek sorban az össztöltés, a dipólus és a kvadrupólus momentum. A $\mat{Q}$ mátrix szimmetrikus és a nyoma nulla, így 5 független paramétert tartalmaz. 
+   melyek sorban az össztöltés, a dipólus és a kvadrupólus momentum.
+   A $\mat{Q}$ mátrix szimmetrikus és a nyoma nulla, így 5 független paramétert tartalmaz. 
    
    Gömbi koordináta-rendszerben a sorfejtés hasonlóan elvégezhető:
    \al{
@@ -279,7 +309,8 @@
       =\frac{1}{r}\frac{1}{\sqrt{1-2\frac{r'}{r}\cos\vartheta+\frac{r'^2}{r^2}}}
       =\suml{l=0}{\infty}\frac{r'^l}{r^{l+1}}P_l(\cos\vartheta),
    }
-   ahol $P_l(\cos\vartheta)$ függvények a Legendre-polinomok. A sorfejtést elvégezhetjük a másik határesetre is, ha nagyon közel vagyunk az origóhoz, akkor $\rv\leftrightarrow\rv'$, így 
+   ahol $P_l(\cos\vartheta)$ függvények a Legendre-polinomok.
+   A sorfejtést elvégezhetjük a másik határesetre is, ha nagyon közel vagyunk az origóhoz, akkor $\rv\leftrightarrow\rv'$, így 
    \al{
     \frac{1}{\abs{\rv-\rv'}}=\suml{l=0}{\infty}\frac{r^l}{r'^{l+1}}P_l(\cos\vartheta).
    }
@@ -305,7 +336,8 @@
       =\underbrace{\intl{\partial V}{} \dd f\, r'_i J_j}_{=0}-\intl{}{}\drkh r'_i \underbrace{\partial_j J_j (\rv')}_{=0}
       =0,
    }
-   hiszen statikában $\Jv$ divergenciamentes, illetve a felületeken nincsenek áramok. A második tag:
+   hiszen statikában $\Jv$ divergenciamentes, illetve a felületeken nincsenek áramok.
+   A második tag:
    \al{
     \intl{}{}\drkh J_i (\rv') r'_j
      &=\intl{}{}\drkh  \underbrace{\partial_k r'_i}_{\delta_{ik}} J_k (\rv') r'_j
@@ -313,7 +345,8 @@
      &=-\intl{}{}\drkh \Big( r'_i \underbrace{\partial_k J_k (\rv')}_{=0} r'_j+r'_i J_k (\rv') \delta_{kj}\Big)
       =-\intl{}{}\drkh r'_i J_j (\rv').
    }
-   Az elsőrendű tag hiányzik, ami a mágneses monopólusok hiányát jelenti. A második tag az előző alapján $i,j$-ben antiszimmetrikus, így felírható egy vektorral való keresztszorzásként:
+   Az elsőrendű tag hiányzik, ami a mágneses monopólusok hiányát jelenti.
+   A második tag az előző alapján $i,j$-ben antiszimmetrikus, így felírható egy vektorral való keresztszorzásként:
    \al{
     &\intl{}{}\drkh r'_i J_j (\rv')=\ep_{ijk}m_k
     &\vect{m}=\frac{1}{2}\intl{}{}\drh \rv\times \Jv.
@@ -364,7 +397,8 @@
     }
     \end{subequations}
     
-    A $\opH_0$ bázisa ortonormált, így $\bra{k^{(0)}}\et{l^{(0)}}=\delta_{kl}$. A korrekciók egymásra ortogonálisak, vagyis $\bra{k^{(i)}}\et{k^{(j)}}=0$, ha $i\ne j$. Úgy normálunk, hogy $\bra{k^{(0)}}\et{k}=1$ legyen. 
+    A $\opH_0$ bázisa ortonormált, így $\bra{k^{(0)}}\et{l^{(0)}}=\delta_{kl}$.
+   A korrekciók egymásra ortogonálisak, vagyis $\bra{k^{(i)}}\et{k^{(j)}}=0$, ha $i\ne j$. Úgy normálunk, hogy $\bra{k^{(0)}}\et{k}=1$ legyen. 
     
     Szorozzunk balról \eqaref{eq:11-nifp2} egyenletre $\bra{k^{(0)}}$-lal majd $\bra{l^{(0)}}$-lal, ahol $l\ne k$.
     \al{
@@ -380,7 +414,6 @@
     \\[6pt]
     \fbox{
      \addtolength{\linewidth}{-3\fboxsep}%
-%      \addtolength{\linewidth}{-5\fboxrule}%
      \begin{minipage}{\linewidth}
       \vspace{-10pt}
       \aln{
@@ -393,11 +426,11 @@
     }
     
     ahol $C_k^{(1)}$ egy állandó, melyet a $\ket{k^{(1)}}$ állapot normáltságából lehet meghatározni. 
-    
-    
+
    \paragraph{Degenerált eset}
     
-    A $\opH_0$ degenerált, így annak megoldásai: $\opH_0\ket{k,\alpha^{(0)}}=E_k^{(0)}\ket{{k\alpha}^{(0)}}$, vagyis egy $E_k^{(0)}$ sajátértékhez több sajátállapot is tartozik $\alpha=1,2,\dots$. Az előzőhöz hasonlóan itt is sorba fejtjük a megoldásokat $\lambda$ szerint:
+    A $\opH_0$ degenerált, így annak megoldásai: $\opH_0\ket{k,\alpha^{(0)}}=E_k^{(0)}\ket{{k\alpha}^{(0)}}$, vagyis egy $E_k^{(0)}$ sajátértékhez több sajátállapot is tartozik $\alpha=1,2,\dots$.
+   Az előzőhöz hasonlóan itt is sorba fejtjük a megoldásokat $\lambda$ szerint:
     \al{
      E_{k\alpha}&=E_k^{(0)}+\lambda E_{k\alpha}^{(1)}+\lambda^2 E_{k\alpha}^{(2)}+\dots\\
      \ket{k\alpha}&=\ket{{k\alpha}^{(0)}}+\lambda \ket{{k\alpha}^{(1)}}+\lambda^2 \ket{{k\alpha}^{(2)}}+\dots.
@@ -425,7 +458,8 @@
     \al{
      \overline{\ket{{k\alpha}^{(0)}}}=\suml{\beta}{}a_{\alpha\beta}\ket{k\beta^{(0)}}
     }
-    Mivel mindkét bázis ortonormált, ezért a transzformáció unitér. Ezt felhasználva:
+    Mivel mindkét bázis ortonormált, ezért a transzformáció unitér.
+   Ezt felhasználva:
     \al{
      E_{k\alpha}^{(1)} \delta_{\alpha\beta}
       &=\overline{\bra{{k\beta}^{(0)}}}\opV\overline{\ket{{k\alpha}^{(0)}}}
@@ -449,7 +483,8 @@
      &\phantom{\forall\,\beta\,\delta\text{-ra}, 0}\qquad
        =\suml{\alpha}{}\Big(V_{\beta\alpha}(k)-E_{{k\delta}}^{(1)}\delta_{\beta\alpha}\Big)a_{\delta\alpha},
     }
-    melynek akkor nemtriviális megoldása, ha a minden $\delta$-ra a zárójelben lévő mennyiségnek, mint $\alpha$-ban és $\beta$-ban mátrixnak a determinánsa eltűnik. Ez a determináns a szekuláris determináns, kiírva:
+    melynek akkor nemtriviális megoldása, ha a minden $\delta$-ra a zárójelben lévő mennyiségnek, mint $\alpha$-ban és $\beta$-ban mátrixnak a determinánsa eltűnik.
+   Ez a determináns a szekuláris determináns, kiírva:
     \al{
      0=
      \begin{vmatrix}
@@ -501,7 +536,8 @@
     }
     vagyis olyan perturbáló operátorral, amely arányos $\op{x}$-szel, csak szomszédos energiaszintek között tudunk átmeneteket létrehozni.
     
-    A hidrogénatom esetében gömbi koordinátarendszerben dolgozunk. A hullámfüggvények 
+    A hidrogénatom esetében gömbi koordinátarendszerben dolgozunk.
+   A hullámfüggvények 
     \al{
      \ket{nlm}=\frac{1}{r}R_{nl}(r)Y^m_l(\vartheta,\varphi)\sim\frac{1}{r}R_{nl}(r)P_l(\cos\vartheta)e^{im\varphi},
     }
@@ -524,7 +560,8 @@
         \end{pmatrix}
         e^{i(m-m')\varphi}
     }
-    A második integrál akkor nem nulla, ha $l'=l\pm1$, a harmadik pedig az $x$, $y$ esetben akkor, ha $m'=m\pm 1$, illetve $z$-nél $m'=m$. Az első integrál nem ad ilyen feltételt. 
+    A második integrál akkor nem nulla, ha $l'=l\pm1$, a harmadik pedig az $x$, $y$ esetben akkor, ha $m'=m\pm 1$, illetve $z$-nél $m'=m$.
+   Az első integrál nem ad ilyen feltételt. 
     
    \paragraph{Zeemann-effektus}
     
@@ -532,7 +569,8 @@
     \al{
      \op{H}=\op{H}_0+\mu_\text{B}\frac{1}{\hbar}(\op{L}^z+2\op{S}^z)B+\frac{q^2B^2}{8m}(x^2+y^2).
     }
-    A diamágneses tagot elhagyjuk, mert az jóval kisebb, mint a paramégneses járulék. $\opH_0$ megoldásait ismerjük, és ezeket az $\opL$ és az $\opS$ teljes rendszerén írtuk fel. Ekkor a perturbációszámítás első rendjében:
+    A diamágneses tagot elhagyjuk, mert az jóval kisebb, mint a paramégneses járulék. $\opH_0$ megoldásait ismerjük, és ezeket az $\opL$ és az $\opS$ teljes rendszerén írtuk fel.
+   Ekkor a perturbációszámítás első rendjében:
     \al{
      E(l,m_l,s,m_s)
       &=E_0+\bra{l,m_l,s,m_s}\left(\mu_\text{B}\frac{1}{\hbar}(\op{L}^z+2\op{S}^z)B\right)\ket{l,m_l,s,m_s}
@@ -542,11 +580,17 @@
     
    \paragraph{Stark-effektus}
     
-    A Zeemann-effektus elektromos megfelelője, itt az elektromos térben történő felhasadásokat vizsgáljuk. Legyen az elektromos tér $z$ irányú, akkor $\phi(\rv)=-Ez$. Szintén \eqaref{eq:03-SCHem} egyenlet alapján
+    A Zeemann-effektus elektromos megfelelője, itt az elektromos térben történő felhasadásokat vizsgáljuk.
+   Legyen az elektromos tér $z$ irányú, akkor $\phi(\rv)=-Ez$.
+   Szintén \eqaref{eq:03-SCHem} egyenlet alapján
     \al{
      \op{H}=\op{H}_0+q\phi.
     }
-    Tekintsük a hidrogénatom problémát. Itt $q=-e$, a perturbálatlan rendszer sajátfüggvényi pedig $\ket{nlm}$. Az alapállapot: $n=1, m=0, l=0$. A kiválasztási szabályok alapján láttuk, hogy $n$ bármekkorát változhat, $l$ $\pm 1$-et vátozik, $m$ pedig nem változhat. Ez alapján:
+    Tekintsük a hidrogénatom problémát.
+   Itt $q=-e$, a perturbálatlan rendszer sajátfüggvényi pedig $\ket{nlm}$.
+   Az alapállapot: $n=1, m=0, l=0$.
+   A kiválasztási szabályok alapján láttuk, hogy $n$ bármekkorát változhat, $l$ $\pm 1$-et vátozik, $m$ pedig nem változhat.
+   Ez alapján:
     \al{
      E(100)
      &=E_0(100)+\bra{100}\op{V}\ket{100}+\suml{nlm}{}\frac{\big|\bra{nlm}\op{V}\ket{100}\big|^2}{E_0(100)-E_0(nlm)}\\
@@ -563,7 +607,9 @@
     &\opI=\suml{i}{}\ket{\psi_i}\bra{\psi_i}
     &&\ket{\psi_i(t)}=e^{-\frac{i}{\hbar}E_i t}\ket{\psi_i}.
    }
-   Mivel az energia nem marad meg, ezért $\ket{\psi_i(t)}$-knek nem lesz olyan lineáris kombinációja, amely minden időpontban sajátfüggvénye a $\opH(t)$-nak. Készítsünk olyan lineáris kombinációkat, ahol az együtthatók függenek az időtől. Ezzel minden állapotot elő tudunk állítani:
+   Mivel az energia nem marad meg, ezért $\ket{\psi_i(t)}$-knek nem lesz olyan lineáris kombinációja, amely minden időpontban sajátfüggvénye a $\opH(t)$-nak.
+   Készítsünk olyan lineáris kombinációkat, ahol az együtthatók függenek az időtől.
+   Ezzel minden állapotot elő tudunk állítani:
    \al{
     \ket{\Psi_i(t)}=\suml{j}{}c_{ji}(t)e^{-\frac{i}{\hbar}E_j t}\ket{\psi_j}.
    }
@@ -600,13 +646,15 @@
     c_{fi}^{(n+1)}(t)
      &=c_{fi}^{(n)}(t=0)+\frac{1}{i\hbar}\suml{j}{}\intl{0}{t}\dd\tau\,\bra{\psi_f}\opV(\tau)\ket{\psi_j}c^{(n)}_{ji}(\tau)e^{-\frac{i}{\hbar}\big(E_j-E_f\big) \tau}
    }
-   Nulladrendben $c_{fi}^{(n)}(t=0)=\delta_{fi}$. Elsőrendben:
+   Nulladrendben $c_{fi}^{(n)}(t=0)=\delta_{fi}$.
+   Elsőrendben:
    \al{
     c_{fi}^{(1)}(t)
      &=\delta_{fi}+\frac{1}{i\hbar}\intl{0}{t}\dd\tau\,\bra{\psi_f}\opV(\tau)\ket{\psi_i}e^{-\frac{i}{\hbar}\big(E_i-E_f\big) \tau}.
    }
    
-   $c_{fi}(t)$ azt adja meg, hogy $t$ idő elteltével a kezdetben $\ket{\psi_i}$ sajátállapotban lévő részecske mekkora valószínűségi amplitúdóval található meg  a $\ket{\psi_f}$ állapotban. Az átmeneti valószínűség első rendben:
+   $c_{fi}(t)$ azt adja meg, hogy $t$ idő elteltével a kezdetben $\ket{\psi_i}$ sajátállapotban lévő részecske mekkora valószínűségi amplitúdóval található meg  a $\ket{\psi_f}$ állapotban.
+   Az átmeneti valószínűség első rendben:
    \aln{
     w_{fi}(t)
      =\abs{c_{fi}^{(1)}(t)}^2
@@ -629,10 +677,5 @@
      \\
      &=\frac{e^2 E^2_{0,x} }{\hbar^2}\abs{\bra{\psi_f}\opx \ket{\psi_i}}^2\left|\frac{e^{i\left(\omega+\frac{E_f-E_i}{\hbar}\right)t}-1}{2\left(\omega+\frac{E_i-E_f}{\hbar}\right)}-\frac{e^{i\left(-\omega+\frac{E_f-E_i}{\hbar}\right)t}-1}{2\left(-\omega+\frac{E_i-E_f}{\hbar}\right)} \right|^2.
     }
-    Az átmenet valószínűsége nagyon nagy, ha a nevező pici, vagyis ha $E_f=E_i\pm\hbar\omega$. Ez a két eset az indukált abszorpció és emisszió.
-   
-   
-   
-   
-   
-   
+    Az átmenet valószínűsége nagyon nagy, ha a nevező pici, vagyis ha $E_f=E_i\pm\hbar\omega$.
+   Ez a két eset az indukált abszorpció és emisszió.

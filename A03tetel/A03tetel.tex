@@ -19,13 +19,15 @@
    }
    ahol $X_i$ a szabaderőknek megfelelő tagok.
    
-   Holonom kényszerek esetén a konfigurációs térre való megszorítások egyenletek formájában megadhatóak. A kényszeregyenletek teljes differenciáját képezhetjük, és $\dd t$-t nullának választjuk, mert azonos időpillanatban keressük a virtuális elmozdulások közötti kapcsolatot:
+   Holonom kényszerek esetén a konfigurációs térre való megszorítások egyenletek formájában megadhatóak.
+   A kényszeregyenletek teljes differenciáját képezhetjük, és $\dd t$-t nullának választjuk, mert azonos időpillanatban keressük a virtuális elmozdulások közötti kapcsolatot:
    \aln{
     &\phi_j(x_1,x_2,\dots,x_{3n},t)=0\qquad\forall j=1\dots s &
     &\Rightarrow&
     &\dd\phi_j=\suml{i=1}{3n}\pder{\phi_j}{x_i}\dd x_i+ \pder{\phi_j}{t}\underbrace{\dd t}_{=0}=0.&\label{eq:03-holonomkenyszer}
    }
-   A d'Alembert-elvben a kényszereket $s$ db. Lagrange-multiplikátoros taggal tudjuk figyelembe venni:
+   A d'Alembert-elvben a kényszereket $s$ db.
+   Lagrange-multiplikátoros taggal tudjuk figyelembe venni:
    \al{
    &\delta A=\sum\limits_{i=1}^{3n} \left(X_i -m_i\ddtx_i + \suml{j=1}{s}\lambda_j\pder{\phi_j}{x_i}\right)\delta x_i=0&
    &\Rightarrow&
@@ -34,8 +36,10 @@
    Ez a $3n$ egyenlet az $s$ db kényszert leíró egyenlettel együtt egy megoldható egyenletrendszert ad a $3n+s$ db. ($\{x_i\}, \{\lambda_j\}$) ismeretlenre.
     
    {\bf Anholonom kényszerek:}
-   Ebben az esetben a kényszer nem írható fel \eqaref{eq:03-holonomkenyszer} egyenlet formájában. Kényszer csak a virtuális elmozdulásokra adható meg.
-   \footnote{Példa: guruló biciklikerék: fázistér: $(y,x,\alpha,\beta)$, ahol $(x,y)$ a kerék helye a síkon, $\alpha$ a kerék tengelyének és az $x$ tengelynek a bezárt szöge, illetve $\beta$ az egyik küllő síkkal bezárt szöge. A fázistér minden pontját el lehet érni, de $\delta x$ és $\delta \beta$ nem függetlenek. }
+   Ebben az esetben a kényszer nem írható fel \eqaref{eq:03-holonomkenyszer} egyenlet formájában.
+   Kényszer csak a virtuális elmozdulásokra adható meg.
+   \footnote{Példa: guruló biciklikerék: fázistér: $(y,x,\alpha,\beta)$, ahol $(x,y)$ a kerék helye a síkon, $\alpha$ a kerék tengelyének és az $x$ tengelynek a bezárt szöge, illetve $\beta$ az egyik küllő síkkal bezárt szöge.
+   A fázistér minden pontját el lehet érni, de $\delta x$ és $\delta \beta$ nem függetlenek. }
    Általános kapcsolat csak a teljes differenciálokra adható:
    \aln{
    &\suml{i=1}{3n}a_{ji}\der{x_i}{t}+a_{j0}=0 \qquad\forall j=1\dots s&
@@ -54,13 +58,15 @@
    }
    Ez az egyenletrendszer is a kényszereket leíró egyenletekkel együtt válik megoldhatóvá.
    
-   Az általános koordinátákra való átérésnél is lehetnek a rendszerben anholonom kényszerek. Ekkor a $\delta q_i$ $i=1\dots f$-re nem lesz lineárisan független. A kényszerek egyenleteiből származtathatóak a fentiekhez hasonló Lagrange-multiplikátoros tagok, amelyekkel a $\delta q_i$-k már függetlenek lesznek, így
+   Az általános koordinátákra való átérésnél is lehetnek a rendszerben anholonom kényszerek.
+   Ekkor a $\delta q_i$ $i=1\dots f$-re nem lesz lineárisan független.
+   A kényszerek egyenleteiből származtathatóak a fentiekhez hasonló Lagrange-multiplikátoros tagok, amelyekkel a $\delta q_i$-k már függetlenek lesznek, így
    \eq{
     Q_j+\suml{k=1}{s'}\lambda_k a_{kj}=\der{}{t}\pder{K}{\dtq_j}-\pder{K}{q_j}.
    }
 
-   
-   A kényszerek másik csoportosítása a következő. Tekintsük az elsőfajú Lagrange-egyenleteket anholonom és holonom $\left(a_{ji}=\pder{\phi_j}{x_i}\right.$, $\left.a_{j0}=\pder{\phi_j}{t}\right)$ rendszerekre együtt, bővítsük mindegyiket $\dtx_i$-vel, majd összegezzük őket  $i=1\dots 3n$-re:
+   A kényszerek másik csoportosítása a következő.
+   Tekintsük az elsőfajú Lagrange-egyenleteket anholonom és holonom $\left(a_{ji}=\pder{\phi_j}{x_i}\right.$, $\left.a_{j0}=\pder{\phi_j}{t}\right)$ rendszerekre együtt, bővítsük mindegyiket $\dtx_i$-vel, majd összegezzük őket  $i=1\dots 3n$-re:
    \al{
     \suml{i=1}{3n}m_i\ddtx_i\dtx_i
     &=\suml{i=1}{3n}\der{}{t}\left(\frac{1}{2}m_i\dtx_i^2\right)
@@ -68,7 +74,9 @@
     &=\suml{i=1}{3n}X_i\dtx_i+\suml{j=1}{s}\lambda_j\underbrace{\suml{i=1}{3n} a_{ji}\dtx_i}_{=-a_{j0}}
     =\suml{i=1}{3n}X_i\dtx_i-\suml{j=1}{s}\lambda_ja_{j0},
    }
-   ahol kihasználtuk a kényszerekre vonatkozó \eqref{eq:03-kenszerdef} egyenletet. Az utolsó egyenlet első tagja a szabaderők teljesítménye. Ha ezek potenciálosak, akkor 
+   ahol kihasználtuk a kényszerekre vonatkozó \eqref{eq:03-kenszerdef} egyenletet.
+   Az utolsó egyenlet első tagja a szabaderők teljesítménye.
+   Ha ezek potenciálosak, akkor 
    \al{
    &\suml{i=1}{3n}m_i\ddtx_i\dtx_i=-\der{}{t}U-\suml{j=1}{s}\lambda_ja_{j0}&
    &\Rightarrow&
@@ -79,7 +87,8 @@
    
    {\bf Reonom rendszer} az olyan rendszer, amely nem szkleronom, vagyis ahol a kényszeregyenletek nem időfüggetlenek. 
    
-   Szkleronom rendszerben a teljes energia megmarad. Reonom rendszerben általában nem.
+   Szkleronom rendszerben a teljes energia megmarad.
+   Reonom rendszerben általában nem.
    
   \subsection{Konzervatív erők}
    
@@ -95,7 +104,12 @@
    &\Rightarrow&
    &\boxed{W=\Delta K}&\label{eq:03-munkatetel}
    }
-   A bal oldalon definiáljuk az $\vect{F}$ erő (tömegponton végzett) munkáját ($W$). Ha az erő nem idő és sebességfüggő, azaz statikus, akkor a munkát átírhatunk vonalintegrál alakban: $W=\intl{\gamma}{}\dd\vect{s}\,\vect{F}(\vect{s})$. Ekkor az erő munkája csak a pályától függ. A jobb oldalon definiáljuk a kinetikus energiát: $K(t)=\frac{1}{2}m\dtr^2$. A kinetikus energia tömegpont pillanatnyi mozgásállapotától függ csak. Ez a munkatétel.
+   A bal oldalon definiáljuk az $\vect{F}$ erő (tömegponton végzett) munkáját ($W$).
+   Ha az erő nem idő és sebességfüggő, azaz statikus, akkor a munkát átírhatunk vonalintegrál alakban: $W=\intl{\gamma}{}\dd\vect{s}\,\vect{F}(\vect{s})$.
+   Ekkor az erő munkája csak a pályától függ.
+   A jobb oldalon definiáljuk a kinetikus energiát: $K(t)=\frac{1}{2}m\dtr^2$.
+   A kinetikus energia tömegpont pillanatnyi mozgásállapotától függ csak.
+   Ez a munkatétel.
    
    \paragraph{A potenciálelmélet alaptétele}
    
@@ -114,23 +128,36 @@
     
     \emph{Bizonyítás:}
     \begin{itemize}
-     \item[$\overset{1)}{\Rightarrow}$] Tekintsünk egy tetszőleges zárt $\gamma$ görbét. Vágjuk el ezt valahol ($\gamma_0$), és vonalintegráljuk rajta az erőteret: $\ointl{\gamma}{}\dd\vect{s}\,\vect{F}(\vect{s})=-\ointl{\gamma}{}\dd\vect{s}\,\grad{U}(\vect{s})=-[U(\vect{s})]_{\vect{s}(\gamma_0)}^{\vect{s}(\gamma_0)}=U({\vect{s}(\gamma_0)})-U({\vect{s}(\gamma_0)})=0$. $\square$
+     \item[$\overset{1)}{\Rightarrow}$] Tekintsünk egy tetszőleges zárt $\gamma$ görbét.
+   Vágjuk el ezt valahol ($\gamma_0$), és vonalintegráljuk rajta az erőteret: $\ointl{\gamma}{}\dd\vect{s}\,\vect{F}(\vect{s})=-\ointl{\gamma}{}\dd\vect{s}\,\grad{U}(\vect{s})=-[U(\vect{s})]_{\vect{s}(\gamma_0)}^{\vect{s}(\gamma_0)}=U({\vect{s}(\gamma_0)})-U({\vect{s}(\gamma_0)})=0$. $\square$
      
-     \item[$\overset{1)}{\Leftarrow}$] Állítás, hogy egy fix $\vect{r}_0$-at lerögzítve az $U(\vect{r})=-\intl{\vect{r}_0}{\vect{r}}\dd\vect{s}\,\vect{F}(\vect{s})$ választás megfelelő lesz. Lássuk be, hogy ennek a negatív gradiense tényleg az erőteret adja: 
+     \item[$\overset{1)}{\Leftarrow}$] Állítás, hogy egy fix $\vect{r}_0$-at lerögzítve az $U(\vect{r})=-\intl{\vect{r}_0}{\vect{r}}\dd\vect{s}\,\vect{F}(\vect{s})$ választás megfelelő lesz.
+   Lássuk be, hogy ennek a negatív gradiense tényleg az erőteret adja: 
      \eq{
       U(\vect{r}+\Delta\vect{r})-U(\vect{r})=-\intl{\vect{r}}{\vect{r}+\Delta\vect{r}}\dd\vect{s}\,\vect{F}(\vect{s}).
      }
-     Paraméterezzük az integrált: $\vect{s}(t):=\vect{r}+t\cdot\Delta\vect{r}$, hogy $t=0\dots 1$. Az integrál ekkor $-\intl{0}{1}\dd t\,\vect{F}(\vect{r}+t\Delta\vect{r})\Delta\vect{r}$, ami az integrálszámítás alaptétele szerint egy $\theta\in[0,1]$-re:
+     Paraméterezzük az integrált: $\vect{s}(t):=\vect{r}+t\cdot\Delta\vect{r}$, hogy $t=0\dots 1$.
+   Az integrál ekkor $-\intl{0}{1}\dd t\,\vect{F}(\vect{r}+t\Delta\vect{r})\Delta\vect{r}$, ami az integrálszámítás alaptétele szerint egy $\theta\in[0,1]$-re:
      \eq{
       U(\vect{r}+\Delta\vect{r})-U(\vect{r})=-\intl{0}{1}\dd t\,\vect{F}(\vect{r}+t\Delta\vect{r})\Delta\vect{r}=-\vect{F}\big(\vect{r}+\theta\Delta\vect{r}\big)\Delta\vect{r}=-\vect{F}(\vect{r})\Delta\vect{r}+\ep(\vect{r},\Delta\vect{r}).
      }
      Ez éppen a derivált definíciója, itt $\ep(\vect{r},\Delta\vect{r})={o}(\Delta\vect{r}^2)$.
      
-     A konzervatívságot ott használtuk fel, hogy csak akkor egyértelmű a potenciálfüggvény. Ha nem lenne konzervatív az erőtér, akkor a potenciálfüggvény értéke függene az integrálási úttól. $\square$
+     A konzervatívságot ott használtuk fel, hogy csak akkor egyértelmű a potenciálfüggvény.
+   Ha nem lenne konzervatív az erőtér, akkor a potenciálfüggvény értéke függene az integrálási úttól. $\square$
      
-     \item[$\overset{2)}{\Rightarrow}$] Indirekt módon bizonyítjuk. Tegyük fel, hogy $\vect{r}_0$-ban $\rot{\vect{F}(\vect{r_0})}\neq 0$. Ekkor legyen $\gamma$ egy olyan kis zárt görbe, melynek középpontja $\vect{r}_0$. A feltétel szerint $0=\ointl{\gamma}{}\dd\vect{s}\,\vect{F}(\vect{s})$. Ezt átalakítva a Stokes-tétellel: $0=\intl{\text{int }\gamma}{}\df\rot\vect{F}(\vect{r})$. Tartsunk a görbe sugarával nullához, majd paraméterezzük meg a felületet: $0=\iint\limits_{T}\dd u\dd v\,\rot\vect{F}\big(\vect{r}(u,v)\big)\cdot(\vect{r}_u\times\vect{r}_v)$, ahol a $(\vect{r}_u\times\vect{r}_v)$ a felületelem-vektort jelöli. Az integrandusban szerepel két vektor, és mind a kettő arányos a $\rot{\vect{F}(\vect{r}_0)}$-lal, így egy szigorúan pozitív mennyiséget integrálunk, mely így nagyobb mint nulla. Ez ellentmondás. $\square$
+     \item[$\overset{2)}{\Rightarrow}$] Indirekt módon bizonyítjuk.
+   Tegyük fel, hogy $\vect{r}_0$-ban $\rot{\vect{F}(\vect{r_0})}\neq 0$.
+   Ekkor legyen $\gamma$ egy olyan kis zárt görbe, melynek középpontja $\vect{r}_0$.
+   A feltétel szerint $0=\ointl{\gamma}{}\dd\vect{s}\,\vect{F}(\vect{s})$.
+   Ezt átalakítva a Stokes-tétellel: $0=\intl{\text{int }\gamma}{}\df\rot\vect{F}(\vect{r})$.
+   Tartsunk a görbe sugarával nullához, majd paraméterezzük meg a felületet: $0=\iint\limits_{T}\dd u\dd v\,\rot\vect{F}\big(\vect{r}(u,v)\big)\cdot(\vect{r}_u\times\vect{r}_v)$, ahol a $(\vect{r}_u\times\vect{r}_v)$ a felületelem-vektort jelöli.
+   Az integrandusban szerepel két vektor, és mind a kettő arányos a $\rot{\vect{F}(\vect{r}_0)}$-lal, így egy szigorúan pozitív mennyiséget integrálunk, mely így nagyobb mint nulla.
+   Ez ellentmondás. $\square$
      
-     \item[$\overset{2)}{\Leftarrow}$] Vegyünk egy tetszőleges egyszeresen összefüggő felületet: $A$, ennek határa pedig $\partial A$. Minden zárt görbe felírható egy egyszeresen összefüggő felület határaként. A Stokes-tétel alapján azonnal látszik, hogy $0=\intl{F}{}\df\rot\vect{F}=\ointl{\partial F}{}\dd\vect{s}\,\vect{F}(\vect{s})$. $\square$
+     \item[$\overset{2)}{\Leftarrow}$] Vegyünk egy tetszőleges egyszeresen összefüggő felületet: $A$, ennek határa pedig $\partial A$.
+   Minden zárt görbe felírható egy egyszeresen összefüggő felület határaként.
+   A Stokes-tétel alapján azonnal látszik, hogy $0=\intl{F}{}\df\rot\vect{F}=\ointl{\partial F}{}\dd\vect{s}\,\vect{F}(\vect{s})$. $\square$
     \end{itemize}
     
    A munkatétel konzervatív erőtérre:
@@ -144,7 +171,8 @@
    
   \subsection{Ponttöltés elektromágneses térben}\label{ss:03-toltesEMterben}
    
-   Az $U=q\phi-q\vect{A}\vect{v}$ potenciállal előállítható az elektromágneses térben mozgó részecske mozgásegyenlete. A Lagrange:
+   Az $U=q\phi-q\vect{A}\vect{v}$ potenciállal előállítható az elektromágneses térben mozgó részecske mozgásegyenlete.
+   A Lagrange:
    \eq{
     L=K-U=\frac{1}{2}m\vect{v}^2-q\phi+q\vect{A}\vect{v},
    }
@@ -189,8 +217,7 @@
       =q\underbrace{-\partial_i \phi - \partial_t A_i}_{E_i}+q v_j\underbrace{( \partial_i A_j- \partial_j A_i)}_{\ep_{ijk}B_k}\\
     m\ddot{\xv}&=q\vect{E}+q\vect{v}\times\vect{B}.
    }
-   
-   
+
  \section{Elektrodinamika}
   
   \subsection{Elektrosztatikus és mágneses skalárpotenciál}
@@ -206,11 +233,13 @@
    
    \paragraph{Lineáris anyag}
    
-    A harmadik egyenletből következik, hogy az $\vect{E}$ tér potenciálos, azaz $\vect{E}=-\grad{\phi(\vect{r})}$. Ezt az első egyenletbe helyettesítve, homogén esetben a Poisson-egyenletet kapjuk:
+    A harmadik egyenletből következik, hogy az $\vect{E}$ tér potenciálos, azaz $\vect{E}=-\grad{\phi(\vect{r})}$.
+   Ezt az első egyenletbe helyettesítve, homogén esetben a Poisson-egyenletet kapjuk:
     \eq{
      \Delta\phi(\vect{r})=-\frac{1}{\ep}\rho(\vect{r}).
     }
-    A mágneses szektor egyenletei teljesen hasonlóak. A negyedik Maxwell-egyenlet alapján: $\vect{H}=-\grad{\phi_M}$, melyet a második egyenletbe helyettesítve:
+    A mágneses szektor egyenletei teljesen hasonlóak.
+   A negyedik Maxwell-egyenlet alapján: $\vect{H}=-\grad{\phi_M}$, melyet a második egyenletbe helyettesítve:
     \eq{
      \Delta\phi_M=0.
     }
@@ -220,7 +249,9 @@
     
    \paragraph{Nemlineáris anyag}
     
-    A Maxwell-egyenleteket ki kell egészíteni a két anyagi egyenlettel: $(\vect{P}(\vect{E})$, $\vect{M}(\vect{H}))$. A 3. Maxwell-egyenlet szerint itt is van skalárpotenciál: $\vect{E}=-\grad{\phi}$, ezt pedig az első egyenletbe helyettesítve:
+    A Maxwell-egyenleteket ki kell egészíteni a két anyagi egyenlettel: $(\vect{P}(\vect{E})$, $\vect{M}(\vect{H}))$.
+   A 3.
+   Maxwell-egyenlet szerint itt is van skalárpotenciál: $\vect{E}=-\grad{\phi}$, ezt pedig az első egyenletbe helyettesítve:
     \eq{
      \rho(\vect{r})=\divo{\left(\ep_0\vect{E}+\vect{P}\right)}=\divo{\left(-\ep_0 \grad{\phi}+\vect{P}\right)} = -\ep_0\Delta\phi+\divo{\vect{P}}
     }
@@ -239,29 +270,32 @@
      \Delta\phi_M=\divo{\vect{M}(\vect{H})}.
     }
     
-    Itt is ugyanolyanok a mágneses és az elektromos szektorra vonatkozó egyenletek. A határfeltételek megegyeznek a lineáris esettel.
+    Itt is ugyanolyanok a mágneses és az elektromos szektorra vonatkozó egyenletek.
+   A határfeltételek megegyeznek a lineáris esettel.
     
   \subsection{A vektorpotenciál}
    
-   Ha a Maxwell-egyenletek áramokat is tartalmaznak, akkor a mágneses skalárpotenciál nem értelmezhető. A 2. Maxwell egyenlet alapján azonban létezik $\vect{A}$, hogy $\vect{B}=\rot{\vect{A}}$. Lineáris és nemlineáris anyagban is:
+   Ha a Maxwell-egyenletek áramokat is tartalmaznak, akkor a mágneses skalárpotenciál nem értelmezhető.
+   A 2. Maxwell egyenlet alapján azonban létezik $\vect{A}$, hogy $\vect{B}=\rot{\vect{A}}$.
+   Lineáris és nemlineáris anyagban is:
    \eq{
    \vect{J}=\rot{\left(\frac{1}{\mu_0}\vect{B}-\vect{M}\right)}
            =\frac{1}{\mu_0}\rot{(\rot{\vect{A}})}-\rot{\vect{M}},
    }
-   ahol pedig felhasználjuk, hogy $\divo{A}=0$. Ez a Coulomb-mérték, ez mindig megválasztható. Ekkor $\vect{A}$-ra a
+   ahol pedig felhasználjuk, hogy $\divo{A}=0$.
+   Ez a Coulomb-mérték, ez mindig megválasztható.
+   Ekkor $\vect{A}$-ra a
    \eq{
     \Delta{\vect{A}}=-\mu_0\big(\vect{J}+\rot{\vect{M}(\vect{B})}\big)
    }
-   egyenletet kapjuk. Ennek három komponense szintén megegyezik a fenti egyenletek struktúrájával. A határfeltételek: $\vect{A}$ és $\frac{1}{\mu}\rot{\vect{A}}$ folytonos a határon. 
-   
-%    {\color{red} 41. old aztán az állandó mágnesek esete. Esetleg a vektorpotenciálos rész a másik elé?}
-   
-    
-%     {\color{red} Ki kellene találni, hogy a teljes időfüggő Green-függvényt is ide írjuk le, vagy később, egyértelműség teljes időfüggés mellett? Az csak statikára van meg.}
-    
+   egyenletet kapjuk.
+   Ennek három komponense szintén megegyezik a fenti egyenletek struktúrájával.
+   A határfeltételek: $\vect{A}$ és $\frac{1}{\mu}\rot{\vect{A}}$ folytonos a határon. 
+
   \subsection{Az elektrodinamika egyértelműsége}
    
-   Az elektrosztatikai feladatok a Poisson-egyenlet megoldására redukálódnak. A megoldandó feladat általánosan:
+   Az elektrosztatikai feladatok a Poisson-egyenlet megoldására redukálódnak.
+   A megoldandó feladat általánosan:
    \al{
     &\Delta{\Psi}=-f&
     \text{ahol }\qquad \Psi(\vect{r})\Big|_\text{felületen}=\text{adott} \qquad \text{vagy} \qquad \pder{\Psi}{\vect{n}}\Bigg|_\text{felületen}=\text{adott}.
@@ -270,7 +304,9 @@
    
    A Poisson-egyenletre igaz az unicitás: ha $\exists\;\Psi_1,\Psi_2$, hogy $\Delta\Psi_1=\Delta\Psi_2=-f$, akkor $\Psi_1-\Psi_2=\text{Const.}$, és a határfeltételt is kielégítik.
    
-   {\bf Bizonyítás:} A $K=\Psi_1-\Psi_2$ függvény megoldása a $\Delta K=0$ egyenletnek a $K=0$ vagy a $\pder{K}{\vect{n}}=0$ határfeltétellel. A határfeltétel miatt a határon a $K\grad{K}$ mennyiség mindenképpen eltűnik. Erre a Gauss-tétel:
+   {\bf Bizonyítás:} A $K=\Psi_1-\Psi_2$ függvény megoldása a $\Delta K=0$ egyenletnek a $K=0$ vagy a $\pder{K}{\vect{n}}=0$ határfeltétellel.
+   A határfeltétel miatt a határon a $K\grad{K}$ mennyiség mindenképpen eltűnik.
+   Erre a Gauss-tétel:
    \al{
     0=\ointl{\partial V}{}\df K\grad{K}
      =\intl{V}{}\drh\divo{(K\grad K)}
@@ -278,25 +314,26 @@
      =\intl{V}{}\drh(\grad K)^2,
    }
    ahonnan $\grad{K}=0$, vagyis $K=\text{Const}$. $\square$
-   
-%    {\color{red} És mi van a d'Alambert-egyenlettel? Az egyértelmű? Hasonló okosságot ki kellene találni arra is. 4D analógia, valami?\dots}
-   
+
   \subsection{Megoldás Green-függvénnyel}
    
-   A Poisson-egyenlet lineáris differenciálegyenlet, így megkereshető annak Green-függvénye, majd abból elkészíthető a teljes megoldás. A fenti Poisson-egyenlet Green-függvénye:
+   A Poisson-egyenlet lineáris differenciálegyenlet, így megkereshető annak Green-függvénye, majd abból elkészíthető a teljes megoldás.
+   A fenti Poisson-egyenlet Green-függvénye:
    \aln{
     &\Delta G(\vect{r},\vect{r}')=-\frac{1}{\ep_0}\delta(\vect{r}-\vect{r}')&
     &\Rightarrow&
     &\Psi(\vect{r})=\int\drkh G(\vect{r},\vect{r}')\rho(\vect{r}').&
    }
-   Mivel az egyenlet szimmetrikus az $\vect{r}$ $\vect{r}'$ cserére, ezért $G(\vect{r},\vect{r}')=G(\vect{r}-\vect{r}')$. Az általános megoldás a Green-függvényből a fenti módon állítható elő:
+   Mivel az egyenlet szimmetrikus az $\vect{r}$ $\vect{r}'$ cserére, ezért $G(\vect{r},\vect{r}')=G(\vect{r}-\vect{r}')$.
+   Az általános megoldás a Green-függvényből a fenti módon állítható elő:
    \al{
     \Delta\Psi(\vect{r})
     =\int\drkh \Delta G(\vect{r},\vect{r}')\rho(\vect{r}')
     =-\frac{1}{\ep_0}\int\drkh \delta(\vect{r},\vect{r}')\rho(\vect{r}')
     =-\frac{1}{\ep_0}\rho(\vect{r}).
    }
-   A Green-függvényre érvényes határfeltételek a Green-tétel alapján kaphatóak. A Green-tétel kimondja két ($\psi,\phi$) skalárfüggvényre, és egy egyszeresen összefüggő $V$ térfogatelemre:
+   A Green-függvényre érvényes határfeltételek a Green-tétel alapján kaphatóak.
+   A Green-tétel kimondja két ($\psi,\phi$) skalárfüggvényre, és egy egyszeresen összefüggő $V$ térfogatelemre:
    \eq{
     \ointl{\partial V}{}\df \big(\phi\grad{\psi}-\psi\grad{\phi}\big)=\intl{V}{}\drh \big(\phi\Delta\psi-\psi\Delta\phi\big).
    }
@@ -311,7 +348,8 @@
     \eqn{
      \Psi(\vect{r}')=\intl{V}{}\drh G(\vect{r},\vect{r}')\rho(\rv)-\ep_0\ointl{\partial V}{}\dd^2\vect{f}_{\vect{r}}\,\Psi(\vect{r})\grad{G(\vect{r},\vect{r}')}.\label{eq:3-dirichletmo}
     }
-    \item[Neumann] határfeltételre pedig mivel $\ointl{\partial V}{}\dd^2\vect{f}_{\vect{r}}\,\grad{G(\vect{r},\vect{r}')}=\intl{V}{}\drh \Delta G(\vect{r},\vect{r}')=-\frac{1}{\ep_0}$, így $\grad{G(\vect{r},\vect{r}')}$-t nem választhatjuk nullának. Azonban konstansnak választhatjuk: 
+    \item[Neumann] határfeltételre pedig mivel $\ointl{\partial V}{}\dd^2\vect{f}_{\vect{r}}\,\grad{G(\vect{r},\vect{r}')}=\intl{V}{}\drh \Delta G(\vect{r},\vect{r}')=-\frac{1}{\ep_0}$, így $\grad{G(\vect{r},\vect{r}')}$-t nem választhatjuk nullának.
+   Azonban konstansnak választhatjuk: 
     \eq{
      \grad{G(\vect{r}\in\partial V,\vect{r}')}=-\frac{1}{\ep_0\abs{\partial V}}.
     }
@@ -324,23 +362,32 @@
    
   \subsection{Tükörtöltések}
    
-   A Poisson-egyenletet megoldását (Green-függvényét) keressük Dirichlet (fémes) határfeltétel mellett. A Green-függvény tartalmazza a határfeltéteteket is azzokat megkeresni általában nagyon nehéz. Mi most nem szeretnénk közvetlenül megoldani az egyenletet, hanem intuícióval keressük a megoldást: a fizikailag elszeparált térrészekbe pontöltéseket helyezünk úgy, hogy ezek és a tényleges töltések tere együtt kiadja a keresett potenciált a fizikai térrészben, és az a határfeltételnek is megfeleljen. 
+   A Poisson-egyenletet megoldását (Green-függvényét) keressük Dirichlet (fémes) határfeltétel mellett.
+   A Green-függvény tartalmazza a határfeltéteteket is azzokat megkeresni általában nagyon nehéz.
+   Mi most nem szeretnénk közvetlenül megoldani az egyenletet, hanem intuícióval keressük a megoldást: a fizikailag elszeparált térrészekbe pontöltéseket helyezünk úgy, hogy ezek és a tényleges töltések tere együtt kiadja a keresett potenciált a fizikai térrészben, és az a határfeltételnek is megfeleljen. 
    
    \begin{description}
     \item[Fém síklap Green-függvénye]
-     Ha van egy töltés a sík felett, akkor hogy konstans legyen a potenciál az egész felületen, akkor egy azzal ellentétes, ugyanakkora töltésnek kell lennie a sík mások felületén tükörszimmetrikusan. Legyen a töltésünk az $\vect{r'}=(x',y',z')$ helyen. A tükörtöltésnek ekkor a $(x',y',-z')$ helyen kell lennie. A potenciál az $\vect{r}$ helyen, azaz a Green-függvény:
+     Ha van egy töltés a sík felett, akkor hogy konstans legyen a potenciál az egész felületen, akkor egy azzal ellentétes, ugyanakkora töltésnek kell lennie a sík mások felületén tükörszimmetrikusan.
+   Legyen a töltésünk az $\vect{r'}=(x',y',z')$ helyen.
+   A tükörtöltésnek ekkor a $(x',y',-z')$ helyen kell lennie.
+   A potenciál az $\vect{r}$ helyen, azaz a Green-függvény:
      \eq{
       G(\vect{r}',\vect{r}) = \frac{1}{4\pi\ep_0}
        \left[\frac{1}{\sqrt{(x-x')^2+(y-y')^2+(z-z')^2}}-\frac{1}{\sqrt{(x-x')^2+(y-y')^2+(z+z')^2}}\right].
      }
     
     \item[Fémgömb Green-függvénye]
-     Legyen a gömb az $R^2=x^2+y^2+z^2$ egyenlettel megadva. Legyen egy egységnyi töltés az $\vect{r}=(x',0,0)$ helyen, a tükörtöltés pedig a hengerszimmetria miatt az $(\bar{x},0,0)$ helyen. Ennek nagysága legyen $-q$. Ekkor a potenciál az $\vect{r}$ helyen:
+     Legyen a gömb az $R^2=x^2+y^2+z^2$ egyenlettel megadva.
+   Legyen egy egységnyi töltés az $\vect{r}=(x',0,0)$ helyen, a tükörtöltés pedig a hengerszimmetria miatt az $(\bar{x},0,0)$ helyen.
+   Ennek nagysága legyen $-q$.
+   Ekkor a potenciál az $\vect{r}$ helyen:
      \eq{
       \phi(\vect{r}) = \frac{1}{4\pi\ep_0}
        \left[\frac{1}{\sqrt{(x-x')^2+y^2+z^2}}-\frac{q}{\sqrt{(x-\bar{x})^2+y^2+z^2}}\right].
      }
-     Azt szeretnénk, hogy $\phi(x,y,z)\equiv 0$, ha $R^2=x^2+y^2+z^2$, ehhez keresünk megfelelő $q$ és $\bar{x}$ paramétereket. A feltétel alapján:
+     Azt szeretnénk, hogy $\phi(x,y,z)\equiv 0$, ha $R^2=x^2+y^2+z^2$, ehhez keresünk megfelelő $q$ és $\bar{x}$ paramétereket.
+   A feltétel alapján:
      \al{
        q^2 \big[(x-x')^2+y^2+z^2\big]&=(x-\bar{x})^2+y^2+z^2 \\
       R^2&=x^2+y^2+z^2.
@@ -355,7 +402,9 @@
      \al{
       0=q^4x'^2-q^2x'^2+(1-q^2)R^2=(1-q^2)(R^2-q^2x'^2).
      }
-     Az egyik megoldás a $q=1$, ám ekkor a két töltés ugyanott van, nincs tér. A másik, fizikai megoldás: $q=\frac{R}{x'}$, illetve $\bar{x}=\frac{R^2}{x'}$. Ezekkel tehát a Green-függvény:
+     Az egyik megoldás a $q=1$, ám ekkor a két töltés ugyanott van, nincs tér.
+   A másik, fizikai megoldás: $q=\frac{R}{x'}$, illetve $\bar{x}=\frac{R^2}{x'}$.
+   Ezekkel tehát a Green-függvény:
      
      \eq{
       G(\vect{r}',\vect{r})=
@@ -386,7 +435,8 @@
     \op{H}= \frac{\op{\vect{p}}^2}{2m}-\frac{q}{m}\vect{A}\op{\vect{p}}+\frac{q^2}{2m}\vect{A}^2+q\phi=\underbrace{-\frac{\hbar^2}{2m}\Delta+q\phi}_{\op{H}_0}+\underbrace{\frac{q\hbar i}{m}\vect{A}\grad{}}_{\op{H}\text{para}}+\underbrace{\frac{q^2}{2m}\vect{A}^2}_{\op{H}_\text{dia}}.
    }
    
-   Tekintsünk egy speciális esetet: homogén esetben jó Coulomb-mértéket a szimmetrikus mérték: $\vect{A}=\frac 12\vect{B}\times\vect{r}$, illetve legyen a részecske elektron: $q=-e$. Ezzel a paramágneses tag:
+   Tekintsünk egy speciális esetet: homogén esetben jó Coulomb-mértéket a szimmetrikus mérték: $\vect{A}=\frac 12\vect{B}\times\vect{r}$, illetve legyen a részecske elektron: $q=-e$.
+   Ezzel a paramágneses tag:
    \eq{
     \op{H}_\text{para}
     =\frac{q\hbar i}{m}\vect{A}\grad{}
@@ -396,7 +446,8 @@
     =-\frac{q}{2m}\op{\vect{L}}\vect{B}
     =\underbrace{\frac{e\hbar}{2m}}_{\mu_\text{B}}\frac{1}{\hbar}\op{\vect{L}}\vect{B}.
    }
-   Itt definiáltuk a Bohr-magnetont: $\mu_\text{B}=9.27\cdot 10^{-24}\me{J/T}$. A fenti Hamilton-operátort kiegészíthetjük a Zeemann-taggal, így kapjuk a Pauli paramágneses tagot:
+   Itt definiáltuk a Bohr-magnetont: $\mu_\text{B}=9.27\cdot 10^{-24}\me{J/T}$.
+   A fenti Hamilton-operátort kiegészíthetjük a Zeemann-taggal, így kapjuk a Pauli paramágneses tagot:
    \eq{
     \op{H}_\text{para}=\mu_\text{B}\frac{1}{\hbar}(\op{\vect{L}}+2\op{\vect{S}})\vect{B}.
    }
@@ -418,17 +469,22 @@
    
    Vizsgáljuk meg az egyes tagok nagyságrendjeit: A Pauli-féle tag $\sim 10^{-23}\cdot 1\cdot 1=10^{-23}\me{(J)}$, míg a Langevin-féle tag: $\sim \frac{10^{-2\cdot 19} 1^2}{10^{-30}}\cdot 10^{-2\cdot 10}=10^{-28}\me{(J)}$, vagyis a diamágneses tag 5 nagyságrenddel kisebb a paramágnesesnél, annak csak akkor van jelentősége, ha a paramágneses tag nulla, vagyis ha $(\op{L}^z+2\op{S}^z)=0$.
    
-   A paramágneses tag a már meglévő $\vects{\mu}_\text{para}=-\pder{H_\text{para}}{\vect{B}}=-\mu_\text{B}\frac{1}{\hbar}(\op{\vect{L}}+2\op{\vect{S}})$ momentumot akarja a mágneses tér irányába forgatni ($\op{H}_\text{para}=-\vects{\mu}_\text{para}\vect{B}$). A diamágneses tagot a mágneses tér indukálja: $\vects{\mu}_\text{dia}=-\frac{e^2B}{4m}(x^2+y^2)\vect{e}_z$. Ez arányos $B$-vel, és mindig a mágneses térrel ellentétes irányba mutat, ezért diamágneses.
+   A paramágneses tag a már meglévő $\vects{\mu}_\text{para}=-\pder{H_\text{para}}{\vect{B}}=-\mu_\text{B}\frac{1}{\hbar}(\op{\vect{L}}+2\op{\vect{S}})$ momentumot akarja a mágneses tér irányába forgatni ($\op{H}_\text{para}=-\vects{\mu}_\text{para}\vect{B}$).
+   A diamágneses tagot a mágneses tér indukálja: $\vects{\mu}_\text{dia}=-\frac{e^2B}{4m}(x^2+y^2)\vect{e}_z$.
+   Ez arányos $B$-vel, és mindig a mágneses térrel ellentétes irányba mutat, ezért diamágneses.
    
   \subsection{Időfüggő terek, indukált emisszió, abszorpció}
-   
-   
-   Legyen egy kvantumrendszer, melynek időbeli fejlődését a $\op{H}_0$ Hamiltonnal tudjuk leírni. Tegyük ezt a rendszert egy időfüggő térbe, amellyel a $\op{V}(t)$ operátoron keresztül hat kölcsön. Legyen a rendszer kezdetben az $i$-edik állapotában. Az időfüggő perturbációszámítás szerint ekkor első rendben annak a valószínűsége, hogy a rendszer a $t$ idő múlva az $f$-edik állapotában van:
+
+   Legyen egy kvantumrendszer, melynek időbeli fejlődését a $\op{H}_0$ Hamiltonnal tudjuk leírni.
+   Tegyük ezt a rendszert egy időfüggő térbe, amellyel a $\op{V}(t)$ operátoron keresztül hat kölcsön.
+   Legyen a rendszer kezdetben az $i$-edik állapotában.
+   Az időfüggő perturbációszámítás szerint ekkor első rendben annak a valószínűsége, hogy a rendszer a $t$ idő múlva az $f$-edik állapotában van:
    \eq{
     W^{(1)}(i\to f)=\frac{1}{\hbar^2}\abs{\intl{0}{t}\dd\tau\,\bra{f}V\ket{i}e^{\frac{i}{\hbar}(\epsilon_f-\epsilon_i)\tau}}^2
    }
    
-   Alkalmazzuk ezt elektromos térre: legyen a gerjesztő jel fény, ahol $\vect{E}=E_0\vect{e}_x\sin{(\omega t)}$. Innen $V(t)=q\phi=eE_0x\sin{(\omega t)}$, vagyis:
+   Alkalmazzuk ezt elektromos térre: legyen a gerjesztő jel fény, ahol $\vect{E}=E_0\vect{e}_x\sin{(\omega t)}$.
+   Innen $V(t)=q\phi=eE_0x\sin{(\omega t)}$, vagyis:
    \al{
     W^{(1)}(i\to f)
      &=\frac{1}{\hbar^2}\abs{\intl{0}{t}\dd\tau\,\bra{f}eE_0x\sin{(\omega \tau)}\ket{i}e^{\frac{i}{\hbar}(\epsilon_f-\epsilon_i)\tau}}^2 
@@ -437,9 +493,14 @@
      &=\frac{e^2E_0^2}{4\hbar^2}\abs{\bra{f}x\ket{i}}^2\abs{\intl{0}{t}\dd\tau\,\left(e^{\left[\frac{i}{\hbar}(\epsilon_f-\epsilon_i)+\omega\right]\tau}-e^{\left[\frac{i}{\hbar}(\epsilon_f-\epsilon_i)-\omega\right]\tau}\right)}^2 \\
      &=\frac{e^2E_0^2}{4\hbar^2}\abs{\bra{f}x\ket{i}}^2\abs{\frac{e^{\left[\frac{i}{\hbar}(\epsilon_f-\epsilon_i)+\omega\right]t}-1}{\frac{i}{\hbar}(\epsilon_f-\epsilon_i)+\omega}-\frac{e^{\left[\frac{i}{\hbar}(\epsilon_f-\epsilon_i)-\omega\right]t}-1}{\frac{i}{\hbar}(\epsilon_f-\epsilon_i)-\omega}}^2.
    }
-   A prefaktor az elektromos tér erősségétől függ. Az $\abs{\bra{f}x\ket{i}}^2$ tag értékét a kiválasztási szabályok határozzák meg. Ha ez nem nulla, akkor megengedett az $i\to f$ átmenet. A kiintegrált részben a számlálók korlátos függvények, a nevezők azonban lehetnek nagyon kicsik, akkor pedig az átmeneti valószínűség nagyon nagy. Ez akkor történik meg, ha 
+   A prefaktor az elektromos tér erősségétől függ.
+   Az $\abs{\bra{f}x\ket{i}}^2$ tag értékét a kiválasztási szabályok határozzák meg.
+   Ha ez nem nulla, akkor megengedett az $i\to f$ átmenet.
+   A kiintegrált részben a számlálók korlátos függvények, a nevezők azonban lehetnek nagyon kicsik, akkor pedig az átmeneti valószínűség nagyon nagy.
+   Ez akkor történik meg, ha 
    \al{
     &\epsilon_f=\epsilon_i+\hbar\omega
     &\epsilon_f=\epsilon_i-\hbar\omega,
    }
-   ami éppen megfelel a Bohr-féle frekvenciafeltételnek. A kezdeti és a végállapot között éppen egy $\hbar\omega$ energiájú fotont abszorbeált vagy emittál a rendszer.
+   ami éppen megfelel a Bohr-féle frekvenciafeltételnek.
+   A kezdeti és a végállapot között éppen egy $\hbar\omega$ energiájú fotont abszorbeált vagy emittál a rendszer.

@@ -4,9 +4,12 @@
 
   \subsection{Klasszikus impulzus}
  
-   A klasszikus (kinetikus) impulzus definíciója: $\pv=m\vv$, vagyis a tömeg és a sebességvektor szorzata. A klasszikus mozgásegyenlet ezzel: $\Fv=\dot{\pv}$.
+   A klasszikus (kinetikus) impulzus definíciója: $\pv=m\vv$, vagyis a tömeg és a sebességvektor szorzata.
+   A klasszikus mozgásegyenlet ezzel: $\Fv=\dot{\pv}$.
    
-   A kanonikus impulzus definíciója a Lagrange-formalizmusban: $p_i=\pder{L}{\dtq_i}$. A kanonikus és a kinetikus impulzus eltérhet egymástól. Egyszerű esetben a kettő ugyanaz, pl.: $L=\frac{1}{2}m\vv^2$, akkor $p_i=mv_i$, de pl.\ az elektromágneses erőtérben mozgó részecske esetén: $L=\frac{1}{2}m\vv^2-q\phi+q\Av\vv$, akkor $p_i=mv_i+qA_i$. 
+   A kanonikus impulzus definíciója a Lagrange-formalizmusban: $p_i=\pder{L}{\dtq_i}$.
+   A kanonikus és a kinetikus impulzus eltérhet egymástól.
+   Egyszerű esetben a kettő ugyanaz, pl.: $L=\frac{1}{2}m\vv^2$, akkor $p_i=mv_i$, de pl.\ az elektromágneses erőtérben mozgó részecske esetén: $L=\frac{1}{2}m\vv^2-q\phi+q\Av\vv$, akkor $p_i=mv_i+qA_i$. 
    
   \subsection{Relativisztikus impulzus}
    
@@ -23,7 +26,8 @@
   
   \subsection{Az elektromos tér impulzusa, klasszikus formalizmus}
    
-   Egy töltéseloszlásra elektromágneses térben erő hat: $\displaystyle\Fv=\intl{}{}\drh(\rho\Ev+\Jv\times\Bv)$. Használjuk fel a Maxwell-egyenleteket (\eqref{eq:01-MXanyagban1} és \eqref{eq:01-MXanyagban2} egyenlet), és alakítsuk át a jobb oldalt:
+   Egy töltéseloszlásra elektromágneses térben erő hat: $\displaystyle\Fv=\intl{}{}\drh(\rho\Ev+\Jv\times\Bv)$.
+   Használjuk fel a Maxwell-egyenleteket (\eqref{eq:01-MXanyagban1} és \eqref{eq:01-MXanyagban2} egyenlet), és alakítsuk át a jobb oldalt:
    \al{
     \rho\Ev+\Jv\times\Bv
      &=\divo{\Dv}\cdot \Ev+(\rot{\Hv}-\partial_t\Dv)\times \Bv
@@ -32,7 +36,8 @@
      &=\divo{\Dv}\cdot \Ev-\Bv\times(\rot{\Hv})+\Hv\cdot\divo{\Bv}+\partial_t(\Bv\times\Dv)-\Dv\times(\rot{\Ev})\\
      &=\underbrace{\partial_t(\Bv\times\Dv)}_{\text{I.}}+\underbrace{\divo{\Dv}\cdot \Ev-\Dv\times(\rot{\Ev})}_\text{II.}+\underbrace{\divo{\Bv}\cdot\Hv-\Bv\times(\rot{\Hv})}_\text{III.}
    }
-   Az I. tag egy teljes időderivált, a második és a harmadik tag pedig azonos szerkezetű. Fejtsük ki ezeket (lineáris anyagban):
+   Az I. tag egy teljes időderivált, a második és a harmadik tag pedig azonos szerkezetű.
+   Fejtsük ki ezeket (lineáris anyagban):
    \al{
     [\divo{\Dv}\cdot \Ev-\Dv\times(\rot{\Ev})]_i
      &=\partial_j D_j\cdot E_i-\ep_{ikl}D_k\ep_{lmn}\partial_m E_n \\
@@ -44,7 +49,10 @@
    \al{
     -(\rho\Ev+\Jv\times\Bv)_i=\partial_t\left(\Dv\times\Bv\right)_i+\partial_j\left(\frac 12 (\Dv\Ev+\Bv\Hv)\delta_{ij}-E_iD_j-H_iB_j\right).
    }
-   Ezt úgy értelmezhetjük, hogy a bal oldal a a testen végzett impulzusváltozás-sűrűség. Legyen egy zárt rendszerünk, ahol a teljes impulzus megmarad. Ekkor a fenti egyenlet szerint a rendszer mechanikai impulzusváltozása megegyezik az elektromos tér impulzusának megváltozásának ellentettjével (a mechanikai és az így definiált elektromágneses tér impulzusának összege megmarad). Az elektromágneses tér impulzus-sűrűsége:
+   Ezt úgy értelmezhetjük, hogy a bal oldal a a testen végzett impulzusváltozás-sűrűség.
+   Legyen egy zárt rendszerünk, ahol a teljes impulzus megmarad.
+   Ekkor a fenti egyenlet szerint a rendszer mechanikai impulzusváltozása megegyezik az elektromos tér impulzusának megváltozásának ellentettjével (a mechanikai és az így definiált elektromágneses tér impulzusának összege megmarad).
+   Az elektromágneses tér impulzus-sűrűsége:
    \eq{
     \gv=\Dv\times\Bv=\frac {1}{c^2}\Sv,
    }
@@ -55,20 +63,25 @@
    
   \subsection{Az elektromos tér impulzusa, relativisztikus formalizmus}\label{ss:05-energiaimptenzor}
    
-   Az elektromágneses-térben mozgó részecske mozgásegyenlete a klasszikus formalizmusban: $\Fv=\partial_t(m\vv)$, ahol $\Fv$ a Lorentz-erő, $\Fv=q\Ev+q\vv\times\Bv$. A kérdés az, hogy a mi lesz a Lorentz-erő alakja a négyes formalizmusban. Az állítás az, hogy ez a $\minv{K}^\mu=qF^{\mu\nu}\minv{u}_\nu$. Fejtsük ki ennek először a térszerű részét:
+   Az elektromágneses-térben mozgó részecske mozgásegyenlete a klasszikus formalizmusban: $\Fv=\partial_t(m\vv)$, ahol $\Fv$ a Lorentz-erő, $\Fv=q\Ev+q\vv\times\Bv$.
+   A kérdés az, hogy a mi lesz a Lorentz-erő alakja a négyes formalizmusban.
+   Az állítás az, hogy ez a $\minv{K}^\mu=qF^{\mu\nu}\minv{u}_\nu$.
+   Fejtsük ki ennek először a térszerű részét:
    \al{
     qF^{i\nu}\minv{u}_\nu
      &=qF^{i0}\minv{u}_0+qF^{ij}\minv{u}_j
       =q\frac{E_i}{c}\frac{c}{\sqrt{1-\frac{v^2}{c^2}}}+q\ep_{ijk}B_k\frac{v_j}{\sqrt{1-\frac{v^2}{c^2}}}\\
      &=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\big(q\Ev+q\vv\times\Bv\big)_i.
    }
-   Innen már látszik, hogy helyes a fenti feltételezés. Az időszerű rész:
+   Innen már látszik, hogy helyes a fenti feltételezés.
+   Az időszerű rész:
    \al{
     qF^{0\nu}\minv{u}_\nu=q\left(-\frac{E_i}{c}\right)\left(-\frac{v_i}{\sqrt{1-\frac{v^2}{c^2}}}\right)=\frac{1}{c}\frac{q\Ev\vv}{\sqrt{1-\frac{v^2}{c^2}}},
    }
    ami megegyezik a munkának megfelelő taggal. 
    
-   Általánosítsuk a fentieket töltéseloszlásokra és áramokra. Ponttöltésekre 
+   Általánosítsuk a fentieket töltéseloszlásokra és áramokra.
+   Ponttöltésekre 
    \eq{
     q\minv{u}^\mu=\left(\frac{qc}{\sqrt{1-\frac{v^2}{c^2}}},\frac{q\vect{v}}{\sqrt{1-\frac{v^2}{c^2}}}\right)=V\cdot\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\minv{J}^\mu,
    }
@@ -82,7 +95,8 @@
    \eq{
     \partial_t\minv{P}^\mu=F^{\mu\nu}\minv{J}_\nu=\frac{1}{\mu_0}F^{\mu\nu}\partial_\rho F^{\rho}_{\phantom{\rho}\nu}.
    }
-   Itt ez a tenzorszorzat kibontható, és felírható négyesdivergencia alakban, amely a kontinuitási egyenletek megfelelő alakja. Az állítás:
+   Itt ez a tenzorszorzat kibontható, és felírható négyesdivergencia alakban, amely a kontinuitási egyenletek megfelelő alakja.
+   Az állítás:
    \eq{
     F^{\mu\nu}\partial_\rho F^{\rho}_{\phantom{\rho}\nu}=-\partial_\rho\left(-F^{\mu\nu}F^{\rho}_{\phantom{\rho}\nu}+\frac 14 g^{\mu\rho}F^{\nu\nu'}F_{\nu\nu'}\right).
    }
@@ -105,14 +119,17 @@
       \underbrace{-(\partial^\rho\partial^{\nu} \minv{A}^\mu)(\partial_\rho \minv{A}_{\nu})+(\partial^\rho\partial^{\nu} \minv{A}^\mu)(\partial_{\nu} \minv{A}_\rho)}_{=0},
       \\
    }
-   ami megegyezik a fentivel, vagyis ezek tényleg kiejtik egymást. Szuper, akkor az átalakítás helyes. 
+   ami megegyezik a fentivel, vagyis ezek tényleg kiejtik egymást.
+   Szuper, akkor az átalakítás helyes. 
    
    Összefoglalva tehát a kontinuitási egyenlet: 
    \al{
     &\partial_t\minv{P}^\mu+\partial_\rho T^{\rho\mu}=0
     &T^{\rho\mu}=\frac{1}{\mu_0}\left(F^{\rho\nu}g_{\nu\sigma}F^{\sigma\mu}-\frac 14 g^{\rho\mu}F^{\nu\nu'}F_{\nu'\nu}\right),
    }
-   ahol a jobb oldalon álló tenzor a Maxwell-féle feszültségtenzor négyesformalizmusbeli alakja. Fejtsük ki a tenzor komponenseit. Ehhez  először a második tag:
+   ahol a jobb oldalon álló tenzor a Maxwell-féle feszültségtenzor négyesformalizmusbeli alakja.
+   Fejtsük ki a tenzor komponenseit.
+   Ehhez  először a második tag:
    \al{
     \frac{1}{4\mu_0}[2F^{0i}F_{0i}+F^{ij}F_{ij}]=\frac{1}{2\mu_0}\left(-\frac{1}{c^2}\Ev^2+\Bv^2\right),
    }
@@ -128,28 +145,40 @@
     &\partial_t(\epsilon+T^{00})+\partial_{i}(cT^{0i})=0& &\Rightarrow& &\partial_t\left(\epsilon+\frac{\ep_0}{2}\Ev^2+\frac{1}{2\mu_0}\Bv^2\right)+\divo\left(\frac{1}{\mu_0}\Ev\times\Bv\right)=0&\\
     &\partial_t\left(P_i+\frac{1}{c}T^{0i}\right)+\partial_{j}(T^{ij})=0& &\Rightarrow& &\partial_t\left(\vect{P}+\frac{1}{\mu_0c^2}\Ev\times\Bv\right)_i+\divo_j T^{ij}=0.&
    }
-   Tehát a rendszer energiasűrűsége a mozgási ($\epsilon$) és az elektromágneses tér energiasűrűségéből áll. Az energia-áramsűrűség $\Sv=\frac{1}{\mu_0}\Ev\times\Bv$, a Poynting-vektor. Az elektromágneses tér impulzussűrűsége $\gv=\frac{\Sv}{c^2}$, ami természetes módon adódik itt, illetve az impulzus-áramsűrűség a $T^{ij}$, azaz a Maxwell-féle feszültségtenzor.
+   Tehát a rendszer energiasűrűsége a mozgási ($\epsilon$) és az elektromágneses tér energiasűrűségéből áll.
+   Az energia-áramsűrűség $\Sv=\frac{1}{\mu_0}\Ev\times\Bv$, a Poynting-vektor.
+   Az elektromágneses tér impulzussűrűsége $\gv=\frac{\Sv}{c^2}$, ami természetes módon adódik itt, illetve az impulzus-áramsűrűség a $T^{ij}$, azaz a Maxwell-féle feszültségtenzor.
    
  \section{Kvantummechanika}
   
   \subsection{Impulzus a kvantummechanikában}
    
-   Az impulzust a kanonikus kvantálás alapján definiálhatjuk: $[\op{A},\op{B}]\to i\hbar\{A,B\}$. A fundamentális Poisson-zárójelek alapján a a hely és az impulzus közötti kommutátorokat megadhatjuk:
+   Az impulzust a kanonikus kvantálás alapján definiálhatjuk: $[\op{A},\op{B}]\to i\hbar\{A,B\}$.
+   A fundamentális Poisson-zárójelek alapján a a hely és az impulzus közötti kommutátorokat megadhatjuk:
    \al{
     &[\oprv_j,\oprv_k]=0,& &[\oppv_j,\oppv_k]=0,& &[\oprv_j,\oppv_k]=i\hbar\delta_{jk}.&
    }
-   A $\oppv$ és az $\oprv$-re egyedül ezek a kikötések. Schrödinger-reprezentációban $\oprv=\rv\cdot$, így $\oppv$ reprezentált alakját úgy kell megválasztani, hogy teljesítse a kommutációs relációkat. A $\oppv=\frac{\hbar}{i}\vects{\nabla}$ a jó választás. Impulzus reprezentációban $\oprv=\pv\cdot$ és $\oprv=-\frac{\hbar}{i}\vects{\nabla}$. 
+   A $\oppv$ és az $\oprv$-re egyedül ezek a kikötések.
+   Schrödinger-reprezentációban $\oprv=\rv\cdot$, így $\oppv$ reprezentált alakját úgy kell megválasztani, hogy teljesítse a kommutációs relációkat.
+   A $\oppv=\frac{\hbar}{i}\vects{\nabla}$ a jó választás.
+   Impulzus reprezentációban $\oprv=\pv\cdot$ és $\oprv=-\frac{\hbar}{i}\vects{\nabla}$. 
    
-   Belátjuk, hogy az impulzus operátora hermitikus de nem önadjungált. Először a definíciók:
+   Belátjuk, hogy az impulzus operátora hermitikus de nem önadjungált.
+   Először a definíciók:
    \begin{description}
     \item[Önadjungált:] $\op{A}\in\mathrm{Lin}(\mathbb{H})$ önadjungált, ha $\exists$ $\op{A}^+\in\mathrm{Lin}(\mathbb{H})$, hogy  $\bra{\psi}\et{\op{A}\varphi}=\bra{\op{A}^+\psi}\et{\varphi}$, ahol $\mathrm{Dom}(\op{A}^+)\equiv\mathrm{Dom}(\op{A})$ és $\forall$ $\psi,\varphi\in\mathrm{Dom}(\op{A})$-ra $\op{A}^+=\op{A}$.
     \item[Hermitikus:] $\op{A}\in\mathrm{Lin}(\mathbb{H})$ hermitikus, ha $\forall$ $\psi,\varphi\in\mathrm{Dom}(\op{A})$-ra  $\bra{\psi}\et{\op{A}\varphi}=\bra{\op{A}\psi}\et{\varphi}$.
    \end{description}
-   Minden önadjungált operátor hermitikus, de nem minden hermitikus önadjungált. A kettő között a különbség ott van, hogy a hermitikusnál a feltételben az szerepel, hogy $\mathrm{Dom}(\op{A})$-n legyen $\op{A}=\op{A}^+$, de arról nem állítunk semmit, hogy $\mathrm{Dom}(\op{A})$-n kívül mi történik. Lehet, hogy $\op{A}^+$ itt is értelmezve van valahol, és itt természetesen nem egyenlő $\op{A}$-val.
+   Minden önadjungált operátor hermitikus, de nem minden hermitikus önadjungált.
+   A kettő között a különbség ott van, hogy a hermitikusnál a feltételben az szerepel, hogy $\mathrm{Dom}(\op{A})$-n legyen $\op{A}=\op{A}^+$, de arról nem állítunk semmit, hogy $\mathrm{Dom}(\op{A})$-n kívül mi történik.
+   Lehet, hogy $\op{A}^+$ itt is értelmezve van valahol, és itt természetesen nem egyenlő $\op{A}$-val.
    
-   Mindezt alkalmazzuk az impulzus operátorára. Legyünk csak 1D-ben, ahol $\op{p}=\frac{\hbar}{i}\partial_x$. A függvénytér a kétszeresen integrálható függvények tere: $\op{p}\in\mathrm{Lin}\big(\mathbb{L}^2[a,b]\big)$. $\op{p}$ értelmezési tartománya: $\mathrm{Dom}(\op{p})=\big\{f\in\mathbb{L}^2[a,b]\,|\,f(a)=f(b)\text{ és $f'$ korlátos}\big\}$. 
+   Mindezt alkalmazzuk az impulzus operátorára.
+   Legyünk csak 1D-ben, ahol $\op{p}=\frac{\hbar}{i}\partial_x$.
+   A függvénytér a kétszeresen integrálható függvények tere: $\op{p}\in\mathrm{Lin}\big(\mathbb{L}^2[a,b]\big)$. $\op{p}$ értelmezési tartománya: $\mathrm{Dom}(\op{p})=\big\{f\in\mathbb{L}^2[a,b]\,|\,f(a)=f(b)\text{ és $f'$ korlátos}\big\}$. 
    
-   A hermitikusság igazolása: legyen $f,g\in\mathrm{Dom}(\op{p})$. Ekkor
+   A hermitikusság igazolása: legyen $f,g\in\mathrm{Dom}(\op{p})$.
+   Ekkor
    \al{
     \bra{f}\et{\op{p}g}
      &=\intl{a}{b}\dd x\,f^*(x)\frac{\hbar}{i}\partial_xg(x)
@@ -160,60 +189,14 @@
       =\bra{\op{p}f}\et{g}.
    }
    
-   $\op{p}$ azonban nem önadjungált, mert $\op{p}^+$-t választhatom nagyobb értelmezési tartománnyal: $\mathrm{Dom}(\op{p}^+)=\big\{f\in\mathbb{L}^2[a,b]\,|\,f(a)=f(b)e^{i\theta}\text{ és $f'$ korlátos}\big\}$. Válasszuk $g\in\mathrm{Dom}(\op{p})$ és $f\in\mathrm{Dom}(\op{p}^+)$. Ekkor is fennáll, hogy $\bra{f}\et{\op{p}g}=\bra{\op{p}^+f}\et{g}$, ám a két operátor már nem egyenlő egymással.
+   $\op{p}$ azonban nem önadjungált, mert $\op{p}^+$-t választhatom nagyobb értelmezési tartománnyal: $\mathrm{Dom}(\op{p}^+)=\big\{f\in\mathbb{L}^2[a,b]\,|\,f(a)=f(b)e^{i\theta}\text{ és $f'$ korlátos}\big\}$.
+   Válasszuk $g\in\mathrm{Dom}(\op{p})$ és $f\in\mathrm{Dom}(\op{p}^+)$.
+   Ekkor is fennáll, hogy $\bra{f}\et{\op{p}g}=\bra{\op{p}^+f}\et{g}$, ám a két operátor már nem egyenlő egymással.
    
   \subsection{Ehrenfest-tétel}
-   
-%    Adjuk meg a Newton-egyenletet a kvantummechanikai eszköztárral. Számoljuk ki a gyorsulás operátorának várható értékét koordináta-reprezentációban a rendszer egy $\Psi(t,\rv)$ állapotában.
-%    \al{
-%     \mv{\oprv}&=\intl{V}{}\drh\Psi^*\rv\Psi\\
-%     \mv{\opvv}
-%      &=\der{}{t}\mv{\oprv}=\intl{V}{}\drh\big(\partial_t\Psi^*\rv\Psi+\Psi^*\rv\partial_t\Psi\big)
-%       =\frac{\hbar}{2mi}\intl{V}{}\drh
-%      \bigg(
-%       \Delta\Psi^*\cdot\rv\Psi-\Psi^*\rv\Delta\Psi
-%      \bigg),
-%    }
-%    ahol felhasználtuk a Schrödinger-egyenletet. Kihasználjuk, hogy $\Delta(\rv\Psi)=\rv\Delta\Psi+2\grad\Psi$.
-%    \al{
-%     \mv{\opvv}
-%      &=\frac{\hbar}{2mi}\intl{V}{}\drh
-%      \bigg(
-%       \Delta\Psi^*\cdot(\rv\Psi)-\Psi^*(\Delta(\rv\Psi)-2\grad\Psi)
-%      \bigg)\\
-%      &=\frac{\hbar}{2mi}\intl{V}{}\drh
-%       \underbrace{\bigg(\Delta\Psi^*\cdot(\rv\Psi)-\Psi^*\Delta(\rv\Psi)\bigg)}_{=\grad\big(\grad\Psi^*(\rv\Psi)-\Psi^*\grad(\pv\Psi)\big)}
-%      +\frac{1}{m}\intl{V}{}\drh
-%      \bigg(
-%       \Psi^*\frac{\hbar}{i}\grad\Psi
-%      \bigg)\\
-%      &=\underbrace{\frac{\hbar}{2mi}\intl{\partial V}{}\drh \big(\grad\Psi^*(\rv\Psi)-\Psi^*\grad(\pv\Psi)\big)
-%       }_{=0}
-%       +\frac{1}{m}\mv{\oppv}
-%       =\frac{1}{m}\mv{\oppv}.
-%    }
-%    A fenti számolást most megismételjük $\opvv$-re is:
-%    \al{
-%     \opav
-%      &=\der{}{t}\mv{\opvv}
-%       =\frac{1}{m}\der{}{t}\mv{\oppv}
-%       =\frac{1}{m}\der{}{t}\intl{V}{}\drh
-%      \bigg(
-%       \Psi^*\frac{\hbar}{i}\grad\Psi
-%      \bigg)\\
-%     &=\frac{\hbar}{im}\intl{V}{}\drh
-%      \bigg[
-%       \bigg(\frac{\hbar}{2mi}\Delta\Psi^*+\frac{i}{\hbar}V\Psi^*\bigg)\grad\Psi
-%       +\Psi^*\grad\bigg(-\frac{\hbar}{2mi}\Delta\Psi-\frac{i}{\hbar}V\Psi\bigg)
-%      \bigg]\\
-%     &=-\frac{\hbar^2}{2m^2}\intl{V}{}\drh
-%       \underbrace {\bigg(\Delta\Psi^*\grad\Psi-\Psi^*\grad(\Delta\Psi)\bigg)}_{=\grad\big(\Psi^*\Delta\Psi\big)}
-%       +\frac{1}{m}\intl{V}{}\drh
-%       \bigg(V\Psi^*\grad\Psi-\Psi^*\grad(V\Psi)\bigg)
-%      \\
-%    }
-   
-   Adjuk meg a Newton-egyenlet megfelelőjét a kvantummechanikai eszköztárral. Ehhez kiszámoljuk általánosan egy Schrödinger-képbeli operátor időfejlődését:
+
+   Adjuk meg a Newton-egyenlet megfelelőjét a kvantummechanikai eszköztárral.
+   Ehhez kiszámoljuk általánosan egy Schrödinger-képbeli operátor időfejlődését:
    \al{
     \der{}{t}\mv{\opA}
      &=\der{}{t}\intl{V}{}\drh\Psi^* \opA\Psi\\
@@ -239,15 +222,18 @@
       =-\frac{1}{m}\intl{V}{}\drh \Psi^*\grad V\Psi
       =\frac{1}{m}\mv{-\grad V}=\frac{1}{m}\mv{\vect{F}}.
    }
-   A Newton-egyenlet a kvantummechanika alapján csak várható értékben teljesül. Ez az egyenlet \eqaref{eq:05ehren} egyenlettel együtt megfelel a korrespondencia-elvnek. 
+   A Newton-egyenlet a kvantummechanika alapján csak várható értékben teljesül.
+   Ez az egyenlet \eqaref{eq:05ehren} egyenlettel együtt megfelel a korrespondencia-elvnek. 
    
   \subsection{Heisenberg-féle határozatlansági relációk}
    
-   Definiáljuk egy operátor szórásnégyzetét: $\Delta\opA^2=\left\langle\Big(\opA-\langle\opA\rangle\Big)^2\right\rangle$. Hermitikus operátorokra:
+   Definiáljuk egy operátor szórásnégyzetét: $\Delta\opA^2=\left\langle\Big(\opA-\langle\opA\rangle\Big)^2\right\rangle$.
+   Hermitikus operátorokra:
    \eq{
     \Delta\opA\Delta\opB\geq\frac 12 \abs{\left\langle[\opA,\opB]\right \rangle}.
    }
-   Bizonyítás: Kezdjük el átalakítani a bal oldalt. Bevezetjük az $\opA'=\opA-\mv{\opA}$ és az $\opB'=\opB-\mv{\opB}$ operátorokat:
+   Bizonyítás: Kezdjük el átalakítani a bal oldalt.
+   Bevezetjük az $\opA'=\opA-\mv{\opA}$ és az $\opB'=\opB-\mv{\opB}$ operátorokat:
    \al{
     (\Delta\opA)^2(\Delta\opB)^2
      &=
@@ -280,25 +266,33 @@
    }
    Innen gyökvonás után kapjuk a bizonyítandó összefüggést. 
    
-   A határozatlansági összefüggés csak nem kommutáló operátorokra ad használható összefüggést. Ilyen pl. a koordináta és az impulzus operátora: 
+   A határozatlansági összefüggés csak nem kommutáló operátorokra ad használható összefüggést.
+   Ilyen pl. a koordináta és az impulzus operátora: 
    \eq{
     \Delta\op{r}_j\Delta\op{p}_k\geq\frac \hbar2 \delta_{jk}.
    }
-   Ez pedig azt jelenti, hogy méréssel nem tudjuk tetszőlegesen pontosan meghatározni a helyet és az impulzust egy állapotban. Ez bizonytalanság a makroszkopikus világban mérhetetlen, de a mikrovilágban igen jelentős. Éppen emiatt a mikrovilágban nem értelmezhető a pálya fogalma.
+   Ez pedig azt jelenti, hogy méréssel nem tudjuk tetszőlegesen pontosan meghatározni a helyet és az impulzust egy állapotban.
+   Ez bizonytalanság a makroszkopikus világban mérhetetlen, de a mikrovilágban igen jelentős. Éppen emiatt a mikrovilágban nem értelmezhető a pálya fogalma.
    
-   Ehhez hasonló határozatlansági reláció felírható az impulzusmomentum $z$ komponense, $\opL_z=\frac\hbar i \partial_\phi$, és az azimutális $\phi$ szög között. Itt azonban probléma lép fel abból adódóan, hogy az $\opL_z$ a $[0,2\pi]$-n periodikus függvényeken hermitikus, de a $\phi=\arctg(y/x)$ itt nem periodikus. (A probléma kis szögekre feloldható.)
+   Ehhez hasonló határozatlansági reláció felírható az impulzusmomentum $z$ komponense, $\opL_z=\frac\hbar i \partial_\phi$, és az azimutális $\phi$ szög között.
+   Itt azonban probléma lép fel abból adódóan, hogy az $\opL_z$ a $[0,2\pi]$-n periodikus függvényeken hermitikus, de a $\phi=\arctg(y/x)$ itt nem periodikus. (A probléma kis szögekre feloldható.)
    
   \subsubsection*{Az idő--energia határozatlansági reláció}\label{ss:energiaidohatarozatlansag}
    
    Ez a határozatlansági reláció nem származtatható a fenti levezetésből közvetlenül, ugyanis az időhöz nem rendelhető semmilyen operátor,  az az elméletben úgy jelenik meg mint egy paraméter, amely a rendszer fejlődésével kapcsolatos. 
    
-   A speciális relativitáselmélet alapján azonban, ahol a momentum hasonló viszonyban áll a koordinátával, mint az energia az idővel, azt gondolhatjuk, hogy létezik valamilyen $\Delta E\Delta t\gtrsim h$ jellegű felcserélési reláció. A kérdés az az, hogy itt mit jelent a $\Delta t$. A heurisztikus jelentés a következőképpen adható meg. Ahhoz, hogy egy állapot energiája jól legyen definiálva, a frekvenciájának jól definiáltnak kell lennie. Ehhez pedig az szükséges, hogy sok oszcillációt bejárjon a rendszer egy ilyen állapotban, vagyis viszonylag hosszabb ideig kell léteznie. 
+   A speciális relativitáselmélet alapján azonban, ahol a momentum hasonló viszonyban áll a koordinátával, mint az energia az idővel, azt gondolhatjuk, hogy létezik valamilyen $\Delta E\Delta t\gtrsim h$ jellegű felcserélési reláció.
+   A kérdés az az, hogy itt mit jelent a $\Delta t$.
+   A heurisztikus jelentés a következőképpen adható meg.
+   Ahhoz, hogy egy állapot energiája jól legyen definiálva, a frekvenciájának jól definiáltnak kell lennie.
+   Ehhez pedig az szükséges, hogy sok oszcillációt bejárjon a rendszer egy ilyen állapotban, vagyis viszonylag hosszabb ideig kell léteznie. 
    
    Ez alapján az energia--idő határozatlansági reláció matematikailag precízen megfogalmazott alakja: 
    \eq{
      \Delta E\frac{\Delta \opB}{\abs{\der{\mv{\opB}}{t}}}\geq\frac \hbar 2,
    }
-   ahol $\Delta E$ a $\Psi$ nem-stacionárius állapotban az energia-operátor szórása, $\opB$ pedig egy önadjungált operátor. A második tag idő dimenziójú, a $\Psi$ állapot várható élettartama a $\opB$ operátorra vonatkoztatva, vagyis az az idő, ami alatt a $\opB$ operátor várható értéke szignifikánsan megváltozik.
+   ahol $\Delta E$ a $\Psi$ nem-stacionárius állapotban az energia-operátor szórása, $\opB$ pedig egy önadjungált operátor.
+   A második tag idő dimenziójú, a $\Psi$ állapot várható élettartama a $\opB$ operátorra vonatkoztatva, vagyis az az idő, ami alatt a $\opB$ operátor várható értéke szignifikánsan megváltozik.
    
    Ennek levezetéséhez készítsük el a $\ket{\Psi}$ állapotban az energia operátorának és a $\opB$ operátornak az időbeli változását:
    \al{
@@ -313,7 +307,10 @@
      =\frac{\hbar}{2}\abs{\der{\langle\opB\rangle}{t}}.
    }
    
-   Az az értelmezés helytelen, amely azt állítja, hogy ahhoz, hogy egy rendszer energiáját $\Delta E$ pontossággal megmérjük, legalább $\Delta t>h/\Delta E$ ideig kell mérni. A $\Delta t$ idő annak az időnek felel meg, amíg a rendszer a perturbált állapotban létezik, nem annak, amíg a mérőeszköz be van kapcsolva. Hasonlóan helytelen az a megfogalmazás, hogy az energiamegmaradás ideiglenesen kikerülhető. Az energiamegmaradás törvénye igaz, csak a rendszer energiáját nem tudjuk megfelelő pontossággal.
+   Az az értelmezés helytelen, amely azt állítja, hogy ahhoz, hogy egy rendszer energiáját $\Delta E$ pontossággal megmérjük, legalább $\Delta t>h/\Delta E$ ideig kell mérni.
+   A $\Delta t$ idő annak az időnek felel meg, amíg a rendszer a perturbált állapotban létezik, nem annak, amíg a mérőeszköz be van kapcsolva.
+   Hasonlóan helytelen az a megfogalmazás, hogy az energiamegmaradás ideiglenesen kikerülhető.
+   Az energiamegmaradás törvénye igaz, csak a rendszer energiáját nem tudjuk megfelelő pontossággal.
     
   \subsection{A kanonikus és a kinetikus impulzus}\label{ss:05-kankinimp}
    
@@ -325,7 +322,8 @@
      =\left(-\frac{1}{c}\frac{\hbar}{i}\partial_t-\frac qc\phi,\frac{\hbar}{i}\vects{\nabla}-q\vect{A}\right).
    }
    
-   A kanonikus impulzus felcserélési relációját a kanonikus kvantálás alapján adtuk meg. Itt most kiszámoljuk azért részletesen is, habár ez nem eredmény, az impulzus operátor alakját éppen azért választottuk ilyennek, hogy ezt kapjuk. 
+   A kanonikus impulzus felcserélési relációját a kanonikus kvantálás alapján adtuk meg.
+   Itt most kiszámoljuk azért részletesen is, habár ez nem eredmény, az impulzus operátor alakját éppen azért választottuk ilyennek, hogy ezt kapjuk. 
    \al{
     \big[\minv{\op{p}}^0,\minv{\op{x}}^0\big]
      &=i\hbar \big[\partial^0,\minv{x}^0\big]
@@ -352,7 +350,9 @@
    }
    Ha az indexek máshol vannak, a reláció akkor is fennáll: $[\op{\minv{p}}_\mu,\op{\minv{x}}_\nu]=\frac{\hbar}{i}\delta_{\mu\nu}$, $[\op{\minv{p}}_\mu,\op{\minv{x}}^\nu]=\frac{\hbar}{i}\delta^{\nu}_\mu$ és $[\op{\minv{p}}^\mu,\op{\minv{x}}_\nu]=\frac{\hbar}{i}\delta^\mu_\nu$.
    
-   Láthatjuk, hogy a térszerű részben visszakaptuk a hely és az impulzus klasszikus kvantummechanikában adódó felcserélési relációját. Az időszerű részben pedig ``$[\minv{\op{p}}^0,\minv{\op{x}}^0]=[\opH,t]=ih$'', amiből következik, hogy $\opH=ih\partial_t$. Ez is megfelel a klasszikus esetnek.
+   Láthatjuk, hogy a térszerű részben visszakaptuk a hely és az impulzus klasszikus kvantummechanikában adódó felcserélési relációját.
+   Az időszerű részben pedig ``$[\minv{\op{p}}^0,\minv{\op{x}}^0]=[\opH,t]=ih$'', amiből következik, hogy $\opH=ih\partial_t$.
+   Ez is megfelel a klasszikus esetnek.
    
    A kinetikus impulzus felcserélési relációi:
    \aln{
@@ -367,7 +367,6 @@
     \big[\op{\minv{k}}^i\,,\,\op{\minv{k}}^j\big]
      &=\left[\frac{\hbar}{i}\vects{\nabla}_i-q\vect{A}_i\,,\,\frac{\hbar}{i}\vect{\nabla}_j-q\vect{A}_j\right]
       =-\frac{\hbar q}{i}\big([\vects{\nabla}_i\,,\,\vect{A}_j]+[\vect{A}_i\,,\,\vects{\nabla}_j]\big)
-%       =-\frac{q\hbar}{i}\Big((\nabla_i,A_j)-(\nabla_jA_i)\big)
       =-\frac{\hbar q}{i}\ep_{ijk}\vect{B}_k.\label{eq:05-kinkommij}
    }
    
@@ -378,4 +377,3 @@
      =\big[\op{\minv{p}}^\mu,\op{\minv{x}}^\nu\big]
      =\frac{\hbar}{i}\delta^{\mu\nu}.
    }
-   

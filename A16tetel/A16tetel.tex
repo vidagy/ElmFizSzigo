@@ -19,7 +19,8 @@
    }
    \paragraph{Homogén egyenlet megoldása}
     
-    A homogén egyenlet ($f(t)\equiv 0$) megoldásait keressük $x(t)=Ae^{\lambda t}$ alakban. Behelyettesítve:
+    A homogén egyenlet ($f(t)\equiv 0$) megoldásait keressük $x(t)=Ae^{\lambda t}$ alakban.
+   Behelyettesítve:
     \al{
      0&=\ddot x+2\beta\dot x+\omega_0^2 x
        =\lambda^2 A e^{\lambda t}+2\beta\lambda Ae^{\lambda t}+\omega_0^2 Ae^{\lambda t}
@@ -39,10 +40,10 @@
      \al{
       x(t)
        &=A_1 e^{\big(-\beta+\sqrt{\beta^2-\omega_0^2}\big)t}+A_2 e^{\big(-\beta-\sqrt{\beta^2-\omega_0^2}\big)t}\\
-%        &=\tilde{A}_1 e^{-\beta t}\left(e^{\sqrt{\beta^2-\omega_0^2 }t}+\tilde{A}_2e^{-\sqrt{\beta^2-\omega_0^2 }t}\right).
      }
      
-     Ennek illesztése a kezdeti feltételekhez: legyen $t_0$-ban a test $x=0$-ban és legyen $v_0$ sebessége. Ekkor a megoldás:
+     Ennek illesztése a kezdeti feltételekhez: legyen $t_0$-ban a test $x=0$-ban és legyen $v_0$ sebessége.
+   Ekkor a megoldás:
      \al{
       &\left.
       \begin{array}{r}
@@ -63,7 +64,9 @@
      }
      \item {\bf Határeset: $\beta=\omega_0$}
       
-      Ekkor csak egy $\lambda$ érték van. Az egyenlet másodrendű, így kell lennie egy másik független megoldásnak. Ezt keressük a $x(t)=Ate^{\lambda t}$ alakban:
+      Ekkor csak egy $\lambda$ érték van.
+   Az egyenlet másodrendű, így kell lennie egy másik független megoldásnak.
+   Ezt keressük a $x(t)=Ate^{\lambda t}$ alakban:
       \al{
        0&=\ddot x+2\beta\dot x+\omega_0^2 x
         =A\left(2\lambda e^{\lambda t}+\lambda^2 t e^{\lambda t}\right)+A2\beta\left(e^{\lambda t}+\lambda t e^{\lambda t}\right)+\beta^2 A t e^{\lambda t}\\
@@ -78,12 +81,14 @@
       
      \item {\bf Gyengén csillapított eset: $\beta<\omega_0$}
       
-      Ekkor a két megoldás szintén független, a gyökök alatt negatív szám áll. Ezzel a megoldások:
+      Ekkor a két megoldás szintén független, a gyökök alatt negatív szám áll.
+   Ezzel a megoldások:
       \al{
        &\sqrt{\beta^2-\omega_0^2}=i\sqrt{\omega_0^2-\beta^2}=i\omega
        &x(t)=A_1 e^{-\beta t-i\omega t}+A_2 e^{-\beta t+i\omega t}.
       }
-      A megoldás akkor lesz valós, ha $A_2=A_1^*$. Vezessük be az $A_1=\frac{1}{2}Ae^{i\delta}$ jelölést, ahol $A$ valós, így
+      A megoldás akkor lesz valós, ha $A_2=A_1^*$.
+   Vezessük be az $A_1=\frac{1}{2}Ae^{i\delta}$ jelölést, ahol $A$ valós, így
       \al{
        x(t)
         &=A\frac{1}{2}\left(e^{-\beta t-i\omega t+i\delta}+e^{-\beta t+i\omega t-i\delta}\right)
@@ -95,7 +100,8 @@
     
    \paragraph{Az inhomogén egyenlet megoldása}
     
-    Legyen a gerjesztés speciális $f(t)=f_0\cos(\Omega t)=\Re\big[e^{i\Omega t} \big]$. Keressünk egy partikuláris megoldást, melynek frekvenciája megfelel a gerjesztésnek:
+    Legyen a gerjesztés speciális $f(t)=f_0\cos(\Omega t)=\Re\big[e^{i\Omega t} \big]$.
+   Keressünk egy partikuláris megoldást, melynek frekvenciája megfelel a gerjesztésnek:
     \al{
      x_p(t)=\Re\big[Ae^{i\Omega t}\big],
     }
@@ -162,7 +168,8 @@
    \al{
     0=\big(m\ddtx +k\dtx +D x\big)e^{\frac{k}{m}t},
    }
-   ami visszaadja a helyes mozgásegyenletet. Ennek a megoldása kis csillapításra láttuk, hogy 
+   ami visszaadja a helyes mozgásegyenletet.
+   Ennek a megoldása kis csillapításra láttuk, hogy 
    \al{
     x(t)=e^{-\frac{k}{2m}t}\Big(A_1\cos(\omega t)+A_1\sin(\omega t)\Big),
    }
@@ -172,13 +179,15 @@
      =-D x e^{\frac{k}{m}t}
       \sim e^{\frac{k}{2m}t},
    }
-   így az végtelenhez fog tartani, ahogy az idő telik. Ez van, nem probléma, mert a valóságban nem a kanonikus impulzust mérjük, hanem a kinetikusat, az pedig $k=m\dtx\sim e^{-\frac{k}{m}t}$-vel lecseng, ahogy várjuk.
+   így az végtelenhez fog tartani, ahogy az idő telik.
+   Ez van, nem probléma, mert a valóságban nem a kanonikus impulzust mérjük, hanem a kinetikusat, az pedig $k=m\dtx\sim e^{-\frac{k}{m}t}$-vel lecseng, ahogy várjuk.
    
   \subsection{Kanonikus transzformációk}
    
    \paragraph{Transzformáció egyenes vonalú egyenletes mozgássá}
     
-    Tekintsünk egy harmonikus oszcillátort, amelyben nincs csillapítás. Ekkor 
+    Tekintsünk egy harmonikus oszcillátort, amelyben nincs csillapítás.
+   Ekkor 
     \al{
      H=\frac{1}{2m}p^2+\frac{1}{2}Dx^2.
     }
@@ -248,7 +257,8 @@
         -\frac{k}{4} \frac{k}{m} P^2 \\
       &=\frac{1}{2m}X^2+\frac{1}{2}m\underbrace{\left(\frac{D}{m}-\frac{k^2}{4m^2}\right)}_{=\Omega^2}P^2.
     }
-    Ez egy harmonikus oszcillátor. Azért a kanonikus egyenletek:
+    Ez egy harmonikus oszcillátor.
+   Azért a kanonikus egyenletek:
     \al{
      &\dot{P}=-\pder{H'}{X}=\frac{1}{m}X
      &\dot{X}=\pder{H'}{P}=m\Omega^2 P,
@@ -297,7 +307,8 @@
        \displaystyle p=\sqrt{\frac{m\omega}{2}}\frac{1}{i}\big(X+iP\big)
       \end{array}
     }
-    Ez kanonikus transzformáció, mert $\{X,P\}=\pder{P}{p}\pder{X}{x}-\pder{P}{x}\pder{X}{p}=1=\{x,p\}$. $\omega$ eddig még csak egy valós szám, később rögzítjük. A Hamilton:
+    Ez kanonikus transzformáció, mert $\{X,P\}=\pder{P}{p}\pder{X}{x}-\pder{P}{x}\pder{X}{p}=1=\{x,p\}$. $\omega$ eddig még csak egy valós szám, később rögzítjük.
+   A Hamilton:
     \al{
      H'
       &=\frac{1}{2m}\left(\sqrt{\frac{m\omega}{2}}\frac{1}{i}\big(X+iP\big)\right)^2+\frac{1}{2}D\left(\sqrt{\frac{1}{2m\omega}}\big(X-iP\big)\right)^2\\
@@ -322,9 +333,9 @@
     }
     Az új Lagrange: $H'=P\dot{X}-L'$ $\Rightarrow$ $L'=P\dot{X}-H'=-i\omega XP+i\omega XP=0$.
     
-    Bizony. A kanonikus transzformációk kivezetnek azon Lagrange-függvények halmazából, amelyekhez tartozik fizikai rendszer. 
-    
- 
+    Bizony.
+   A kanonikus transzformációk kivezetnek azon Lagrange-függvények halmazából, amelyekhez tartozik fizikai rendszer. 
+
  \section{Elektrodinamika}
   
   \subsection{Dipólsugárzás}
@@ -347,7 +358,8 @@
      &=\partial_t p_i
       =-i\omega p_i,
    }
-   ahol $\pv$ a dipólmomentum. Ezzel
+   ahol $\pv$ a dipólmomentum.
+   Ezzel
    \al{
     \vect{A}(\omega,\rv)
      &=-i\omega\frac{\mu_0}{4\pi}\frac{e^{ikr}}{r}\pv.
@@ -374,7 +386,8 @@
       =\mu_0 c\Hv\times\ev_\rv
       =Z_0\Hv\times\ev_\rv,
    }
-   ahol $Z_0=376.7\,\Omega$ a vákuumimpedancia. A Poynting-vektor:
+   ahol $Z_0=376.7\,\Omega$ a vákuumimpedancia.
+   A Poynting-vektor:
    \al{
     \Sv
      =\Ev\times\Hv
@@ -387,7 +400,8 @@
      =\frac{1}{2}Z_0\mv{\Hv^2}_t
      =\frac{1}{2}Z_0\frac{\omega^4}{16\pi^2 c^2}\frac{1}{r^2}\pv^2\sin^2\vartheta,
    }
-   ahol $\pv$ és $\rv$ között a bezárt szög $\vartheta$. A legegyszerűbb, ha $z$ irányba mutat a dipól, és $\rv$ pedig a gömbi koordináta-rendszerben a helyvektor. $\Sv$ integrálva egy zárt felületre a dipól által kisugárzott teljesítményt adja (a gömbön $\ev_\rv$ merőleges a felületre, így):
+   ahol $\pv$ és $\rv$ között a bezárt szög $\vartheta$.
+   A legegyszerűbb, ha $z$ irányba mutat a dipól, és $\rv$ pedig a gömbi koordináta-rendszerben a helyvektor. $\Sv$ integrálva egy zárt felületre a dipól által kisugárzott teljesítményt adja (a gömbön $\ev_\rv$ merőleges a felületre, így):
    \aln{
     \dd P&=\dd\Omega r^2 \me{\Sv}_t\ev_\rv
     \qquad\qquad\qquad\der{P}{\Omega}=Z_0\frac{\omega^4}{32\pi^2 c^2}\pv^2\sin^2\vartheta\nonumber\\
@@ -405,9 +419,12 @@
      &\left(\Delta-\frac{1}{c^2}\partial_t^2\right)\phi=-\frac{1}{\ep_0}\rho  &\left(\Delta-\frac{1}{c^2}\partial_t^2\right)\vect{A}=-\mu_0\vect{J}. 
     }
    
-   A vektorpotenciál három komponense és a skalárpotenciál összesen négy darab háromváltozós függvény. Ez a leírás kicsit redundáns a mértékinvariancia miatt. Mértéket választva ezek már nem független egymástól, így érdemes áttérni egy olyan leírásra, ahol csak három függvénnyel kell foglalkozni.
+   A vektorpotenciál három komponense és a skalárpotenciál összesen négy darab háromváltozós függvény.
+   Ez a leírás kicsit redundáns a mértékinvariancia miatt.
+   Mértéket választva ezek már nem független egymástól, így érdemes áttérni egy olyan leírásra, ahol csak három függvénnyel kell foglalkozni.
    
-   Vezessünk be új potenciálokat. Legyen $\Piv(t,\rv)$ olyan, hogy 
+   Vezessünk be új potenciálokat.
+   Legyen $\Piv(t,\rv)$ olyan, hogy 
    \al{
     &\Av=\frac{1}{c^2}\partial_t\Piv.\\
     &\frac{1}{c^2}\partial_t\phi=-\divo\Av=-\frac{1}{c^2}\partial_t\divo\Piv
@@ -463,7 +480,9 @@
     
    \paragraph{Megoldás Sommerfeld-féle polinom módszerrel}
     
-    Az aszimptotikus megoldás $\xi\to\pm\infty$-re: ekkor $\eta$ elhagyható $q^2$ mellett. Az egyenletnek megoldása $\psi_\text{a}(\xi)=e^{-\frac{\xi^2}{2}}$. Behelyettesítve:
+    Az aszimptotikus megoldás $\xi\to\pm\infty$-re: ekkor $\eta$ elhagyható $q^2$ mellett.
+   Az egyenletnek megoldása $\psi_\text{a}(\xi)=e^{-\frac{\xi^2}{2}}$.
+   Behelyettesítve:
     \al{
      \left(\Delta_\xi-\xi^2\right)\psi_\text{a}(\xi)
       &=\left(\Delta_\xi-\xi^2\right)e^{-\frac{\xi^2}{2}}
@@ -502,11 +521,14 @@
     \al{
      c_{i+2}=\frac{2i-\eta+1}{(i+1)(i+2)}c_i.
     }
-    Láthatjuk, hogy csak minden második index van összekötve, így a $c_0=1$ $c_1=0$ és a $c_0=0$ $c_1=1$ választással a másodrendű differenciálegyenlet két független megoldását elő lehet állítani. Az első esetben páros, a másodikban pedig páratlan függvényt kapunk. 
+    Láthatjuk, hogy csak minden második index van összekötve, így a $c_0=1$ $c_1=0$ és a $c_0=0$ $c_1=1$ választással a másodrendű differenciálegyenlet két független megoldását elő lehet állítani.
+   Az első esetben páros, a másodikban pedig páratlan függvényt kapunk. 
     
-    Aszimptotikusan a rekurziós összefüggés közelíthető $c_{i+2}\sim\frac{2}{1}c_i$, vagyis aszimptotikusan $u(\xi)\to e^{\xi^2}$. Hiszen $e^{\xi^2}=\suml{i=0}{\infty}\frac{\xi^{2i}}{i!}=\suml{\substack{i=0\\ (k=2i)}}{\infty}\frac{\xi^{k}}{(k/2)!}$, vagyis $c_i=\frac{1}{(i/2)!}$, így $\frac{c_{i+2}}{c_i}=\frac{1}{i/2+1}=\frac{2}{i+2}\xrightarrow{i\to\infty}\frac{2}{i}$.
+    Aszimptotikusan a rekurziós összefüggés közelíthető $c_{i+2}\sim\frac{2}{1}c_i$, vagyis aszimptotikusan $u(\xi)\to e^{\xi^2}$.
+   Hiszen $e^{\xi^2}=\suml{i=0}{\infty}\frac{\xi^{2i}}{i!}=\suml{\substack{i=0\\ (k=2i)}}{\infty}\frac{\xi^{k}}{(k/2)!}$, vagyis $c_i=\frac{1}{(i/2)!}$, így $\frac{c_{i+2}}{c_i}=\frac{1}{i/2+1}=\frac{2}{i+2}\xrightarrow{i\to\infty}\frac{2}{i}$.
     
-    De ha $u(\xi)\sim e^{\xi^2}$ aszimptotikusan, akkor a megoldás $\psi(\xi)\sim e^{\frac{\xi^2}{2}}$, ami viszont nem normálható. Normálható megoldást akkor kapunk, ha létezik olyan $n$, hogy $c_{n+2}=0$, vagyis
+    De ha $u(\xi)\sim e^{\xi^2}$ aszimptotikusan, akkor a megoldás $\psi(\xi)\sim e^{\frac{\xi^2}{2}}$, ami viszont nem normálható.
+   Normálható megoldást akkor kapunk, ha létezik olyan $n$, hogy $c_{n+2}=0$, vagyis
     \al{
      &0=2n+1-\eta=2n+1-\frac{2E_n}{\hbar\omega}
      &\Rightarrow
@@ -525,7 +547,8 @@
     \begin{figure}[ht!]
      \centering
      \includegraphics[width=0.7\textwidth]{A16tetel/hrmmegoldas}
-     \caption{Az első nyolc harmonikus oszcillátor megoldás. Az ábrázolt függvények a megtalálási valószínűségek, vagyis a hullámfüggvény abszolút érték négyzetek. (Forrás: Mathematica help.)}
+     \caption{Az első nyolc harmonikus oszcillátor megoldás.
+   Az ábrázolt függvények a megtalálási valószínűségek, vagyis a hullámfüggvény abszolút érték négyzetek. (Forrás: Mathematica help.)}
     \end{figure}
     
    \paragraph{Megoldás léptető operátorokkal}
@@ -602,16 +625,19 @@
      &\opH\big(\opa\ket{\psi}\big)=\big(E-\hbar\omega\big)\big(\opa\ket{\psi}\big)
      &\opH\big(\opad\ket{\psi}\big)=\big(E+\hbar\omega\big)\big(\opad\ket{\psi}\big).
     }
-    Mivel $\opH$ alulról korlátos, ezért kell léteznie egy olyan $\ket{0}$-nak, amire ha $\opa$ hat, akkor azt eltünteti: $\opa\ket{0}=\ket{}_0$, így $\opH\ket{0}=\frac{\hbar\omega}{2}\ket{0}$. Minden magasabb energiájú állapot az $\opad$ operátorral állítható elő:
+    Mivel $\opH$ alulról korlátos, ezért kell léteznie egy olyan $\ket{0}$-nak, amire ha $\opa$ hat, akkor azt eltünteti: $\opa\ket{0}=\ket{}_0$, így $\opH\ket{0}=\frac{\hbar\omega}{2}\ket{0}$.
+   Minden magasabb energiájú állapot az $\opad$ operátorral állítható elő:
     \al{
      &\ket{n}=N_n\big(\opad\big)^n\ket{0}
      &\opH\ket{n}=\hbar\omega\left(n+\frac{1}{2}\right)\ket{n}.
     }
-    Itt $N_n$ normálási állandó, hogy mindegyik $\ket{n}$ állapot normált legyen. A Hamilton-operátor hatásából leolvasható, hogy 
+    Itt $N_n$ normálási állandó, hogy mindegyik $\ket{n}$ állapot normált legyen.
+   A Hamilton-operátor hatásából leolvasható, hogy 
     \al{
      \opad\opa\ket{n}=n\ket{n}.
     }
-    Legyen $\opa\ket{n}=c_n\ket{n-1}$. Ekkor
+    Legyen $\opa\ket{n}=c_n\ket{n-1}$.
+   Ekkor
     \al{
      \norm{\opa\ket{n}}
       &=\bra{n}\opad\opa\ket{n}
@@ -622,7 +648,9 @@
        =\abs{c_n}^2\norm{\ket{n-1}}
        =\abs{c_n}^2,
     } 
-    vagyis $c_n=\sqrt{n}$. Hasonlóan legyen $\opad\ket{n}=d_n\ket{n+1}$. Ekkor
+    vagyis $c_n=\sqrt{n}$.
+   Hasonlóan legyen $\opad\ket{n}=d_n\ket{n+1}$.
+   Ekkor
     \al{
      \norm{\opad\ket{n}}
       &=\bra{n}\opa\opad\ket{n}
@@ -662,7 +690,10 @@
     
   \subsection{Kapcsolat a Heisenberg-féle határozatlansági relációval}
    
-   A zérusponti ($n=0$) energia léte a Heisenberg-féle határozatlansági relációkkal interpretálható. Klasszikusan $x\sim\sin(\omega t)$ és $p\sim m\omega\cos\omega t$. Ekkor $\Delta p=m\omega \Delta x$. A határozatlansági relációt használva:
+   A zérusponti ($n=0$) energia léte a Heisenberg-féle határozatlansági relációkkal interpretálható.
+   Klasszikusan $x\sim\sin(\omega t)$ és $p\sim m\omega\cos\omega t$.
+   Ekkor $\Delta p=m\omega \Delta x$.
+   A határozatlansági relációt használva:
    \al{
     &\frac{\hbar}{2}\leq\Delta p\Delta x=\frac{1}{m \omega}(\Delta p)^2
     &\Rightarrow
@@ -712,11 +743,14 @@
    
   \subsection{Kétatomos molekulák vibrációs spektruma, izotópeffektus}
    
-   Tekintsünk egy kétatomos molekulát, amelyek között a kölcsönhatást úgy képzeljük el, mintha azok harmonikus potenciállal lennének összekapcsolva, és az egyensúlyi helyzetük körül tudnának vibrálni. Ebben az esetben az energia:
+   Tekintsünk egy kétatomos molekulát, amelyek között a kölcsönhatást úgy képzeljük el, mintha azok harmonikus potenciállal lennének összekapcsolva, és az egyensúlyi helyzetük körül tudnának vibrálni.
+   Ebben az esetben az energia:
    \al{
     E(A,n)=E(A)+\hbar\sqrt{\frac{D_A}{m}} \left(n+\frac{1}{2}\right),
    }
-   ahol $E(A)$ az egyéb kvantumszámokhoz tartozó energiák. Ez a tag az elektronkonfigurációtól függ csak. A vibrációs energiához tartozó szintek távolsága függhet attól, hogy milyen az elektronok konfigurációja, vagyis, hogy mennyi a többi kvantumszám. 
+   ahol $E(A)$ az egyéb kvantumszámokhoz tartozó energiák.
+   Ez a tag az elektronkonfigurációtól függ csak.
+   A vibrációs energiához tartozó szintek távolsága függhet attól, hogy milyen az elektronok konfigurációja, vagyis, hogy mennyi a többi kvantumszám. 
    
    Két gerjesztés közötti energia:
    \al{
@@ -724,7 +758,11 @@
      &=E(B,n')-E(A,n)
       =E(B)-E(A)+\hbar \left[\sqrt{\frac{D_B}{m}}\left(n'+\frac{1}{2}\right)-\sqrt{\frac{D_A}{m}}\left(n+\frac{1}{2}\right)\right].
    }
-   Tekintsünk két izotópból álló keveréket. Ezeknek az elektronkonfigurációja azonos, de tömegük különbözik ($m\ne m^*$). Mivel az elektronkonfiguráció azonos, ezért  mind a két komponensnél ugyanaz az $A\to B$ átmenet zajlik le. Tekintsük az alapállapot vibrációs módusait. A két különböző komponens által elnyelt/kibocsátott foton közötti energiakülönbség:
+   Tekintsünk két izotópból álló keveréket.
+   Ezeknek az elektronkonfigurációja azonos, de tömegük különbözik ($m\ne m^*$).
+   Mivel az elektronkonfiguráció azonos, ezért  mind a két komponensnél ugyanaz az $A\to B$ átmenet zajlik le.
+   Tekintsük az alapállapot vibrációs módusait.
+   A két különböző komponens által elnyelt/kibocsátott foton közötti energiakülönbség:
    \al{
     \Delta E
      &=\Delta E-\Delta E^*
@@ -735,16 +773,3 @@
       =\frac{\hbar}{2}\left[\sqrt{D_B}-\sqrt{D_A}\right]\left[\sqrt{\frac{1}{m}}-\sqrt{\frac{1}{m^*}}\right].
    }
    Ha az $n=0$ állapot energiája nulla lenne, akkor nem létezne ez az energiakülönbség, de létezik, és kimérték.
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   

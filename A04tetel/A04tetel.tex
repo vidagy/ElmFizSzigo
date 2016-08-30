@@ -1,12 +1,13 @@
 \chapter{Megmarad\'asi t\'etelek \'es szimmetri\'ak}\label{ss:A04}
  
  \section{Mechanika}
-  
-%    {\color{red} Lehet, hogy a Lagrange-i mechanikához tartozó elmélet nem is tartozik a tételhez, de azért összefoglalom azt is. \\ FÁÁÁÁÁÁÁÁÁÁKKKKKKKKKKKKK}
-   
+
   \subsection{A Lagrange-függvény egyértelműsége}
    
-   A Lagrange-függvényből egyértelműen következnek a mozgásegyenletek. Azonban a mozgásegyenletek és a Lagrange-függvény között nincs egy-egyértelmű kapcsolat. Az $L(q,\dtq,t)$ Lagrange-függvényt módosítsuk egy teljes  $F(q,t)$ függvény időbeli deriváltjával: $L'=L+\der{F}{t}=L+\suml{j=1}{f}\pder{F}{q_j}\dtq_j+\pder{F}{t}$. Az ehhez tartozó mozgásegyenletek:
+   A Lagrange-függvényből egyértelműen következnek a mozgásegyenletek.
+   Azonban a mozgásegyenletek és a Lagrange-függvény között nincs egy-egyértelmű kapcsolat.
+   Az $L(q,\dtq,t)$ Lagrange-függvényt módosítsuk egy teljes  $F(q,t)$ függvény időbeli deriváltjával: $L'=L+\der{F}{t}=L+\suml{j=1}{f}\pder{F}{q_j}\dtq_j+\pder{F}{t}$.
+   Az ehhez tartozó mozgásegyenletek:
    \al{
     0&=\der{}{t}\pder{L'}{\dtq_i}-\pder{L'}{q_i} 
       =\der{}{t}\pder{}{\dtq_i}\left(L+\suml{j=1}{f}\pder{F}{q_j}\dtq_j+\pder{F}{t}\right)-\pder{}{q_i}\left(L+\suml{j=1}{F}\pder{F}{q_j}\dtq_j+\pder{F}{t}\right) \\
@@ -16,7 +17,8 @@
        +\der{}{t}\pder{F}{q_i}-\pder{}{q_i}\der{F}{t} \\
      &=\der{}{t}\pder{L}{\dtq_i}-\pder{L}{q_i},
    }
-   melyek egyeznek az eredeti $L$-hez tartozókkal. Tehát a Lagrange-függvény egy teljes időderiváltban meghatározatlan.
+   melyek egyeznek az eredeti $L$-hez tartozókkal.
+   Tehát a Lagrange-függvény egy teljes időderiváltban meghatározatlan.
    
    Ez a Hamilton-elvvel is összhangban van, hiszen tekintsük az $L'$-höz tartozó hatás variációját:
    \al{
@@ -27,13 +29,12 @@
       =\delta\intl{t_1}{t_2}\dd t\, L(q,\dtq,t) =\delta S,
    }
    ami pontosan akkor tűnik el, ha az eredeti Lagrange-függvény variációja eltűnik, vagyis ha a rendszer az eredeti mozgásegyenletek szerint mozog.
-   
-   
-  
-   
+
   \subsection{Kanonikus transzformációk}
    
-   A következőkben tekintsük a Hamiltoni formalizmust. Először vizsgáljuk meg a koordináták transzformációit. Térjünk át új kanonikus koordinátákra:
+   A következőkben tekintsük a Hamiltoni formalizmust.
+   Először vizsgáljuk meg a koordináták transzformációit.
+   Térjünk át új kanonikus koordinátákra:
    \al{
     Q_k&=Q_k(q_1,\dots,q_f,p_1,\dots,p_f,t)\qquad \forall k=1\dots f,\\
     P_k&=P_k(q_1,\dots,q_f,p_1,\dots,p_f,t)\qquad \forall k=1\dots f.
@@ -50,7 +51,8 @@
    \eqn{
     \suml{i=1}{f}p_i\dtq_i-H(q,p,t)=\suml{i=1}{f}P_i\dtQ_i-H'(Q,P,t)+\der{W}{t},\label{eq:04-kt}
    }
-   ahol a $W$ függvény (alkotófüggvény) az idő és a régi és az új kanonikus koordinátáktól is függhet. A függés alapján négy altípust különböztetünk meg:
+   ahol a $W$ függvény (alkotófüggvény) az idő és a régi és az új kanonikus koordinátáktól is függhet.
+   A függés alapján négy altípust különböztetünk meg:
    \begin{description}
     \item[1. típus: $W_1=W_1(q,Q,t)$.]
      Ekkor \eqaref{eq:04-kt} egyenlet kifejtve:
@@ -67,7 +69,8 @@
       &H'=H+\pder{W_1}{t}.&\label{eq:04-kt1}
      }
     \item[2. típus: $W_2=W_2(q,P,t)$.]
-     Ez az 1. típusból egy Legendre-transzformációval érhető el: $W_2=W_1+\suml{k=1}{f}P_kQ_k=W_1-\suml{k=1}{f}\pder{W_1}{Q_k}Q_k$. Ebben az esetben \eqaref{eq:04-kt} egyenlet:
+     Ez az 1. típusból egy Legendre-transzformációval érhető el: $W_2=W_1+\suml{k=1}{f}P_kQ_k=W_1-\suml{k=1}{f}\pder{W_1}{Q_k}Q_k$.
+   Ebben az esetben \eqaref{eq:04-kt} egyenlet:
      \eq{
      \suml{i=1}{f}p_i\dtq_i-H(q,p,t)=\suml{i=1}{f}P_i\dtQ_i-H'(Q,P,t)+\suml{i=1}{f}\left(\pder{W}{q_i}\dtq_i+\pder{W}{P_i}\dtP_i\right)+\pder{W}{t},
      }
@@ -78,7 +81,8 @@
       &H'=H+\pder{W_2}{t}.&\label{eq:04-kt2}
      }
     \item[3. típus: $W_3=W_3(p,Q,t)$.]
-     Szintén az 1. típusból Legendre-transzformációval érhető el: $W_3=W_1-\suml{k=1}{f}p_kq_k=W_1-\suml{k=1}{f}\pder{W_1}{q_k}q_k$. Itt \eqaref{eq:04-kt} egyenlet:
+     Szintén az 1. típusból Legendre-transzformációval érhető el: $W_3=W_1-\suml{k=1}{f}p_kq_k=W_1-\suml{k=1}{f}\pder{W_1}{q_k}q_k$.
+   Itt \eqaref{eq:04-kt} egyenlet:
      \eq{
       \suml{i=1}{f}p_i\dtq_i-H(q,p,t)=\suml{i=1}{f}P_i\dtQ_i-H'(Q,P,t)+\suml{i=1}{f}\left(\pder{W}{p_i}\dtp_i+\pder{W}{Q_i}\dtQ_i\right)+\pder{W}{t},
      }
@@ -89,7 +93,8 @@
       &H'=H+\pder{W_3}{t}.&\label{eq:04-kt3}
      }
     \item[4. típus: $W_4=W_4(p,P,t)$.]
-     Az 1. típusból Legendre-transzformációval: $W_4=W_1-\suml{k=1}{f}p_kq_k+\suml{k=1}{f}P_kQ_k=W_1-\suml{k=1}{f}\pder{W_1}{q_k}q_k-\suml{k=1}{f}\pder{W_1}{Q_k}Q_k$. Itt \eqaref{eq:04-kt} egyenlet:
+     Az 1. típusból Legendre-transzformációval: $W_4=W_1-\suml{k=1}{f}p_kq_k+\suml{k=1}{f}P_kQ_k=W_1-\suml{k=1}{f}\pder{W_1}{q_k}q_k-\suml{k=1}{f}\pder{W_1}{Q_k}Q_k$.
+   Itt \eqaref{eq:04-kt} egyenlet:
      \eq{
       \suml{i=1}{f}p_i\dtq_i-H(q,p,t)=\suml{i=1}{f}P_i\dtQ_i-H'(Q,P,t)+\suml{i=1}{f}\left(\pder{W}{p_i}\dtp_i+\pder{W}{P_i}\dtP_i\right)+\pder{W}{t},
      }
@@ -100,7 +105,9 @@
       &H'=H+\pder{W_4}{t}.&\label{eq:04-kt4}
      }
    \end{description}
-   Kanonikus transzformációval megmutatható, hogy a $p$ és a $q$ koordináták egyenrangúak: $W_1=\suml{k=1}{f}q_kQ_k$. Az identitás kanonikus transzformáció a $W_2=\suml{k=1}{f}q_kP_k$. A $Q_k=Q_k(q,t)$ koordináta-transzformáció is elérhető egy kanonikus transzformációval: $W_2=\suml{k=1}{f}Q_k(q,t)P_k$. 
+   Kanonikus transzformációval megmutatható, hogy a $p$ és a $q$ koordináták egyenrangúak: $W_1=\suml{k=1}{f}q_kQ_k$.
+   Az identitás kanonikus transzformáció a $W_2=\suml{k=1}{f}q_kP_k$.
+   A $Q_k=Q_k(q,t)$ koordináta-transzformáció is elérhető egy kanonikus transzformációval: $W_2=\suml{k=1}{f}Q_k(q,t)P_k$. 
    
   \subsection{Poisson-zárójelek}
    
@@ -145,15 +152,6 @@
    Kérdés, hogy a régi $p,q$ koordinátákban vett $\{\cdot,\cdot\}_{p,q}$ Poisson-zárójel, és az új koordinátákban felírt $\{\cdot,\cdot\}_{P,Q}$ Poisson-zárójel között mi a kapcsolat. 
    
    Ehhez először tekintsünk egy tetszőleges 3. típusú kanonikus transzformációt:
-%  koordináta-transzformációt, amelyet egy    
-%    \footnote{Ez az alkotófüggvény:
-%     \eq{
-%       W_3(Q,p)
-%        =W_2(q,P)-\suml{k=1}{f}\pder{W_2}{q_k}Q_k-\suml{k=1}{f}\pder{W_2}{P_k}p_k
-%        =\suml{k=1}{f}Q_kP_k-\suml{k=1}{f}Q_k\suml{i=1}{f}\pder{Q_i}{q_k}P_i-\suml{k=1}{f}Q_kp_k
-%      }
-%     }
-%    val hajtunk végre
    \aln{
     &q_i=-\pder{W_3}{p_i}&
     &P_i=-\pder{W_3}{Q_i}&
@@ -164,13 +162,6 @@
     \pder{q_i}{Q_j}=-\pder{}{Q_j}\pder{W_3}{p_i}=-\pder{}{p_i}\pder{W_3}{Q_j}=\pder{P_j}{p_i}.
    }
    Hasonlóan, ha egy tetszőleges 4. típusú transzformációt tekintünk:
-%    \footnote{
-%     Ez pedig:
-%     \eq{
-%      W_4(p,P)=W_2(q,P)-\suml{k=1}{f}\pder{W_2}{q_k}p_k
-%       =\suml{k=1}{f}Q_kP_k-\suml{k=1}{f}p_k\suml{i=1}{f}\pder{Q_i}{q_k}P_i
-%     }
-%    }
    \al{
     \pder{q_i}{P_j}=-\pder{Q_j}{p_i}.
    }
@@ -189,7 +180,9 @@
      &=\{p_i,A\}_{q,p}.
    }
    
-   Ezek felhasználásával már felírhatjuk a $\{A,B\}_{Q,P}$ Poisson-zárójelet. Tekintsünk az $A$ fázisfüggvényre, mint a $q,p$ függvényére. Ekkor:
+   Ezek felhasználásával már felírhatjuk a $\{A,B\}_{Q,P}$ Poisson-zárójelet.
+   Tekintsünk az $A$ fázisfüggvényre, mint a $q,p$ függvényére.
+   Ekkor:
    \al{
     \{A(q,p),B\}_{Q,P}
      &=\suml{k=1}{f}\left(\pder{A}{q_k}\{q_k,B\}_{Q,P}+\pder{A}{p_k}\{p_k,B\}_{Q,P}\right)
@@ -208,7 +201,6 @@
     &\{P_i,P_j\}_{q,p}=0.& \label{eq:04-ktfelt}
    }
    Állítás: egy transzformáció akkor és csak akkor kanonikus transzformáció, ha igazak rá \eqaref{eq:04-ktfelt} egyenletek minden $i,j$-re. 
-%    {\color{red} Miért is van ez így? Az egyik irányt itt bizonyítottuk, de a másik? bizonyítás, szemlélet, valami ???}
    
    \paragraph{Poisson-tétele}
    
@@ -225,7 +217,8 @@
    
   \subsection{Infinitezimális kanonikus transzformációk}
    
-   A Lagrange formalizmushoz hasonlóan itt is az infinitezimális koordinátatranszformációk az érdekesek, ugyanis ezekhez társítható folytonos szimmetria: $Q_i=q_i+\delta q_i$, $P_i=p_i+\delta p_i$. Mivel a transzformáció csak infinitezimálisan változtatja meg a koordinátákat, ezért az alkotófüggvény is csak kicsit ($\ep\to 0$) különbözik az identitás kanonikus transzformáció alkotófüggvényétől:
+   A Lagrange formalizmushoz hasonlóan itt is az infinitezimális koordinátatranszformációk az érdekesek, ugyanis ezekhez társítható folytonos szimmetria: $Q_i=q_i+\delta q_i$, $P_i=p_i+\delta p_i$.
+   Mivel a transzformáció csak infinitezimálisan változtatja meg a koordinátákat, ezért az alkotófüggvény is csak kicsit ($\ep\to 0$) különbözik az identitás kanonikus transzformáció alkotófüggvényétől:
    \eq{
     W_2(q,P,t)=\suml{k=1}{f}q_kP_k+\ep G(q,P,t).
    }
@@ -235,7 +228,8 @@
     &Q_i=\pder{W_2}{P_i}=q_i+\ep\pder{G}{P_i}& &\Rightarrow& &\delta q_i=\ep\pder{G}{P_i}& \\
     &H'=H+\pder{W_2}{t}=H+\ep\pder{G}{t}.& && &&
    }
-   A $G$ függvényben, ha $P_i$ változót $p-i$-re cseréljük, csak másodrendű hibát vétünk. Így $G$-t felírhatjuk mint $G(q,p,t)$. Ez a generátorfüggvény, mellyel:
+   A $G$ függvényben, ha $P_i$ változót $p-i$-re cseréljük, csak másodrendű hibát vétünk. Így $G$-t felírhatjuk mint $G(q,p,t)$.
+   Ez a generátorfüggvény, mellyel:
    \aln{
     &\delta q_i=\ep\pder{G(q,p,t)}{p_i}= \ep\{q_i,G(q,p,t)\}&
     &\delta p_i=-\ep\pder{G(q,p,t)}{q_i}= \ep\{p_i,G(q,p,t)\}.&\label{eq:04-Generator}
@@ -247,7 +241,8 @@
     =\ep\suml{i=1}{f}\left(\pder{A}{q_i}\pder{G}{p_i}-\pder{A}{p_i}\pder{G}{q_i}\right)=\ep\{A,G\}.
    }
    
-   Speciális eset, legyen $G(q,p,t):=H(q,p,t)$ és $\ep:=\dd t$. Ekkor:
+   Speciális eset, legyen $G(q,p,t):=H(q,p,t)$ és $\ep:=\dd t$.
+   Ekkor:
    \al{
     &\delta q_i=\dd t\pder{H(q,p,t)}{p_i}=\dd t\dtq_i=\dd q_i& 
     &\delta p_i=-\dd t\pder{H(q,p,t)}{q_i}=\dd t\dtp_i=\dd p_i,& 
@@ -255,33 +250,10 @@
    vagyis a rendszer időbeli fejlődése megfelel a Hamilton-függvénnyel mint generátorfüggvénnyel végrehajtott egymás utáni infinitezimális kanonikus transzformációk sorozatának. 
    
   \subsection{Noether-tétel}
-   
-%    Először két példa:
-%    \begin{description}
-%     \item[Eltolási invariancia:] Ha a $q_j$ koordináta ciklikus, azaz $\pder{L}{q_j}=0$, akkor a $j$-edik Lagrange-egyenlet:
-%     \al{
-%      &\der{}{t}\pder{L}{\dtq_j}=0&
-%      &\Rightarrow&
-%      &p_j=\pder{L}{\dtq_j}=\text{Const}.&
-%     }
-%     \item[Időeltolási invariancia:] 
-%     Az idő nem kanonikus koordináta, azonban ha ez ciklikus $\left(\pder{L}{t}=0\right)$, akkor is kapunk egy megmaradó mennyiséget:
-%     \al{
-%      \der{L}{t}
-%       &=\suml{i=1}{f}\left(\pder{L}{q_i}\dtq_i+\pder{L}{\dtq_i}\ddtq_i\right)
-%       =\suml{i=1}{f}\left(\der{}{t}\pder{L}{\dtq_i}\dtq_i+\pder{L}{\dtq_i}\ddtq_i\right)\\
-%       &=\der{}{t}\left(\suml{i=1}{f}\der{}{t}\pder{L}{\dtq_i}\dtq_i\right),
-%     }
-%     vagyis
-%     \al{
-%      &\der{}{t}\left(\suml{i=1}{f}\pder{L}{\dtq_i}\dtq_i-L\right)=0&
-%      &\Rightarrow&
-%      &H=\suml{i=1}{f}p_i\dtq_i-L(q,\dtq)=\text{Const}.&
-%     }
-%     A megmaradó mennyiség a Hamiltoni. Konzervatív rendszerre: $\suml{i=1}{f}\pder{L}{\dtq_i}\dtq_i=2 K$, vagyis $2K-L=K+U=E$.
-%    \end{description}
-   
-   Tekintsük egy rendszert, melynek véges szabadsági foka van. A célunk, hogy megtaláljuk a kapcsolatot a szimmetriák és a megmaradó mennyiségek között. Ehhez először tekintsünk egy infinitezimális koordinátatranszformációt: 
+
+   Tekintsük egy rendszert, melynek véges szabadsági foka van.
+   A célunk, hogy megtaláljuk a kapcsolatot a szimmetriák és a megmaradó mennyiségek között.
+   Ehhez először tekintsünk egy infinitezimális koordinátatranszformációt: 
    \eqn{
     \delta q_i=\ep\phi_i(q,t).\label{eq:04-Lagrangetansf}
    }
@@ -348,22 +320,30 @@
       =-\ep\pder{}{q_i}\left(\suml{j=1}{f}p_j\phi_j-F(q,t)\right)\\
      &=\ep\big\{p_i,G(q,p,t)\big\}.
    }
-   Tehát beláttuk, hogy egyértelmű kapcsolat van a megmaradó mennyiség és az azzal generált transzformáció között. A koordinátatranszformáció ismeretében meg lehet kapni a megmaradó mennyiséget \eqaref{eq:04-LagrangeCOM} egyenlet alapján, a megmaradó mennyiség alapján pedig elő lehet állítani a koordinátatranszformációt. 
-   
-   
+   Tehát beláttuk, hogy egyértelmű kapcsolat van a megmaradó mennyiség és az azzal generált transzformáció között.
+   A koordinátatranszformáció ismeretében meg lehet kapni a megmaradó mennyiséget \eqaref{eq:04-LagrangeCOM} egyenlet alapján, a megmaradó mennyiség alapján pedig elő lehet állítani a koordinátatranszformációt. 
+
    \subsection{Megmaradó mennyiségek}
    
    \begin{description}
-    \item[Eltolási invariancia:] Ha a $q_j$ koordináta ciklikus, azaz $\pder{L}{q_j}=0$, akkor a $q_j$ eltolására invariáns a Lagrange és a mozgásegyenlet is. Legyen $\delta q_i=\ep \phi_i=\ep\delta_{ij}$. Ekkor
+    \item[Eltolási invariancia:] Ha a $q_j$ koordináta ciklikus, azaz $\pder{L}{q_j}=0$, akkor a $q_j$ eltolására invariáns a Lagrange és a mozgásegyenlet is.
+   Legyen $\delta q_i=\ep \phi_i=\ep\delta_{ij}$.
+   Ekkor
     \eq{
      \text{Const}=\suml{i=1}{f}\pder{L}{\dtq_i}\phi_i-\underbrace{f(q,t)}_{:=0}=\pder{L}{\dtq_j}=p_j.
     }
-    \item[Forgási invariancia:] Legyen egy centrális erőtér két dimenzióban. Ez polárkoordinátákban: $L=\frac{1}{2}m(\dot{r}^2+r^2\dot{\varphi}^2)-U(r)$. Itt a $\varphi$ a ciklikus koordináta, így a fenti esethez hasonlóan a
+    \item[Forgási invariancia:] Legyen egy centrális erőtér két dimenzióban.
+   Ez polárkoordinátákban: $L=\frac{1}{2}m(\dot{r}^2+r^2\dot{\varphi}^2)-U(r)$.
+   Itt a $\varphi$ a ciklikus koordináta, így a fenti esethez hasonlóan a
     \eq{
      \pder{L}{\dot{\varphi}}=mr^2\dot{\varphi}
     }
     megmaradó mennyiség. 
-    \item[Szabadesés:] Itt a Lagrange $L=\frac{1}{2}m\dot{x}^2+mgx$. Legyen $\delta x=\ep$, azaz $\phi=1$. Ennek hatására a Lagrange megváltozása $\delta L=mg\delta x=mg\ep$. Ehhez egy jó $f$ függvény az $f=mgt$, mivel ennek a teljes idő szerinti deriváltja a Lagrange megváltozása. A megmaradó mennyiség így:
+    \item[Szabadesés:] Itt a Lagrange $L=\frac{1}{2}m\dot{x}^2+mgx$.
+   Legyen $\delta x=\ep$, azaz $\phi=1$.
+   Ennek hatására a Lagrange megváltozása $\delta L=mg\delta x=mg\ep$.
+   Ehhez egy jó $f$ függvény az $f=mgt$, mivel ennek a teljes idő szerinti deriváltja a Lagrange megváltozása.
+   A megmaradó mennyiség így:
     \eq{
      \pder{L}{\dot{x}}-mgt=m\dot{x}-mgt.
     }
@@ -379,18 +359,19 @@
     \eq{
      \der{}{t}\left(\suml{i=1}{f}\pder{L}{\dtq_i}\dtq_i-L\right)=-\pder{L}{t}.
     }
-    Így ha $\pder{L}{t}=0$, vagyis a Lagrange (illetve a Hamilton) nem függ explicite az időtől, akkor a a bal oldali mennyiség megmaradó. Konzervatív rendszerre: $\suml{i=1}{f}\pder{L}{\dtq_i}\dtq_i=2 K$, vagyis $2K-L=K+U=E$.
+    Így ha $\pder{L}{t}=0$, vagyis a Lagrange (illetve a Hamilton) nem függ explicite az időtől, akkor a a bal oldali mennyiség megmaradó.
+   Konzervatív rendszerre: $\suml{i=1}{f}\pder{L}{\dtq_i}\dtq_i=2 K$, vagyis $2K-L=K+U=E$.
     
-    Ez az eset olyan transzformációnak felel meg, mint mikor minden koordinátát eltolunk $\delta q_j=\dd q_i=\dtq_i\dd t$-vel, illetve továbbra is szükséges, hogy  $\pder{L}{t}=0$. Az $f$ függvény itt éppen maga az $L$ lesz.
+    Ez az eset olyan transzformációnak felel meg, mint mikor minden koordinátát eltolunk $\delta q_j=\dd q_i=\dtq_i\dd t$-vel, illetve továbbra is szükséges, hogy  $\pder{L}{t}=0$.
+   Az $f$ függvény itt éppen maga az $L$ lesz.
    \end{description}
-   
-%    {\color{red} Ne felejtsd el, hogy az infinitezimális kanonikus trafóktól hátramaradt a megmaradó mennyiséges rész. Onnan egyedül az impulzusmomentumos rész lehet érdekes. Esetleg a Poisson-zárójelek, impulzusmomentum Lie-algebra még valahova? Illetve a Jakovác által elmondott dolgok a Noether-tétel qm részéről.}
-   
+
  \section{Elektrodinamika}
   
   \subsection{Mértékszabadság}\label{ss:04-mertekszabadsag}
   
-   A teljes időfüggő Maxwell-egyenletek esetében van vektorpotenciál, hiszen $\divo{\Bv}=0$. Ezt a 3. Maxwell-egyenletbe helyettesítve:
+   A teljes időfüggő Maxwell-egyenletek esetében van vektorpotenciál, hiszen $\divo{\Bv}=0$.
+   Ezt a 3. Maxwell-egyenletbe helyettesítve:
    \al{
     &0=\rot{\vect{E}}+\partial_t\vect{B}=\rot{\left(\vect{E}+\partial_t\vect{A}\right)}&
     &\Rightarrow&
@@ -402,7 +383,8 @@
     \rot{\vect{B}}&= \grad{(\divo{\vect{A}})}-\Delta{\vect{A}}=\mu_0\vect{J}+\frac{1}{c^2}\left(-\partial_t\grad{\phi}-\partial_t^2\vect{A}\right)
    }
    
-   Mivel csak $\vect{E}$ és $\vect{B}$ fizikai mennyiség, ezért a $\vect{A}$ és $\phi$ választásában van szabadság. Mivel $\vect{A}$-nak csak a rotációja fizikai, ezért egy gradienssel eltolható, ám ekkor, hogy $\phi$ ne változzon azt korrigálni kell egy időderiválttal:
+   Mivel csak $\vect{E}$ és $\vect{B}$ fizikai mennyiség, ezért a $\vect{A}$ és $\phi$ választásában van szabadság.
+   Mivel $\vect{A}$-nak csak a rotációja fizikai, ezért egy gradienssel eltolható, ám ekkor, hogy $\phi$ ne változzon azt korrigálni kell egy időderiválttal:
    \al{
     &\vect{A}'=\vect{A}+\grad{\Psi} & \phi'=\phi-\partial_t\Psi.
    }
@@ -410,7 +392,8 @@
    \begin{description}
     \item[Coulomb-mérték $\boxed{\divo{\vect{A}}=0}$:] Ez a $\Delta\Psi=-\divo{\vect{A}}$ választással érhető el: $\divo{\vect{A}'}=\divo{\vect{A}}+\divo{(\grad{\Psi})}=\divo{\vect{A}}+\Delta{\Psi}=0$. 
     
-    A $\Psi$-t megadó egyenlet egy időfüggő tagban bizonytalan. Ezt azáltal rögzítjük, hogy a skalárpotenciál legyen a stacionárius esetnek megfelelő, annak időfüggése csak a töltéssűrűségen keresztül van:
+    A $\Psi$-t megadó egyenlet egy időfüggő tagban bizonytalan.
+   Ezt azáltal rögzítjük, hogy a skalárpotenciál legyen a stacionárius esetnek megfelelő, annak időfüggése csak a töltéssűrűségen keresztül van:
     \al{
      &\Delta{\phi}=-\frac{1}{\ep_0}\rho&
      &\Rightarrow&
@@ -432,7 +415,8 @@
    
   \subsection{Kontinuitási egyenlet}
    
-   A töltésmegmaradás ténye része a Maxwell-egyenleteknek. A teljes időfüggő anyagban értelmezett Maxwell egyenletek alapján (\eqref{eq:01-MXanyagban1} és \eqref{eq:01-MXanyagban2} egyenletek):
+   A töltésmegmaradás ténye része a Maxwell-egyenleteknek.
+   A teljes időfüggő anyagban értelmezett Maxwell egyenletek alapján (\eqref{eq:01-MXanyagban1} és \eqref{eq:01-MXanyagban2} egyenletek):
    \eq{
     0=\divo{(\rot{\vect{H}})}
      =\divo{\vect{J}+\divo\pder{\vect{D}}{t}}
@@ -443,9 +427,11 @@
     \boxed{0=\divo{\vect{J}}+\pder{\rho}{t}}\label{eq:04-kont}
    }
    
-   Relativisztikus formalizmusban a $\minv{J}^\mu$ megmaradását belátni a legegyszerűbben \eqaref{eq:02-MX34} egyenlet alapján lehet: $0=\partial_\mu\partial_\nu \minv{F}^{\mu\nu}=\mu_0\partial_\nu\minv{J}^{\nu}$. A kontinuitási egyenlet, vagyis a töltésmegmaradás azonban mélyebb okokra vezethető vissza. Az elektrodinamikának folytonos szimmetriája a mértéktranszformáció, amelyhez a Noether-tétel folytán tartozik megmaradó áram. Ez a megmaradó áram $\minv{j}^\mu=(c\rho,\Jv)$, mellyel $\partial_\mu\minv{j}^\mu=\partial_t\rho+\divo\Jv=0$.
-   
-   
+   Relativisztikus formalizmusban a $\minv{J}^\mu$ megmaradását belátni a legegyszerűbben \eqaref{eq:02-MX34} egyenlet alapján lehet: $0=\partial_\mu\partial_\nu \minv{F}^{\mu\nu}=\mu_0\partial_\nu\minv{J}^{\nu}$.
+   A kontinuitási egyenlet, vagyis a töltésmegmaradás azonban mélyebb okokra vezethető vissza.
+   Az elektrodinamikának folytonos szimmetriája a mértéktranszformáció, amelyhez a Noether-tétel folytán tartozik megmaradó áram.
+   Ez a megmaradó áram $\minv{j}^\mu=(c\rho,\Jv)$, mellyel $\partial_\mu\minv{j}^\mu=\partial_t\rho+\divo\Jv=0$.
+
   \subsection{Vektorpotenciál számítása egyszerű esetekben}
    
    \paragraph{Homogén tér}
@@ -463,7 +449,8 @@
     
    \paragraph{Végtelen egyenes vezető tere -- Számolás direktben}
     
-    Válasszunk hengerkoordináta-rendszert. Ekkor általános esetben:
+    Válasszunk hengerkoordináta-rendszert.
+   Ekkor általános esetben:
     \[
      \vect{B}(\vect{r})=\begin{pmatrix}
                          B_r(r,\varphi,z) \\
@@ -480,7 +467,11 @@
                         \end{pmatrix}.
     \]
     
-    Használjuk ki a Biot--Savart-törvényből az irányokra való következményeket. Láthattuk, hogy $\dd \vect{B}\sim \dd \vect{I}\times \vect{\hat{r}}$, ahol $\vect{\hat{r}}$ köti össze az áramdarabkát a megfigyelési hellyel. A  $\dd \vect{I}$ és a $\vect{\hat{r}}$ vektorok meghatároznak egy síkot, melyben a keresztszorzás tulajdonságai miatt biztosan nulla az indukált tér. Ez a sík egy fix megfigyelési helyen mindig ugyanaz, mégpedig a vezetőt és a megfigyelési pontot tartalmazó sík. Innen következik, hogy $B_r(r)=0$ és $B_z(r)=0$, hiszen ez a két komponens éppen ebben a síkban fekszik. 
+    Használjuk ki a Biot--Savart-törvényből az irányokra való következményeket.
+   Láthattuk, hogy $\dd \vect{B}\sim \dd \vect{I}\times \vect{\hat{r}}$, ahol $\vect{\hat{r}}$ köti össze az áramdarabkát a megfigyelési hellyel.
+   A  $\dd \vect{I}$ és a $\vect{\hat{r}}$ vektorok meghatároznak egy síkot, melyben a keresztszorzás tulajdonságai miatt biztosan nulla az indukált tér.
+   Ez a sík egy fix megfigyelési helyen mindig ugyanaz, mégpedig a vezetőt és a megfigyelési pontot tartalmazó sík.
+   Innen következik, hogy $B_r(r)=0$ és $B_z(r)=0$, hiszen ez a két komponens éppen ebben a síkban fekszik. 
     
     Tehát a mágneses indukció mindenhol érintőirányú és nagysága csak a sugártól függ:
     \[
@@ -502,18 +493,25 @@
     
    \paragraph{Végtelen egyenes vezető tere -- Számolás elektromos analógia alapján}
     
-    Vegyük észre, hogy a skalárpotenciál (\eqref{eq:01-pot} egyenlet) és a vektorpotenciál (\eqref{01-MX2s} egyenlet) ugyanolyan alakú. Mivel csak $z$ irányban van áram, így $A_x=A_y=0$. Az $A_z$ alakja pedig megegyezik a vonaltöltés potenciáljával, csak az $I\leftrightarrow \lambda$ és $\frac{1}{\ep_0}\leftrightarrow\mu_0$ cseréket kell elvégezni. A vonaltöltés terének ismeretében pedig már adódik a fenti képlet.
+    Vegyük észre, hogy a skalárpotenciál (\eqref{eq:01-pot} egyenlet) és a vektorpotenciál (\eqref{01-MX2s} egyenlet) ugyanolyan alakú.
+   Mivel csak $z$ irányban van áram, így $A_x=A_y=0$.
+   Az $A_z$ alakja pedig megegyezik a vonaltöltés potenciáljával, csak az $I\leftrightarrow \lambda$ és $\frac{1}{\ep_0}\leftrightarrow\mu_0$ cseréket kell elvégezni.
+   A vonaltöltés terének ismeretében pedig már adódik a fenti képlet.
     
    \paragraph{Áramhurok tere}
     
-    Legyen az áramhurok az $x^2+y^2=R^2$, $z=0$ egyenlettel megadva. Ez paraméterezve $\vect{r}'(\phi')=(R\cos(\phi'),R\sin(\phi'),0)$, ahol $\phi'\in[0,2\pi]$. Hengerkoordinátákban dolgozunk, így: $\vect{r}=(r\cos(\phi),r\sin(\phi),z)$. Ezzel:
+    Legyen az áramhurok az $x^2+y^2=R^2$, $z=0$ egyenlettel megadva.
+   Ez paraméterezve $\vect{r}'(\phi')=(R\cos(\phi'),R\sin(\phi'),0)$, ahol $\phi'\in[0,2\pi]$.
+   Hengerkoordinátákban dolgozunk, így: $\vect{r}=(r\cos(\phi),r\sin(\phi),z)$.
+   Ezzel:
     \al{
      \vect{A}(\vect{r})
      &=\frac{I\mu_0}{4\pi}\oint\dd\vect{r}'\, \frac{1}{\abs{\vect{r}-\vect{r}'}}
       =\frac{RI\mu_0}{4\pi}\intl{0}{2\pi}\dd\phi'\, \frac{(-\sin{\phi'},\cos(\phi'),0)}{\abs{\vect{r}-\vect{r}'}}\\
      &=\frac{RI\mu_0}{4\pi}\intl{0}{2\pi}\dd\phi'\, \frac{(-\sin{\phi'},\cos(\phi'),0)}{\sqrt{r^2+z^2+R^2-2rR\cos(\phi-\phi')}}.
     }
-    Ennek a $z$ és a radiális komponense nulla a szimmetria miatt. Az előbbi látszik a fenti képletről is, az utóbbi pedig:
+    Ennek a $z$ és a radiális komponense nulla a szimmetria miatt.
+   Az előbbi látszik a fenti képletről is, az utóbbi pedig:
     \al{
      A_r(\vect{r})
       &=\vect{A}(\vect{r})\cdot\vect{e}_r
@@ -530,7 +528,8 @@
       =\frac{RI\mu_0}{4\pi}\intl{0}{2\pi}\dd\phi'\, \frac{(-\sin{\phi'},\cos(\phi'),0)\cdot(-\sin(\phi),\cos(\phi),0)}{\sqrt{r^2+z^2+R^2-2rR\cos(\phi-\phi')}} \\
       &=\frac{RI\mu_0}{4\pi}\intl{0}{2\pi}\dd\phi'\, \frac{\cos(\phi-\phi')}{\sqrt{r^2+z^2+R^2-2rR\cos(\phi-\phi')}}.
     }
-    Itt használjuk ki, hogy a teljes $[0,2\pi]$ tartományra integrálunk, vagyis eltolhatjuk $\phi'$-t. Illetve legyünk távol a tengelytől: legyen $\rho^2:=r^2+z^2\gg R^2$, ekkor pedig sorba fejthetjük a nevezőt:
+    Itt használjuk ki, hogy a teljes $[0,2\pi]$ tartományra integrálunk, vagyis eltolhatjuk $\phi'$-t.
+   Illetve legyünk távol a tengelytől: legyen $\rho^2:=r^2+z^2\gg R^2$, ekkor pedig sorba fejthetjük a nevezőt:
     \al{
      A_\phi(\vect{r})
       &=\frac{RI\mu_0}{4\pi}\intl{0}{2\pi}\dd\phi'\, \cos(\phi')\frac{1}{\sqrt{r^2+z^2}}\left(1-\frac{1}{2}\frac{R^2-2rR\cos(\phi')}{r^2+z^2}+\dots\right)\\
@@ -556,7 +555,8 @@
     i\hbar\partial_t e^{\frac{i}{\hbar}\opG\alpha}\ket{\psi}&=\opH e^{\frac{i}{\hbar}\opG\alpha}\ket{\psi}\\
     i\hbar\partial_t\ket{\psi}&=e^{-\frac{i}{\hbar}\opG\alpha}\opH e^{\frac{i}{\hbar}\opG\alpha}\ket{\psi}.
    }
-   $\opG$ akkor és csak akkor szimmetria, ha invariánsan hagyja a Hamilton-operátort: $e^{-\frac{i}{\hbar}\opG\alpha}\opH e^{\frac{i}{\hbar}\opG\alpha}=\opH$, ami akkor és csak akkor következik be, ha $\big[\opH,\opG\big]=0$. Ekkor $\opG$ megmaradó mennyiség, hiszen
+   $\opG$ akkor és csak akkor szimmetria, ha invariánsan hagyja a Hamilton-operátort: $e^{-\frac{i}{\hbar}\opG\alpha}\opH e^{\frac{i}{\hbar}\opG\alpha}=\opH$, ami akkor és csak akkor következik be, ha $\big[\opH,\opG\big]=0$.
+   Ekkor $\opG$ megmaradó mennyiség, hiszen
    \al{
     \der{\opG}{t}=\frac{i}{\hbar}\big[\opH,\opG\big]=0.
    }
@@ -564,12 +564,14 @@
    Ha kis paramétert veszünk, vagyis infinitezimális transzformációt tekintünk, akkor $U(\alpha)\approx 1+\frac{i}{\hbar}\opG\alpha$, vagyis valóban $\opG$ generálja a transzformációt. 
    
   \subsection{Mozgásállandók a kvantummechanikában}
-   A kvantálást annak megfelelően végezzük el, hogy a Poisson-zárójelek a kommutátorokba menjenek át: $\{A,B\}\to \frac{1}{i\hbar}[\opA,\opB]$. Ez alapján $[p_i,q_j]=\frac{\hbar}{i}\delta_{ij}$.
+   A kvantálást annak megfelelően végezzük el, hogy a Poisson-zárójelek a kommutátorokba menjenek át: $\{A,B\}\to \frac{1}{i\hbar}[\opA,\opB]$.
+   Ez alapján $[p_i,q_j]=\frac{\hbar}{i}\delta_{ij}$.
    \begin{description}
-    \item[Impulzus:] Klasszikusan az impulzus a koordináta eltolásához tartozó generátor. Ha az impulzus megmaradó mennyiség, akkor $0=\der{\opp}{t}=\frac{i}{\hbar}[\opH,\opp]$. Az eltolás, mint unitér transzformáció ekkor: $\opT(a)=e^{\frac{i}{\hbar}\opp a}$.
-    \item[Idő eltolás:] Klasszikusan láttuk, hogy a Hamilton-függvénnyel generált kanonikus transzformáció maga az időfejlődés. Ez itt is így van. Az időeltolás operátora $\opT(\tau)=e^{-\frac{i}{\hbar}\opH a}$.
+    \item[Impulzus:] Klasszikusan az impulzus a koordináta eltolásához tartozó generátor.
+   Ha az impulzus megmaradó mennyiség, akkor $0=\der{\opp}{t}=\frac{i}{\hbar}[\opH,\opp]$.
+   Az eltolás, mint unitér transzformáció ekkor: $\opT(a)=e^{\frac{i}{\hbar}\opp a}$.
+    \item[Idő eltolás:] Klasszikusan láttuk, hogy a Hamilton-függvénnyel generált kanonikus transzformáció maga az időfejlődés.
+   Ez itt is így van.
+   Az időeltolás operátora $\opT(\tau)=e^{-\frac{i}{\hbar}\opH a}$.
     \item[Forgatás:] A forgatásokhoz az impulzusmomentum tartozik, mint generátor: $\opR_x(\varphi)=e^{\frac{i}{\hbar}\opL_z \varphi}$.
    \end{description}
-
-   
-   

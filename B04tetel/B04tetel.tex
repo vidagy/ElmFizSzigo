@@ -6,11 +6,14 @@
   
  \section{Kanonikus sokaság ($T$,$V$,$N$)}
   
-  Kanonikus sokaságban egy zárt rendszer kis alrendszerét tekintjük. Az egész rendszer energiája rögzített ($E_0=E+E_\text{K}$), ahol $E$ az alrendszer energiája, míg $E_\text{K}$ a környezeté. Mivel a környezet jóval nagyobb, mint az alrendszer, ezért $E\approx E_\text{K}=\text{áll}$. 
+  Kanonikus sokaságban egy zárt rendszer kis alrendszerét tekintjük.
+   Az egész rendszer energiája rögzített ($E_0=E+E_\text{K}$), ahol $E$ az alrendszer energiája, míg $E_\text{K}$ a környezeté.
+   Mivel a környezet jóval nagyobb, mint az alrendszer, ezért $E\approx E_\text{K}=\text{áll}$. 
   
   \subsection{A kanonikus eloszlás}
    
-   Az eloszlás meghatározásához kiszámoljuk annak a valószínűségét, hogy az alrendszer az $i$-edik mikroállapotban van. Ez a szám azzal lesz egyenlő ahányféleképpen a környezet energiája $E_0-E_i$ lehet:
+   Az eloszlás meghatározásához kiszámoljuk annak a valószínűségét, hogy az alrendszer az $i$-edik mikroállapotban van.
+   Ez a szám azzal lesz egyenlő ahányféleképpen a környezet energiája $E_0-E_i$ lehet:
    \al{
     \rho(i)
      =\frac{\Omega_\text{K}(E_0-E_i,\delta E)}{\Omega_0(E_0,\delta E)}.
@@ -22,7 +25,8 @@
      &=\underbrace{\ln\frac{\Omega_\text{K}(E_0,\delta E)}{\Omega_0(E_0,\delta E)}}_{\text{const.}}-\underbrace{\pder{\ln\Omega_\text{K}(E_\text{K},\delta E)}{E}}_{=\frac{1}{\kB T_\text{K}}}\cdot E_i+\mathcal{O}(E_i^2)
       \approx\text{const.}-\beta_\text{K}E_i.
    }
-   Igy $\rho(i)\sim e^{-\beta_\text{K} E_i}$. A normálással együtt klasszikus és kvantumos rendszerre:
+   Igy $\rho(i)\sim e^{-\beta_\text{K} E_i}$.
+   A normálással együtt klasszikus és kvantumos rendszerre:
    \al{
     &\text{Klasszikus rendszerre:}
     &\rho(q,p)&=\frac{1}{Z}e^{-\beta E(q,p)}
@@ -31,11 +35,15 @@
     &\op\rho&=\frac{1}{Z}e^{-\beta \opH}
     &Z&=\tr\left(e^{-\beta \opH}\right),
    }
-   ahol megelőlegeztük, hogy a környezet és a rendszer hőmérséklete egyenlő. Ehhez vizsgáljuk meg, hogy mekkora annak a valószínűségi sűrűsége, hogy az általunk vizsgált alrendszer energiája $E$. Ez abból adódik, hogy a rendszer mekkora valószínűséggel van az $i$-edik mikroállapotban, illetve hogy az állapotok milyen sűrűn vannak ($\omega(E)$ az energia-állapotsűrűség): 
+   ahol megelőlegeztük, hogy a környezet és a rendszer hőmérséklete egyenlő.
+   Ehhez vizsgáljuk meg, hogy mekkora annak a valószínűségi sűrűsége, hogy az általunk vizsgált alrendszer energiája $E$.
+   Ez abból adódik, hogy a rendszer mekkora valószínűséggel van az $i$-edik mikroállapotban, illetve hogy az állapotok milyen sűrűn vannak ($\omega(E)$ az energia-állapotsűrűség): 
    \al{
     P(E)=\rho(E)\omega(E)=\frac{e^{-\beta_\text{K}E}\omega(E)}{Z}.
    }
-   Ez egy éles eloszlás, hiszen a számláló első tagja az energia növelésével élesen levág, míg $\omega(E)$ az energia növelésével élesen nő. Az éles eloszlás miatt a várható érték és a legvalószínűbb érték itt is jó közelítéssel megegyezik. Az eloszlás (logaritmusának) maximuma:
+   Ez egy éles eloszlás, hiszen a számláló első tagja az energia növelésével élesen levág, míg $\omega(E)$ az energia növelésével élesen nő.
+   Az éles eloszlás miatt a várható érték és a legvalószínűbb érték itt is jó közelítéssel megegyezik.
+   Az eloszlás (logaritmusának) maximuma:
    \al{
     \ln P(E)&=-\beta_\text{K}E+\ln\omega(E)+\text{const.}\\
     0&=\pder{\ln P(E)}{E}=-\beta_\text{K}+\underbrace{\pder{\ln \omega(E)}{E}}_{\frac{1}{\kB T}}
@@ -63,20 +71,25 @@
       =-\kB\underbrace{\pder{E}{T}}_{C_V}\underbrace{\pder{T}{\frac{1}{T}}}_{-T^2}
       =\kB T^2 C_V.
    }
-   Az energia szórásnégyzete egy statisztikus fizikai mennyiség, míg a jobb oldalon állók termodinamikai mennyiségek. Mivel feltételeztük, hogy normál rendszerben vagyunk, így $C_V>0$ adódik. A termodinamikában ez stabilitási feltétel.
+   Az energia szórásnégyzete egy statisztikus fizikai mennyiség, míg a jobb oldalon állók termodinamikai mennyiségek.
+   Mivel feltételeztük, hogy normál rendszerben vagyunk, így $C_V>0$ adódik.
+   A termodinamikában ez stabilitási feltétel.
    
   \subsection{Szabadenergia}
    
-   A termodinamikában az energiából Legendre-transzformációval előállítjuk a szabadenergiát: $F=E-TS$. A statisztikus fizikában:
+   A termodinamikában az energiából Legendre-transzformációval előállítjuk a szabadenergiát: $F=E-TS$.
+   A statisztikus fizikában:
    \al{
     F=-\kB T\ln Z,
    }
-   ahol $Z$ az állapotszám. Mivel az eloszlás nagyon éles, ezért az állapotösszeg közelíthető:
+   ahol $Z$ az állapotszám.
+   Mivel az eloszlás nagyon éles, ezért az állapotösszeg közelíthető:
    \aln{
     Z=\intl{E_\text{min}}{\infty}\dd E\,e^{-\beta E}\omega(E)
      =e^{-\beta E} \omega(E)\cdot \Delta E,\label{eq:B04-kanallszam}
    }
-   ahol $\Delta E$ az eloszlás szélessége. A szórásnégyzetből adódik, hogy $\Delta E\sim C_V\sim N$. Így tehát
+   ahol $\Delta E$ az eloszlás szélessége.
+   A szórásnégyzetből adódik, hogy $\Delta E\sim C_V\sim N$. Így tehát
    \al{
     F=-\kB T\ln Z
      =-\kB T \big(\underbrace{-\beta E}_{\mathcal{O}(N)} +\underbrace{\ln\omega(E)}_{\mathcal{O}(N)}+ \underbrace{\ln\Delta E}_{\mathcal{O}(\ln N)}\big)
@@ -100,7 +113,8 @@
      &=\mv{\pder{E}{V}}=-p
    }
    
-   $F$ extenzív mennyiség, hiszen független alrendszerek összességére $Z$ szorzódik. Az információs entrópiába helyettesítve a kanonikus eloszlás az $S$ entrópiát adja:
+   $F$ extenzív mennyiség, hiszen független alrendszerek összességére $Z$ szorzódik.
+   Az információs entrópiába helyettesítve a kanonikus eloszlás az $S$ entrópiát adja:
    \al{
     \kB S_\text{inf}
      &=-\kB\suml{}{}\rho(i)\ln\rho(i)
@@ -111,7 +125,9 @@
      &=\frac{E}{T}-\frac{F}{T}
       =S.
    }
-   Az információs entrópiát a mikrokanonikus eloszlás maximalizálta. A kanonikus eloszlás az információs entrópiát az a mellékfeltétel mellett maximalizálja, hogy $E$ állandó. Ezt onnan tudjuk, hogy $T$-t rögzíti a környezet, és $T$ az átlagenergia, így fix részecskeszám mellett $E=\suml{}{}E_i\rho(i)=\text{const.}$ A variálás:
+   Az információs entrópiát a mikrokanonikus eloszlás maximalizálta.
+   A kanonikus eloszlás az információs entrópiát az a mellékfeltétel mellett maximalizálja, hogy $E$ állandó.
+   Ezt onnan tudjuk, hogy $T$-t rögzíti a környezet, és $T$ az átlagenergia, így fix részecskeszám mellett $E=\suml{}{}E_i\rho(i)=\text{const.}$ A variálás:
    \al{
     0&=\delta\left(-\suml{i}{}\rho(i)\ln\rho(i)-\lambda\suml{i}{}E_i\rho(i)\right)
       =-\suml{i}{}\left(\delta\rho(i)\ln\rho(i)+\rho(i)\frac{1}{\rho(i)}\delta\rho(i)\right)-\lambda\suml{i}{}E_i\delta\rho(i)\\
@@ -123,7 +139,8 @@
    
   \section{Nagykanonikus sokaság ($T$,$V$,$\mu$)}
    
-   A konstrukció hasonló az előzőhöz: most is egy elszigetelt nagy rendszer pici alrendszerét vizsgáljuk. Az alrendszer és a környezet között anyagi kölcsönhatás és energiatranszfer történhet, de mechanikai munka nincs ($\delta V=0$). 
+   A konstrukció hasonló az előzőhöz: most is egy elszigetelt nagy rendszer pici alrendszerét vizsgáljuk.
+   Az alrendszer és a környezet között anyagi kölcsönhatás és energiatranszfer történhet, de mechanikai munka nincs ($\delta V=0$). 
    
    Bevezetjük a nagykanonikus potenciált:
    \al{
@@ -136,7 +153,9 @@
     &&\left(\pder{\Phi}{V}\right)_{T,\mu}=-p
     &&\left(\pder{\Phi}{\mu}\right)_{T,V}=-N.
    }
-   Ebben az esetben egy mikroállapot valószínűsége: $\rho(N,i_N)$. A mikroállapotok valószínűsége attól is függ, hogy hány részecske van épp a rendszerben. Ez felírva a környezet és a teljes rendszer állapotszámaival:
+   Ebben az esetben egy mikroállapot valószínűsége: $\rho(N,i_N)$.
+   A mikroállapotok valószínűsége attól is függ, hogy hány részecske van épp a rendszerben.
+   Ez felírva a környezet és a teljes rendszer állapotszámaival:
    \al{
     \rho(N,i_N)=\frac{\Omega_{0,\text{K}}(E_0-E,N_0-N)}{\Omega_0(E_0,N_0)}.
    }
@@ -149,7 +168,8 @@
     &\rho(N,i_N)=\frac{1}{\mathcal{Z}}e^{-\beta_\text{K}(E_i-\mu_\text{K} N)}
     &\mathcal{Z}=\mathcal{Z}(T,V,\mu)=\suml{N=0}{\infty}\suml{i_N}{}e^{-\beta_\text{K}(E_i-\mu_\text{K} N)}
    }
-   Itt is a környezet kémiai potenciálja és redukált hőmérséklete szerepel. A kanonikus esethez hasonlóan itt is be lehet látni, hogy a $\beta_\text{K}=\beta$ és $\mu_\text{K}=\mu$.
+   Itt is a környezet kémiai potenciálja és redukált hőmérséklete szerepel.
+   A kanonikus esethez hasonlóan itt is be lehet látni, hogy a $\beta_\text{K}=\beta$ és $\mu_\text{K}=\mu$.
    
    A nagykanonikus potenciál statisztikus fizikai definíciója:
    \al{
@@ -162,7 +182,8 @@
       =-\kB T\ln\left(\suml{i}{}e^{-\beta(E_i-\mu N)}\right)
       =-\kB T\ln\left(\suml{N=0}{\infty}e^{\beta\mu N} Z_n\right),
    }
-   ahol $Z_N$ a kanonikus állapotszám $N$ részecskére. Használva \eqaref{eq:B04-kanallszam} egyenletet, illetve hogy az eloszlás $N$ szerint is éles
+   ahol $Z_N$ a kanonikus állapotszám $N$ részecskére.
+   Használva \eqaref{eq:B04-kanallszam} egyenletet, illetve hogy az eloszlás $N$ szerint is éles
    \al{
     \Phi
      &=-\kB T\ln\left(\suml{N=0}{\infty}e^{\beta\mu N} e^{-\beta E} \omega(E)\cdot \Delta E\right)
@@ -174,7 +195,8 @@
    
  \section{TPN sokaság ($T$,$p$,$N$)}
   
-  Tekintsünk egy olyan alrendszer, amely mechanikai kapcsolatban van a környezettel és hőátadás is lehetséges. Ennek a termodinamikai potenciálja a szabadentalpia:
+  Tekintsünk egy olyan alrendszer, amely mechanikai kapcsolatban van a környezettel és hőátadás is lehetséges.
+   Ennek a termodinamikai potenciálja a szabadentalpia:
   \al{
    &G(T,p,N)=E-TS+pV=\mu N
    &\dd G=-S\dd T+V\dd p+\mu\dd N.
@@ -190,7 +212,8 @@
   \al{
    G=-\kB T\ln Y,
   }
-  amiről szintén meg lehet mutatni, hogy a termodinamikai határesetben megegyezik a szabadentalpiával. A termodinamikai deriváltak:
+  amiről szintén meg lehet mutatni, hogy a termodinamikai határesetben megegyezik a szabadentalpiával.
+   A termodinamikai deriváltak:
   \al{
    \pder{G}{T}
     &=-\kB\ln Y-\kB T\pder{\ln Y}{T}
@@ -217,7 +240,3 @@
     &=-\kB T\pder{V}{p}
      =\kB T V \kappa_T.
   }
-  
-  
-  
-  
